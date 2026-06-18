@@ -307,6 +307,19 @@ function ProductDetailPage() {
                                         description: t`This will remove all option groups from this product and return to the variant setup choice.`,
                                     },
                                 }}
+                                additionalActions={
+                                    <AddOptionGroupDialog
+                                        productId={entity.id}
+                                        existingGroupIds={entity.optionGroups.map(g => g.id)}
+                                        onSuccess={() => refreshEntity()}
+                                        trigger={
+                                            <Button variant="outline" type="button">
+                                                <PlusIcon className="mr-2 h-4 w-4" />
+                                                <Trans>Add option group</Trans>
+                                            </Button>
+                                        }
+                                    />
+                                }
                             />
                         )}
                     </PageBlock>
@@ -320,6 +333,7 @@ function ProductDetailPage() {
                                     id={g.id}
                                     name={g.name}
                                     productId={entity.id}
+                                    onRemove={() => removeAllOptionGroups(entity.id, [g])}
                                 />
                             ))}
                         </div>

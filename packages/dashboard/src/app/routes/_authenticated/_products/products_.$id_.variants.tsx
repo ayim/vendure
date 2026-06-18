@@ -40,6 +40,7 @@ import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
 import { AddOptionGroupDialog } from './components/add-option-group-dialog.js';
 import { AddProductVariantDialog } from './components/add-product-variant-dialog.js';
+import { GenerateVariantsPanel } from './components/generate-variants-panel.js';
 import {
     createProductOptionDocument,
     deleteProductVariantDocument,
@@ -194,6 +195,7 @@ function ManageProductVariants() {
     });
 
     const [forceRemoveGroupId, setForceRemoveGroupId] = useState<string | null>(null);
+    const [showGenerator, setShowGenerator] = useState(false);
 
     const removeOptionGroupMutation = useMutation({
         mutationFn: api.mutate(removeOptionGroupFromProductDocument),
@@ -269,6 +271,24 @@ function ManageProductVariants() {
         return null;
     }
 
+    const optionGroupsCount = productData.product.optionGroups.length;
+    const totalCombos = productData.product.optionGroups.reduce(
+        (acc, g) => acc * g.options.length,
+        1,
+    );
+    const existingFullCombos = new Set(
+        productData.product.variants
+            .filter(v => v.options.length === optionGroupsCount)
+            .map(v =>
+                v.options
+                    .map(o => o.id)
+                    .sort((a, b) => a.localeCompare(b))
+                    .join(','),
+            ),
+    );
+    const optionsExhausted =
+        optionGroupsCount > 0 && totalCombos > 0 && existingFullCombos.size >= totalCombos;
+
     return (
         <Page pageId={pageId}>
             <PageTitle>
@@ -339,6 +359,25 @@ function ManageProductVariants() {
                     />
                 </PageBlock>
 
+                {showGenerator ? (
+                    <PageBlock
+                        column="main"
+                        blockId="generate-variants"
+                        title={<Trans>Generate variants</Trans>}
+                    >
+                        <GenerateVariantsPanel
+                            productId={id}
+                            productName={productData.product.name}
+                            optionGroups={productData.product.optionGroups}
+                            existingVariants={productData.product.variants}
+                            onSuccess={() => {
+                                setShowGenerator(false);
+                                refetch();
+                            }}
+                            onBack={{ handler: () => setShowGenerator(false) }}
+                        />
+                    </PageBlock>
+                ) : (
                 <PageBlock column="main" blockId="product-variants" title={<Trans>Variants</Trans>}>
                     <div className="mb-4">
                         <Table>
@@ -470,15 +509,26 @@ function ManageProductVariants() {
                         </Table>
                     </div>
 
-                    {productData.product.optionGroups.length > 0 && (
-                        <AddProductVariantDialog
-                            productId={id}
-                            onSuccess={() => {
-                                refetch();
-                            }}
-                        />
+                    {productData.product.optionGroups.length > 0 && !optionsExhausted && (
+                        <div className="flex gap-2">
+                            <Button
+                                variant="outline"
+                                type="button"
+                                onClick={() => setShowGenerator(true)}
+                            >
+                                <Plus className="mr-2 h-4 w-4" />
+                                <Trans>Generate variants</Trans>
+                            </Button>
+                            <AddProductVariantDialog
+                                productId={id}
+                                onSuccess={() => {
+                                    refetch();
+                                }}
+                            />
+                        </div>
                     )}
                 </PageBlock>
+                )}
             </PageLayout>
             <AlertDialog open={!!forceRemoveGroupId} onOpenChange={(open) => { if (!open) setForceRemoveGroupId(null); }}>
                 <AlertDialogContent>
