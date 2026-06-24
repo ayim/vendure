@@ -159,17 +159,24 @@ export function useGeneratedForm<
     }, [processedEntity, processedDefaultValues, updateFields, customFieldConfig]);
 
     const form = useForm({
-        resolver: async (values, context, options) => {
-            const result = await zodResolver(schema)(values, context, options);
-            if (Object.keys(result.errors).length > 0) {
-                console.log('Zod form validation errors:', result.errors);
-            }
-            return result;
-        },
+        resolver: zodResolver(schema),
         mode: 'onChange',
         defaultValues: processedDefaultValues,
         values,
     });
+
+    // When editing an existing entity, validate once the entity has loaded so
+    // that any pre-existing invalid values (e.g. a custom field whose stored
+    // value or default fails validation) surface as on-page errors instead of
+    // silently disabling the submit button with no explanation (see #4741).
+    useEffect(() => {
+        if (entity) {
+            void form.trigger();
+        }
+        // Keyed on the entity id so we validate once per loaded entity, not on
+        // every background refetch that produces a new object identity.
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [entity?.id]);
     let submitHandler = (event: FormEvent): any => {
         event.preventDefault();
     };
@@ -181,7 +188,6 @@ export function useGeneratedForm<
             const isValid = await form.trigger();
 
             if (!isValid) {
-                console.log(`Form invalid!`);
                 event.stopPropagation();
                 return;
             }
