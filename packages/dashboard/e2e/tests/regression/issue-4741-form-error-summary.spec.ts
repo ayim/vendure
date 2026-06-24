@@ -2,8 +2,7 @@ import { expect, type Page, test } from '@playwright/test';
 
 import { BaseDetailPage } from '../../page-objects/detail-page.base.js';
 
-// https://github.com/vendurehq/vendure/issues/4741 (OSS-540)
-// Operation buttons are frequently disabled with no on-page prompts.
+// `#4741` — Operation buttons are frequently disabled with no on-page prompts.
 //
 // When a detail-page form is invalid, the submit button is disabled. Previously
 // there was no on-page indication of *why* — the validation error was only

@@ -42,17 +42,27 @@ function collectErrors(errors: FieldErrors, path: string[] = []): FlatError[] {
 
 /**
  * Turns a dotted field path into a human-readable label, e.g.
- * "customFields.myField" -> "My field".
+ * "customFields.myField" -> "My field", and keeps enough path context to tell
+ * repeated/nested entries apart, e.g. "translations.0.name" -> "Translations #1 › Name".
  *
  * This is a best-effort fallback: the precise, configured (and translated) field
  * label is rendered next to each offending field by the form itself. Resolving
  * the configured label here would require threading the entity type / custom
  * field config into this shared component — see follow-up noted on #4741.
  */
-function humanizeFieldName(name: string): string {
-    const last = name.split('.').pop() ?? name;
-    const spaced = last.replace(/([a-z0-9])([A-Z])/g, '$1 $2').replace(/[_-]+/g, ' ');
+function humanizeSegment(segment: string): string {
+    const spaced = segment.replace(/([a-z0-9])([A-Z])/g, '$1 $2').replace(/[_-]+/g, ' ');
     return spaced.charAt(0).toUpperCase() + spaced.slice(1);
+}
+
+function humanizeFieldName(name: string): string {
+    return name
+        .split('.')
+        // The "customFields" wrapper segment is noise on every custom field.
+        .filter(segment => segment !== 'customFields')
+        // Array indices become 1-based to disambiguate repeated groups.
+        .map(segment => (/^\d+$/.test(segment) ? `#${Number(segment) + 1}` : humanizeSegment(segment)))
+        .join(' › ');
 }
 
 /**

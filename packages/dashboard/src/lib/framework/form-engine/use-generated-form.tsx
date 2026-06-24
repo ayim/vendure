@@ -173,10 +173,13 @@ export function useGeneratedForm<
         if (entity) {
             void form.trigger();
         }
-        // Keyed on the entity id so we validate once per loaded entity, not on
-        // every background refetch that produces a new object identity.
+        // Keyed on the entity id (so we don't re-run on every background refetch
+        // that yields a new object identity) plus the inputs that shape the
+        // validated `values` — `schema` (custom field config) and the available
+        // languages — so we re-validate if those settle after the entity loads,
+        // otherwise hidden invalid custom fields/translations could stay hidden.
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [entity?.id]);
+    }, [entity?.id, schema, availableLanguages]);
     let submitHandler = (event: FormEvent): any => {
         event.preventDefault();
     };
