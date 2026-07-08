@@ -7,7 +7,7 @@ This package is not published to npm. It is used in development of the Vendure s
 Ensure you have a database running. From the root directory, run:
 
 ```bash
-docker-compose up -d mariadb
+docker compose up -d mariadb
 ```
 
 To run the server, run the `dev` script. The database configuration can be specified by the `DB=<type>` environment variable:
