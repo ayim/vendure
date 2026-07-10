@@ -14,7 +14,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:159
-#: src/lib/components/shared/customer-address-form.tsx:103
+#: src/lib/components/shared/customer-address-form.tsx:110
 msgid "Full Name"
 msgstr "Pełne imię i nazwisko"
 
@@ -39,6 +39,10 @@ msgstr "Wybrane uprawnienia zostaną zastosowane do tych kanałów."
 msgid "Product options"
 msgstr "Opcje produktu"
 
+#: src/lib/components/shared/customer-selector.tsx:266
+msgid "Select an existing customer or create a new one"
+msgstr ""
+
 #: src/app/routes/_authenticated/_tax-rates/tax-rates.tsx:108
 msgid "New Tax Rate"
 msgstr "Nowa stawka podatkowa"
@@ -52,7 +56,7 @@ msgstr "Przypisz istniejącą grupę opcji lub utwórz nową"
 msgid "New role"
 msgstr "Nowa rola"
 
-#: src/lib/components/shared/customer-address-form.tsx:131
+#: src/lib/components/shared/customer-address-form.tsx:140
 msgid "Apartment, suite, etc."
 msgstr "Mieszkanie, apartament itp."
 
@@ -203,7 +207,7 @@ msgstr "Gdy to jest włączone, ceny wprowadzone w katalogu produktów będą za
 #~ msgid "Create variants for your product"
 #~ msgstr "Utwórz warianty swojego produktu"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:331
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:329
 msgid "Draft order completed"
 msgstr "Ukończono zamówienie robocze"
 
@@ -334,6 +338,7 @@ msgstr "Wpisz co najmniej 2 znaki, aby wyszukać..."
 #: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:121
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:182
 #: src/app/routes/_authenticated/_profile/profile.tsx:108
+#: src/lib/components/shared/customer-selector.tsx:176
 msgid "Last name"
 msgstr "Nazwisko"
 
@@ -502,8 +507,12 @@ msgstr "Pomyślnie utworzono opcję produktu"
 msgid "Parent product"
 msgstr "Produkt nadrzędny"
 
+#: src/lib/components/shared/customer-selector.tsx:277
+msgid "Create new customer"
+msgstr ""
+
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:196
-#: src/lib/components/shared/customer-address-form.tsx:141
+#: src/lib/components/shared/customer-address-form.tsx:150
 msgid "City"
 msgstr "Miasto"
 
@@ -535,7 +544,7 @@ msgid "Order Count"
 msgstr "Liczba zamówień"
 
 #: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:92
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:59
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:60
 msgid "Successfully updated order"
 msgstr "Pomyślnie zaktualizowano zamówienie"
 
@@ -551,7 +560,7 @@ msgstr "Zarządzaj globalnymi zapisanymi widokami widocznymi dla wszystkich uży
 msgid "Search payment methods..."
 msgstr "Szukaj metod płatności..."
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:257
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:255
 msgid "Shipping address unset for order"
 msgstr "Adres dostawy usunięty dla zamówienia"
 
@@ -675,7 +684,7 @@ msgstr "Dodaj produkty i uzupełnij adres wysyłki, aby uruchomić test."
 msgid "Toggle header row"
 msgstr "Przełącz wiersz nagłówka"
 
-#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:52
+#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:80
 msgid "Select address"
 msgstr "Wybierz adres"
 
@@ -697,7 +706,7 @@ msgid "Metadata"
 msgstr "Metadane"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:291
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:289
 msgid "Failed to set shipping method for order: {0}"
 msgstr ""
 
@@ -727,6 +736,10 @@ msgstr "Data krótka"
 msgid "Available currencies"
 msgstr "Dostępne waluty"
 
+#: src/lib/components/shared/customer-selector.tsx:113
+msgid "Search customers..."
+msgstr ""
+
 #. placeholder {0}: selectedIds.size
 #: src/lib/components/data-input/product-multi-selector-input.tsx:473
 msgid "Select {0} Items"
@@ -752,7 +765,7 @@ msgstr "Potwierdź nawigację"
 msgid "Link target"
 msgstr "Cel linku"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:405
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:403
 msgid "Complete draft"
 msgstr "Ukończ wersję roboczą"
 
@@ -803,7 +816,7 @@ msgstr "Wprowadź ID transakcji dla tego rozliczenia zwrotu"
 msgid "Your API Key"
 msgstr "Twój API Key"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:389
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:387
 msgid "Are you sure you want to delete this draft order?"
 msgstr "Czy na pewno chcesz usunąć ten projekt zamówienia?"
 
@@ -832,7 +845,7 @@ msgid "(max: {0})"
 msgstr "(maks: {0})"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:165
-#: src/lib/components/shared/customer-address-form.tsx:111
+#: src/lib/components/shared/customer-address-form.tsx:120
 msgid "Company"
 msgstr "Firma"
 
@@ -873,7 +886,7 @@ msgid "Confirm"
 msgstr "Potwierdź"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:343
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:341
 msgid "Failed to complete draft order: {0}"
 msgstr ""
 
@@ -890,8 +903,8 @@ msgid "Failed to create product"
 msgstr "Nie udało się utworzyć produktu"
 
 #: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:276
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:233
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:497
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:246
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:495
 #: src/lib/components/shared/role-code-label.tsx:8
 msgid "Customer"
 msgstr "Klient"
@@ -901,7 +914,7 @@ msgstr "Klient"
 msgid "Error loading order history: {0}"
 msgstr "Błąd ładowania historii zamówień: {0}"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:235
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:233
 msgid "Shipping address set for order"
 msgstr "Adres dostawy ustawiony dla zamówienia"
 
@@ -948,7 +961,7 @@ msgstr "To są wartości aspektów dla aspektu <0>{facetName}</0>."
 msgid "Successfully added payment to order"
 msgstr "Pomyślnie dodano płatność do zamówienia"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:246
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:244
 msgid "Billing address set for order"
 msgstr "Adres rozliczeniowy ustawiony dla zamówienia"
 
@@ -1026,7 +1039,7 @@ msgstr "Przydzielono"
 #~ msgstr "Dodaj kolejną grupę opcji"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:310
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:308
 msgid "Failed to set coupon code for order: {0}"
 msgstr ""
 
@@ -1051,7 +1064,7 @@ msgstr "Pomyślnie utworzono kolekcję"
 msgid "Price"
 msgstr "Cena"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:383
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:381
 #: src/app/routes/_authenticated/_orders/orders.tsx:115
 msgid "Draft order"
 msgstr "Zamówienie robocze"
@@ -1098,7 +1111,7 @@ msgstr "Po włączeniu promocja jest dostępna w sklepie"
 msgid "When tracked, product variant stock levels will be automatically adjusted when sold. This setting can be overridden by individual product variants."
 msgstr "Po włączeniu śledzenia poziomy magazynowe wariantów produktów będą automatycznie dostosowywane podczas sprzedaży. To ustawienie może zostać zastąpione przez poszczególne warianty produktów."
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:282
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:280
 msgid "Shipping method set for order"
 msgstr "Metoda dostawy ustawiona dla zamówienia"
 
@@ -1140,11 +1153,12 @@ msgid "Assets"
 msgstr "Zasoby"
 
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:188
+#: src/lib/components/shared/customer-selector.tsx:182
 msgid "Email address"
 msgstr "Adres e-mail"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:321
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:319
 msgid "Failed to remove coupon code from order: {0}"
 msgstr ""
 
@@ -1255,7 +1269,7 @@ msgstr "Metody płatności"
 msgid "Stock"
 msgstr "Magazyn"
 
-#: src/lib/components/shared/customer-selector.tsx:88
+#: src/lib/components/shared/customer-selector.tsx:119
 msgid "No customers found"
 msgstr "Nie znaleziono klientów"
 
@@ -1339,7 +1353,7 @@ msgid "No variants match the current filter."
 msgstr "Żadne warianty nie pasują do bieżącego filtra."
 
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:203
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:245
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:258
 msgid "Addresses"
 msgstr "Adresy"
 
@@ -1369,7 +1383,8 @@ msgstr "Nie udało się utworzyć grupy opcji"
 msgid "True"
 msgstr "Prawda"
 
-#: src/lib/components/shared/customer-selector.tsx:77
+#: src/lib/components/shared/customer-selector.tsx:222
+#: src/lib/components/shared/customer-selector.tsx:258
 msgid "Select customer"
 msgstr "Wybierz klienta"
 
@@ -1385,7 +1400,7 @@ msgstr "Przeniesiono zamówienie"
 msgid "is before"
 msgstr "jest przed"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:388
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:386
 msgid "Delete draft order"
 msgstr "Usuń zamówienie robocze"
 
@@ -1438,7 +1453,7 @@ msgid "before"
 msgstr "przed"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:228
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:226
 msgid "Failed to set customer for order: {0}"
 msgstr ""
 
@@ -1463,7 +1478,7 @@ msgstr "Ostatnie zamówienia"
 msgid "+ {leftOver} more"
 msgstr "+ {leftOver} więcej"
 
-#: src/lib/components/shared/customer-address-form.tsx:241
+#: src/lib/components/shared/customer-address-form.tsx:259
 msgid "Use as the default billing address"
 msgstr "Użyj jako domyślny adres rozliczeniowy"
 
@@ -1563,7 +1578,7 @@ msgstr "Adres zaktualizowany pomyślnie"
 msgid "Created"
 msgstr "Utworzono"
 
-#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:63
+#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:100
 msgid "Loading addresses..."
 msgstr "Ładowanie adresów..."
 
@@ -1573,7 +1588,7 @@ msgid "Select a target collection to move {0} to."
 msgstr "Wybierz kolekcję docelową, aby przenieść {0}."
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:272
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:270
 msgid "Failed to unset billing address for order: {0}"
 msgstr ""
 
@@ -1618,7 +1633,7 @@ msgstr "Przejdź do ostatniej strony"
 #: src/lib/components/shared/asset/asset-focal-point-editor.tsx:88
 #: src/lib/components/shared/assign-to-channel-dialog.tsx:126
 #: src/lib/components/shared/confirmation-dialog.tsx:42
-#: src/lib/components/shared/customer-address-form.tsx:253
+#: src/lib/components/shared/customer-address-form.tsx:272
 #: src/lib/components/shared/navigation-confirmation.tsx:55
 #: src/lib/components/shared/rich-text-editor/image-dialog.tsx:208
 #: src/lib/components/shared/rich-text-editor/link-dialog.tsx:146
@@ -1640,7 +1655,7 @@ msgid "Refund from this method"
 msgstr "Zwrot z tej metody"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:208
-#: src/lib/components/shared/customer-address-form.tsx:163
+#: src/lib/components/shared/customer-address-form.tsx:174
 msgid "Postal Code"
 msgstr "Kod pocztowy"
 
@@ -1661,7 +1676,7 @@ msgstr "Nowa kategoria podatkowa"
 msgid "Partial refund completed"
 msgstr "Częściowy zwrot zakończony"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:492
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:490
 msgid "Set custom fields"
 msgstr "Ustaw pola niestandardowe"
 
@@ -1692,8 +1707,8 @@ msgid "Reason:"
 msgstr "Powód:"
 
 #: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:291
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:248
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:510
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:261
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:516
 msgid "Shipping address"
 msgstr "Adres wysyłki"
 
@@ -1715,6 +1730,10 @@ msgstr "Kategorie podatkowe"
 #: src/app/routes/_authenticated/_collections/collections_.$id.tsx:158
 msgid "Private collections are not visible in the shop"
 msgstr "Prywatne kolekcje nie są widoczne w sklepie"
+
+#: src/lib/components/shared/customer-selector.tsx:194
+msgid "Create customer"
+msgstr ""
 
 #: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:262
 #: src/app/routes/_authenticated/_products/products_.$id.tsx:229
@@ -1743,7 +1762,7 @@ msgstr "Wyłączono"
 msgid "New promotion"
 msgstr "Nowa promocja"
 
-#: src/lib/components/shared/customer-address-form.tsx:220
+#: src/lib/components/shared/customer-address-form.tsx:238
 msgid "Default Shipping Address"
 msgstr "Domyślny adres wysyłki"
 
@@ -1844,8 +1863,8 @@ msgstr "Pomyślnie zaktualizowano profil"
 msgid "Payment method"
 msgstr "Metoda płatności"
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:263
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:292
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:277
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:307
 #: src/lib/components/shared/history-timeline/history-note-entry.tsx:46
 msgid "Edit"
 msgstr "Edytuj"
@@ -1867,7 +1886,7 @@ msgstr "Dodano notatkę"
 msgid "Select quantities to fulfill and configure the fulfillment handler"
 msgstr "Wybierz ilości do zrealizowania i skonfiguruj obsługę realizacji"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:268
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:266
 msgid "Billing address unset for order"
 msgstr "Adres rozliczeniowy usunięty z zamówienia"
 
@@ -2386,7 +2405,7 @@ msgid "Registered"
 msgstr "Zarejestrowany"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:239
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:237
 msgid "Failed to set shipping address for order: {0}"
 msgstr ""
 
@@ -2462,7 +2481,7 @@ msgstr "{0} wybranych"
 msgid "Search option groups..."
 msgstr "Szukaj grup opcji..."
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:168
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:181
 msgid "Modify order"
 msgstr "Modyfikuj zamówienie"
 
@@ -2620,6 +2639,10 @@ msgstr "Zastosowano widok „{viewName}\""
 msgid "Successfully removed {successCount} facets from channel"
 msgstr "Pomyślnie usunięto {successCount} aspektów z kanału"
 
+#: src/lib/components/shared/customer-selector.tsx:263
+msgid "Set customer"
+msgstr ""
+
 #: src/app/routes/_authenticated/_products/products.tsx:117
 msgid "New Product"
 msgstr "Nowy produkt"
@@ -2650,8 +2673,8 @@ msgid "This will remove all option groups from this product and return to the va
 msgstr "Spowoduje to usunięcie wszystkich grup opcji z tego produktu i powrót do wyboru konfiguracji wariantów."
 
 #: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:299
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:277
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:532
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:291
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:544
 msgid "Billing address"
 msgstr "Adres rozliczeniowy"
 
@@ -2727,7 +2750,7 @@ msgid "Amount"
 msgstr "Kwota"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:242
-#: src/lib/components/shared/customer-address-form.tsx:201
+#: src/lib/components/shared/customer-address-form.tsx:218
 msgid "Phone Number"
 msgstr "Numer telefonu"
 
@@ -2866,12 +2889,12 @@ msgstr "Zaktualizowano punkt ogniskowy"
 msgid "Option values"
 msgstr "Wartości opcji"
 
-#: src/lib/components/shared/customer-address-form.tsx:238
+#: src/lib/components/shared/customer-address-form.tsx:256
 msgid "Default Billing Address"
 msgstr "Domyślny adres rozliczeniowy"
 
 #: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:284
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:241
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:254
 msgid "No customer"
 msgstr "Brak klienta"
 
@@ -3115,7 +3138,7 @@ msgstr "Nie udało się zaktualizować punktu ogniskowego"
 msgid "Successfully updated zone"
 msgstr "Pomyślnie zaktualizowano strefę"
 
-#: src/lib/components/shared/customer-address-form.tsx:149
+#: src/lib/components/shared/customer-address-form.tsx:160
 msgid "State/Province"
 msgstr "Stan/Województwo"
 
@@ -3137,7 +3160,7 @@ msgstr "Ustaw kryteria filtrowania dla kolumny {columnId}"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:217
 #: src/app/routes/_authenticated/_zones/components/zone-countries-table.tsx:53
-#: src/lib/components/shared/customer-address-form.tsx:173
+#: src/lib/components/shared/customer-address-form.tsx:184
 msgid "Country"
 msgstr "Kraj"
 
@@ -3349,7 +3372,7 @@ msgstr "Autoryzowano płatność"
 msgid "Successfully updated role"
 msgstr "Pomyślnie zaktualizowano rolę"
 
-#: src/lib/components/shared/customer-address-form.tsx:184
+#: src/lib/components/shared/customer-address-form.tsx:201
 msgid "Select a country"
 msgstr "Wybierz kraj"
 
@@ -3364,8 +3387,8 @@ msgid "Shipping Methods"
 msgstr "Metody wysyłki"
 
 #: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:58
-msgid "Select an address"
-msgstr "Wybierz adres"
+#~ msgid "Select an address"
+#~ msgstr "Wybierz adres"
 
 #: src/app/routes/_authenticated/_system/settings-store.tsx:326
 msgid "Yes"
@@ -3421,6 +3444,10 @@ msgstr "nie jest równe"
 #: src/app/routes/_authenticated/_system/healthchecks.tsx:47
 #~ msgid "Refresh"
 #~ msgstr "Odśwież"
+
+#: src/lib/components/shared/customer-selector.tsx:273
+msgid "Existing customer"
+msgstr ""
 
 #: src/app/routes/_authenticated/_products/components/create-product-options-dialog.tsx:269
 #~ msgid "e.g. Size"
@@ -3539,7 +3566,7 @@ msgstr "Dodaj wiersz po"
 msgid "Tax total"
 msgstr "Suma podatków"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:414
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:412
 msgid "Draft order status"
 msgstr "Status wersji roboczej zamówienia"
 
@@ -3560,7 +3587,11 @@ msgstr "Pomyślnie utworzono wartość aspektu"
 msgid "Marketing"
 msgstr "Marketing"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:351
+#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:89
+msgid "Existing address"
+msgstr ""
+
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:349
 msgid "Draft order deleted"
 msgstr "Usunięto zamówienie robocze"
 
@@ -3582,6 +3613,7 @@ msgid "Remove from channel"
 msgstr "Usuń z kanału"
 
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:169
+#: src/lib/components/shared/customer-selector.tsx:164
 #: src/lib/components/shared/rich-text-editor/image-dialog.tsx:157
 msgid "Title"
 msgstr "Tytuł"
@@ -3621,7 +3653,7 @@ msgstr "{0} wariantów"
 msgid "Failed to settle payment"
 msgstr "Nie udało się rozliczyć płatności"
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:300
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:315
 msgid "No billing address"
 msgstr "Brak adresu rozliczeniowego"
 
@@ -3773,7 +3805,7 @@ msgstr "Nie udało się zaktualizować lokalizacji magazynowej"
 msgid "Order shipped"
 msgstr "Wysłano zamówienie"
 
-#: src/lib/components/shared/customer-address-form.tsx:257
+#: src/lib/components/shared/customer-address-form.tsx:276
 msgid "Save Address"
 msgstr "Zapisz adres"
 
@@ -4031,7 +4063,7 @@ msgstr "+ {0} więcej"
 msgid "Option Groups"
 msgstr "Grupy opcji"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:471
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:469
 msgid "Custom fields"
 msgstr "Pola niestandardowe"
 
@@ -4255,7 +4287,7 @@ msgstr "{title}"
 
 #: src/app/routes/_authenticated/_orders/components/fulfill-order-dialog.tsx:244
 #: src/app/routes/_authenticated/_orders/components/refund-order-dialog.tsx:87
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:178
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:191
 msgid "Order lines"
 msgstr "Wiersze zamówienia"
 
@@ -4326,7 +4358,7 @@ msgid "Customer information updated"
 msgstr "Zaktualizowano informacje o kliencie"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:358
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:356
 msgid "Failed to delete draft order: {0}"
 msgstr ""
 
@@ -4473,7 +4505,7 @@ msgstr "LUB"
 msgid "Manage tags"
 msgstr "Zarządzaj tagami"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:317
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:315
 msgid "Coupon code removed from order"
 msgstr "Kod kuponu usunięty z zamówienia"
 
@@ -4501,11 +4533,11 @@ msgid "Loading selected items..."
 msgstr ""
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:250
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:248
 msgid "Failed to set billing address for order: {0}"
 msgstr ""
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:271
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:285
 msgid "No shipping address"
 msgstr "Brak adresu wysyłki"
 
@@ -4559,7 +4591,7 @@ msgstr "Warunki sprawdzania kwalifikowalności tej metody wysyłki nie są speł
 msgid "Add coupon code"
 msgstr "Dodaj kod kuponu"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:301
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:299
 msgid "Coupon code set for order"
 msgstr "Kod kuponu ustawiony dla zamówienia"
 
@@ -4617,7 +4649,7 @@ msgstr "Inne"
 msgid "refundReason.WrongItem"
 msgstr "Niewłaściwy przedmiot"
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:201
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:214
 msgid "Summary of modifications"
 msgstr "Podsumowanie modyfikacji"
 
@@ -4655,7 +4687,7 @@ msgstr "Nie udało się zaktualizować grupy klientów"
 msgid "Payment metadata"
 msgstr "Metadane płatności"
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:173
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:186
 msgid "Cancel modification"
 msgstr "Anuluj modyfikację"
 
@@ -4677,7 +4709,7 @@ msgid "Additional payment required"
 msgstr "Wymagana dodatkowa płatność"
 
 #: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:96
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:63
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:64
 msgid "Failed to update order"
 msgstr "Nie udało się zaktualizować zamówienia"
 
@@ -4698,7 +4730,7 @@ msgid "Customer group members for {customerGroupName}"
 msgstr "Członkowie grupy klientów {customerGroupName}"
 
 #. placeholder {0}: e instanceof Error ? e.message : String(e)
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:217
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:214
 msgid "Failed to set address for order: {0}"
 msgstr ""
 
@@ -4765,6 +4797,10 @@ msgstr "Edytuj członków"
 msgid "Stock on hand"
 msgstr "Stan magazynowy"
 
+#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:93
+msgid "New address"
+msgstr ""
+
 #: src/lib/components/data-table/data-table-filter-dialog.tsx:55
 msgid "Filter by {columnId}"
 msgstr "Filtruj według {columnId}"
@@ -4781,7 +4817,7 @@ msgstr "Alerty"
 msgid "Option Values"
 msgstr "Wartości opcji"
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:222
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:235
 msgid "Preview changes"
 msgstr "Podgląd zmian"
 
@@ -4968,7 +5004,7 @@ msgstr "System"
 msgid "Variant name"
 msgstr "Nazwa wariantu"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:579
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:597
 msgid "Remove"
 msgstr "Usuń"
 
@@ -5029,7 +5065,7 @@ msgid "The page will continue with the default query."
 msgstr "Strona będzie kontynuowana z domyślnym zapytaniem."
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:175
-#: src/lib/components/shared/customer-address-form.tsx:121
+#: src/lib/components/shared/customer-address-form.tsx:130
 msgid "Street Address"
 msgstr "Ulica"
 
@@ -5290,6 +5326,7 @@ msgstr "Nie udało się przetworzyć zwrotu"
 #: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:115
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:176
 #: src/app/routes/_authenticated/_profile/profile.tsx:102
+#: src/lib/components/shared/customer-selector.tsx:170
 msgid "First name"
 msgstr "Imię"
 
@@ -5391,7 +5428,7 @@ msgid "Option Groups"
 msgstr "Grupy opcji"
 
 #: src/app/routes/_authenticated/_orders/components/add-surcharge-form.tsx:133
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:194
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:207
 msgid "Add surcharge"
 msgstr "Dodaj dopłatę"
 
@@ -5491,7 +5528,7 @@ msgstr "Języki globalne"
 msgid "New administrator"
 msgstr "Nowy administrator"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:395
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:393
 msgid "Delete draft"
 msgstr "Usuń wersję roboczą"
 
@@ -5613,7 +5650,7 @@ msgstr "Wyświetl proces zamówienia"
 msgid "Failed to duplicate view"
 msgstr "Nie udało się zduplikować widoku"
 
-#: src/lib/components/shared/customer-address-form.tsx:223
+#: src/lib/components/shared/customer-address-form.tsx:241
 msgid "Use as the default shipping address"
 msgstr "Użyj jako domyślny adres wysyłki"
 
@@ -5803,7 +5840,7 @@ msgid "Add option value to {groupName}"
 msgstr "Dodaj wartość opcji do {groupName}"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:261
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:259
 msgid "Failed to unset shipping address for order: {0}"
 msgstr ""
 
@@ -5944,7 +5981,7 @@ msgstr "Dodaj płatność do zamówienia"
 #: src/lib/components/data-input/relation-selector.tsx:427
 #: src/lib/components/shared/country-selector.tsx:86
 #: src/lib/components/shared/customer-group-selector.tsx:56
-#: src/lib/components/shared/customer-selector.tsx:88
+#: src/lib/components/shared/customer-selector.tsx:119
 #: src/lib/components/shared/facet-value-selector.tsx:159
 msgid "Loading..."
 msgstr "Ładowanie..."
@@ -5953,7 +5990,7 @@ msgstr "Ładowanie..."
 msgid "The token is used to specify the channel when making API requests."
 msgstr "Token służy do określenia kanału podczas wykonywania żądań API."
 
-#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:67
+#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:104
 msgid "No addresses found"
 msgstr "Nie znaleziono adresów"
 
@@ -6035,6 +6072,7 @@ msgid "Order process"
 msgstr "Proces zamówienia"
 
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:194
+#: src/lib/components/shared/customer-selector.tsx:188
 msgid "Phone number"
 msgstr "Numer telefonu"
 

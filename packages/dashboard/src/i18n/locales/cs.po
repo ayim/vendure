@@ -14,7 +14,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:159
-#: src/lib/components/shared/customer-address-form.tsx:103
+#: src/lib/components/shared/customer-address-form.tsx:110
 msgid "Full Name"
 msgstr "Celé jméno"
 
@@ -39,6 +39,10 @@ msgstr "Vybraná oprávnění budou aplikována na tyto kanály."
 msgid "Product options"
 msgstr "Volby produktu"
 
+#: src/lib/components/shared/customer-selector.tsx:266
+msgid "Select an existing customer or create a new one"
+msgstr ""
+
 #: src/app/routes/_authenticated/_tax-rates/tax-rates.tsx:108
 msgid "New Tax Rate"
 msgstr "Nová daňová sazba"
@@ -52,7 +56,7 @@ msgstr "Přiřaďte existující skupinu voleb nebo vytvořte novou"
 msgid "New role"
 msgstr "Nová role"
 
-#: src/lib/components/shared/customer-address-form.tsx:131
+#: src/lib/components/shared/customer-address-form.tsx:140
 msgid "Apartment, suite, etc."
 msgstr "Byt, apartmá apod."
 
@@ -203,7 +207,7 @@ msgstr "Když je toto povoleno, ceny zadané v katalogu produktů budou zahrnova
 #~ msgid "Create variants for your product"
 #~ msgstr "Vytvořte varianty pro váš produkt"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:331
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:329
 msgid "Draft order completed"
 msgstr "Koncept objednávky dokončen"
 
@@ -334,6 +338,7 @@ msgstr "Zadejte alespoň 2 znaky pro vyhledávání..."
 #: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:121
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:182
 #: src/app/routes/_authenticated/_profile/profile.tsx:108
+#: src/lib/components/shared/customer-selector.tsx:176
 msgid "Last name"
 msgstr "Příjmení"
 
@@ -502,8 +507,12 @@ msgstr "Možnost produktu byla úspěšně vytvořena"
 msgid "Parent product"
 msgstr "Nadřazený produkt"
 
+#: src/lib/components/shared/customer-selector.tsx:277
+msgid "Create new customer"
+msgstr ""
+
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:196
-#: src/lib/components/shared/customer-address-form.tsx:141
+#: src/lib/components/shared/customer-address-form.tsx:150
 msgid "City"
 msgstr "Město"
 
@@ -535,7 +544,7 @@ msgid "Order Count"
 msgstr "Počet objednávek"
 
 #: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:92
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:59
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:60
 msgid "Successfully updated order"
 msgstr "Objednávka úspěšně aktualizována"
 
@@ -551,7 +560,7 @@ msgstr "Spravovat globální uložené pohledy viditelné pro všechny uživatel
 msgid "Search payment methods..."
 msgstr "Hledat způsoby platby..."
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:257
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:255
 msgid "Shipping address unset for order"
 msgstr "Dodací adresa zrušena pro objednávku"
 
@@ -675,7 +684,7 @@ msgstr "Pro spuštění testu přidejte produkty a vyplňte doručovací adresu.
 msgid "Toggle header row"
 msgstr "Přepnout řádek hlavičky"
 
-#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:52
+#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:80
 msgid "Select address"
 msgstr "Vybrat adresu"
 
@@ -697,7 +706,7 @@ msgid "Metadata"
 msgstr "Metadata"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:291
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:289
 msgid "Failed to set shipping method for order: {0}"
 msgstr "Nepodařilo se nastavit způsob dopravy pro objednávku: {0}"
 
@@ -727,6 +736,10 @@ msgstr "Krátké datum"
 msgid "Available currencies"
 msgstr "Dostupné měny"
 
+#: src/lib/components/shared/customer-selector.tsx:113
+msgid "Search customers..."
+msgstr ""
+
 #. placeholder {0}: selectedIds.size
 #: src/lib/components/data-input/product-multi-selector-input.tsx:473
 msgid "Select {0} Items"
@@ -752,7 +765,7 @@ msgstr "Potvrdit navigaci"
 msgid "Link target"
 msgstr "Cíl odkazu"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:405
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:403
 msgid "Complete draft"
 msgstr "Dokončit koncept"
 
@@ -803,7 +816,7 @@ msgstr "Zadejte ID transakce pro toto vypořádání refundu"
 msgid "Your API Key"
 msgstr "Váš API Key"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:389
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:387
 msgid "Are you sure you want to delete this draft order?"
 msgstr "Opravdu chcete smazat tento koncept objednávky?"
 
@@ -832,7 +845,7 @@ msgid "(max: {0})"
 msgstr "(max: {0})"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:165
-#: src/lib/components/shared/customer-address-form.tsx:111
+#: src/lib/components/shared/customer-address-form.tsx:120
 msgid "Company"
 msgstr "Společnost"
 
@@ -873,7 +886,7 @@ msgid "Confirm"
 msgstr "Potvrdit"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:343
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:341
 msgid "Failed to complete draft order: {0}"
 msgstr "Nepodařilo se dokončit koncept objednávky: {0}"
 
@@ -890,8 +903,8 @@ msgid "Failed to create product"
 msgstr "Nepodařilo se vytvořit produkt"
 
 #: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:276
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:233
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:497
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:246
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:495
 #: src/lib/components/shared/role-code-label.tsx:8
 msgid "Customer"
 msgstr "Zákazník"
@@ -901,7 +914,7 @@ msgstr "Zákazník"
 msgid "Error loading order history: {0}"
 msgstr "Chyba při načítání historie objednávky: {0}"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:235
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:233
 msgid "Shipping address set for order"
 msgstr "Dodací adresa nastavena pro objednávku"
 
@@ -948,7 +961,7 @@ msgstr "Toto jsou hodnoty vlastností pro vlastnost <0>{facetName}</0>."
 msgid "Successfully added payment to order"
 msgstr "Platba úspěšně přidána k objednávce"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:246
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:244
 msgid "Billing address set for order"
 msgstr "Fakturační adresa nastavena pro objednávku"
 
@@ -1026,7 +1039,7 @@ msgstr "Alokováno"
 #~ msgstr "Přidat další skupinu voleb"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:310
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:308
 msgid "Failed to set coupon code for order: {0}"
 msgstr "Nepodařilo se nastavit kupónový kód pro objednávku: {0}"
 
@@ -1051,7 +1064,7 @@ msgstr "Kolekce úspěšně vytvořena"
 msgid "Price"
 msgstr "Cena"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:383
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:381
 #: src/app/routes/_authenticated/_orders/orders.tsx:115
 msgid "Draft order"
 msgstr "Koncept objednávky"
@@ -1098,7 +1111,7 @@ msgstr "Když je povoleno, akce je dostupná v obchodě"
 msgid "When tracked, product variant stock levels will be automatically adjusted when sold. This setting can be overridden by individual product variants."
 msgstr "Když je sledování povoleno, skladové úrovně variant produktů se automaticky upraví při prodeji. Toto nastavení může být přepsáno jednotlivými variantami produktů."
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:282
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:280
 msgid "Shipping method set for order"
 msgstr "Způsob dopravy nastaven pro objednávku"
 
@@ -1140,11 +1153,12 @@ msgid "Assets"
 msgstr "Soubory"
 
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:188
+#: src/lib/components/shared/customer-selector.tsx:182
 msgid "Email address"
 msgstr "E-mailová adresa"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:321
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:319
 msgid "Failed to remove coupon code from order: {0}"
 msgstr "Nepodařilo se odebrat kupónový kód z objednávky: {0}"
 
@@ -1255,7 +1269,7 @@ msgstr "Způsoby platby"
 msgid "Stock"
 msgstr "Sklad"
 
-#: src/lib/components/shared/customer-selector.tsx:88
+#: src/lib/components/shared/customer-selector.tsx:119
 msgid "No customers found"
 msgstr "Nenalezeni žádní zákazníci"
 
@@ -1339,7 +1353,7 @@ msgid "No variants match the current filter."
 msgstr "Žádné varianty neodpovídají aktuálnímu filtru."
 
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:203
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:245
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:258
 msgid "Addresses"
 msgstr "Adresy"
 
@@ -1369,7 +1383,8 @@ msgstr "Nepodařilo se vytvořit skupinu voleb"
 msgid "True"
 msgstr "Pravda"
 
-#: src/lib/components/shared/customer-selector.tsx:77
+#: src/lib/components/shared/customer-selector.tsx:222
+#: src/lib/components/shared/customer-selector.tsx:258
 msgid "Select customer"
 msgstr "Vybrat zákazníka"
 
@@ -1385,7 +1400,7 @@ msgstr "Objednávka převedena"
 msgid "is before"
 msgstr "je před"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:388
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:386
 msgid "Delete draft order"
 msgstr "Smazat koncept objednávky"
 
@@ -1438,7 +1453,7 @@ msgid "before"
 msgstr "před"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:228
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:226
 msgid "Failed to set customer for order: {0}"
 msgstr "Nepodařilo se nastavit zákazníka pro objednávku: {0}"
 
@@ -1463,7 +1478,7 @@ msgstr "Poslední objednávky"
 msgid "+ {leftOver} more"
 msgstr "+ {leftOver} dalších"
 
-#: src/lib/components/shared/customer-address-form.tsx:241
+#: src/lib/components/shared/customer-address-form.tsx:259
 msgid "Use as the default billing address"
 msgstr "Použít jako výchozí fakturační adresu"
 
@@ -1563,7 +1578,7 @@ msgstr "Adresa úspěšně aktualizována"
 msgid "Created"
 msgstr "Vytvořeno"
 
-#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:63
+#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:100
 msgid "Loading addresses..."
 msgstr "Načítání adres..."
 
@@ -1573,7 +1588,7 @@ msgid "Select a target collection to move {0} to."
 msgstr "Vyberte cílovou kolekci pro přesunutí {0}."
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:272
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:270
 msgid "Failed to unset billing address for order: {0}"
 msgstr "Nepodařilo se odebrat fakturační adresu z objednávky: {0}"
 
@@ -1618,7 +1633,7 @@ msgstr "Přejít na poslední stránku"
 #: src/lib/components/shared/asset/asset-focal-point-editor.tsx:88
 #: src/lib/components/shared/assign-to-channel-dialog.tsx:126
 #: src/lib/components/shared/confirmation-dialog.tsx:42
-#: src/lib/components/shared/customer-address-form.tsx:253
+#: src/lib/components/shared/customer-address-form.tsx:272
 #: src/lib/components/shared/navigation-confirmation.tsx:55
 #: src/lib/components/shared/rich-text-editor/image-dialog.tsx:208
 #: src/lib/components/shared/rich-text-editor/link-dialog.tsx:146
@@ -1640,7 +1655,7 @@ msgid "Refund from this method"
 msgstr "Refund z tohoto způsobu"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:208
-#: src/lib/components/shared/customer-address-form.tsx:163
+#: src/lib/components/shared/customer-address-form.tsx:174
 msgid "Postal Code"
 msgstr "PSČ"
 
@@ -1661,7 +1676,7 @@ msgstr "Nová daňová kategorie"
 msgid "Partial refund completed"
 msgstr "Částečné vrácení dokončeno"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:492
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:490
 msgid "Set custom fields"
 msgstr "Nastavit vlastní pole"
 
@@ -1692,8 +1707,8 @@ msgid "Reason:"
 msgstr "Důvod:"
 
 #: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:291
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:248
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:510
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:261
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:516
 msgid "Shipping address"
 msgstr "Doručovací adresa"
 
@@ -1715,6 +1730,10 @@ msgstr "Daňové kategorie"
 #: src/app/routes/_authenticated/_collections/collections_.$id.tsx:158
 msgid "Private collections are not visible in the shop"
 msgstr "Soukromé kolekce nejsou viditelné v obchodě"
+
+#: src/lib/components/shared/customer-selector.tsx:194
+msgid "Create customer"
+msgstr ""
 
 #: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:262
 #: src/app/routes/_authenticated/_products/products_.$id.tsx:229
@@ -1743,7 +1762,7 @@ msgstr "Zakázáno"
 msgid "New promotion"
 msgstr "Nová akce"
 
-#: src/lib/components/shared/customer-address-form.tsx:220
+#: src/lib/components/shared/customer-address-form.tsx:238
 msgid "Default Shipping Address"
 msgstr "Výchozí doručovací adresa"
 
@@ -1844,8 +1863,8 @@ msgstr "Profil úspěšně aktualizován"
 msgid "Payment method"
 msgstr "Způsob platby"
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:263
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:292
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:277
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:307
 #: src/lib/components/shared/history-timeline/history-note-entry.tsx:46
 msgid "Edit"
 msgstr "Upravit"
@@ -1867,7 +1886,7 @@ msgstr "Poznámka přidána"
 msgid "Select quantities to fulfill and configure the fulfillment handler"
 msgstr "Vyberte množství k expedici a nakonfigurujte správce expedice"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:268
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:266
 msgid "Billing address unset for order"
 msgstr "Fakturační adresa odebrána z objednávky"
 
@@ -2386,7 +2405,7 @@ msgid "Registered"
 msgstr "Registrovaný"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:239
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:237
 msgid "Failed to set shipping address for order: {0}"
 msgstr "Nepodařilo se nastavit doručovací adresu pro objednávku: {0}"
 
@@ -2462,7 +2481,7 @@ msgstr "{0} vybráno"
 msgid "Search option groups..."
 msgstr "Hledat skupiny voleb..."
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:168
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:181
 msgid "Modify order"
 msgstr "Upravit objednávku"
 
@@ -2620,6 +2639,10 @@ msgstr "Použit pohled \"{viewName}\""
 msgid "Successfully removed {successCount} facets from channel"
 msgstr "Úspěšně odebráno {successCount} vlastností z kanálu"
 
+#: src/lib/components/shared/customer-selector.tsx:263
+msgid "Set customer"
+msgstr ""
+
 #: src/app/routes/_authenticated/_products/products.tsx:117
 msgid "New Product"
 msgstr "Nový produkt"
@@ -2650,8 +2673,8 @@ msgid "This will remove all option groups from this product and return to the va
 msgstr "Tímto se odeberou všechny skupiny voleb z tohoto produktu a vrátíte se k výběru nastavení variant."
 
 #: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:299
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:277
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:532
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:291
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:544
 msgid "Billing address"
 msgstr "Fakturační adresa"
 
@@ -2727,7 +2750,7 @@ msgid "Amount"
 msgstr "Částka"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:242
-#: src/lib/components/shared/customer-address-form.tsx:201
+#: src/lib/components/shared/customer-address-form.tsx:218
 msgid "Phone Number"
 msgstr "Telefonní číslo"
 
@@ -2866,12 +2889,12 @@ msgstr "Ohniskový bod aktualizován"
 msgid "Option values"
 msgstr "Hodnoty voleb"
 
-#: src/lib/components/shared/customer-address-form.tsx:238
+#: src/lib/components/shared/customer-address-form.tsx:256
 msgid "Default Billing Address"
 msgstr "Výchozí fakturační adresa"
 
 #: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:284
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:241
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:254
 msgid "No customer"
 msgstr "Žádný zákazník"
 
@@ -3115,7 +3138,7 @@ msgstr "Nepodařilo se aktualizovat ohniskový bod"
 msgid "Successfully updated zone"
 msgstr "Zóna úspěšně aktualizována"
 
-#: src/lib/components/shared/customer-address-form.tsx:149
+#: src/lib/components/shared/customer-address-form.tsx:160
 msgid "State/Province"
 msgstr "Stát/Kraj"
 
@@ -3137,7 +3160,7 @@ msgstr "Nastavit kritéria filtru pro sloupec {columnId}"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:217
 #: src/app/routes/_authenticated/_zones/components/zone-countries-table.tsx:53
-#: src/lib/components/shared/customer-address-form.tsx:173
+#: src/lib/components/shared/customer-address-form.tsx:184
 msgid "Country"
 msgstr "Země"
 
@@ -3349,7 +3372,7 @@ msgstr "Platba autorizována"
 msgid "Successfully updated role"
 msgstr "Role úspěšně aktualizována"
 
-#: src/lib/components/shared/customer-address-form.tsx:184
+#: src/lib/components/shared/customer-address-form.tsx:201
 msgid "Select a country"
 msgstr "Vyberte zemi"
 
@@ -3364,8 +3387,8 @@ msgid "Shipping Methods"
 msgstr "Způsoby dopravy"
 
 #: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:58
-msgid "Select an address"
-msgstr "Vyberte adresu"
+#~ msgid "Select an address"
+#~ msgstr "Vyberte adresu"
 
 #: src/app/routes/_authenticated/_system/settings-store.tsx:326
 msgid "Yes"
@@ -3421,6 +3444,10 @@ msgstr "není rovno"
 #: src/app/routes/_authenticated/_system/healthchecks.tsx:47
 #~ msgid "Refresh"
 #~ msgstr "Obnovit"
+
+#: src/lib/components/shared/customer-selector.tsx:273
+msgid "Existing customer"
+msgstr ""
 
 #: src/app/routes/_authenticated/_products/components/create-product-options-dialog.tsx:269
 #~ msgid "e.g. Size"
@@ -3539,7 +3566,7 @@ msgstr "Přidat řádek za"
 msgid "Tax total"
 msgstr "Celková daň"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:414
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:412
 msgid "Draft order status"
 msgstr "Stav konceptu objednávky"
 
@@ -3560,7 +3587,11 @@ msgstr "Hodnota vlastnosti úspěšně vytvořena"
 msgid "Marketing"
 msgstr "Marketing"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:351
+#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:89
+msgid "Existing address"
+msgstr ""
+
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:349
 msgid "Draft order deleted"
 msgstr "Koncept objednávky smazán"
 
@@ -3582,6 +3613,7 @@ msgid "Remove from channel"
 msgstr "Odebrat z kanálu"
 
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:169
+#: src/lib/components/shared/customer-selector.tsx:164
 #: src/lib/components/shared/rich-text-editor/image-dialog.tsx:157
 msgid "Title"
 msgstr "Nadpis"
@@ -3621,7 +3653,7 @@ msgstr "{0} variant"
 msgid "Failed to settle payment"
 msgstr "Nepodařilo se vypořádat platbu"
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:300
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:315
 msgid "No billing address"
 msgstr "Žádná fakturační adresa"
 
@@ -3773,7 +3805,7 @@ msgstr "Nepodařilo se aktualizovat sklad"
 msgid "Order shipped"
 msgstr "Objednávka odeslána"
 
-#: src/lib/components/shared/customer-address-form.tsx:257
+#: src/lib/components/shared/customer-address-form.tsx:276
 msgid "Save Address"
 msgstr "Uložit adresu"
 
@@ -4031,7 +4063,7 @@ msgstr "+ {0} dalších"
 msgid "Option Groups"
 msgstr "Skupiny voleb"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:471
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:469
 msgid "Custom fields"
 msgstr "Vlastní pole"
 
@@ -4255,7 +4287,7 @@ msgstr "{title}"
 
 #: src/app/routes/_authenticated/_orders/components/fulfill-order-dialog.tsx:244
 #: src/app/routes/_authenticated/_orders/components/refund-order-dialog.tsx:87
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:178
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:191
 msgid "Order lines"
 msgstr "Řádky objednávky"
 
@@ -4326,7 +4358,7 @@ msgid "Customer information updated"
 msgstr "Informace o zákazníkovi aktualizovány"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:358
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:356
 msgid "Failed to delete draft order: {0}"
 msgstr "Nepodařilo se smazat koncept objednávky: {0}"
 
@@ -4473,7 +4505,7 @@ msgstr "NEBO"
 msgid "Manage tags"
 msgstr "Spravovat štítky"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:317
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:315
 msgid "Coupon code removed from order"
 msgstr "Kód kupónu odebrán z objednávky"
 
@@ -4501,11 +4533,11 @@ msgid "Loading selected items..."
 msgstr ""
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:250
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:248
 msgid "Failed to set billing address for order: {0}"
 msgstr "Nepodařilo se nastavit fakturační adresu pro objednávku: {0}"
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:271
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:285
 msgid "No shipping address"
 msgstr "Žádná doručovací adresa"
 
@@ -4559,7 +4591,7 @@ msgstr "Podmínky kontroly způsobilosti tohoto způsobu dopravy nejsou splněny
 msgid "Add coupon code"
 msgstr "Přidat kód kupónu"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:301
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:299
 msgid "Coupon code set for order"
 msgstr "Kód kupónu nastaven pro objednávku"
 
@@ -4617,7 +4649,7 @@ msgstr "Jiné"
 msgid "refundReason.WrongItem"
 msgstr "Špatná položka"
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:201
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:214
 msgid "Summary of modifications"
 msgstr "Souhrn úprav"
 
@@ -4655,7 +4687,7 @@ msgstr "Nepodařilo se aktualizovat skupinu zákazníků"
 msgid "Payment metadata"
 msgstr "Metadata platby"
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:173
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:186
 msgid "Cancel modification"
 msgstr "Zrušit úpravu"
 
@@ -4677,7 +4709,7 @@ msgid "Additional payment required"
 msgstr "Vyžadována dodatečná platba"
 
 #: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:96
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:63
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:64
 msgid "Failed to update order"
 msgstr "Nepodařilo se aktualizovat objednávku"
 
@@ -4698,7 +4730,7 @@ msgid "Customer group members for {customerGroupName}"
 msgstr "Členové skupiny zákazníků {customerGroupName}"
 
 #. placeholder {0}: e instanceof Error ? e.message : String(e)
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:217
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:214
 msgid "Failed to set address for order: {0}"
 msgstr ""
 
@@ -4765,6 +4797,10 @@ msgstr "Upravit členy"
 msgid "Stock on hand"
 msgstr "Sklad na skladě"
 
+#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:93
+msgid "New address"
+msgstr ""
+
 #: src/lib/components/data-table/data-table-filter-dialog.tsx:55
 msgid "Filter by {columnId}"
 msgstr "Filtrovat podle {columnId}"
@@ -4781,7 +4817,7 @@ msgstr "Upozornění"
 msgid "Option Values"
 msgstr "Hodnoty voleb"
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:222
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:235
 msgid "Preview changes"
 msgstr "Náhled změn"
 
@@ -4968,7 +5004,7 @@ msgstr "Systém"
 msgid "Variant name"
 msgstr "Název varianty"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:579
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:597
 msgid "Remove"
 msgstr "Odebrat"
 
@@ -5029,7 +5065,7 @@ msgid "The page will continue with the default query."
 msgstr "Stránka bude pokračovat s výchozím dotazem."
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:175
-#: src/lib/components/shared/customer-address-form.tsx:121
+#: src/lib/components/shared/customer-address-form.tsx:130
 msgid "Street Address"
 msgstr "Ulice"
 
@@ -5290,6 +5326,7 @@ msgstr "Nepodařilo se zpracovat vrácení"
 #: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:115
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:176
 #: src/app/routes/_authenticated/_profile/profile.tsx:102
+#: src/lib/components/shared/customer-selector.tsx:170
 msgid "First name"
 msgstr "Jméno"
 
@@ -5391,7 +5428,7 @@ msgid "Option Groups"
 msgstr "Skupiny voleb"
 
 #: src/app/routes/_authenticated/_orders/components/add-surcharge-form.tsx:133
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:194
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:207
 msgid "Add surcharge"
 msgstr "Přidat příplatek"
 
@@ -5491,7 +5528,7 @@ msgstr "Globální jazyky"
 msgid "New administrator"
 msgstr "Nový správce"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:395
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:393
 msgid "Delete draft"
 msgstr "Smazat koncept"
 
@@ -5613,7 +5650,7 @@ msgstr "Zobrazit proces objednávky"
 msgid "Failed to duplicate view"
 msgstr "Nepodařilo se duplikovat pohled"
 
-#: src/lib/components/shared/customer-address-form.tsx:223
+#: src/lib/components/shared/customer-address-form.tsx:241
 msgid "Use as the default shipping address"
 msgstr "Použít jako výchozí doručovací adresu"
 
@@ -5803,7 +5840,7 @@ msgid "Add option value to {groupName}"
 msgstr "Přidat hodnotu volby do {groupName}"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:261
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:259
 msgid "Failed to unset shipping address for order: {0}"
 msgstr "Nepodařilo se odebrat doručovací adresu z objednávky: {0}"
 
@@ -5944,7 +5981,7 @@ msgstr "Přidat platbu k objednávce"
 #: src/lib/components/data-input/relation-selector.tsx:427
 #: src/lib/components/shared/country-selector.tsx:86
 #: src/lib/components/shared/customer-group-selector.tsx:56
-#: src/lib/components/shared/customer-selector.tsx:88
+#: src/lib/components/shared/customer-selector.tsx:119
 #: src/lib/components/shared/facet-value-selector.tsx:159
 msgid "Loading..."
 msgstr "Načítání..."
@@ -5953,7 +5990,7 @@ msgstr "Načítání..."
 msgid "The token is used to specify the channel when making API requests."
 msgstr "Token se používá k určení kanálu při provádění API požadavků."
 
-#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:67
+#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:104
 msgid "No addresses found"
 msgstr "Nenalezeny žádné adresy"
 
@@ -6035,6 +6072,7 @@ msgid "Order process"
 msgstr "Proces objednávky"
 
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:194
+#: src/lib/components/shared/customer-selector.tsx:188
 msgid "Phone number"
 msgstr "Telefonní číslo"
 

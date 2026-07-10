@@ -14,7 +14,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:159
-#: src/lib/components/shared/customer-address-form.tsx:103
+#: src/lib/components/shared/customer-address-form.tsx:110
 msgid "Full Name"
 msgstr "نام کامل"
 
@@ -39,6 +39,10 @@ msgstr "مجوزهای انتخاب شده به این کانال‌ها اعم�
 msgid "Product options"
 msgstr "گزینه‌های محصول"
 
+#: src/lib/components/shared/customer-selector.tsx:266
+msgid "Select an existing customer or create a new one"
+msgstr ""
+
 #: src/app/routes/_authenticated/_tax-rates/tax-rates.tsx:108
 msgid "New Tax Rate"
 msgstr "نرخ مالیات جدید"
@@ -52,7 +56,7 @@ msgstr "تخصیص یک گروه گزینه موجود یا ایجاد گروه 
 msgid "New role"
 msgstr "نقش جدید"
 
-#: src/lib/components/shared/customer-address-form.tsx:131
+#: src/lib/components/shared/customer-address-form.tsx:140
 msgid "Apartment, suite, etc."
 msgstr "آپارتمان، سوئیت و غیره"
 
@@ -203,7 +207,7 @@ msgstr "وقتی این فعال باشد، قیمت‌های وارد شده د
 #~ msgid "Create variants for your product"
 #~ msgstr "انواع را برای محصول خود ایجاد کنید"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:331
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:329
 msgid "Draft order completed"
 msgstr "سفارش پیش‌نویس تکمیل شد"
 
@@ -334,6 +338,7 @@ msgstr "حداقل ۲ حرف برای جستجو تایپ کنید..."
 #: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:121
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:182
 #: src/app/routes/_authenticated/_profile/profile.tsx:108
+#: src/lib/components/shared/customer-selector.tsx:176
 msgid "Last name"
 msgstr "نام خانوادگی"
 
@@ -502,8 +507,12 @@ msgstr "گزینه محصول با موفقیت ایجاد شد"
 msgid "Parent product"
 msgstr "محصول والد"
 
+#: src/lib/components/shared/customer-selector.tsx:277
+msgid "Create new customer"
+msgstr ""
+
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:196
-#: src/lib/components/shared/customer-address-form.tsx:141
+#: src/lib/components/shared/customer-address-form.tsx:150
 msgid "City"
 msgstr "شهر"
 
@@ -535,7 +544,7 @@ msgid "Order Count"
 msgstr "تعداد سفارش"
 
 #: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:92
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:59
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:60
 msgid "Successfully updated order"
 msgstr "سفارش با موفقیت به‌روزرسانی شد"
 
@@ -551,7 +560,7 @@ msgstr "مدیریت نماهای ذخیره شده عمومی که برای ه�
 msgid "Search payment methods..."
 msgstr "جستجوی روش‌های پرداخت..."
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:257
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:255
 msgid "Shipping address unset for order"
 msgstr "آدرس حمل و نقل برای سفارش لغو شد"
 
@@ -675,7 +684,7 @@ msgstr "لطفا برای اجرای آزمون محصولات اضافه کنی
 msgid "Toggle header row"
 msgstr "تغییر وضعیت سطر سرفصل"
 
-#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:52
+#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:80
 msgid "Select address"
 msgstr "انتخاب آدرس"
 
@@ -697,7 +706,7 @@ msgid "Metadata"
 msgstr "فراداده"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:291
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:289
 msgid "Failed to set shipping method for order: {0}"
 msgstr ""
 
@@ -727,6 +736,10 @@ msgstr "تاریخ کوتاه"
 msgid "Available currencies"
 msgstr "ارزهای موجود"
 
+#: src/lib/components/shared/customer-selector.tsx:113
+msgid "Search customers..."
+msgstr ""
+
 #. placeholder {0}: selectedIds.size
 #: src/lib/components/data-input/product-multi-selector-input.tsx:473
 msgid "Select {0} Items"
@@ -752,7 +765,7 @@ msgstr "تایید پیمایش"
 msgid "Link target"
 msgstr "هدف پیوند"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:405
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:403
 msgid "Complete draft"
 msgstr "تکمیل پیش‌نویس"
 
@@ -803,7 +816,7 @@ msgstr "شناسه تراکنش را برای این تسویه بازپرداخ
 msgid "Your API Key"
 msgstr "کلید API شما"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:389
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:387
 msgid "Are you sure you want to delete this draft order?"
 msgstr "آیا مطمئن هستید که می‌خواهید این سفارش پیش‌نویس را حذف کنید؟"
 
@@ -832,7 +845,7 @@ msgid "(max: {0})"
 msgstr "(حداکثر: {0})"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:165
-#: src/lib/components/shared/customer-address-form.tsx:111
+#: src/lib/components/shared/customer-address-form.tsx:120
 msgid "Company"
 msgstr "شرکت"
 
@@ -873,7 +886,7 @@ msgid "Confirm"
 msgstr "تایید"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:343
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:341
 msgid "Failed to complete draft order: {0}"
 msgstr ""
 
@@ -890,8 +903,8 @@ msgid "Failed to create product"
 msgstr "ایجاد محصول ناموفق بود"
 
 #: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:276
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:233
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:497
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:246
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:495
 #: src/lib/components/shared/role-code-label.tsx:8
 msgid "Customer"
 msgstr "مشتری"
@@ -901,7 +914,7 @@ msgstr "مشتری"
 msgid "Error loading order history: {0}"
 msgstr "خطا در بارگذاری تاریخچه سفارش: {0}"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:235
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:233
 msgid "Shipping address set for order"
 msgstr "آدرس حمل و نقل برای سفارش تنظیم شد"
 
@@ -948,7 +961,7 @@ msgstr "اینها مقادیر ویژگی برای ویژگی <0>{facetName}</0
 msgid "Successfully added payment to order"
 msgstr "پرداخت با موفقیت به سفارش اضافه شد"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:246
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:244
 msgid "Billing address set for order"
 msgstr "آدرس صورتحساب برای سفارش تنظیم شد"
 
@@ -1026,7 +1039,7 @@ msgstr "تخصیص داده شده"
 #~ msgstr "افزودن گروه گزینه دیگر"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:310
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:308
 msgid "Failed to set coupon code for order: {0}"
 msgstr ""
 
@@ -1051,7 +1064,7 @@ msgstr "مجموعه با موفقیت ایجاد شد"
 msgid "Price"
 msgstr "قیمت"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:383
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:381
 #: src/app/routes/_authenticated/_orders/orders.tsx:115
 msgid "Draft order"
 msgstr "سفارش پیش‌نویس"
@@ -1098,7 +1111,7 @@ msgstr "وقتی فعال باشد، تبلیغات در فروشگاه موجو
 msgid "When tracked, product variant stock levels will be automatically adjusted when sold. This setting can be overridden by individual product variants."
 msgstr "وقتی دنبال می‌شود، سطوح موجودی نوع محصول هنگام فروش به طور خودکار تنظیم می‌شود. این تنظیم می‌تواند توسط انواع محصول منفرد لغو شود."
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:282
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:280
 msgid "Shipping method set for order"
 msgstr "روش حمل و نقل برای سفارش تنظیم شد"
 
@@ -1140,11 +1153,12 @@ msgid "Assets"
 msgstr "فایل‌ها"
 
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:188
+#: src/lib/components/shared/customer-selector.tsx:182
 msgid "Email address"
 msgstr "آدرس ایمیل"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:321
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:319
 msgid "Failed to remove coupon code from order: {0}"
 msgstr ""
 
@@ -1255,7 +1269,7 @@ msgstr "روش‌های پرداخت"
 msgid "Stock"
 msgstr "موجودی"
 
-#: src/lib/components/shared/customer-selector.tsx:88
+#: src/lib/components/shared/customer-selector.tsx:119
 msgid "No customers found"
 msgstr "هیچ مشتری یافت نشد"
 
@@ -1339,7 +1353,7 @@ msgid "No variants match the current filter."
 msgstr "هیچ گونه‌ای با فیلتر فعلی مطابقت ندارد."
 
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:203
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:245
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:258
 msgid "Addresses"
 msgstr "آدرس‌ها"
 
@@ -1369,7 +1383,8 @@ msgstr "ایجاد گروه گزینه ناموفق بود"
 msgid "True"
 msgstr "درست"
 
-#: src/lib/components/shared/customer-selector.tsx:77
+#: src/lib/components/shared/customer-selector.tsx:222
+#: src/lib/components/shared/customer-selector.tsx:258
 msgid "Select customer"
 msgstr "انتخاب مشتری"
 
@@ -1385,7 +1400,7 @@ msgstr "سفارش منتقل شد"
 msgid "is before"
 msgstr "قبل از است"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:388
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:386
 msgid "Delete draft order"
 msgstr "حذف سفارش پیش‌نویس"
 
@@ -1438,7 +1453,7 @@ msgid "before"
 msgstr "قبل از"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:228
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:226
 msgid "Failed to set customer for order: {0}"
 msgstr ""
 
@@ -1463,7 +1478,7 @@ msgstr "آخرین سفارش‌ها"
 msgid "+ {leftOver} more"
 msgstr "+ {leftOver} بیشتر"
 
-#: src/lib/components/shared/customer-address-form.tsx:241
+#: src/lib/components/shared/customer-address-form.tsx:259
 msgid "Use as the default billing address"
 msgstr "استفاده به عنوان آدرس صورتحساب پیش‌فرض"
 
@@ -1563,7 +1578,7 @@ msgstr "آدرس با موفقیت به‌روزرسانی شد"
 msgid "Created"
 msgstr "ایجاد شد"
 
-#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:63
+#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:100
 msgid "Loading addresses..."
 msgstr "در حال بارگذاری آدرس‌ها..."
 
@@ -1573,7 +1588,7 @@ msgid "Select a target collection to move {0} to."
 msgstr "یک مجموعه هدف برای جابجایی {0} انتخاب کنید."
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:272
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:270
 msgid "Failed to unset billing address for order: {0}"
 msgstr ""
 
@@ -1618,7 +1633,7 @@ msgstr "رفتن به صفحه آخر"
 #: src/lib/components/shared/asset/asset-focal-point-editor.tsx:88
 #: src/lib/components/shared/assign-to-channel-dialog.tsx:126
 #: src/lib/components/shared/confirmation-dialog.tsx:42
-#: src/lib/components/shared/customer-address-form.tsx:253
+#: src/lib/components/shared/customer-address-form.tsx:272
 #: src/lib/components/shared/navigation-confirmation.tsx:55
 #: src/lib/components/shared/rich-text-editor/image-dialog.tsx:208
 #: src/lib/components/shared/rich-text-editor/link-dialog.tsx:146
@@ -1640,7 +1655,7 @@ msgid "Refund from this method"
 msgstr "بازپرداخت از این روش"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:208
-#: src/lib/components/shared/customer-address-form.tsx:163
+#: src/lib/components/shared/customer-address-form.tsx:174
 msgid "Postal Code"
 msgstr "کد پستی"
 
@@ -1661,7 +1676,7 @@ msgstr "دسته‌بندی مالیاتی جدید"
 msgid "Partial refund completed"
 msgstr "بازپرداخت جزئی تکمیل شد"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:492
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:490
 msgid "Set custom fields"
 msgstr "تنظیم فیلدهای سفارشی"
 
@@ -1692,8 +1707,8 @@ msgid "Reason:"
 msgstr "دلیل:"
 
 #: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:291
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:248
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:510
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:261
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:516
 msgid "Shipping address"
 msgstr "آدرس ارسال"
 
@@ -1715,6 +1730,10 @@ msgstr "دسته‌بندی‌های مالیاتی"
 #: src/app/routes/_authenticated/_collections/collections_.$id.tsx:158
 msgid "Private collections are not visible in the shop"
 msgstr "مجموعه‌های خصوصی در فروشگاه قابل مشاهده نیستند"
+
+#: src/lib/components/shared/customer-selector.tsx:194
+msgid "Create customer"
+msgstr ""
 
 #: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:262
 #: src/app/routes/_authenticated/_products/products_.$id.tsx:229
@@ -1743,7 +1762,7 @@ msgstr "غیرفعال"
 msgid "New promotion"
 msgstr "تبلیغات جدید"
 
-#: src/lib/components/shared/customer-address-form.tsx:220
+#: src/lib/components/shared/customer-address-form.tsx:238
 msgid "Default Shipping Address"
 msgstr "آدرس ارسال پیش‌فرض"
 
@@ -1844,8 +1863,8 @@ msgstr "پروفایل با موفقیت به‌روزرسانی شد"
 msgid "Payment method"
 msgstr "روش پرداخت"
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:263
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:292
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:277
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:307
 #: src/lib/components/shared/history-timeline/history-note-entry.tsx:46
 msgid "Edit"
 msgstr "ویرایش"
@@ -1867,7 +1886,7 @@ msgstr "یادداشت اضافه شد"
 msgid "Select quantities to fulfill and configure the fulfillment handler"
 msgstr "تعداد را برای تحویل انتخاب کنید و مدیریت تحویل را پیکربندی کنید"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:268
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:266
 msgid "Billing address unset for order"
 msgstr "آدرس صورتحساب از سفارش حذف شد"
 
@@ -2386,7 +2405,7 @@ msgid "Registered"
 msgstr "ثبت‌نام شده"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:239
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:237
 msgid "Failed to set shipping address for order: {0}"
 msgstr ""
 
@@ -2462,7 +2481,7 @@ msgstr "{0} انتخاب شده"
 msgid "Search option groups..."
 msgstr "جستجوی گروه‌های گزینه..."
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:168
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:181
 msgid "Modify order"
 msgstr "تغییر سفارش"
 
@@ -2620,6 +2639,10 @@ msgstr "نمای \"{viewName}\" اعمال شد"
 msgid "Successfully removed {successCount} facets from channel"
 msgstr "{successCount} ویژگی با موفقیت از کانال حذف شد"
 
+#: src/lib/components/shared/customer-selector.tsx:263
+msgid "Set customer"
+msgstr ""
+
 #: src/app/routes/_authenticated/_products/products.tsx:117
 msgid "New Product"
 msgstr "محصول جدید"
@@ -2650,8 +2673,8 @@ msgid "This will remove all option groups from this product and return to the va
 msgstr "این عمل تمام گروه‌های گزینه را از این محصول حذف کرده و به انتخاب تنظیم گونه بازمی‌گردد."
 
 #: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:299
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:277
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:532
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:291
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:544
 msgid "Billing address"
 msgstr "آدرس صورتحساب"
 
@@ -2727,7 +2750,7 @@ msgid "Amount"
 msgstr "مقدار"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:242
-#: src/lib/components/shared/customer-address-form.tsx:201
+#: src/lib/components/shared/customer-address-form.tsx:218
 msgid "Phone Number"
 msgstr "شماره تلفن"
 
@@ -2866,12 +2889,12 @@ msgstr "نقطه کانونی به‌روزرسانی شد"
 msgid "Option values"
 msgstr "مقادیر گزینه"
 
-#: src/lib/components/shared/customer-address-form.tsx:238
+#: src/lib/components/shared/customer-address-form.tsx:256
 msgid "Default Billing Address"
 msgstr "آدرس صورتحساب پیش‌فرض"
 
 #: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:284
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:241
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:254
 msgid "No customer"
 msgstr "مشتری وجود ندارد"
 
@@ -3115,7 +3138,7 @@ msgstr "به‌روزرسانی نقطه کانونی ناموفق بود"
 msgid "Successfully updated zone"
 msgstr "منطقه با موفقیت به‌روزرسانی شد"
 
-#: src/lib/components/shared/customer-address-form.tsx:149
+#: src/lib/components/shared/customer-address-form.tsx:160
 msgid "State/Province"
 msgstr "ایالت/استان"
 
@@ -3137,7 +3160,7 @@ msgstr "تنظیم معیارهای فیلتر برای ستون {columnId}"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:217
 #: src/app/routes/_authenticated/_zones/components/zone-countries-table.tsx:53
-#: src/lib/components/shared/customer-address-form.tsx:173
+#: src/lib/components/shared/customer-address-form.tsx:184
 msgid "Country"
 msgstr "کشور"
 
@@ -3349,7 +3372,7 @@ msgstr "پرداخت تایید شد"
 msgid "Successfully updated role"
 msgstr "نقش با موفقیت به‌روزرسانی شد"
 
-#: src/lib/components/shared/customer-address-form.tsx:184
+#: src/lib/components/shared/customer-address-form.tsx:201
 msgid "Select a country"
 msgstr "یک کشور انتخاب کنید"
 
@@ -3364,8 +3387,8 @@ msgid "Shipping Methods"
 msgstr "روش‌های ارسال"
 
 #: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:58
-msgid "Select an address"
-msgstr "یک آدرس انتخاب کنید"
+#~ msgid "Select an address"
+#~ msgstr "یک آدرس انتخاب کنید"
 
 #: src/app/routes/_authenticated/_system/settings-store.tsx:326
 msgid "Yes"
@@ -3421,6 +3444,10 @@ msgstr "مساوی نیست با"
 #: src/app/routes/_authenticated/_system/healthchecks.tsx:47
 #~ msgid "Refresh"
 #~ msgstr "تازه‌سازی"
+
+#: src/lib/components/shared/customer-selector.tsx:273
+msgid "Existing customer"
+msgstr ""
 
 #: src/app/routes/_authenticated/_products/components/create-product-options-dialog.tsx:269
 #~ msgid "e.g. Size"
@@ -3539,7 +3566,7 @@ msgstr "افزودن سطر بعد از"
 msgid "Tax total"
 msgstr "مجموع مالیات"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:414
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:412
 msgid "Draft order status"
 msgstr "وضعیت پیش‌نویس سفارش"
 
@@ -3560,7 +3587,11 @@ msgstr "مقدار ویژگی با موفقیت ایجاد شد"
 msgid "Marketing"
 msgstr "بازاریابی"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:351
+#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:89
+msgid "Existing address"
+msgstr ""
+
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:349
 msgid "Draft order deleted"
 msgstr "سفارش پیش‌نویس حذف شد"
 
@@ -3582,6 +3613,7 @@ msgid "Remove from channel"
 msgstr "حذف از کانال"
 
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:169
+#: src/lib/components/shared/customer-selector.tsx:164
 #: src/lib/components/shared/rich-text-editor/image-dialog.tsx:157
 msgid "Title"
 msgstr "عنوان"
@@ -3621,7 +3653,7 @@ msgstr "{0} نوع"
 msgid "Failed to settle payment"
 msgstr "تسویه پرداخت ناموفق بود"
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:300
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:315
 msgid "No billing address"
 msgstr "آدرس صورتحساب وجود ندارد"
 
@@ -3773,7 +3805,7 @@ msgstr "به‌روزرسانی محل انبار ناموفق بود"
 msgid "Order shipped"
 msgstr "سفارش ارسال شد"
 
-#: src/lib/components/shared/customer-address-form.tsx:257
+#: src/lib/components/shared/customer-address-form.tsx:276
 msgid "Save Address"
 msgstr "ذخیره آدرس"
 
@@ -4031,7 +4063,7 @@ msgstr "+ {0} بیشتر"
 msgid "Option Groups"
 msgstr "گروه‌های گزینه"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:471
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:469
 msgid "Custom fields"
 msgstr "فیلدهای سفارشی"
 
@@ -4255,7 +4287,7 @@ msgstr "{title}"
 
 #: src/app/routes/_authenticated/_orders/components/fulfill-order-dialog.tsx:244
 #: src/app/routes/_authenticated/_orders/components/refund-order-dialog.tsx:87
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:178
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:191
 msgid "Order lines"
 msgstr "خطوط سفارش"
 
@@ -4326,7 +4358,7 @@ msgid "Customer information updated"
 msgstr "اطلاعات مشتری به‌روزرسانی شد"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:358
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:356
 msgid "Failed to delete draft order: {0}"
 msgstr ""
 
@@ -4473,7 +4505,7 @@ msgstr "یا"
 msgid "Manage tags"
 msgstr "مدیریت برچسب‌ها"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:317
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:315
 msgid "Coupon code removed from order"
 msgstr "کد کوپن از سفارش حذف شد"
 
@@ -4501,11 +4533,11 @@ msgid "Loading selected items..."
 msgstr ""
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:250
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:248
 msgid "Failed to set billing address for order: {0}"
 msgstr ""
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:271
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:285
 msgid "No shipping address"
 msgstr "آدرس ارسال وجود ندارد"
 
@@ -4559,7 +4591,7 @@ msgstr "شرایط بررسی صلاحیت این روش ارسال برای س�
 msgid "Add coupon code"
 msgstr "افزودن کد کوپن"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:301
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:299
 msgid "Coupon code set for order"
 msgstr "کد کوپن برای سفارش تنظیم شد"
 
@@ -4617,7 +4649,7 @@ msgstr "سایر"
 msgid "refundReason.WrongItem"
 msgstr "کالای اشتباه"
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:201
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:214
 msgid "Summary of modifications"
 msgstr "خلاصه تغییرات"
 
@@ -4655,7 +4687,7 @@ msgstr "به‌روزرسانی گروه مشتری ناموفق بود"
 msgid "Payment metadata"
 msgstr "فراداده پرداخت"
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:173
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:186
 msgid "Cancel modification"
 msgstr "لغو تغییر"
 
@@ -4677,7 +4709,7 @@ msgid "Additional payment required"
 msgstr "پرداخت اضافی مورد نیاز است"
 
 #: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:96
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:63
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:64
 msgid "Failed to update order"
 msgstr "به‌روزرسانی سفارش ناموفق بود"
 
@@ -4698,7 +4730,7 @@ msgid "Customer group members for {customerGroupName}"
 msgstr "اعضای گروه مشتری {customerGroupName}"
 
 #. placeholder {0}: e instanceof Error ? e.message : String(e)
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:217
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:214
 msgid "Failed to set address for order: {0}"
 msgstr ""
 
@@ -4765,6 +4797,10 @@ msgstr "ویرایش اعضا"
 msgid "Stock on hand"
 msgstr "موجودی در دست"
 
+#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:93
+msgid "New address"
+msgstr ""
+
 #: src/lib/components/data-table/data-table-filter-dialog.tsx:55
 msgid "Filter by {columnId}"
 msgstr "فیلتر بر اساس {columnId}"
@@ -4781,7 +4817,7 @@ msgstr "هشدارها"
 msgid "Option Values"
 msgstr "مقادیر گزینه"
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:222
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:235
 msgid "Preview changes"
 msgstr "پیش‌نمایش تغییرات"
 
@@ -4968,7 +5004,7 @@ msgstr "سیستم"
 msgid "Variant name"
 msgstr "نام نوع"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:579
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:597
 msgid "Remove"
 msgstr "حذف"
 
@@ -5029,7 +5065,7 @@ msgid "The page will continue with the default query."
 msgstr "صفحه با پرس‌وجوی پیش‌فرض ادامه می‌یابد."
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:175
-#: src/lib/components/shared/customer-address-form.tsx:121
+#: src/lib/components/shared/customer-address-form.tsx:130
 msgid "Street Address"
 msgstr "آدرس خیابان"
 
@@ -5290,6 +5326,7 @@ msgstr "پردازش بازپرداخت ناموفق بود"
 #: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:115
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:176
 #: src/app/routes/_authenticated/_profile/profile.tsx:102
+#: src/lib/components/shared/customer-selector.tsx:170
 msgid "First name"
 msgstr "نام"
 
@@ -5391,7 +5428,7 @@ msgid "Option Groups"
 msgstr "گروه‌های گزینه"
 
 #: src/app/routes/_authenticated/_orders/components/add-surcharge-form.tsx:133
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:194
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:207
 msgid "Add surcharge"
 msgstr "افزودن هزینه اضافی"
 
@@ -5491,7 +5528,7 @@ msgstr "زبان‌های عمومی"
 msgid "New administrator"
 msgstr "مدیر جدید"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:395
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:393
 msgid "Delete draft"
 msgstr "حذف پیش‌نویس"
 
@@ -5613,7 +5650,7 @@ msgstr "مشاهده فرآیند سفارش"
 msgid "Failed to duplicate view"
 msgstr "تکثیر نما ناموفق بود"
 
-#: src/lib/components/shared/customer-address-form.tsx:223
+#: src/lib/components/shared/customer-address-form.tsx:241
 msgid "Use as the default shipping address"
 msgstr "استفاده به عنوان آدرس ارسال پیش‌فرض"
 
@@ -5803,7 +5840,7 @@ msgid "Add option value to {groupName}"
 msgstr "افزودن مقدار گزینه به {groupName}"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:261
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:259
 msgid "Failed to unset shipping address for order: {0}"
 msgstr ""
 
@@ -5944,7 +5981,7 @@ msgstr "افزودن پرداخت به سفارش"
 #: src/lib/components/data-input/relation-selector.tsx:427
 #: src/lib/components/shared/country-selector.tsx:86
 #: src/lib/components/shared/customer-group-selector.tsx:56
-#: src/lib/components/shared/customer-selector.tsx:88
+#: src/lib/components/shared/customer-selector.tsx:119
 #: src/lib/components/shared/facet-value-selector.tsx:159
 msgid "Loading..."
 msgstr "در حال بارگذاری..."
@@ -5953,7 +5990,7 @@ msgstr "در حال بارگذاری..."
 msgid "The token is used to specify the channel when making API requests."
 msgstr "توکن برای مشخص کردن کانال هنگام انجام درخواست‌های API استفاده می‌شود."
 
-#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:67
+#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:104
 msgid "No addresses found"
 msgstr "هیچ آدرسی یافت نشد"
 
@@ -6035,6 +6072,7 @@ msgid "Order process"
 msgstr "فرآیند سفارش"
 
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:194
+#: src/lib/components/shared/customer-selector.tsx:188
 msgid "Phone number"
 msgstr "شماره تلفن"
 
