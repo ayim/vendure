@@ -89,8 +89,16 @@ export function FormErrorSummary({ form }: Readonly<{ form: UseFormReturn<any> }
                 <ul className="list-disc pl-4">
                     {flatErrors.map(error => (
                         <li key={error.name}>
-                            <span className="font-medium">{humanizeFieldName(error.name)}</span>:{' '}
-                            {error.message ?? <Trans>This field is invalid</Trans>}
+                            {/* Focusing the field scrolls it back into view — the exact
+                                "offending field is scrolled out of view" case #4741 targets. */}
+                            <button
+                                type="button"
+                                className="font-medium underline underline-offset-2 hover:no-underline"
+                                onClick={() => form.setFocus(error.name)}
+                            >
+                                {humanizeFieldName(error.name)}
+                            </button>
+                            : {error.message ?? <Trans>This field is invalid</Trans>}
                         </li>
                     ))}
                 </ul>
