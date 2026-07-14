@@ -26,6 +26,22 @@ import { VendureConfig } from '../config/vendure-config';
 const MAX_STRING_LENGTH = 65535;
 
 /**
+ * @description
+ * Returns the names of all registered entities that support custom fields (i.e.
+ * implement `HasCustomFields`). An entity supports custom fields when it declares
+ * a `customFields` embedded property, so we detect them from the TypeORM metadata
+ * rather than a runtime-unavailable `implements` check. Used to auto-initialise
+ * `config.customFields[EntityName]` so plugins can extend any such entity without
+ * a defensive guard (OSS-408).
+ */
+export function getEntityNamesWithCustomFields(): string[] {
+    const names = getMetadataArgsStorage()
+        .embeddeds.filter(embedded => embedded.propertyName === 'customFields')
+        .map(embedded => (typeof embedded.target === 'string' ? embedded.target : embedded.target.name));
+    return Array.from(new Set(names));
+}
+
+/**
  * Dynamically add columns to the custom field entity based on the CustomFields config.
  */
 function registerCustomFieldsForEntity(
