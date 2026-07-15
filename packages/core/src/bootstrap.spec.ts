@@ -28,6 +28,17 @@ describe('runPluginConfigurations()', () => {
         expect(config.customFields.Customer).toEqual([]);
     });
 
+    // OSS-408: translation entities also declare a `customFields` embedded (for localized
+    // values), but must NOT be auto-initialised — a `config.customFields.<Entity>Translation`
+    // entry makes the GraphQL schema builder emit a duplicate `customFields` field on the
+    // `*TranslationInput` types ("... can only be defined once").
+    it('does not auto-initialise translation entities', async () => {
+        const config = makeConfig({});
+        await runPluginConfigurations(config);
+        expect(config.customFields.ProductTranslation).toBeUndefined();
+        expect(config.customFields.CollectionTranslation).toBeUndefined();
+    });
+
     it('does not overwrite an existing customFields entry', async () => {
         const existing: CustomFieldConfig[] = [{ name: 'foo', type: 'string' }];
         const config = makeConfig({ customFields: { Product: existing } });

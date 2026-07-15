@@ -33,11 +33,28 @@ const MAX_STRING_LENGTH = 65535;
  * rather than a runtime-unavailable `implements` check. Used to auto-initialise
  * `config.customFields[EntityName]` so plugins can extend any such entity without
  * a defensive guard (OSS-408).
+ *
+ * Translation entities are excluded: they carry their own `customFields` embedded
+ * (to hold localized field values) but are never valid `config.customFields` keys —
+ * localized custom fields are declared on the *base* entity. Auto-initialising an
+ * entry for a translation entity would make the GraphQL schema builder emit a
+ * duplicate `customFields` field on the `*TranslationInput` types (colliding with
+ * the one derived from the base entity's localized fields — "Field
+ * `CreateXTranslationInput.customFields` can only be defined once"). We detect
+ * translation entities as the target of a `translations` relation, the same signal
+ * `registerCustomEntityFields` uses to locate the translation type.
  */
 export function getEntityNamesWithCustomFields(): string[] {
-    const names = getMetadataArgsStorage()
-        .embeddeds.filter(embedded => embedded.propertyName === 'customFields')
-        .map(embedded => (typeof embedded.target === 'string' ? embedded.target : embedded.target.name));
+    const metadataArgsStorage = getMetadataArgsStorage();
+    const translationEntityNames = new Set(
+        metadataArgsStorage.relations
+            .filter(relation => relation.propertyName === 'translations')
+            .map(relation => (relation.type as () => Function)().name),
+    );
+    const names = metadataArgsStorage.embeddeds
+        .filter(embedded => embedded.propertyName === 'customFields')
+        .map(embedded => (typeof embedded.target === 'string' ? embedded.target : embedded.target.name))
+        .filter(name => !translationEntityNames.has(name));
     return Array.from(new Set(names));
 }
 
