@@ -58,9 +58,7 @@ export interface BullMQPluginOptions {
      * - The concurrency limit applies to the total jobs processed by that worker,
      *   not strictly per Vendure queue
      *
-     * For strict per-queue concurrency isolation, consider:
-     * - Creating separate BullMQ queues per Vendure queue (requires custom implementation)
-     * - Using [BullMQ Pro Groups](https://docs.bullmq.io/bullmq-pro/groups)
+     * For strict per-queue concurrency isolation, use `queueWorkerOptions` instead.
      *
      * @example
      * ```ts
@@ -77,6 +75,24 @@ export interface BullMQPluginOptions {
      * @default 3
      */
     concurrency?: number | ((queueName: string) => number);
+    /**
+     * @description
+     * When set, each Vendure queue gets its own BullMQ queue and worker, so you can set
+     * a different concurrency (and other worker options) per queue with strict isolation.
+     * Keys are Vendure queue names (e.g. `'send-email'`, `'update-collections'`).
+     * Queues not listed use the global `workerOptions` (and default concurrency).
+     *
+     * This takes precedence over `concurrency` when both are configured.
+     *
+     * @example
+     * ```ts
+     * queueWorkerOptions: {
+     *   'send-email': { concurrency: 10 },
+     *   'update-collections': { concurrency: 1 },
+     * }
+     * ```
+     */
+    queueWorkerOptions?: Record<string, Omit<WorkerOptions, 'connection'>>;
     /**
      * @description
      * When a job is added to the JobQueue using `JobQueue.add()`, the calling
