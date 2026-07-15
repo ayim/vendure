@@ -55,7 +55,11 @@ export interface GeneratedFormOptions<
      * The entity to use to generate the form.
      */
     entity: E | null | undefined;
-    customFieldConfig?: any[]; // Add custom field config for validation
+    // Custom field config used to build the validation schema. MUST be referentially
+    // stable across renders (e.g. from `useCustomFieldConfig`, which memoises it):
+    // it feeds the `schema`/`values` memos and the on-load validation effect below,
+    // so a fresh array each render causes an infinite validate -> re-render loop.
+    customFieldConfig?: any[];
     setValues: (
         entity: NonNullable<E>,
     ) => WithLooseCustomFields<
