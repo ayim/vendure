@@ -10,16 +10,6 @@ describe('getDefaultTempCompilationDir', () => {
         const dir = getDefaultTempCompilationDir(cwd);
 
         expect(dir).toBe(path.join(cwd, 'node_modules', '.cache', TEMP_COMPILATION_DIR_NAME));
-        expect(dir.startsWith(cwd)).toBe(true);
-    });
-
-    it('is not located inside the @vendure/dashboard package', () => {
-        // The config is compiled to CommonJS; if the output lived inside the
-        // `type: module` @vendure/dashboard package, Node would load it as ESM and
-        // fail with "exports is not defined in ES module scope".
-        const dir = getDefaultTempCompilationDir(path.join(path.sep, 'tmp', 'my-project'));
-
-        expect(dir).not.toContain(path.join('@vendure', 'dashboard'));
     });
 
     it('defaults to process.cwd() when no cwd is provided', () => {

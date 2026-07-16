@@ -8,11 +8,11 @@ import { PluginOption } from 'vite';
 
 import { PathAdapter } from './types.js';
 import { PackageScannerConfig } from './utils/compiler.js';
-import { getDefaultTempCompilationDir } from './utils/temp-compilation-dir.js';
 import {
     buildTanstackRouterPluginConfig,
     TanstackRouterPluginOptions,
 } from './utils/tanstack-router-config.js';
+import { getDefaultTempCompilationDir } from './utils/temp-compilation-dir.js';
 import { adminApiSchemaPlugin } from './vite-plugin-admin-api-schema.js';
 import { bundleEntryPlugin } from './vite-plugin-bundle-entry.js';
 import { configLoaderPlugin } from './vite-plugin-config-loader.js';
