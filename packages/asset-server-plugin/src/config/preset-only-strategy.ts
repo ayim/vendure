@@ -42,6 +42,14 @@ export interface PresetOnlyStrategyOptions {
      * @default false
      */
     allowFocalPoint?: boolean;
+    /**
+     * @description
+     * Whether to allow the background color to be specified in the URL.
+     *
+     * @default false
+     * @since 3.8.0
+     */
+    allowBackgroundColor?: boolean;
 }
 
 /**
@@ -107,6 +115,7 @@ export class PresetOnlyStrategy implements ImageTransformStrategy {
             fpx: this.options.allowFocalPoint ? input.fpx : undefined,
             fpy: this.options.allowFocalPoint ? input.fpy : undefined,
             preset: input.preset,
+            backgroundColor: this.options.allowBackgroundColor ? input.backgroundColor : undefined,
         };
     }
 }
