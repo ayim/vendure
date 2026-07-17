@@ -405,6 +405,50 @@ describe('Entity hydration', () => {
         expect(order!.lines[1].productVariant.product.facetValues[0].facet).toBeDefined();
     });
 
+    // https://github.com/vendurehq/vendure/issues/4537
+    // A relation can be loaded on some elements of an array relation but not others, which
+    // is what plugin code (e.g. an OrderInterceptor) commonly encounters. Hydration must
+    // populate every element, regardless of what was loaded beforehand.
+    it('hydrates a relation that is present on only some order lines', async () => {
+        // Fresh anonymous order so we're not appending to another test's active order.
+        await shopClient.asAnonymousUser();
+        // Two variants belonging to different products (T_1 = Laptop, T_5 = Curvy Monitor),
+        // so each line has its own ProductVariant and Product instance.
+        await shopClient.query(addItemToOrderDocument, {
+            productVariantId: 'T_1',
+            quantity: 1,
+        });
+        const { addItemToOrder } = await shopClient.query(addItemToOrderDocument, {
+            productVariantId: 'T_5',
+            quantity: 1,
+        });
+        orderResultGuard.assertSuccess(addItemToOrder);
+        expect(addItemToOrder.lines.length).toBe(2);
+
+        const internalOrderId = +addItemToOrder.id.replace(/^\D+/g, '');
+        const ctx = await server.app.get(RequestContextService).create({ apiType: 'admin' });
+        const order = await server.app
+            .get(OrderService)
+            .findOne(ctx, internalOrderId, ['lines.productVariant.product']);
+
+        // Model the unevenly-loaded tree: the first line has its product, the second does not.
+        delete (order!.lines[1].productVariant as any).product;
+
+        await server.app.get(EntityHydrator).hydrate(ctx, order!, {
+            relations: ['lines.productVariant.product'],
+        });
+
+        // Before the fix, only the first array element was inspected, so the relation was
+        // considered present for the whole array and nothing was fetched, leaving the second
+        // line's product undefined.
+        expect(order!.lines[0].productVariant.product).toBeDefined();
+        expect(order!.lines[1].productVariant.product).toBeDefined();
+        // Each line must end up with its own product (T_1 => Laptop, T_5 => Curvy Monitor),
+        // not a copy of the first line's product.
+        expect(order!.lines[0].productVariant.product.id).toBe(1);
+        expect(order!.lines[1].productVariant.product.id).toBe(2);
+    });
+
     // https://github.com/vendurehq/vendure/issues/2546
     it('Preserves ordering when merging arrays of relations', async () => {
         await shopClient.asUserWithCredentials('trevor_donnelly96@hotmail.com', 'test');

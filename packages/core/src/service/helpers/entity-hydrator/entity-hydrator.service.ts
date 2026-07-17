@@ -208,18 +208,43 @@ export class EntityHydrator {
         for (const relation of options.relations.slice().sort()) {
             if (typeof relation === 'string') {
                 const parts = relation.split('.');
-                let entity: Record<string, any> | undefined = target;
+                // The entities found at the current depth of the relation path. An array-valued
+                // relation can be loaded unevenly, e.g. `order.lines[0].productVariant` is present
+                // but `order.lines[1].productVariant` is not, so every entity at a given depth must
+                // be checked rather than just the first.
+                let entities: Array<Record<string, any>> = [target];
                 const path = [];
+                let isMissing = false;
                 for (const part of parts) {
                     path.push(part);
-                    // null = the relation has been fetched but was null in the database.
-                    // undefined = the relation has not been fetched.
-                    if (entity && entity[part] === null) {
-                        break;
+                    if (!isMissing) {
+                        const nextEntities: Array<Record<string, any>> = [];
+                        for (const entity of entities) {
+                            // null = the relation has been fetched but was null in the database.
+                            // undefined = the relation has not been fetched.
+                            if (!entity || entity[part] === null) {
+                                continue;
+                            }
+                            if (entity[part]) {
+                                const value = entity[part];
+                                if (Array.isArray(value)) {
+                                    if (value.length === 0 && path.length < parts.length) {
+                                        // An empty array leaves nothing to check further down the
+                                        // path, so treat the rest of the path as missing.
+                                        isMissing = true;
+                                    } else {
+                                        nextEntities.push(...value);
+                                    }
+                                } else {
+                                    nextEntities.push(value);
+                                }
+                            } else {
+                                isMissing = true;
+                            }
+                        }
+                        entities = nextEntities;
                     }
-                    if (entity && entity[part]) {
-                        entity = Array.isArray(entity[part]) ? entity[part][0] : entity[part];
-                    } else {
+                    if (isMissing) {
                         const allParts = path.reduce((result, p, i) => {
                             if (i === 0) {
                                 return [p];
@@ -228,7 +253,6 @@ export class EntityHydrator {
                             }
                         }, [] as string[]);
                         missingRelations.push(...allParts);
-                        entity = undefined;
                     }
                 }
             }
