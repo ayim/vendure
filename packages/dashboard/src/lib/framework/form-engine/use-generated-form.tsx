@@ -182,7 +182,6 @@ export function useGeneratedForm<
         // validated `values` — `schema` (custom field config) and the available
         // languages — so we re-validate if those settle after the entity loads,
         // otherwise hidden invalid custom fields/translations could stay hidden.
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [entity?.id, schema, availableLanguages]);
     let submitHandler = (event: FormEvent): any => {
         event.preventDefault();
