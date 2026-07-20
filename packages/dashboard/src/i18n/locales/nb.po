@@ -13,6 +13,10 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:267
+msgid "You do not have permission to create new options. Choose an existing option."
+msgstr ""
+
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:159
 #: src/lib/components/shared/customer-address-form.tsx:103
 msgid "Full Name"
@@ -27,18 +31,18 @@ msgstr "Velg varer"
 msgid "View changes"
 msgstr "Vis endringer"
 
-#: src/app/routes/_authenticated/_orders/components/fulfillment-details.tsx:124
+#: src/app/routes/_authenticated/_orders/components/fulfillment-details.tsx:139
 msgid "Tracking code"
 msgstr "Sporingskode"
 
-#: src/lib/components/data-table/data-table.tsx:701
+#: src/lib/components/data-table/data-table.tsx:772
 #: src/lib/components/data-table/use-generated-columns.tsx:226
 msgid "Select all rows"
-msgstr ""
+msgstr "Velg alle rader"
 
 #: src/lib/components/shared/rich-text-editor/responsive-toolbar.tsx:343
 msgid "Text style"
-msgstr ""
+msgstr "Tekststil"
 
 #: src/app/routes/_authenticated/_roles/roles_.$id.tsx:113
 msgid "The selected permissions will be applied to the these channels."
@@ -55,6 +59,10 @@ msgstr "Ny skattesats"
 #: src/app/routes/_authenticated/_products/components/add-option-group-dialog.tsx:151
 msgid "Assign an existing option group or create a new one"
 msgstr "Tilordne en eksisterende opsjonsgruppe eller opprett en ny"
+
+#: src/lib/components/login/reset-password-form.tsx:158
+msgid "New password"
+msgstr "Nytt passord"
 
 #: src/app/routes/_authenticated/_roles/roles_.$id.tsx:33
 #: src/app/routes/_authenticated/_roles/roles_.$id.tsx:77
@@ -154,7 +162,7 @@ msgstr "Slettet"
 #~ msgid "Remove from current channel"
 #~ msgstr "Fjern fra gjeldende kanal"
 
-#: src/app/routes/_authenticated/_assets/components/asset-bulk-actions.tsx:25
+#: src/app/routes/_authenticated/_assets/components/asset-bulk-actions.tsx:22
 msgid "Deleted {selectionLength} assets"
 msgstr "Slettet {selectionLength} ressurser"
 
@@ -166,25 +174,27 @@ msgstr "Skattesats oppdatert"
 msgid "Enter custom reason..."
 msgstr "Skriv inn egendefinert grunn..."
 
-#: src/lib/components/shared/asset/asset-gallery.tsx:744
+#: src/lib/components/shared/asset/asset-gallery.tsx:1100
 msgid "Type"
 msgstr "Type"
 
+#. placeholder {0}: asset.name
 #. placeholder {0}: entityName.toLowerCase()
 #. placeholder {0}: group.name
 #: src/app/routes/_authenticated/_products/components/product-option-select.tsx:57
 #: src/lib/components/data-input/default-relation-input.tsx:671
+#: src/lib/components/shared/asset/asset-gallery.tsx:976
 msgid "Select {0}"
 msgstr "Velg {0}"
 
 #. placeholder {0}: selectedItems.length
 #: src/lib/components/data-input/relation-selector.tsx:409
 msgid "Add more ({0} selected)"
-msgstr ""
+msgstr "Legg til flere ({0} valgt)"
 
 #: src/app/routes/_authenticated/_facets/facets.tsx:71
-msgid "View values"
-msgstr "Vis verdier"
+#~ msgid "View values"
+#~ msgstr "Vis verdier"
 
 #: src/lib/components/shared/rich-text-editor/table-edit-icons.tsx:214
 msgid "Delete row"
@@ -200,7 +210,7 @@ msgctxt "current channel"
 msgid "Current"
 msgstr "Gjeldende"
 
-#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:330
+#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:300
 msgid "No fulfillments"
 msgstr "Ingen oppfyllelser"
 
@@ -233,17 +243,17 @@ msgstr "Auto-oppdatering: {0}"
 msgid "Deleted {deleted} {entityName}"
 msgstr "Slettet {deleted} {entityName}"
 
-#: src/lib/components/data-table/data-table.tsx:590
+#: src/lib/components/data-table/data-table.tsx:660
 msgid "There are no items to display yet."
-msgstr ""
+msgstr "Det er ingen elementer å vise ennå."
 
 #: src/app/routes/_authenticated/_orders/components/order-table.tsx:187
 msgid "Order items"
-msgstr ""
+msgstr "Bestillingsvarer"
 
 #: src/lib/components/shared/asset/asset-properties.tsx:32
 msgid "File Size"
-msgstr ""
+msgstr "Filstørrelse"
 
 #: src/app/routes/_authenticated/_system/healthchecks.tsx:13
 #~ msgid "Healthchecks"
@@ -255,13 +265,18 @@ msgstr ""
 msgid "Sellers"
 msgstr "Selgere"
 
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:269
+#: src/app/routes/_authenticated/_option-groups/option-groups.tsx:40
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:520
 msgid "Options"
 msgstr "Alternativer"
 
+#: src/lib/framework/dashboard-widget/top-products-widget/index.tsx:114
+msgid "Loading top products…"
+msgstr "Laster topprodukter…"
+
 #: src/lib/components/shared/error-page.tsx:86
 msgid "Go to dashboard"
-msgstr ""
+msgstr "Gå til dashbordet"
 
 #: src/app/routes/_authenticated/_system/components/cancel-jobs-bulk-action.tsx:35
 msgid "{fulfilled, plural, one {Successfully cancelled {fulfilled} job} other {Successfully cancelled {fulfilled} jobs}}"
@@ -278,6 +293,10 @@ msgstr "Varenr.:"
 #: src/app/routes/_authenticated/_orders/components/add-manual-payment-dialog.tsx:121
 msgid "Add payment"
 msgstr "Legg til betaling"
+
+#: src/app/routes/_authenticated/_collections/collections.tsx:403
+msgid "Expand"
+msgstr "Utvid"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-single-shipping-method-sheet.tsx:40
 msgid "Test this shipping method by simulating an order to see if it's eligible and what the shipping cost would be."
@@ -316,7 +335,7 @@ msgstr "Velg roller"
 msgid "Successfully created role"
 msgstr "Rolle opprettet"
 
-#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:435
+#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:480
 msgid "Are you sure you want to delete this variant?"
 msgstr "Er du sikker på at du vil slette denne varianten?"
 
@@ -324,24 +343,38 @@ msgstr "Er du sikker på at du vil slette denne varianten?"
 #~ msgid "All resources are up and running"
 #~ msgstr "Alle ressurser er oppe og kjører"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:86
+#: src/lib/components/shared/asset/asset-gallery.tsx:1015
+#: src/lib/components/shared/asset/asset-gallery.tsx:1159
+msgid "Open"
+msgstr ""
+
+#. placeholder {0}: asset.name
+#: src/lib/components/shared/asset/asset-gallery.tsx:989
+msgid "Toggle selection for {0}"
+msgstr ""
+
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:87
 msgid "Failed to create administrator"
 msgstr "Kunne ikke opprette administrator"
 
-#: src/app/routes/_authenticated/_system/settings-store.tsx:338
+#: src/app/routes/_authenticated/_system/settings-store.tsx:402
 #: src/lib/components/shared/configurable-operation-arg-summary.tsx:71
 msgid "No"
 msgstr "Nei"
 
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:147
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:176
 msgid "Successfully updated product variant"
 msgstr "Produktvariant oppdatert"
+
+#: src/lib/components/shared/asset/asset-gallery.tsx:859
+msgid "Upload images, videos, or files to start building your asset library."
+msgstr ""
 
 #: src/app/common/delete-bulk-action.tsx:114
 msgid "Failed to delete {failed} {entityName}: {allErrors}"
 msgstr "Kunne ikke slette {failed} {entityName}: {allErrors}"
 
-#: src/app/routes/_authenticated/_products/products_.$id.tsx:164
+#: src/app/routes/_authenticated/_products/products_.$id.tsx:165
 msgid "Successfully updated product"
 msgstr "Produkt oppdatert"
 
@@ -353,9 +386,9 @@ msgstr "Kunne ikke oppdatere land"
 msgid "Type at least 2 characters to search..."
 msgstr "Skriv minst 2 tegn for å søke..."
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:121
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:122
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:182
-#: src/app/routes/_authenticated/_profile/profile.tsx:108
+#: src/app/routes/_authenticated/_profile/profile.tsx:109
 msgid "Last name"
 msgstr "Etternavn"
 
@@ -375,23 +408,36 @@ msgstr "Egendefinerte felt endret"
 msgid "Successfully created stock location"
 msgstr "Lagerlokasjon opprettet"
 
+#: src/app/routes/_authenticated/index.tsx:364
+msgid "No widgets to add"
+msgstr "Ingen widgeter å legge til"
+
 #: src/app/routes/_authenticated/_orders/components/order-modification-preview-dialog.tsx:109
 #: src/app/routes/_authenticated/_orders/hooks/use-refund-order.ts:303
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:291
 #: src/app/routes/_authenticated/_products/components/add-option-group-dialog.tsx:79
 #: src/app/routes/_authenticated/_products/components/add-option-group-dialog.tsx:121
 #: src/app/routes/_authenticated/_products/components/add-product-variant-dialog.tsx:166
-#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:185
+#: src/app/routes/_authenticated/_products/components/generate-missing-variants-dialog.tsx:155
+#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:91
 #: src/app/routes/_authenticated/_products/hooks/use-remove-option-group.ts:55
 #: src/app/routes/_authenticated/_products/hooks/use-remove-option-group.ts:73
-#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:105
-#: src/app/routes/_authenticated/_products/products_.$id.tsx:202
+#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:107
+#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:290
+#: src/app/routes/_authenticated/_products/products_.$id.tsx:203
+#: src/lib/components/shared/asset/asset-gallery.tsx:334
 #: src/lib/components/shared/asset/asset-preview.tsx:127
 msgid "Unknown error"
 msgstr "Ukjent feil"
 
 #: src/lib/components/shared/rich-text-editor/rich-text-editor.tsx:142
 msgid "Uploading image..."
-msgstr ""
+msgstr "Laster opp bilde..."
+
+#. placeholder {0}: fulfillment.lines.reduce((acc, line) => acc + line.quantity, 0)
+#: src/app/routes/_authenticated/_orders/components/fulfillment-details.tsx:149
+msgid "View fulfilled items ({0})"
+msgstr "Vis oppfylte varer ({0})"
 
 #: src/app/routes/_authenticated/_orders/hooks/use-refund-order.ts:200
 msgid "Refund total cannot be negative"
@@ -412,7 +458,7 @@ msgstr "Kunde opprettet"
 
 #: src/lib/components/data-table/data-table-views-tabs.tsx:108
 msgid "More"
-msgstr ""
+msgstr "Mer"
 
 #: src/lib/components/date-range-picker.tsx:55
 msgctxt "date-range"
@@ -433,7 +479,7 @@ msgstr "Utviklermodus"
 msgid "New Role"
 msgstr "Ny rolle"
 
-#: src/app/routes/_authenticated/_assets/components/asset-bulk-actions.tsx:28
+#: src/app/routes/_authenticated/_assets/components/asset-bulk-actions.tsx:25
 msgid "Failed to delete assets: {message}"
 msgstr "Kunne ikke slette ressurser: {message}"
 
@@ -445,8 +491,8 @@ msgstr "Returner til lager"
 msgid "Visibility"
 msgstr "Synlighet"
 
-#: src/app/routes/_authenticated/_products/products_.$id.tsx:273
 #: src/app/routes/_authenticated/_products/products_.$id.tsx:287
+#: src/app/routes/_authenticated/_products/products_.$id.tsx:301
 msgid "Product variants"
 msgstr "Produktvarianter"
 
@@ -461,9 +507,9 @@ msgstr "Ny kundegruppe"
 msgid "Create \"{0}\""
 msgstr "Opprett \"{0}\""
 
-#: src/lib/framework/dashboard-widget/latest-orders-widget/index.tsx:133
+#: src/lib/framework/dashboard-widget/latest-orders-widget/index.tsx:136
 msgid "Could not load orders"
-msgstr ""
+msgstr "Kunne ikke laste bestillinger"
 
 #: src/lib/components/data-table/views-sheet.tsx:238
 msgid "Rename"
@@ -494,7 +540,6 @@ msgid "Address deleted successfully"
 msgstr "Adresse slettet"
 
 #: src/app/routes/_authenticated/_orders/components/add-surcharge-form.tsx:109
-#: src/app/routes/_authenticated/_orders/components/order-tax-summary.tsx:17
 msgid "Tax rate"
 msgstr "Skattesats"
 
@@ -506,14 +551,18 @@ msgstr "Skattesats"
 msgid "Order draft isn't ready to be completed"
 msgstr "Ordreutkastet er ikke klart til å fullføres"
 
-#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:48
-#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:137
+#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:52
+#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:156
 msgid "New collection"
 msgstr "Ny samling"
 
-#: src/app/routes/_authenticated/index.tsx:184
+#: src/app/routes/_authenticated/index.tsx:307
 msgid "Insights"
 msgstr "Innsikt"
+
+#: src/lib/components/shared/asset/asset-gallery.tsx:333
+msgid "Failed to upload assets"
+msgstr ""
 
 #: src/app/routes/_authenticated/_system/scheduled-tasks.tsx:226
 msgid "Run"
@@ -536,26 +585,30 @@ msgid "Successfully created product option"
 msgstr "Produktalternativ opprettet"
 
 #: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:501
-msgid "Parent product"
-msgstr "Overordnet produkt"
+#~ msgid "Parent product"
+#~ msgstr "Overordnet produkt"
+
+#: src/lib/framework/dashboard-widget/low-stock-widget/index.tsx:78
+msgid "We couldn't load the stock levels"
+msgstr "Vi kunne ikke laste lagernivåene"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:196
 #: src/lib/components/shared/customer-address-form.tsx:141
 msgid "City"
 msgstr "By"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:37
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:38
 #: src/app/routes/_authenticated/_administrators/administrators.tsx:15
 #: src/app/routes/_authenticated/_administrators/administrators.tsx:23
 msgid "Administrators"
 msgstr "Administratorer"
 
 #: src/app/routes/_authenticated/_product-variants/components/variant-price-detail.tsx:86
-msgid "Gross price: <0/>"
-msgstr "Bruttopris: <0/>"
+#~ msgid "Gross price: <0/>"
+#~ msgstr "Bruttopris: <0/>"
 
 #: src/lib/components/data-table/data-table-pagination.tsx:82
-#: src/lib/components/data-table/data-table.tsx:706
+#: src/lib/components/data-table/data-table.tsx:777
 msgid "Go to next page"
 msgstr "Gå til neste side"
 
@@ -569,25 +622,33 @@ msgstr "Dette feltet er skrivebeskyttet"
 
 #: src/lib/components/shared/rich-text-editor/responsive-toolbar.tsx:219
 msgid "Code block"
-msgstr ""
+msgstr "Kodeblokk"
 
 #: src/app/routes/_authenticated/_products/components/product-options-table.tsx:108
 msgid "Search options..."
-msgstr ""
+msgstr "Søk i alternativer..."
 
-#: src/lib/framework/dashboard-widget/metrics-widget/index.tsx:33
-#: src/lib/framework/dashboard-widget/metrics-widget/index.tsx:81
+#: src/lib/framework/dashboard-widget/metrics-widget/index.tsx:39
+#: src/lib/framework/dashboard-widget/metrics-widget/index.tsx:85
 msgid "Order Count"
 msgstr "Antall bestillinger"
 
-#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:93
+#: src/app/routes/_authenticated/_orders/components/fulfillment-details.tsx:157
+msgid "Fulfilled items"
+msgstr "Oppfylte varer"
+
+#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:95
 #: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:59
 msgid "Successfully updated order"
 msgstr "Bestilling oppdatert"
 
-#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:203
+#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:222
 msgid "Inherit filters"
 msgstr "Arv filtre"
+
+#: src/lib/framework/dashboard-widget/top-products-widget/index.tsx:95
+msgid "Best sellers from the most recent {ORDER_SAMPLE_SIZE} orders in {currencyCode} for the selected period"
+msgstr "Bestselgere fra de siste {ORDER_SAMPLE_SIZE} bestillingene i {currencyCode} for den valgte perioden"
 
 #: src/lib/components/data-table/views-sheet.tsx:130
 msgid "Manage global saved views that are visible to all users"
@@ -602,7 +663,8 @@ msgstr "Søk betalingsmetoder..."
 msgid "Shipping address unset for order"
 msgstr "Leveringsadresse fjernet for bestilling"
 
-#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:432
+#: src/app/routes/_authenticated/_products/components/generate-missing-variants-dialog.tsx:258
+#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:284
 msgid "Create {enabledCount} variants"
 msgstr "Opprett {enabledCount} varianter"
 
@@ -621,7 +683,7 @@ msgstr "Feil ved lasting av kundehistorikk: {0}"
 msgid "Successfully removed {selectionLength} {entityType} from channel"
 msgstr "Fjernet {selectionLength} {entityType} fra kanal"
 
-#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:151
+#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:153
 msgid "Add option value"
 msgstr "Legg til opsjonsverdi"
 
@@ -653,7 +715,7 @@ msgstr "Legger til..."
 msgid "Move Collections"
 msgstr "Flytt samlinger"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:139
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:140
 #: src/app/routes/_authenticated/_administrators/administrators.tsx:57
 #: src/app/routes/_authenticated/_api-keys/api-keys_.$id.tsx:170
 #: src/app/routes/_authenticated/_roles/roles_.$id.tsx:32
@@ -662,7 +724,7 @@ msgstr "Flytt samlinger"
 msgid "Roles"
 msgstr "Roller"
 
-#: src/lib/components/shared/asset/asset-gallery.tsx:395
+#: src/lib/components/shared/asset/asset-gallery.tsx:568
 msgid "Grid view"
 msgstr "Rutenettvisning"
 
@@ -682,17 +744,21 @@ msgstr "Global visning konvertert til personlig visning"
 msgid "Fulfillment transitioned"
 msgstr "Oppfyllelse endret"
 
-#: src/app/routes/_authenticated/_assets/components/asset-bulk-actions.tsx:42
+#: src/app/routes/_authenticated/_assets/components/asset-bulk-actions.tsx:41
 msgid "Are you sure you want to delete {selectionLength} assets?"
 msgstr "Er du sikker på at du vil slette {selectionLength} ressurser?"
 
-#: src/lib/components/login/login-form.tsx:105
+#: src/lib/components/login/login-form.tsx:114
 msgid "Sign in"
 msgstr "Logg inn"
 
-#: src/lib/components/shared/asset/asset-gallery.tsx:398
+#: src/lib/components/shared/asset/asset-gallery.tsx:571
 msgid "List view"
 msgstr "Listevisning"
+
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:484
+msgid "When enabled, this variant is available in the shop"
+msgstr ""
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-order-builder.tsx:164
 msgid "Test Order"
@@ -711,8 +777,8 @@ msgid "Run Test"
 msgstr "Kjør test"
 
 #: src/app/routes/_authenticated/_product-variants/components/variant-price-detail.tsx:83
-msgid "Tax rate: {taxRate}%"
-msgstr "Skattesats: {taxRate}%"
+#~ msgid "Tax rate: {taxRate}%"
+#~ msgstr "Skattesats: {taxRate}%"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/shipping-method-test-result-wrapper.tsx:58
 msgid "Please add products and complete the shipping address to run the test."
@@ -721,6 +787,10 @@ msgstr "Vennligst legg til produkter og fullfør leveringsadressen for å kjøre
 #: src/lib/components/shared/rich-text-editor/table-edit-icons.tsx:206
 msgid "Toggle header row"
 msgstr "Veksle overskriftsrad"
+
+#: src/lib/hooks/use-widget-config.ts:44
+msgid "useWidgetConfig must be used within an Insights page widget"
+msgstr "useWidgetConfig må brukes innenfor en widget på Innsikt-siden"
 
 #: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:52
 msgid "Select address"
@@ -736,28 +806,28 @@ msgstr "Standard skattesone"
 
 #: src/lib/components/shared/rich-text-editor/responsive-toolbar.tsx:268
 msgid "Clear formatting"
-msgstr ""
+msgstr "Fjern formatering"
 
 #: src/app/routes/_authenticated/_orders/components/draft-order-status.tsx:36
 msgid "Order draft is ready to be completed"
 msgstr "Ordreutkastet er klart til å fullføres"
 
 #: src/app/routes/_authenticated/_api-keys/api-keys_.$id.tsx:201
-#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:243
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:279
 msgid "Metadata"
 msgstr "Metadata"
 
 #. placeholder {0}: error.message
 #: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:291
 msgid "Failed to set shipping method for order: {0}"
-msgstr ""
+msgstr "Kunne ikke angi fraktmetode for bestillingen: {0}"
 
 #: src/app/routes/_authenticated/_option-groups/components/option-group-products-block.tsx:49
 msgid "Filter..."
 msgstr "Filtrer..."
 
-#: src/app/routes/_authenticated/_facets/facets_.$facetId.values_.$id.tsx:40
-#: src/app/routes/_authenticated/_facets/facets_.$facetId.values_.$id.tsx:102
+#: src/app/routes/_authenticated/_facets/facets_.$facetId.values_.$id.tsx:41
+#: src/app/routes/_authenticated/_facets/facets_.$facetId.values_.$id.tsx:103
 msgid "New facet value"
 msgstr "Ny fasettverdi"
 
@@ -780,14 +850,14 @@ msgstr "Tilgjengelige valutaer"
 #: src/app/routes/_authenticated/_customer-groups/components/customer-group-members-table.tsx:110
 #: src/app/routes/_authenticated/_customers/customers.tsx:26
 msgid "Search customers..."
-msgstr ""
+msgstr "Søk etter kunder..."
 
 #. placeholder {0}: selectedIds.size
 #: src/lib/components/data-input/product-multi-selector-input.tsx:474
 msgid "Select {0} Items"
 msgstr "Velg {0} varer"
 
-#: src/lib/framework/dashboard-widget/latest-orders-widget/index.tsx:104
+#: src/lib/framework/dashboard-widget/latest-orders-widget/index.tsx:107
 msgid "Placed At"
 msgstr "Plassert"
 
@@ -801,7 +871,7 @@ msgstr "Dataene som har blitt sendt til jobben"
 
 #: src/lib/components/shared/copyable-text.tsx:72
 msgid "Copied"
-msgstr ""
+msgstr "Kopiert"
 
 #: src/lib/components/shared/navigation-confirmation.tsx:44
 msgid "Confirm navigation"
@@ -817,18 +887,17 @@ msgstr "Fullfør utkast"
 
 #: src/app/routes/_authenticated/_administrators/administrators.tsx:47
 #: src/app/routes/_authenticated/_api-keys/api-keys_.$id.tsx:165
-#: src/app/routes/_authenticated/_assets/assets_.$id.tsx:152
-#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:173
+#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:192
 #: src/app/routes/_authenticated/_countries/countries_.$id.tsx:104
 #: src/app/routes/_authenticated/_customer-groups/customer-groups_.$id.tsx:104
 #: src/app/routes/_authenticated/_customers/customers.tsx:73
-#: src/app/routes/_authenticated/_facets/facets_.$facetId.values_.$id.tsx:131
+#: src/app/routes/_authenticated/_facets/facets_.$facetId.values_.$id.tsx:121
 #: src/app/routes/_authenticated/_facets/facets_.$id.tsx:121
-#: src/app/routes/_authenticated/_option-groups/option-groups_.$groupId.options_.$id.tsx:202
+#: src/app/routes/_authenticated/_option-groups/option-groups_.$groupId.options_.$id.tsx:187
 #: src/app/routes/_authenticated/_option-groups/option-groups_.$id.tsx:173
 #: src/app/routes/_authenticated/_payment-methods/payment-methods_.$id.tsx:158
 #: src/app/routes/_authenticated/_products/components/add-product-variant-dialog.tsx:286
-#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:329
+#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:411
 #: src/app/routes/_authenticated/_promotions/promotions_.$id.tsx:165
 #: src/app/routes/_authenticated/_sellers/sellers_.$id.tsx:89
 #: src/app/routes/_authenticated/_shipping-methods/shipping-methods_.$id.tsx:148
@@ -836,7 +905,7 @@ msgstr "Fullfør utkast"
 #: src/app/routes/_authenticated/_tax-categories/tax-categories_.$id.tsx:106
 #: src/app/routes/_authenticated/_tax-rates/tax-rates_.$id.tsx:113
 #: src/app/routes/_authenticated/_zones/zones_.$id.tsx:93
-#: src/lib/components/shared/asset/asset-gallery.tsx:743
+#: src/lib/components/shared/asset/asset-gallery.tsx:1088
 msgid "Name"
 msgstr "Navn"
 
@@ -849,8 +918,8 @@ msgstr "Kunne ikke oppfylle bestilling"
 #: src/app/routes/_authenticated/_orders/components/edit-order-table.tsx:193
 #: src/app/routes/_authenticated/_orders/components/order-table-totals.tsx:88
 #: src/app/routes/_authenticated/_orders/components/order-table.tsx:106
-#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:226
-#: src/lib/framework/dashboard-widget/latest-orders-widget/index.tsx:117
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:262
+#: src/lib/framework/dashboard-widget/latest-orders-widget/index.tsx:120
 msgid "Total"
 msgstr "Totalt"
 
@@ -876,7 +945,7 @@ msgstr "Oppfyllelse opprettet"
 msgid "Found {0} eligible shipping method{1}"
 msgstr "Fant {0} kvalifiserte fraktmetode(r)"
 
-#: src/lib/components/shared/asset/asset-gallery.tsx:746
+#: src/lib/components/shared/asset/asset-gallery.tsx:1132
 #: src/lib/components/shared/asset/asset-properties.tsx:39
 msgid "Dimensions"
 msgstr "Dimensjoner"
@@ -899,9 +968,10 @@ msgstr "Firma"
 msgid "Add column after"
 msgstr "Legg til kolonne etter"
 
+#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:421
 #: src/app/routes/_authenticated/_promotions/promotions_.$id.tsx:241
 #: src/app/routes/_authenticated/_system/scheduled-tasks.tsx:209
-#: src/lib/components/data-table/data-table-bulk-actions.tsx:82
+#: src/lib/components/data-table/data-table-bulk-actions.tsx:97
 #: src/lib/components/data-table/use-generated-columns.tsx:262
 msgid "Actions"
 msgstr "Handlinger"
@@ -922,7 +992,7 @@ msgstr "Bestillingslinje fjernet"
 msgid "Content:"
 msgstr "Innhold:"
 
-#: src/app/routes/_authenticated/_system/settings-store.tsx:270
+#: src/app/routes/_authenticated/_system/settings-store.tsx:360
 msgid "Key"
 msgstr "Nøkkel"
 
@@ -934,9 +1004,9 @@ msgstr "Bekreft"
 #. placeholder {0}: error.message
 #: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:343
 msgid "Failed to complete draft order: {0}"
-msgstr ""
+msgstr "Kunne ikke fullføre bestillingsutkastet: {0}"
 
-#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:119
+#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:138
 msgid "Failed to create collection"
 msgstr "Kunne ikke opprette samling"
 
@@ -944,20 +1014,24 @@ msgstr "Kunne ikke opprette samling"
 msgid "Go to first page"
 msgstr "Gå til første side"
 
-#: src/app/routes/_authenticated/_products/products_.$id.tsx:172
+#: src/app/routes/_authenticated/_products/products_.$id.tsx:173
 msgid "Failed to create product"
 msgstr "Kunne ikke opprette produkt"
 
-#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:279
+#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:308
 #: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:233
 #: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:498
 #: src/lib/components/shared/role-code-label.tsx:8
 msgid "Customer"
 msgstr "Kunde"
 
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:223
+msgid "Metadata returned by the payment handler."
+msgstr "Metadata returnert av betalingsbehandleren."
+
 #: src/lib/components/shared/error-page.tsx:98
 msgid "Page not found"
-msgstr ""
+msgstr "Siden ble ikke funnet"
 
 #. placeholder {0}: error.message
 #: src/app/routes/_authenticated/_orders/components/order-history/order-history-container.tsx:46
@@ -968,12 +1042,12 @@ msgstr "Feil ved lasting av bestillingshistorikk: {0}"
 msgid "Shipping address set for order"
 msgstr "Leveringsadresse satt for bestilling"
 
-#: src/app/routes/_authenticated/_assets/assets_.$id.tsx:173
+#: src/app/routes/_authenticated/_assets/assets_.$id.tsx:218
 #: src/lib/components/shared/asset/asset-preview.tsx:153
 msgid "Focal Point"
 msgstr "Fokuspunkt"
 
-#: src/app/routes/_authenticated/_products/products_.$id.tsx:101
+#: src/app/routes/_authenticated/_products/products_.$id.tsx:102
 msgid "Single variant, no options"
 msgstr "Enkel variant, ingen opsjoner"
 
@@ -983,7 +1057,7 @@ msgstr "Velg neste tilstand for bestillingen"
 
 #: src/lib/components/shared/configurable-operation-arg-summary.tsx:200
 msgid "{count} selected"
-msgstr ""
+msgstr "{count} valgt"
 
 #: src/lib/components/layout/language-dialog.tsx:80
 msgid "Locale"
@@ -1002,6 +1076,10 @@ msgstr "Skriv inn transaksjons-ID"
 msgid "Refresh data"
 msgstr "Oppdater data"
 
+#: src/app/routes/_authenticated/index.tsx:337
+msgid "Add widget"
+msgstr "Legg til widget"
+
 #. placeholder {0}: entityIds.length
 #: src/app/routes/_authenticated/_products/components/assign-facet-values-dialog.tsx:163
 msgid "Add or remove facet values for {0} {entityType}"
@@ -1019,14 +1097,18 @@ msgstr "Betaling lagt til bestilling"
 msgid "Billing address set for order"
 msgstr "Fakturaadresse satt for bestilling"
 
+#: src/lib/framework/dashboard-widget/top-products-widget/index.tsx:106
+msgid "Revenue"
+msgstr "Omsetning"
+
 #: src/app/routes/_authenticated/_zones/zones_.$id.tsx:68
 msgid "Failed to update zone"
 msgstr "Kunne ikke oppdatere sone"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:133
-#: src/app/routes/_authenticated/_profile/profile.tsx:120
-#: src/app/routes/_authenticated/_profile/profile.tsx:137
-#: src/lib/components/login/login-form.tsx:93
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:134
+#: src/app/routes/_authenticated/_profile/profile.tsx:121
+#: src/app/routes/_authenticated/_profile/profile.tsx:138
+#: src/lib/components/login/login-form.tsx:94
 msgid "Password"
 msgstr "Passord"
 
@@ -1044,10 +1126,10 @@ msgstr "Planlagt oppgave vil bli utført"
 msgid "New stock location"
 msgstr "Ny lagerlokasjon"
 
-#: src/lib/components/data-table/data-table.tsx:702
+#: src/lib/components/data-table/data-table.tsx:773
 #: src/lib/components/data-table/use-generated-columns.tsx:238
 msgid "Select row"
-msgstr ""
+msgstr "Velg rad"
 
 #: src/app/routes/_authenticated/_roles/roles_.$id.tsx:129
 msgid "Permissions"
@@ -1059,7 +1141,7 @@ msgstr "Leveringsadresse endret"
 
 #: src/lib/components/data-table/data-table-column-header.tsx:33
 msgid "Sort by {display}"
-msgstr ""
+msgstr "Sorter etter {display}"
 
 #: src/app/routes/_authenticated/_option-groups/components/option-group-products-block.tsx:62
 msgid "No products found"
@@ -1069,7 +1151,7 @@ msgstr "Ingen produkter funnet"
 msgid "Add row before"
 msgstr "Legg til rad før"
 
-#: src/app/routes/_authenticated/_orders/components/fulfillment-details.tsx:95
+#: src/app/routes/_authenticated/_orders/components/fulfillment-details.tsx:102
 msgid "Transition to {suggestedState}"
 msgstr "Gå over til {suggestedState}"
 
@@ -1080,7 +1162,7 @@ msgstr "Denne måneden"
 
 #: src/lib/components/shared/rich-text-editor/responsive-toolbar.tsx:275
 msgid "Undo"
-msgstr ""
+msgstr "Angre"
 
 #: src/app/routes/_authenticated/_facets/facets_.$id.tsx:85
 msgid "Failed to create facet"
@@ -1091,13 +1173,13 @@ msgid "Failed to cancel order items"
 msgstr "Kunne ikke kansellere ordrevarer"
 
 #: src/app/routes/_authenticated/_orders/components/add-manual-payment-dialog.tsx:160
-#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:176
-#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:237
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:198
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:273
 #: src/app/routes/_authenticated/_orders/components/settle-refund-dialog.tsx:58
 msgid "Transaction ID"
 msgstr "Transaksjons-ID"
 
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:476
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:752
 msgid "Allocated"
 msgstr "Allokert"
 
@@ -1108,11 +1190,11 @@ msgstr "Allokert"
 #. placeholder {0}: error.message
 #: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:310
 msgid "Failed to set coupon code for order: {0}"
-msgstr ""
+msgstr "Kunne ikke angi kupongkode for bestillingen: {0}"
 
 #: src/lib/components/data-table/data-table-settings-menu.tsx:64
 msgid "Table settings"
-msgstr ""
+msgstr "Tabellinnstillinger"
 
 #: src/lib/components/layout/nav-user.tsx:102
 msgid "Explore Platform & Cloud"
@@ -1122,15 +1204,16 @@ msgstr "Utforsk Platform & Cloud"
 msgid "Every 5 seconds"
 msgstr "Hvert 5. sekund"
 
-#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:105
+#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:124
 msgid "Successfully created collection"
 msgstr "Samling opprettet"
 
 #: src/app/routes/_authenticated/_orders/components/add-surcharge-form.tsx:88
 #: src/app/routes/_authenticated/_orders/components/shipping-method-selector.tsx:49
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:324
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:597
 #: src/app/routes/_authenticated/_products/components/add-product-variant-dialog.tsx:298
-#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:290
+#: src/app/routes/_authenticated/_products/components/generate-missing-variants-dialog.tsx:191
+#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:196
 #: src/lib/components/layout/language-dialog.tsx:136
 msgid "Price"
 msgstr "Pris"
@@ -1140,8 +1223,12 @@ msgstr "Pris"
 msgid "Draft order"
 msgstr "Utkastbestilling"
 
-#: src/app/routes/_authenticated/_system/settings-store.tsx:291
-#: src/app/routes/_authenticated/_system/settings-store.tsx:325
+#: src/lib/components/login/forgot-password-form.tsx:108
+msgid "Enter your email address and we will send you a link to reset your password"
+msgstr "Skriv inn e-postadressen din, så sender vi deg en lenke for å tilbakestille passordet ditt"
+
+#: src/app/routes/_authenticated/_system/settings-store.tsx:362
+#: src/app/routes/_authenticated/_system/settings-store.tsx:389
 msgid "Scope"
 msgstr "Omfang"
 
@@ -1154,7 +1241,7 @@ msgid "Shipping method is eligible for this order"
 msgstr "Fraktmetode er kvalifisert for denne bestillingen"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:195
+#: src/lib/framework/defaults.ts:198
 msgid "Administrators"
 msgstr "Administratorer"
 
@@ -1188,20 +1275,21 @@ msgstr "Leveringsmetode satt for bestilling"
 
 #: src/lib/components/shared/rich-text-editor/link-bubble-menu.tsx:160
 msgid "Open in new tab"
-msgstr ""
+msgstr "Åpne i ny fane"
 
 #: src/app/routes/_authenticated/_promotions/promotions_.$id.tsx:112
 #: src/app/routes/_authenticated/_promotions/promotions_.$id.tsx:120
 msgid "Failed to update promotion"
 msgstr "Kunne ikke oppdatere kampanje"
 
-#: src/lib/components/shared/asset/asset-gallery.tsx:368
-#: src/lib/components/shared/asset/asset-gallery.tsx:380
+#: src/lib/components/shared/asset/asset-gallery.tsx:106
+#: src/lib/components/shared/asset/asset-gallery.tsx:526
+#: src/lib/components/shared/asset/asset-gallery.tsx:543
 msgid "Images"
 msgstr "Bilder"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:158
+#: src/lib/framework/defaults.ts:161
 msgid "API Keys"
 msgstr "API Keys"
 
@@ -1209,11 +1297,11 @@ msgstr "API Keys"
 msgid "Search {name}..."
 msgstr "Søk {name}..."
 
-#: src/app/routes/_authenticated/_assets/assets_.$id.tsx:110
+#: src/app/routes/_authenticated/_assets/assets_.$id.tsx:150
 msgid "Edit asset"
 msgstr "Rediger ressurs"
 
-#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:150
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:158
 msgid "Cancel payment"
 msgstr "Avbryt betaling"
 
@@ -1223,7 +1311,7 @@ msgid "Job Queue"
 msgstr "Jobbkø"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:66
+#: src/lib/framework/defaults.ts:69
 msgid "Assets"
 msgstr "Ressurser"
 
@@ -1234,21 +1322,20 @@ msgstr "E-postadresse"
 #. placeholder {0}: error.message
 #: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:321
 msgid "Failed to remove coupon code from order: {0}"
-msgstr ""
+msgstr "Kunne ikke fjerne kupongkoden fra bestillingen: {0}"
 
 #: src/lib/components/data-input/slug-input.tsx:266
 #: src/lib/components/data-input/slug-input.tsx:267
 msgid "Regenerate slug from source field"
 msgstr "Regenerer slug fra kildefelt"
 
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:387
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:403
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:398
 msgid "Inherit from global settings"
 msgstr "Arv fra globale innstillinger"
 
-#: src/app/routes/_authenticated/_facets/facets.tsx:79
+#: src/app/routes/_authenticated/_facets/facets.tsx:77
 msgid "Search facets..."
-msgstr ""
+msgstr "Søk etter fasetter..."
 
 #: src/lib/components/data-input/relation-selector.tsx:428
 #: src/lib/components/data-table/data-table-facet-value-faceted-filter.tsx:171
@@ -1270,16 +1357,16 @@ msgstr "Av"
 
 #: src/lib/components/shared/rich-text-editor/resizable-image.tsx:97
 msgid "Resize image from right"
-msgstr ""
+msgstr "Endre størrelse på bildet fra høyre"
 
 #: src/app/routes/_authenticated/_system/settings-store.tsx:37
-#: src/app/routes/_authenticated/_system/settings-store.tsx:314
+#: src/app/routes/_authenticated/_system/settings-store.tsx:377
 msgid "Settings Store"
 msgstr "Innstillingslager"
 
-#: src/app/routes/_authenticated/_product-variants/product-variants.tsx:86
+#: src/app/routes/_authenticated/_product-variants/product-variants.tsx:97
 msgid "Search product variants..."
-msgstr ""
+msgstr "Søk etter produktvarianter..."
 
 #: src/app/routes/_authenticated/_system/job-queue.tsx:254
 msgid "Queue"
@@ -1324,7 +1411,7 @@ msgid "No items selected"
 msgstr "Ingen varer valgt"
 
 #. placeholder {0}: selected.length
-#: src/lib/components/shared/asset/asset-gallery.tsx:469
+#: src/lib/components/shared/asset/asset-gallery.tsx:681
 msgid ", {0} selected"
 msgstr ", {0} valgt"
 
@@ -1332,7 +1419,8 @@ msgstr ", {0} valgt"
 msgid "No countries found"
 msgstr "Ingen land funnet"
 
-#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:181
+#: src/app/routes/_authenticated/_products/components/generate-missing-variants-dialog.tsx:151
+#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:87
 msgid "Successfully created variants"
 msgstr "Variantene ble opprettet"
 
@@ -1351,15 +1439,19 @@ msgstr "Tilleggsgebyr"
 msgid "Payment Methods"
 msgstr "Betalingsmetoder"
 
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:377
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:650
 msgid "Stock"
 msgstr "Lager"
+
+#: src/lib/framework/dashboard-widget/top-products-widget/index.tsx:153
+msgid "No sales for this period"
+msgstr "Ingen salg i denne perioden"
 
 #: src/lib/components/shared/customer-selector.tsx:92
 msgid "No customers found"
 msgstr "Ingen kunder funnet"
 
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:436
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:689
 msgid "Use global out-of-stock threshold"
 msgstr "Bruk global utsolgt-terskel"
 
@@ -1367,7 +1459,7 @@ msgstr "Bruk global utsolgt-terskel"
 #~ msgid "New product option group"
 #~ msgstr "Ny produktopsjonsgruppe"
 
-#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:57
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:65
 msgid "Payment state updated successfully"
 msgstr "Betalingstilstand oppdatert"
 
@@ -1390,7 +1482,7 @@ msgstr "Bare roller tilordnet din konto er tilgjengelige."
 
 #: src/app/routes/_authenticated/_system/components/cancel-jobs-bulk-action.tsx:65
 msgid "{cancellableCount, plural, one {Cancel {cancellableCount} job} other {Cancel {cancellableCount} jobs}}"
-msgstr ""
+msgstr "{cancellableCount, plural, one {Avbryt {cancellableCount} jobb} other {Avbryt {cancellableCount} jobber}}"
 
 #: src/lib/components/data-input/product-multi-selector-input.tsx:500
 msgid "{buttonText}"
@@ -1434,7 +1526,7 @@ msgstr "Kunne ikke opprette selger"
 msgid "Configure duplication settings for {0}s"
 msgstr "Konfigurer duplikeringsinnstillinger for {0}"
 
-#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:304
+#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:210
 msgid "No variants match the current filter."
 msgstr "Ingen varianter samsvarer med gjeldende filter."
 
@@ -1443,7 +1535,7 @@ msgstr "Ingen varianter samsvarer med gjeldende filter."
 msgid "Addresses"
 msgstr "Adresser"
 
-#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:136
+#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:138
 msgid "Add a new option value to the {groupName} option group"
 msgstr "Legg til en ny opsjonsverdi i opsjonsgruppen {groupName}"
 
@@ -1485,12 +1577,17 @@ msgstr "Bestilling endret"
 msgid "is before"
 msgstr "er før"
 
+#. placeholder {0}: collision.name
+#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:277
+msgid "This option combination is already used by \"{0}\""
+msgstr "Denne alternativkombinasjonen brukes allerede av \"{0}\""
+
 #: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:388
 msgid "Delete draft order"
 msgstr "Slett utkastbestilling"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:24
+#: src/lib/framework/defaults.ts:27
 msgid "Catalog"
 msgstr "Katalog"
 
@@ -1509,7 +1606,7 @@ msgstr "{rejected, plural, one {Kunne ikke avbryte {rejected} jobb} other {Kunne
 
 #: src/lib/framework/dashboard-widget/metrics-widget/index.tsx:102
 msgid "We couldn't load these metrics"
-msgstr ""
+msgstr "Vi kunne ikke laste disse metrikkene"
 
 #: src/lib/components/shared/assign-to-channel-dialog.tsx:111
 #: src/lib/components/shared/channel-selector.tsx:47
@@ -1520,7 +1617,11 @@ msgstr "Velg en kanal"
 msgid "Display language"
 msgstr "Visningsspråk"
 
-#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:312
+#: src/app/routes/_authenticated/_assets/assets_.$id.tsx:194
+msgid "The source file remains unchanged. Keep the original extension or omit it."
+msgstr ""
+
+#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:282
 msgid "Fulfillment details"
 msgstr "Oppfyllelsesdetaljer"
 
@@ -1529,7 +1630,7 @@ msgstr "Oppfyllelsesdetaljer"
 #~ msgstr "Nå"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:181
+#: src/lib/framework/defaults.ts:184
 msgid "Channels"
 msgstr "Kanaler"
 
@@ -1544,9 +1645,9 @@ msgstr "før"
 #. placeholder {0}: error.message
 #: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:228
 msgid "Failed to set customer for order: {0}"
-msgstr ""
+msgstr "Kunne ikke angi kunde for bestillingen: {0}"
 
-#: src/lib/components/shared/asset/asset-gallery.tsx:745
+#: src/lib/components/shared/asset/asset-gallery.tsx:1109
 msgid "Size"
 msgstr "Størrelse"
 
@@ -1559,15 +1660,20 @@ msgstr "Ingen oversettelse funnet for {0}"
 msgid "New Customer"
 msgstr "Ny kunde"
 
-#: src/lib/framework/dashboard-widget/latest-orders-widget/index.tsx:53
+#: src/app/routes/_authenticated/_assets/components/asset-tag-filter.tsx:76
+msgid "Filter assets by tags"
+msgstr ""
+
+#: src/lib/framework/dashboard-widget/latest-orders-widget/index.tsx:54
 msgid "Latest Orders"
 msgstr "Siste bestillinger"
 
 #: src/lib/components/shared/error-page.tsx:81
 msgid "Go back"
-msgstr ""
+msgstr "Gå tilbake"
 
-#: src/app/routes/_authenticated/_collections/collections.tsx:452
+#: src/app/routes/_authenticated/_collections/collections.tsx:476
+#: src/app/routes/_authenticated/_option-groups/option-groups.tsx:54
 msgid "+ {leftOver} more"
 msgstr "+ {leftOver} flere"
 
@@ -1576,8 +1682,7 @@ msgid "Use as the default billing address"
 msgstr "Bruk som standard fakturaadresse"
 
 #: src/app/common/delete-bulk-action.tsx:139
-#: src/app/routes/_authenticated/_assets/components/asset-bulk-actions.tsx:41
-#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:338
+#: src/app/routes/_authenticated/_assets/components/asset-bulk-actions.tsx:40
 #: src/lib/components/data-table/use-generated-columns.tsx:419
 #: src/lib/components/data-table/use-generated-columns.tsx:449
 #: src/lib/components/data-table/views-sheet.tsx:270
@@ -1590,7 +1695,7 @@ msgid "Disable"
 msgstr "Deaktiver"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:59
+#: src/lib/framework/defaults.ts:62
 msgid "Collections"
 msgstr "Samlinger"
 
@@ -1603,13 +1708,13 @@ msgid "Failed to create country"
 msgstr "Kunne ikke opprette land"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:237
+#: src/lib/framework/defaults.ts:240
 msgid "Countries"
 msgstr "Land"
 
 #: src/lib/framework/dashboard-widget/metrics-widget/index.tsx:96
 msgid "Loading metrics…"
-msgstr ""
+msgstr "Laster metrikker…"
 
 #: src/app/routes/_authenticated/_products/components/create-product-options-dialog.tsx:124
 #: src/app/routes/_authenticated/_products/components/create-product-options-dialog.tsx:209
@@ -1628,24 +1733,24 @@ msgstr "Tilgjengelig"
 msgid "Normal"
 msgstr "Normal"
 
-#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:199
+#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:218
 msgid "Filters"
 msgstr "Filtre"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:105
+#: src/lib/framework/defaults.ts:108
 msgid "Customer Groups"
 msgstr "Kundegrupper"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:91
-#: src/lib/framework/defaults.ts:98
+#: src/lib/framework/defaults.ts:94
+#: src/lib/framework/defaults.ts:101
 msgid "Customers"
 msgstr "Kunder"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/shipping-calculator-selector.tsx:37
 msgid "Select Shipping Calculator"
-msgstr ""
+msgstr "Velg fraktkalkulator"
 
 #: src/lib/components/layout/language-dialog.tsx:103
 msgid "Sample Formatting"
@@ -1660,9 +1765,9 @@ msgstr "Ny opsjon"
 msgid "Usage limit"
 msgstr "Bruksgrense"
 
-#: src/app/routes/_authenticated/_collections/collections.tsx:547
+#: src/app/routes/_authenticated/_collections/collections.tsx:575
 msgid "Create your first collection"
-msgstr ""
+msgstr "Opprett din første samling"
 
 #: src/lib/components/layout/manage-languages-dialog.tsx:267
 msgid "Loading global settings..."
@@ -1673,8 +1778,8 @@ msgid "Address updated successfully"
 msgstr "Adresse oppdatert"
 
 #: src/app/routes/_authenticated/_api-keys/api-keys_.$id.tsx:226
-#: src/app/routes/_authenticated/_orders/components/fulfillment-details.tsx:126
-#: src/lib/components/shared/asset/asset-gallery.tsx:747
+#: src/app/routes/_authenticated/_orders/components/fulfillment-details.tsx:141
+#: src/lib/components/shared/asset/asset-gallery.tsx:1116
 #: src/lib/framework/layout-engine/page-layout.tsx:748
 msgid "Created"
 msgstr "Opprettet"
@@ -1691,7 +1796,7 @@ msgstr "Velg en målsamling å flytte {0} til."
 #. placeholder {0}: error.message
 #: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:272
 msgid "Failed to unset billing address for order: {0}"
-msgstr ""
+msgstr "Kunne ikke fjerne fakturaadressen for bestillingen: {0}"
 
 #: src/app/routes/_authenticated/_customers/components/customer-history/customer-history-utils.tsx:45
 msgid "Customer details updated"
@@ -1708,11 +1813,17 @@ msgstr "Bruk"
 
 #: src/app/routes/_authenticated/_tax-rates/tax-rates.tsx:36
 msgid "Search tax rates..."
-msgstr ""
+msgstr "Søk etter skattesatser..."
 
 #: src/app/routes/_authenticated/_option-groups/option-groups_.$groupId.options_.$id.tsx:163
 msgid "New product option"
 msgstr "Ny produktopsjon"
+
+#. placeholder {0}: conflict.name
+#. placeholder {1}: conflict.sku
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:328
+msgid "A variant with these options already exists: {0} ({1})"
+msgstr ""
 
 #: src/lib/components/data-table/data-table-pagination.tsx:94
 msgid "Go to last page"
@@ -1720,7 +1831,7 @@ msgstr "Gå til siste side"
 
 #: src/lib/components/shared/rich-text-editor/table-grid-picker.tsx:84
 msgid "Insert {row} by {col} table"
-msgstr ""
+msgstr "Sett inn {row} x {col}-tabell"
 
 #: src/app/common/duplicate-entity-dialog.tsx:113
 #: src/app/routes/_authenticated/_api-keys/components/rotate-api-key-button.tsx:61
@@ -1753,9 +1864,9 @@ msgstr "Avbryt"
 #. placeholder {0}: error.message
 #: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:97
 msgid "Failed to update order custom fields: {0}"
-msgstr ""
+msgstr "Kunne ikke oppdatere egendefinerte felter for bestillingen: {0}"
 
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:146
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:175
 #: src/app/routes/_authenticated/_products/components/add-product-variant-dialog.tsx:160
 msgid "Successfully created product variant"
 msgstr "Produktvariant opprettet"
@@ -1790,17 +1901,17 @@ msgstr "Delvis refusjon fullført"
 msgid "Set custom fields"
 msgstr "Sett egendefinerte felt"
 
-#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:47
-#: src/app/routes/_authenticated/_collections/collections.tsx:51
-#: src/app/routes/_authenticated/_collections/collections.tsx:362
+#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:49
+#: src/app/routes/_authenticated/_collections/collections.tsx:52
+#: src/app/routes/_authenticated/_collections/collections.tsx:364
 msgid "Collections"
 msgstr "Samlinger"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/shipping-eligibility-checker-selector.tsx:37
 msgid "Select Shipping Eligibility Checker"
-msgstr ""
+msgstr "Velg kvalifiseringssjekker for frakt"
 
-#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:434
+#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:479
 msgid "Delete variant"
 msgstr "Slett variant"
 
@@ -1816,7 +1927,7 @@ msgstr "Standard fraktsone"
 msgid "Reason:"
 msgstr "Årsak:"
 
-#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:294
+#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:323
 #: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:248
 #: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:511
 msgid "Shipping address"
@@ -1825,9 +1936,9 @@ msgstr "Leveringsadresse"
 #. placeholder {0}: getTranslatedFulfillmentState(state)
 #. placeholder {0}: getTranslatedOrderState(state)
 #. placeholder {0}: getTranslatedPaymentState(state)
-#: src/app/routes/_authenticated/_orders/components/fulfillment-details.tsx:103
-#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:126
-#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:151
+#: src/app/routes/_authenticated/_orders/components/fulfillment-details.tsx:110
+#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:128
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:159
 msgid "Transition to {0}"
 msgstr "Gå over til {0}"
 
@@ -1837,12 +1948,11 @@ msgstr "Gå over til {0}"
 msgid "Tax Categories"
 msgstr "Skattekategorier"
 
-#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:162
+#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:181
 msgid "Private collections are not visible in the shop"
 msgstr "Private samlinger er ikke synlige i butikken"
 
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:262
-#: src/app/routes/_authenticated/_products/products_.$id.tsx:227
+#: src/app/routes/_authenticated/_products/products_.$id.tsx:221
 msgid "When enabled, a product is available in the shop"
 msgstr "Når aktivert, er et produkt tilgjengelig i butikken"
 
@@ -1881,7 +1991,7 @@ msgstr "{operator}"
 
 #: src/app/routes/_authenticated/_customer-groups/customer-groups.tsx:48
 msgid "Search customer groups..."
-msgstr ""
+msgstr "Søk etter kundegrupper..."
 
 #: src/app/routes/_authenticated/_orders/components/order-modification-preview-dialog.tsx:177
 msgid "Refund required"
@@ -1892,6 +2002,10 @@ msgstr "Refusjon nødvendig"
 #: src/app/routes/_authenticated/_orders/components/fulfill-order-dialog.tsx:317
 msgid "Fulfill order"
 msgstr "Oppfyll bestilling"
+
+#: src/lib/components/login/forgot-password-form.tsx:139
+msgid "Send reset link"
+msgstr "Send tilbakestillingslenke"
 
 #: src/lib/components/layout/manage-languages-dialog.tsx:316
 msgid "You don't have permission to view channel settings"
@@ -1910,7 +2024,7 @@ msgstr "Ingen fasettverdier"
 msgid "A reason for the refund is required"
 msgstr "En grunn for refusjonen er påkrevd"
 
-#: src/app/routes/_authenticated/_products/products_.$id.tsx:192
+#: src/app/routes/_authenticated/_products/products_.$id.tsx:193
 msgid "Could not remove option group"
 msgstr "Kunne ikke fjerne opsjonsgruppen"
 
@@ -1918,29 +2032,29 @@ msgstr "Kunne ikke fjerne opsjonsgruppen"
 msgid "Failed to update tax category"
 msgstr "Kunne ikke oppdatere skattekategori"
 
-#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:87
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:95
 msgid "Refund settled successfully"
 msgstr "Refusjon gjennomført"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:105
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:106
 #: src/app/routes/_authenticated/_api-keys/api-keys_.$id.tsx:155
-#: src/app/routes/_authenticated/_assets/assets_.$id.tsx:115
+#: src/app/routes/_authenticated/_assets/assets_.$id.tsx:155
 #: src/app/routes/_authenticated/_channels/channels_.$id.tsx:122
-#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:152
+#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:171
 #: src/app/routes/_authenticated/_countries/countries_.$id.tsx:84
 #: src/app/routes/_authenticated/_customer-groups/customer-groups_.$id.tsx:94
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:159
-#: src/app/routes/_authenticated/_facets/facets_.$facetId.values_.$id.tsx:110
+#: src/app/routes/_authenticated/_facets/facets_.$facetId.values_.$id.tsx:111
 #: src/app/routes/_authenticated/_facets/facets_.$id.tsx:100
 #: src/app/routes/_authenticated/_global-settings/global-settings.tsx:102
 #: src/app/routes/_authenticated/_option-groups/option-groups_.$groupId.options_.$id.tsx:177
 #: src/app/routes/_authenticated/_option-groups/option-groups_.$id.tsx:163
 #: src/app/routes/_authenticated/_orders/components/order-line-custom-fields-form.tsx:51
 #: src/app/routes/_authenticated/_payment-methods/payment-methods_.$id.tsx:138
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:252
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:513
 #: src/app/routes/_authenticated/_products/components/assign-facet-values-dialog.tsx:278
-#: src/app/routes/_authenticated/_products/products_.$id.tsx:217
-#: src/app/routes/_authenticated/_profile/profile.tsx:92
+#: src/app/routes/_authenticated/_products/products_.$id.tsx:242
+#: src/app/routes/_authenticated/_profile/profile.tsx:93
 #: src/app/routes/_authenticated/_promotions/promotions_.$id.tsx:144
 #: src/app/routes/_authenticated/_roles/roles_.$id.tsx:84
 #: src/app/routes/_authenticated/_sellers/sellers_.$id.tsx:78
@@ -1961,7 +2075,7 @@ msgstr "Overskrift 2"
 msgid "Order placed"
 msgstr "Bestilling lagt inn"
 
-#: src/app/routes/_authenticated/_profile/profile.tsx:71
+#: src/app/routes/_authenticated/_profile/profile.tsx:72
 msgid "Successfully updated profile"
 msgstr "Profil oppdatert"
 
@@ -1972,7 +2086,7 @@ msgstr "Profil oppdatert"
 #~ msgstr "slutt"
 
 #: src/app/routes/_authenticated/_orders/components/add-manual-payment-dialog.tsx:146
-#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:166
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:187
 msgid "Payment method"
 msgstr "Betalingsmetode"
 
@@ -1983,8 +2097,8 @@ msgid "Edit"
 msgstr "Rediger"
 
 #: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:180
-msgid "Variant updated successfully"
-msgstr "Variant oppdatert"
+#~ msgid "Variant updated successfully"
+#~ msgstr "Variant oppdatert"
 
 #: src/app/routes/_authenticated/_collections/components/move-collections-dialog.tsx:370
 msgid "Filter by collection name"
@@ -2013,8 +2127,8 @@ msgstr "Starter"
 msgid "Duplicate"
 msgstr "Dupliser"
 
-#: src/lib/components/data-table/data-table.tsx:578
-#: src/lib/components/data-table/data-table.tsx:589
+#: src/lib/components/data-table/data-table.tsx:648
+#: src/lib/components/data-table/data-table.tsx:659
 #: src/lib/components/shared/customer-group-selector.tsx:60
 msgid "No results"
 msgstr "Ingen resultater"
@@ -2025,19 +2139,19 @@ msgstr "Kolonneinnstillinger"
 
 #: src/app/routes/_authenticated/_channels/channels_.$id.tsx:132
 #: src/app/routes/_authenticated/_countries/countries_.$id.tsx:110
-#: src/app/routes/_authenticated/_facets/facets_.$facetId.values_.$id.tsx:137
+#: src/app/routes/_authenticated/_facets/facets_.$facetId.values_.$id.tsx:127
 #: src/app/routes/_authenticated/_facets/facets_.$id.tsx:127
-#: src/app/routes/_authenticated/_option-groups/option-groups_.$groupId.options_.$id.tsx:208
+#: src/app/routes/_authenticated/_option-groups/option-groups_.$groupId.options_.$id.tsx:193
 #: src/app/routes/_authenticated/_option-groups/option-groups_.$id.tsx:179
 #: src/app/routes/_authenticated/_payment-methods/payment-methods_.$id.tsx:164
 #: src/app/routes/_authenticated/_roles/roles_.$id.tsx:100
 #: src/app/routes/_authenticated/_shipping-methods/shipping-methods_.$id.tsx:154
 #: src/app/routes/_authenticated/_zones/components/zone-countries-table.tsx:63
-#: src/lib/framework/dashboard-widget/latest-orders-widget/index.tsx:91
+#: src/lib/framework/dashboard-widget/latest-orders-widget/index.tsx:94
 msgid "Code"
 msgstr "Kode"
 
-#: src/app/routes/_authenticated/_products/products_.$id.tsx:201
+#: src/app/routes/_authenticated/_products/products_.$id.tsx:202
 msgid "Failed to remove option groups"
 msgstr "Kunne ikke fjerne opsjonsgruppene"
 
@@ -2061,7 +2175,7 @@ msgstr "Er du sikker på at du vil slette denne adressen?"
 msgid "Failed to assign option group"
 msgstr "Kunne ikke tilordne opsjonsgruppen"
 
-#: src/app/routes/_authenticated/_assets/assets_.$id.tsx:89
+#: src/app/routes/_authenticated/_assets/assets_.$id.tsx:103
 msgid "Failed to update asset"
 msgstr "Kunne ikke oppdatere ressurs"
 
@@ -2078,7 +2192,7 @@ msgid "Successfully updated country"
 msgstr "Land oppdatert"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:52
+#: src/lib/framework/defaults.ts:55
 msgid "Facets"
 msgstr "Fasetter"
 
@@ -2109,9 +2223,9 @@ msgstr "Kunne ikke oppdatere notat"
 msgid "Refund shipping"
 msgstr "Refunder frakt"
 
-#: src/app/routes/_authenticated/_system/settings-store.tsx:299
-#: src/app/routes/_authenticated/_system/settings-store.tsx:303
-#: src/app/routes/_authenticated/_system/settings-store.tsx:335
+#: src/app/routes/_authenticated/_system/settings-store.tsx:321
+#: src/app/routes/_authenticated/_system/settings-store.tsx:363
+#: src/app/routes/_authenticated/_system/settings-store.tsx:399
 msgid "Readonly"
 msgstr "Skrivebeskyttet"
 
@@ -2119,7 +2233,7 @@ msgstr "Skrivebeskyttet"
 msgid "Failed to duplicate global view"
 msgstr "Kunne ikke duplisere global visning"
 
-#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:254
+#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:160
 msgid "Showing {shown} of {total} • {selected} selected"
 msgstr "Viser {shown} av {total} • {selected} valgt"
 
@@ -2127,12 +2241,12 @@ msgstr "Viser {shown} av {total} • {selected} valgt"
 msgid "Test Shipping Method"
 msgstr "Test fraktmetode"
 
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:491
-#: src/app/routes/_authenticated/_products/products_.$id.tsx:333
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:767
+#: src/app/routes/_authenticated/_products/products_.$id.tsx:347
 msgid "Facet Values"
 msgstr "Fasettverdier"
 
-#: src/app/routes/_authenticated/_assets/assets_.$id.tsx:85
+#: src/app/routes/_authenticated/_assets/assets_.$id.tsx:99
 msgid "Successfully updated asset"
 msgstr "Ressurs oppdatert"
 
@@ -2496,13 +2610,13 @@ msgstr "Sone"
 
 #: src/lib/framework/dashboard-widget/metrics-widget/index.tsx:125
 msgid "No metrics for this period"
-msgstr ""
+msgstr "Ingen metrikker for denne perioden"
 
-#: src/app/routes/_authenticated/_orders/components/fulfillment-details.tsx:118
+#: src/app/routes/_authenticated/_orders/components/fulfillment-details.tsx:137
 msgid "Method"
 msgstr "Metode"
 
-#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:234
+#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:338
 msgid "Tax summary"
 msgstr "Skatteoppsummering"
 
@@ -2510,9 +2624,9 @@ msgstr "Skatteoppsummering"
 msgid "Sets the languages that are available for all channels. Individual channels can then support a subset of these languages."
 msgstr "Setter språkene som er tilgjengelige for alle kanaler. Individuelle kanaler kan deretter støtte en delmengde av disse språkene."
 
-#: src/app/routes/_authenticated/_facets/facets.tsx:119
+#: src/app/routes/_authenticated/_facets/facets.tsx:117
 msgid "Create your first facet"
-msgstr ""
+msgstr "Opprett din første fasett"
 
 #: src/app/routes/_authenticated/_collections/components/move-collections-dialog.tsx:284
 msgid "Collections moved successfully"
@@ -2520,7 +2634,7 @@ msgstr "Samlinger flyttet vellykket"
 
 #: src/lib/components/data-input/relation-selector.tsx:412
 msgid "Change selection"
-msgstr ""
+msgstr "Endre utvalg"
 
 #: src/app/routes/_authenticated/_customers/components/customer-status-badge.tsx:33
 msgid "Registered"
@@ -2529,11 +2643,15 @@ msgstr "Registrert"
 #. placeholder {0}: error.message
 #: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:239
 msgid "Failed to set shipping address for order: {0}"
-msgstr ""
+msgstr "Kunne ikke angi leveringsadresse for bestillingen: {0}"
 
 #: src/app/routes/_authenticated/_system/job-queue.tsx:228
 msgid "Cancel Job"
 msgstr "Avbryt jobb"
+
+#: src/lib/components/shared/asset/asset-gallery.tsx:854
+msgid "No assets yet"
+msgstr ""
 
 #: src/app/routes/_authenticated/_promotions/promotions_.$id.tsx:194
 msgid "Ends at"
@@ -2549,7 +2667,7 @@ msgstr "Side {0} av {1}"
 msgid "Rate"
 msgstr "Sats"
 
-#: src/app/routes/_authenticated/_products/products_.$id.tsx:118
+#: src/app/routes/_authenticated/_products/products_.$id.tsx:119
 msgid "Size, colour, etc."
 msgstr "Størrelse, farge, osv."
 
@@ -2594,12 +2712,12 @@ msgid "Save View"
 msgstr "Lagre visning"
 
 #. placeholder {0}: selectedIds.size
+#. placeholder {0}: selectedTags.length
 #. placeholder {0}: selectedValues.size
-#. placeholder {0}: selection.length
-#: src/lib/components/data-table/data-table-bulk-actions.tsx:76
+#: src/app/routes/_authenticated/_assets/components/asset-tag-filter.tsx:48
+#: src/lib/components/data-table/data-table-bulk-actions.tsx:91
 #: src/lib/components/data-table/data-table-facet-value-faceted-filter.tsx:137
 #: src/lib/components/data-table/data-table-faceted-filter.tsx:139
-#: src/lib/components/shared/asset/asset-bulk-actions.tsx:80
 #: src/lib/components/shared/configurable-operation-arg-summary.tsx:67
 msgid "{0} selected"
 msgstr "{0} valgt"
@@ -2624,7 +2742,7 @@ msgstr "Verdier"
 msgid "Customer set for order"
 msgstr "Kunde satt for bestilling"
 
-#: src/app/routes/_authenticated/_facets/facets_.$facetId.values_.$id.tsx:38
+#: src/app/routes/_authenticated/_facets/facets_.$facetId.values_.$id.tsx:39
 #: src/app/routes/_authenticated/_facets/facets_.$id.tsx:36
 #: src/app/routes/_authenticated/_facets/facets.tsx:22
 #: src/app/routes/_authenticated/_facets/facets.tsx:30
@@ -2639,13 +2757,14 @@ msgstr "{count, plural, one {Er du sikker på at du vil fjerne {count} kunde fra
 
 #: src/app/routes/_authenticated/_countries/countries.tsx:29
 msgid "Search countries..."
-msgstr ""
+msgstr "Søk etter land..."
 
-#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:293
+#: src/app/routes/_authenticated/_products/components/generate-missing-variants-dialog.tsx:194
+#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:199
 msgid "Stock on Hand"
 msgstr "Lager på hånd"
 
-#: src/app/routes/_authenticated/_products/products.tsx:36
+#: src/app/routes/_authenticated/_products/products.tsx:38
 msgid "Search index rebuild could not be started"
 msgstr "Gjenoppbygging av søkeindeks kunne ikke startes"
 
@@ -2672,6 +2791,11 @@ msgstr "Slett kolonne"
 msgid "Assign existing"
 msgstr "Tilordne eksisterende"
 
+#: src/app/routes/_authenticated/_products/components/generate-missing-variants-dialog.tsx:62
+#: src/app/routes/_authenticated/_products/components/generate-missing-variants-dialog.tsx:68
+msgid "Generate variants"
+msgstr "Generer varianter"
+
 #: src/lib/components/data-table/filters/data-table-enum-filter.tsx:19
 #: src/lib/components/data-table/human-readable-operator.tsx:36
 msgid "is null"
@@ -2694,7 +2818,7 @@ msgstr "Standardkanal"
 msgid "Insert a new image with source, title, and dimensions"
 msgstr "Sett inn et nytt bilde med kilde, tittel og dimensjoner"
 
-#: src/app/routes/_authenticated/_facets/facets_.$facetId.values_.$id.tsx:93
+#: src/app/routes/_authenticated/_facets/facets_.$facetId.values_.$id.tsx:94
 msgid "Failed to create facet value"
 msgstr "Kunne ikke opprette fasettverdi"
 
@@ -2719,15 +2843,19 @@ msgid "Customer verified"
 msgstr "Kunde verifisert"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:251
+#: src/lib/framework/defaults.ts:254
 msgid "Global Settings"
 msgstr "Globale innstillinger"
+
+#: src/lib/components/login/forgot-password-form.tsx:105
+msgid "Forgot your password?"
+msgstr "Glemt passordet ditt?"
 
 #: src/app/routes/_authenticated/_system/scheduled-tasks.tsx:148
 msgid "Schedule"
 msgstr "Tidsplan"
 
-#: src/app/routes/_authenticated/_collections/collections.tsx:304
+#: src/app/routes/_authenticated/_collections/collections.tsx:306
 msgid "Cannot move a collection into its own descendant"
 msgstr "Kan ikke flytte en samling til sin egen undergruppe"
 
@@ -2747,6 +2875,10 @@ msgstr "Kanal opprettet"
 msgid "Successfully updated customer"
 msgstr "Kunde oppdatert"
 
+#: src/lib/framework/dashboard-widget/latest-customers-widget/index.tsx:45
+msgid "Latest Customers"
+msgstr "Siste kunder"
+
 #: src/app/routes/_authenticated/_system/job-queue.tsx:165
 msgid "View data"
 msgstr "Vis data"
@@ -2763,6 +2895,10 @@ msgstr "Legg til en ny adresse til kunden."
 msgid "More views"
 msgstr "Flere visninger"
 
+#: src/app/routes/_authenticated/_product-variants/components/variant-price-detail.tsx:86
+msgid "(incl. {taxRate}% tax)"
+msgstr ""
+
 #: src/lib/components/shared/rich-text-editor/image-dialog.tsx:109
 msgid "Edit the selected image properties"
 msgstr "Rediger egenskapene for det valgte bildet"
@@ -2775,13 +2911,17 @@ msgstr "Brukte visning \"{viewName}\""
 msgid "Successfully removed {successCount} facets from channel"
 msgstr "Fjernet {successCount} fasetter fra kanal"
 
-#: src/app/routes/_authenticated/_products/products.tsx:125
+#: src/app/routes/_authenticated/_products/products.tsx:134
 msgid "New Product"
 msgstr "Nytt produkt"
 
-#: src/app/routes/_authenticated/_assets/assets_.$id.tsx:40
+#: src/app/routes/_authenticated/_assets/assets_.$id.tsx:54
 msgid "New asset"
 msgstr "Ny ressurs"
+
+#: src/app/routes/_authenticated/index.tsx:380
+msgid "Tidy"
+msgstr "Rydd opp"
 
 #: src/app/routes/_authenticated/_orders/components/order-modification-summary.tsx:262
 msgid "Recalculate shipping"
@@ -2791,20 +2931,20 @@ msgstr "Beregn frakt på nytt"
 #~ msgid "Select which options should apply to the existing variant \"{0}\""
 #~ msgstr "Velg hvilke opsjoner som skal gjelde for eksisterende variant \"{0}\""
 
-#: src/app/routes/_authenticated/_assets/assets_.$id.tsx:39
-#: src/app/routes/_authenticated/_assets/assets.tsx:17
-#: src/app/routes/_authenticated/_assets/assets.tsx:40
-#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:229
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:508
-#: src/app/routes/_authenticated/_products/products_.$id.tsx:366
+#: src/app/routes/_authenticated/_assets/assets_.$id.tsx:53
+#: src/app/routes/_authenticated/_assets/assets.tsx:19
+#: src/app/routes/_authenticated/_assets/assets.tsx:45
+#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:248
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:777
+#: src/app/routes/_authenticated/_products/products_.$id.tsx:380
 msgid "Assets"
 msgstr "Ressurser"
 
-#: src/app/routes/_authenticated/_products/products_.$id.tsx:306
+#: src/app/routes/_authenticated/_products/products_.$id.tsx:320
 msgid "This will remove all option groups from this product and return to the variant setup choice."
 msgstr "Dette vil fjerne alle opsjonsgrupper fra dette produktet og returnere til variantoppsettsvalget."
 
-#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:302
+#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:331
 #: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:277
 #: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:533
 msgid "Billing address"
@@ -2817,7 +2957,7 @@ msgstr "Legg til fasettverdi"
 
 #: src/lib/components/shared/error-page.tsx:118
 msgid "You do not have permission to view this page."
-msgstr ""
+msgstr "Du har ikke tillatelse til å se denne siden."
 
 #: src/app/routes/_authenticated/_collections/components/move-collections-dialog.tsx:312
 msgid "Please select a target collection"
@@ -2829,7 +2969,7 @@ msgstr "Gjennomgå endringene før du bruker dem på bestillingen."
 
 #: src/lib/components/shared/rich-text-editor/responsive-toolbar.tsx:284
 msgid "Redo"
-msgstr ""
+msgstr "Gjør om"
 
 #: src/lib/components/shared/role-selector.tsx:52
 msgid "Select a role"
@@ -2845,22 +2985,30 @@ msgstr "Bestilling kansellert"
 msgid "Discount"
 msgstr "Rabatt"
 
-#: src/lib/components/shared/asset/asset-gallery.tsx:367
-#: src/lib/components/shared/asset/asset-gallery.tsx:379
+#: src/lib/framework/dashboard-widget/top-products-widget/index.tsx:94
+msgid "Top Products"
+msgstr "Topprodukter"
+
+#: src/lib/components/shared/asset/asset-gallery.tsx:525
+#: src/lib/components/shared/asset/asset-gallery.tsx:542
 msgid "All types"
 msgstr "Alle typer"
+
+#: src/app/routes/_authenticated/_collections/collections.tsx:403
+msgid "Collapse"
+msgstr "Skjul"
 
 #: src/app/routes/_authenticated/_orders/components/draft-order-status.tsx:29
 msgid "Only draft orders can be completed"
 msgstr "Kun ordreutkast kan fullføres"
 
-#: src/app/routes/_authenticated/_products/products_.$id.tsx:172
+#: src/app/routes/_authenticated/_products/products_.$id.tsx:173
 msgid "Failed to update product"
 msgstr "Kunne ikke oppdatere produkt"
 
 #: src/app/routes/_authenticated/_collections/components/collection-filters-selector.tsx:26
 msgid "Add collection filter"
-msgstr ""
+msgstr "Legg til samlingsfilter"
 
 #. placeholder {0}: adjustedLines.length
 #: src/app/routes/_authenticated/_orders/components/order-modification-summary.tsx:152
@@ -2881,14 +3029,14 @@ msgstr "Kanal"
 
 #: src/lib/components/shared/copyable-text.tsx:71
 msgid "Copy"
-msgstr ""
+msgstr "Kopier"
 
 #. js-lingui-explicit-id
 #: src/lib/framework/defaults.ts:137
 #~ msgid "Healthchecks"
 #~ msgstr "Helsesjekker"
 
-#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:168
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:189
 #: src/app/routes/_authenticated/_orders/components/refund-order-dialog.tsx:322
 msgid "Amount"
 msgstr "Beløp"
@@ -2909,12 +3057,12 @@ msgstr "Ny kunde"
 msgid "Image"
 msgstr "Bilde"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:77
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:78
 msgid "Successfully created administrator"
 msgstr "Administrator opprettet"
 
 #: src/app/routes/_authenticated/_option-groups/option-groups_.$id.tsx:196
-#: src/app/routes/_authenticated/_products/products_.$id.tsx:314
+#: src/app/routes/_authenticated/_products/products_.$id.tsx:328
 msgid "Product Options"
 msgstr "Produktopsjoner"
 
@@ -2922,7 +3070,8 @@ msgstr "Produktopsjoner"
 msgid "Select country"
 msgstr "Velg land"
 
-#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:427
+#: src/app/routes/_authenticated/_products/components/generate-missing-variants-dialog.tsx:253
+#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:279
 msgid "Creating..."
 msgstr "Oppretter..."
 
@@ -2934,7 +3083,7 @@ msgstr "Er du sikker på at du vil slette denne globale visningen? Denne handlin
 msgid "Force remove option group"
 msgstr "Tving fjerning av alternativgruppe"
 
-#: src/app/routes/_authenticated/_profile/profile.tsx:140
+#: src/app/routes/_authenticated/_profile/profile.tsx:141
 msgid "Added"
 msgstr "Lagt til"
 
@@ -2964,9 +3113,20 @@ msgstr "Bruksgrense per kunde"
 msgid "Billing address changed"
 msgstr "Fakturaadresse endret"
 
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:553
+msgid "Manage option groups"
+msgstr ""
+
 #: src/lib/components/data-input/select-with-options.tsx:107
 msgid "Select an option"
 msgstr "Velg en opsjon"
+
+#. placeholder {0}: asset.name
+#. placeholder {0}: row.original.name
+#: src/lib/components/shared/asset/asset-gallery.tsx:1012
+#: src/lib/components/shared/asset/asset-gallery.tsx:1156
+msgid "Open {0}"
+msgstr ""
 
 #: src/lib/components/data-table/views-sheet.tsx:251
 msgid "Copy to Personal"
@@ -2981,20 +3141,20 @@ msgstr "Total refusjon overstiger maksimalt refunderbart beløp på {0}"
 msgid "Delete Global View"
 msgstr "Slett global visning"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:105
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:106
 #: src/app/routes/_authenticated/_api-keys/api-keys_.$id.tsx:155
 #: src/app/routes/_authenticated/_channels/channels_.$id.tsx:122
-#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:152
+#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:171
 #: src/app/routes/_authenticated/_countries/countries_.$id.tsx:84
 #: src/app/routes/_authenticated/_customer-groups/customer-groups_.$id.tsx:94
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:159
-#: src/app/routes/_authenticated/_facets/facets_.$facetId.values_.$id.tsx:110
+#: src/app/routes/_authenticated/_facets/facets_.$facetId.values_.$id.tsx:111
 #: src/app/routes/_authenticated/_facets/facets_.$id.tsx:100
 #: src/app/routes/_authenticated/_option-groups/option-groups_.$groupId.options_.$id.tsx:177
 #: src/app/routes/_authenticated/_option-groups/option-groups_.$id.tsx:163
 #: src/app/routes/_authenticated/_payment-methods/payment-methods_.$id.tsx:138
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:252
-#: src/app/routes/_authenticated/_products/products_.$id.tsx:217
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:513
+#: src/app/routes/_authenticated/_products/products_.$id.tsx:242
 #: src/app/routes/_authenticated/_promotions/promotions_.$id.tsx:144
 #: src/app/routes/_authenticated/_roles/roles_.$id.tsx:84
 #: src/app/routes/_authenticated/_sellers/sellers_.$id.tsx:78
@@ -3030,7 +3190,7 @@ msgstr "Kunne ikke opprette kunde"
 msgid "Focal point updated"
 msgstr "Fokuspunkt oppdatert"
 
-#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:279
+#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:361
 msgid "Option values"
 msgstr "Opsjonsverdier"
 
@@ -3038,7 +3198,7 @@ msgstr "Opsjonsverdier"
 msgid "Default Billing Address"
 msgstr "Standard fakturaadresse"
 
-#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:287
+#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:316
 #: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:241
 msgid "No customer"
 msgstr "Ingen kunde"
@@ -3085,7 +3245,7 @@ msgstr "Legger til {0} tillegg"
 msgid "Fallback: {value}"
 msgstr "Reserveverdi: {value}"
 
-#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:263
+#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:304
 #: src/app/routes/_authenticated/_orders/components/order-history/order-history-container.tsx:30
 msgid "Order history"
 msgstr "Bestillingshistorikk"
@@ -3110,8 +3270,8 @@ msgstr "Global visning omdøpt"
 msgid "No tags selected"
 msgstr "Ingen tagger valgt"
 
-#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:408
-#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:417
+#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:260
+#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:269
 #: src/lib/components/data-table/data-table-facet-value-faceted-filter.tsx:186
 msgid "Back"
 msgstr "Tilbake"
@@ -3122,7 +3282,7 @@ msgstr "Visning omdøpt"
 
 #: src/lib/components/shared/rich-text-editor/responsive-toolbar.tsx:192
 msgid "Bullet list"
-msgstr ""
+msgstr "Punktliste"
 
 #: src/lib/components/data-table/data-table-filter-dialog.tsx:94
 msgid "Apply filter"
@@ -3137,7 +3297,7 @@ msgid "Added to group"
 msgstr "Lagt til gruppe"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:16
+#: src/lib/framework/defaults.ts:19
 msgid "Insights"
 msgstr "Innsikt"
 
@@ -3147,7 +3307,7 @@ msgstr "Innsikt"
 
 #: src/lib/components/shared/rich-text-editor/responsive-toolbar.tsx:261
 msgid "Horizontal rule"
-msgstr ""
+msgstr "Horisontal linje"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/shipping-method-test-result-wrapper.tsx:31
 #: src/app/routes/_authenticated/_shipping-methods/components/test-single-method-result.tsx:46
@@ -3165,7 +3325,7 @@ msgstr "Testresultater"
 
 #: src/lib/components/shared/rich-text-editor/responsive-toolbar.tsx:201
 msgid "Ordered list"
-msgstr ""
+msgstr "Nummerert liste"
 
 #: src/app/routes/_authenticated/_customer-groups/components/customer-group-members-table.tsx:86
 msgid "Add customer"
@@ -3176,9 +3336,13 @@ msgstr "Legg til kunde"
 msgid "Save Changes"
 msgstr "Lagre endringer"
 
-#: src/app/routes/_authenticated/_products/products.tsx:57
+#: src/app/routes/_authenticated/_products/products.tsx:72
 msgid "Search products..."
-msgstr ""
+msgstr "Søk etter produkter..."
+
+#: src/app/routes/_authenticated/_orders/components/fulfillment-details.tsx:166
+msgid "Unknown product"
+msgstr "Ukjent produkt"
 
 #: src/app/routes/_authenticated/_customers/components/customer-history/customer-history-utils.tsx:53
 #: src/app/routes/_authenticated/_customers/components/customer-history/default-customer-history-components.tsx:78
@@ -3191,7 +3355,7 @@ msgstr "Refusjon behandlet vellykket"
 
 #: src/lib/components/data-table/filters/data-table-enum-filter.tsx:72
 msgid "Select value"
-msgstr ""
+msgstr "Velg verdi"
 
 #. placeholder {0}: action.label
 #. placeholder {0}: entityType === 'products' ? 'Product' : 'Variant'
@@ -3211,7 +3375,7 @@ msgstr "{0}"
 msgid "New Zone"
 msgstr "Ny sone"
 
-#: src/app/routes/_authenticated/_collections/collections.tsx:353
+#: src/app/routes/_authenticated/_collections/collections.tsx:355
 msgid "Failed to update collection position"
 msgstr "Kunne ikke oppdatere samlingsposisjon"
 
@@ -3219,7 +3383,7 @@ msgstr "Kunne ikke oppdatere samlingsposisjon"
 msgid "Refund"
 msgstr "Refusjon"
 
-#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:162
+#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:164
 #: src/app/routes/_authenticated/_orders/utils/order-detail-loaders.tsx:78
 msgid "Modify"
 msgstr "Endre"
@@ -3233,13 +3397,14 @@ msgstr "Ingen globale språk konfigurert"
 msgid "Removing {0} item(s)"
 msgstr "Fjerner {0} vare(r)"
 
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:388
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:406
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:661
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:677
 msgid "Track"
 msgstr "Spor"
 
 #: src/app/routes/_authenticated/_products/components/add-product-variant-dialog.tsx:322
-#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:429
+#: src/app/routes/_authenticated/_products/components/generate-missing-variants-dialog.tsx:255
+#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:281
 msgid "Create variant"
 msgstr "Opprett variant"
 
@@ -3247,7 +3412,7 @@ msgstr "Opprett variant"
 msgid "Facet values for {facetName}"
 msgstr "Fasettverdier for {facetName}"
 
-#: src/app/routes/_authenticated/index.tsx:199
+#: src/app/routes/_authenticated/index.tsx:402
 msgid "Save Layout"
 msgstr "Lagre layout"
 
@@ -3272,15 +3437,23 @@ msgstr "Veksle overskriftskolonne"
 msgid "New Promotion"
 msgstr "Ny kampanje"
 
+#: src/lib/components/login/reset-password-form.tsx:130
+msgid "Request a new link"
+msgstr "Be om en ny lenke"
+
 #: src/lib/components/data-table/data-table-settings-menu.tsx:83
 msgid "Columns"
-msgstr ""
+msgstr "Kolonner"
 
 #: src/lib/components/shared/rich-text-editor/rich-text-editor.tsx:163
 msgid "Failed to upload image"
+msgstr "Kunne ikke laste opp bildet"
+
+#: src/lib/components/shared/asset/asset-gallery.tsx:854
+msgid "No assets match these filters"
 msgstr ""
 
-#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:144
+#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:146
 msgid "Option value name"
 msgstr "Opsjonsverdinavn"
 
@@ -3331,12 +3504,12 @@ msgstr "Angi filterkriterier for kolonnen {columnId}"
 msgid "Country"
 msgstr "Land"
 
-#: src/app/routes/_authenticated/_products/products_.$id.tsx:98
+#: src/app/routes/_authenticated/_products/products_.$id.tsx:99
 msgid "Simple product"
 msgstr "Enkelt produkt"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:137
+#: src/lib/framework/defaults.ts:140
 msgid "Job Queue"
 msgstr "Jobbkø"
 
@@ -3348,7 +3521,7 @@ msgstr "Bekreft at du har lagret API-nøkkelen før du lukker."
 msgid "Confirm deletion"
 msgstr "Bekreft sletting"
 
-#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:152
+#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:154
 msgid "Failed to modify order"
 msgstr "Kunne ikke endre bestilling"
 
@@ -3356,9 +3529,13 @@ msgstr "Kunne ikke endre bestilling"
 msgid "Includes tax at {taxRate}%"
 msgstr "Inkluderer mva. på {taxRate}%"
 
-#: src/lib/framework/dashboard-widget/metrics-widget/index.tsx:76
+#: src/lib/framework/dashboard-widget/metrics-widget/index.tsx:81
 msgid "Order metrics"
 msgstr "Bestillingsberegninger"
+
+#: src/lib/components/login/reset-password-form.tsx:175
+msgid "Confirm new password"
+msgstr "Bekreft nytt passord"
 
 #: src/lib/components/layout/language-dialog.tsx:49
 msgid "Select display language"
@@ -3366,9 +3543,13 @@ msgstr "Velg visningsspråk"
 
 #: src/app/routes/_authenticated/_payment-methods/components/payment-handler-selector.tsx:37
 msgid "Select Payment Handler"
-msgstr ""
+msgstr "Velg betalingshåndterer"
 
-#: src/app/routes/_authenticated/_profile/profile.tsx:128
+#: src/lib/components/login/reset-password-form.tsx:119
+msgid "Password reset links are only valid for a limited time. Request a new one to reset your password."
+msgstr "Lenker for tilbakestilling av passord er bare gyldige i en begrenset periode. Be om en ny for å tilbakestille passordet ditt."
+
+#: src/app/routes/_authenticated/_profile/profile.tsx:129
 msgid "Authentication methods"
 msgstr "Autentiseringsmetoder"
 
@@ -3393,7 +3574,11 @@ msgstr "Søk roller..."
 #~ msgid "Successfully cancelled {fulfilled} jobs"
 #~ msgstr ""
 
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:71
+#: src/lib/framework/dashboard-widget/low-stock-widget/index.tsx:115
+msgid "None of the {CANDIDATE_POOL_SIZE} sampled variants are at or below {threshold}. Others may still be low."
+msgstr "Ingen av de {CANDIDATE_POOL_SIZE} kontrollerte variantene er på eller under {threshold}. Andre kan fortsatt være lave."
+
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:73
 #: src/app/routes/_authenticated/_product-variants/product-variants.tsx:19
 #: src/app/routes/_authenticated/_product-variants/product-variants.tsx:28
 msgid "Product Variants"
@@ -3407,10 +3592,9 @@ msgstr "Administrer globale visninger"
 msgid "Processing..."
 msgstr "Behandler..."
 
-#. placeholder {0}: totalItems === 1 ? 'asset' : 'assets'
-#: src/lib/components/shared/asset/asset-gallery.tsx:465
-msgid "{totalItems} {0} found"
-msgstr "{totalItems} {0} funnet"
+#: src/lib/components/shared/asset/asset-gallery.tsx:472
+#~ msgid "{totalItems} {0} found"
+#~ msgstr "{totalItems} {0} funnet"
 
 #: src/lib/components/date-range-picker.tsx:122
 msgid "Select date range"
@@ -3419,6 +3603,7 @@ msgstr "Velg datoperiode"
 #: src/app/routes/_authenticated/_orders/components/edit-order-table.tsx:158
 #: src/app/routes/_authenticated/_orders/components/order-table.tsx:44
 #: src/app/routes/_authenticated/_orders/components/refund-order-dialog.tsx:97
+#: src/app/routes/_authenticated/_product-variants/product-variants.tsx:54
 msgid "Product"
 msgstr "Produkt"
 
@@ -3430,7 +3615,7 @@ msgstr "Roter API-nøkkel"
 #: src/lib/components/shared/rich-text-editor/table-grid-picker.tsx:48
 #: src/lib/components/shared/rich-text-editor/table-grid-picker.tsx:58
 msgid "Insert table"
-msgstr ""
+msgstr "Sett inn tabell"
 
 #: src/app/routes/_authenticated/_tax-rates/tax-rates.tsx:63
 msgid "Category"
@@ -3448,15 +3633,22 @@ msgstr "Tildel"
 msgid "Successfully created seller"
 msgstr "Selger opprettet"
 
-#: src/lib/framework/dashboard-widget/metrics-widget/index.tsx:104
-msgid "Try again"
+#: src/lib/components/shared/asset/asset-gallery.tsx:906
+msgid "We couldn't load assets"
 msgstr ""
+
+#: src/lib/framework/dashboard-widget/latest-customers-widget/index.tsx:58
+#: src/lib/framework/dashboard-widget/low-stock-widget/index.tsx:80
+#: src/lib/framework/dashboard-widget/metrics-widget/index.tsx:104
+#: src/lib/framework/dashboard-widget/top-products-widget/index.tsx:122
+msgid "Try again"
+msgstr "Prøv igjen"
 
 #: src/app/routes/_authenticated/_shipping-methods/shipping-methods_.$id.tsx:91
 msgid "Successfully updated shipping method"
 msgstr "Fraktmetode oppdatert"
 
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:156
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:185
 msgid "Failed to update product variant"
 msgstr "Kunne ikke oppdatere produktvariant"
 
@@ -3483,33 +3675,37 @@ msgstr "Notat"
 #: src/lib/components/shared/rich-text-editor/responsive-toolbar.tsx:147
 #: src/lib/components/shared/rich-text-editor/selection-bubble-menu.tsx:59
 msgid "Bold"
-msgstr ""
+msgstr "Fet"
 
 #: src/app/routes/_authenticated/_channels/channels_.$id.tsx:160
 #: src/app/routes/_authenticated/_global-settings/global-settings.tsx:112
 msgid "Available languages"
 msgstr "Tilgjengelige språk"
 
+#: src/lib/framework/dashboard-widget/low-stock-widget/index.tsx:100
+msgid "{saleable} in stock"
+msgstr "{saleable} på lager"
+
 #. placeholder {0}: Math.min(remaining, CHILDREN_PAGE_SIZE)
-#: src/app/routes/_authenticated/_collections/collections.tsx:503
+#: src/app/routes/_authenticated/_collections/collections.tsx:530
 msgid "Load {0} more ({remaining} remaining)"
 msgstr "Last {0} flere ({remaining} gjenstår)"
 
 #: src/lib/components/shared/error-page.tsx:94
 msgid "Not found"
-msgstr ""
+msgstr "Ikke funnet"
 
 #: src/app/routes/_authenticated/_facets/facets_.$id.tsx:143
-#: src/app/routes/_authenticated/_product-variants/product-variants.tsx:82
-#: src/app/routes/_authenticated/_products/products.tsx:78
+#: src/app/routes/_authenticated/_product-variants/product-variants.tsx:93
+#: src/app/routes/_authenticated/_products/products.tsx:93
 msgid "Facet values"
 msgstr "Fasettverdier"
 
-#: src/lib/components/data-table/data-table.tsx:300
+#: src/lib/components/data-table/data-table.tsx:370
 msgid "Failed to reorder items"
 msgstr "Kunne ikke omorganisere varer"
 
-#: src/lib/framework/dashboard-widget/orders-summary/index.tsx:90
+#: src/lib/framework/dashboard-widget/orders-summary/index.tsx:101
 msgid "Total Orders"
 msgstr "Totalt antall bestillinger"
 
@@ -3559,6 +3755,10 @@ msgstr "Betaling autorisert"
 msgid "Successfully updated role"
 msgstr "Rolle oppdatert"
 
+#: src/app/routes/_authenticated/_assets/assets_.$id.tsx:135
+msgid "The display name can omit the extension or keep {sourceExtensionLabel}. It cannot use a different file extension."
+msgstr ""
+
 #: src/lib/components/shared/customer-address-form.tsx:184
 msgid "Select a country"
 msgstr "Velg et land"
@@ -3577,13 +3777,13 @@ msgstr "Fraktmetoder"
 msgid "Select an address"
 msgstr "Velg en adresse"
 
-#: src/app/routes/_authenticated/_system/settings-store.tsx:337
+#: src/app/routes/_authenticated/_system/settings-store.tsx:401
 #: src/lib/components/shared/configurable-operation-arg-summary.tsx:71
 msgid "Yes"
 msgstr "Ja"
 
-#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:179
-#: src/app/routes/_authenticated/_products/products_.$id.tsx:244
+#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:198
+#: src/app/routes/_authenticated/_products/products_.$id.tsx:259
 msgid "Slug"
 msgstr "Slug"
 
@@ -3604,9 +3804,18 @@ msgid "Update the note content or visibility"
 msgstr "Oppdater notatinnhold eller synlighet"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:272
+#: src/lib/framework/defaults.ts:315
+msgid "Latest Customers Widget"
+msgstr "Siste kunder-widget"
+
+#. js-lingui-explicit-id
+#: src/lib/framework/defaults.ts:277
 msgid "Latest Orders Widget"
 msgstr "Siste bestillinger-widget"
+
+#: src/lib/framework/dashboard-widget/low-stock-widget/index.tsx:72
+msgid "Loading stock levels…"
+msgstr "Laster lagernivåer…"
 
 #: src/app/routes/_authenticated/_collections/components/collection-contents-sheet.tsx:34
 msgid "Collection contents for {collectionName}"
@@ -3629,6 +3838,7 @@ msgstr "er mindre enn eller lik"
 msgid "is not equal to"
 msgstr "er ikke lik"
 
+#: src/app/routes/_authenticated/index.tsx:395
 #: src/lib/components/data-table/data-table-settings-menu.tsx:72
 msgid "Refresh"
 msgstr "Oppdater"
@@ -3639,9 +3849,9 @@ msgstr "Oppdater"
 
 #: src/app/routes/_authenticated/_payment-methods/components/payment-eligibility-checker-selector.tsx:38
 msgid "No checkers found"
-msgstr ""
+msgstr "Ingen sjekkere funnet"
 
-#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:139
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:147
 msgid "Settle payment"
 msgstr "Gjennomfør betaling"
 
@@ -3649,7 +3859,7 @@ msgstr "Gjennomfør betaling"
 #: src/app/routes/_authenticated/_channels/channels.tsx:15
 #: src/app/routes/_authenticated/_channels/channels.tsx:24
 #: src/app/routes/_authenticated/_option-groups/option-groups_.$id.tsx:210
-#: src/app/routes/_authenticated/_products/products_.$id.tsx:343
+#: src/app/routes/_authenticated/_products/products_.$id.tsx:357
 #: src/app/routes/_authenticated/_roles/roles_.$id.tsx:111
 #: src/lib/components/layout/channel-switcher.tsx:146
 msgid "Channels"
@@ -3659,7 +3869,12 @@ msgstr "Kanaler"
 msgid "Shipping refunded"
 msgstr "Frakt refundert"
 
-#: src/lib/components/shared/asset/asset-gallery.tsx:376
+#. placeholder {0}: group.name
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:290
+msgid "Failed to create option in group \"{0}\""
+msgstr ""
+
+#: src/lib/components/shared/asset/asset-gallery.tsx:539
 msgid "Asset type"
 msgstr "Ressurstype"
 
@@ -3675,8 +3890,8 @@ msgstr "{successfulRefundCount} betaling(er) refundert før feil. Sjekk ordrehis
 msgid "Select item"
 msgstr "Velg vare"
 
-#: src/app/routes/_authenticated/_products/products_.$id.tsx:57
-#: src/app/routes/_authenticated/_products/products_.$id.tsx:210
+#: src/app/routes/_authenticated/_products/products_.$id.tsx:58
+#: src/app/routes/_authenticated/_products/products_.$id.tsx:211
 msgid "New product"
 msgstr "Nytt produkt"
 
@@ -3705,20 +3920,29 @@ msgstr "Dupliser {0}"
 msgid "Remove from group"
 msgstr "Fjern fra gruppe"
 
+#. js-lingui-explicit-id
+#: src/lib/framework/defaults.ts:304
+msgid "Low Stock Widget"
+msgstr "Lav lagerbeholdning-widget"
+
 #: src/app/routes/_authenticated/_api-keys/api-keys.tsx:34
 msgid "Search API keys..."
-msgstr ""
+msgstr "Søk etter API-nøkler..."
+
+#: src/lib/components/login/reset-password-form.tsx:61
+msgid "Passwords do not match"
+msgstr "Passordene stemmer ikke overens"
 
 #: src/lib/components/data-input/datetime-input.tsx:45
 msgid "Pick a date and time"
-msgstr ""
+msgstr "Velg dato og klokkeslett"
 
 #: src/lib/components/shared/form-error-summary.tsx:101
 msgid "This field is invalid"
 msgstr ""
 
-#: src/app/routes/_authenticated/_orders/components/fulfillment-details.tsx:53
-#: src/app/routes/_authenticated/_orders/components/fulfillment-details.tsx:57
+#: src/app/routes/_authenticated/_orders/components/fulfillment-details.tsx:60
+#: src/app/routes/_authenticated/_orders/components/fulfillment-details.tsx:64
 msgid "Failed to update fulfillment state"
 msgstr "Kunne ikke oppdatere oppfyllelsestilstand"
 
@@ -3762,7 +3986,7 @@ msgstr "Legger til {0} vare(r)"
 msgid "Add row after"
 msgstr "Legg til rad etter"
 
-#: src/app/routes/_authenticated/_orders/components/order-tax-summary.tsx:23
+#: src/app/routes/_authenticated/_orders/components/order-tax-summary.tsx:30
 msgid "Tax total"
 msgstr "Mva totalt"
 
@@ -3770,10 +3994,10 @@ msgstr "Mva totalt"
 msgid "Draft order status"
 msgstr "Utkast til ordrestatus"
 
-#: src/app/routes/_authenticated/_collections/components/collection-contents-preview-table.tsx:147
+#: src/app/routes/_authenticated/_collections/components/collection-contents-preview-table.tsx:166
 #: src/app/routes/_authenticated/_collections/components/collection-contents-table.tsx:79
 msgid "Search variants..."
-msgstr ""
+msgstr "Søk etter varianter..."
 
 #: src/app/routes/_authenticated/_products/components/create-product-options-dialog.tsx:119
 #~ msgid "Successfully created product options"
@@ -3783,12 +4007,12 @@ msgstr ""
 msgid "Failed to create payment method"
 msgstr "Kunne ikke opprette betalingsmetode"
 
-#: src/app/routes/_authenticated/_facets/facets_.$facetId.values_.$id.tsx:84
+#: src/app/routes/_authenticated/_facets/facets_.$facetId.values_.$id.tsx:85
 msgid "Successfully created facet value"
 msgstr "Fasettverdi opprettet"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:114
+#: src/lib/framework/defaults.ts:117
 msgid "Marketing"
 msgstr "Markedsføring"
 
@@ -3801,7 +4025,7 @@ msgid "greater than"
 msgstr "større enn"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:263
+#: src/lib/framework/defaults.ts:266
 msgid "Metrics Widget"
 msgstr "Metrikk-widget"
 
@@ -3843,13 +4067,17 @@ msgstr "Laster tagger..."
 msgid "Successfully created facet"
 msgstr "Fasett opprettet"
 
-#. placeholder {0}: row.original.productVariantCount
-#: src/app/routes/_authenticated/_collections/collections.tsx:432
+#: src/app/routes/_authenticated/index.tsx:460
+msgid "No widgets to display. Use \"Edit Layout\" to add widgets."
+msgstr "Ingen widgeter å vise. Bruk «Rediger oppsett» for å legge til widgeter."
+
+#. placeholder {0}: formatNumber(row.original.productVariantCount as number)
+#: src/app/routes/_authenticated/_collections/collections.tsx:454
 msgid "{0} variants"
 msgstr "{0} varianter"
 
-#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:45
-#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:49
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:53
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:57
 msgid "Failed to settle payment"
 msgstr "Kunne ikke gjennomføre betaling"
 
@@ -3857,13 +4085,13 @@ msgstr "Kunne ikke gjennomføre betaling"
 msgid "No billing address"
 msgstr "Ingen fakturaadresse"
 
-#: src/app/routes/_authenticated/_facets/facets_.$facetId.values_.$id.tsx:119
-msgid "Facet"
-msgstr "Fasett"
+#: src/app/routes/_authenticated/_facets/facets_.$facetId.values_.$id.tsx:120
+#~ msgid "Facet"
+#~ msgstr "Fasett"
 
 #: src/lib/components/data-table/data-table-views-tabs.tsx:124
 msgid "Unsaved view"
-msgstr ""
+msgstr "Ulagret visning"
 
 #: src/app/routes/_authenticated/_system/components/cancel-jobs-bulk-action.tsx:41
 #~ msgid "{rejected, plural, one {{0}} other {{1}}}"
@@ -3873,7 +4101,7 @@ msgstr ""
 msgid "Cannot remove from active channel"
 msgstr "Kan ikke fjerne fra aktiv kanal"
 
-#: src/app/routes/_authenticated/_assets/assets_.$id.tsx:179
+#: src/app/routes/_authenticated/_assets/assets_.$id.tsx:225
 #: src/lib/components/shared/asset/asset-preview.tsx:162
 msgid "Not set"
 msgstr "Ikke angitt"
@@ -3902,23 +4130,23 @@ msgstr "Kunne ikke opprette kundegruppe"
 msgid "Failed to create role"
 msgstr "Kunne ikke opprette rolle"
 
-#: src/app/routes/_authenticated/_products/products_.$id.tsx:238
+#: src/app/routes/_authenticated/_products/products_.$id.tsx:253
 msgid "Product name"
 msgstr "Produktnavn"
 
-#: src/app/routes/_authenticated/_orders/components/fulfillment-details.tsx:50
+#: src/app/routes/_authenticated/_orders/components/fulfillment-details.tsx:57
 msgid "Fulfillment state updated successfully"
 msgstr "Oppfyllelsestilstand oppdatert"
 
 #: src/app/routes/_authenticated/_option-groups/option-groups_.$groupId.options_.$id.tsx:79
 #: src/app/routes/_authenticated/_option-groups/option-groups_.$id.tsx:79
 #: src/app/routes/_authenticated/_option-groups/option-groups_.$id.tsx:205
-#: src/app/routes/_authenticated/_option-groups/option-groups.tsx:38
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:66
-#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:59
-#: src/app/routes/_authenticated/_products/products_.$id.tsx:56
-#: src/app/routes/_authenticated/_products/products.tsx:25
-#: src/app/routes/_authenticated/_products/products.tsx:48
+#: src/app/routes/_authenticated/_option-groups/option-groups.tsx:62
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:80
+#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:61
+#: src/app/routes/_authenticated/_products/products_.$id.tsx:57
+#: src/app/routes/_authenticated/_products/products.tsx:27
+#: src/app/routes/_authenticated/_products/products.tsx:56
 msgid "Products"
 msgstr "Produkter"
 
@@ -3941,7 +4169,7 @@ msgstr "Legg til opsjonsgruppe"
 
 #: src/lib/components/data-table/data-table-views-tabs.tsx:84
 msgid "All"
-msgstr ""
+msgstr "Alle"
 
 #. placeholder {0}: formatCurrency(refund.amountToRefundTotal, order.currencyCode)
 #: src/app/routes/_authenticated/_orders/components/refund-order-dialog.tsx:372
@@ -3952,16 +4180,20 @@ msgstr "Refunder {0}"
 msgid "Enter slug manually"
 msgstr "Skriv inn slug manuelt"
 
-#: src/app/routes/_authenticated/index.tsx:230
-msgid "No widgets available"
-msgstr "Ingen widgeter tilgjengelig"
+#: src/app/routes/_authenticated/_orders/components/fulfillment-details.tsx:160
+msgid "Items included in this fulfillment."
+msgstr "Varer som inngår i denne oppfyllelsen."
 
-#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:75
-#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:79
+#: src/app/routes/_authenticated/index.tsx:230
+#~ msgid "No widgets available"
+#~ msgstr "Ingen widgeter tilgjengelig"
+
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:83
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:87
 msgid "Failed to cancel payment"
 msgstr "Kunne ikke kansellere betaling"
 
-#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:72
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:80
 msgid "Payment cancelled successfully"
 msgstr "Betaling kansellert"
 
@@ -3971,18 +4203,18 @@ msgstr "Global visning duplisert"
 
 #: src/app/routes/_authenticated/_administrators/administrators.tsx:26
 msgid "Search administrators..."
-msgstr ""
+msgstr "Søk etter administratorer..."
 
 #: src/app/routes/_authenticated/_api-keys/api-keys_.$id.tsx:210
 #: src/app/routes/_authenticated/_api-keys/api-keys.tsx:70
 msgid "Created by"
 msgstr "Opprettet av"
 
-#: src/lib/components/data-table/data-table.tsx:579
+#: src/lib/components/data-table/data-table.tsx:649
 msgid "No items match your current filters. Try clearing them to see more."
-msgstr ""
+msgstr "Ingen elementer samsvarer med de gjeldende filtrene. Prøv å fjerne dem for å se mer."
 
-#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:240
+#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:146
 msgid "Filter variants..."
 msgstr "Filtrer varianter..."
 
@@ -3990,8 +4222,8 @@ msgstr "Filtrer varianter..."
 msgid "Add a price in another currency"
 msgstr "Legg til en pris i en annen valuta"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:127
-#: src/app/routes/_authenticated/_profile/profile.tsx:114
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:128
+#: src/app/routes/_authenticated/_profile/profile.tsx:115
 msgid "Email Address or identifier"
 msgstr "E-postadresse eller identifikator"
 
@@ -4071,12 +4303,12 @@ msgstr "Notat slettet"
 msgid "Note updated successfully"
 msgstr "Notat oppdatert"
 
-#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:91
-#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:95
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:99
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:103
 msgid "Failed to settle refund"
 msgstr "Kunne ikke gjennomføre refusjon"
 
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:461
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:737
 #: src/app/routes/_authenticated/_products/components/add-product-variant-dialog.tsx:311
 msgid "Stock level"
 msgstr "Lagernivå"
@@ -4102,15 +4334,14 @@ msgid "View duplicated successfully"
 msgstr "Visning duplisert"
 
 #: src/app/routes/_authenticated/_products/components/product-option-group-badge.tsx:62
-#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:297
+#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:379
 msgid "Remove option group"
 msgstr "Fjern alternativgruppe"
 
-#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:194
+#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:213
 #: src/app/routes/_authenticated/_orders/components/add-surcharge-form.tsx:76
-#: src/app/routes/_authenticated/_orders/components/order-tax-summary.tsx:14
 #: src/app/routes/_authenticated/_payment-methods/payment-methods_.$id.tsx:171
-#: src/app/routes/_authenticated/_products/products_.$id.tsx:260
+#: src/app/routes/_authenticated/_products/products_.$id.tsx:275
 #: src/app/routes/_authenticated/_promotions/promotions_.$id.tsx:174
 #: src/app/routes/_authenticated/_roles/roles_.$id.tsx:94
 #: src/app/routes/_authenticated/_shipping-methods/shipping-methods_.$id.tsx:162
@@ -4126,10 +4357,15 @@ msgstr "Beskrivelse"
 msgid "Countries"
 msgstr "Land"
 
+#: src/lib/components/login/forgot-password-form.tsx:61
+#: src/lib/components/login/reset-password-form.tsx:91
+msgid "Something went wrong"
+msgstr "Noe gikk galt"
+
 #. placeholder {0}: error.message
 #: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:162
 msgid "Failed to remove order line: {0}"
-msgstr ""
+msgstr "Kunne ikke fjerne bestillingslinjen: {0}"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:182
 msgid "Street Address 2"
@@ -4140,8 +4376,8 @@ msgid "Global view deleted successfully"
 msgstr "Global visning slettet"
 
 #: src/app/routes/_authenticated/index.tsx:199
-msgid "Edit Layout"
-msgstr "Rediger layout"
+#~ msgid "Edit Layout"
+#~ msgstr "Rediger layout"
 
 #: src/lib/components/shared/assign-to-channel-bulk-action.tsx:55
 #: src/lib/components/shared/assigned-channels.tsx:98
@@ -4166,15 +4402,17 @@ msgstr "Legg til manuell betaling på {0}"
 msgid "is in"
 msgstr "er i"
 
-#: src/lib/components/login/login-form.tsx:83
+#: src/lib/components/login/forgot-password-form.tsx:123
+#: src/lib/components/login/login-form.tsx:84
 msgid "Email"
 msgstr "E-post"
 
+#: src/app/routes/_authenticated/_assets/components/asset-tag-filter.tsx:80
 #: src/lib/components/data-table/add-filter-menu.tsx:47
 msgid "Filter"
-msgstr ""
+msgstr "Filtrer"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:86
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:87
 msgid "Failed to update administrator"
 msgstr "Kunne ikke oppdatere administrator"
 
@@ -4182,11 +4420,15 @@ msgstr "Kunne ikke oppdatere administrator"
 msgid "Manage your personal saved views for this table"
 msgstr "Administrer dine personlige lagrede visninger for denne tabellen"
 
-#: src/app/routes/_authenticated/_assets/components/asset-tag-filter.tsx:104
-msgid "Filter by tags"
-msgstr "Filtrer etter tagger"
+#: src/lib/framework/dashboard-widget/latest-customers-widget/index.tsx:50
+msgid "Loading customers…"
+msgstr "Laster kunder…"
 
-#: src/lib/components/login/login-form.tsx:73
+#: src/app/routes/_authenticated/_assets/components/asset-tag-filter.tsx:104
+#~ msgid "Filter by tags"
+#~ msgstr "Filtrer etter tagger"
+
+#: src/lib/components/login/login-form.tsx:74
 msgid "Sign in to access the admin dashboard"
 msgstr "Logg inn for å få tilgang til administrasjonspanelet"
 
@@ -4197,6 +4439,10 @@ msgstr "Logg inn for å få tilgang til administrasjonspanelet"
 #: src/lib/components/data-table/filters/data-table-boolean-filter.tsx:57
 msgid "False"
 msgstr "Usann"
+
+#: src/app/routes/_authenticated/_assets/assets_.$id.tsx:138
+msgid "Asset name extension does not match the source file"
+msgstr ""
 
 #: src/lib/components/layout/nav-user.tsx:127
 msgctxt "theme"
@@ -4214,7 +4460,7 @@ msgstr "er lik"
 
 #: src/lib/components/shared/asset/asset-properties.tsx:17
 msgid "Source File"
-msgstr ""
+msgstr "Kildefil"
 
 #: src/app/routes/_authenticated/_products/components/create-product-options-dialog.tsx:249
 #: src/app/routes/_authenticated/_products/components/create-product-options-dialog.tsx:408
@@ -4231,8 +4477,8 @@ msgid "does not contain"
 msgstr "inneholder ikke"
 
 #: src/app/routes/_authenticated/_option-groups/option-groups_.$groupId.options_.$id.tsx:186
-msgid "Option Group"
-msgstr "Opsjonsgruppe"
+#~ msgid "Option Group"
+#~ msgstr "Opsjonsgruppe"
 
 #: src/app/routes/_authenticated/_customers/components/customer-address-card.tsx:132
 msgid "Edit the address details below."
@@ -4248,31 +4494,31 @@ msgstr "Kunne ikke flytte samlinger"
 
 #: src/lib/components/shared/rich-text-editor/responsive-toolbar.tsx:210
 msgid "Blockquote"
-msgstr ""
+msgstr "Sitatblokk"
 
 #: src/lib/components/shared/rich-text-editor/table-grid-picker.tsx:93
 msgid "Select table size"
-msgstr ""
+msgstr "Velg tabellstørrelse"
 
-#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:60
-#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:64
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:68
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:72
 msgid "Failed to update payment state"
 msgstr "Kunne ikke oppdatere betalingstilstand"
 
-#: src/lib/framework/dashboard-widget/orders-summary/index.tsx:85
+#: src/lib/framework/dashboard-widget/orders-summary/index.tsx:96
 msgid "Your orders summary"
 msgstr "Oversikt over dine bestillinger"
 
-#: src/lib/components/shared/asset/asset-gallery.tsx:406
+#: src/lib/components/shared/asset/asset-gallery.tsx:589
 msgid "Upload"
 msgstr "Last opp"
 
-#: src/app/routes/_authenticated/_products/products_.$id.tsx:115
+#: src/app/routes/_authenticated/_products/products_.$id.tsx:116
 msgid "Product with options"
 msgstr "Produkt med opsjoner"
 
 #. placeholder {0}: filteredTags.length
-#: src/app/routes/_authenticated/_assets/components/asset-tag-filter.tsx:163
+#: src/app/routes/_authenticated/_assets/components/asset-tag-filter.tsx:196
 msgid "Showing all {0} results"
 msgstr "Viser alle {0} resultater"
 
@@ -4288,7 +4534,7 @@ msgid "+ {0} more"
 msgstr "+ {0} flere"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:45
+#: src/lib/framework/defaults.ts:48
 msgid "Option Groups"
 msgstr "Opsjonsgrupper"
 
@@ -4296,17 +4542,22 @@ msgstr "Opsjonsgrupper"
 msgid "Custom fields"
 msgstr "Egendefinerte felt"
 
+#. placeholder {0}: group.name
+#: src/app/routes/_authenticated/_product-variants/components/variant-option-select.tsx:79
+msgid "Select or create {0}"
+msgstr ""
+
 #: src/app/routes/_authenticated/_orders/components/order-process-dialog.tsx:98
 msgid "All possible order states and their transitions. The current state is highlighted."
 msgstr "Alle mulige ordretilstander og deres overganger. Gjeldende tilstand er uthevet."
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:82
+#: src/lib/framework/defaults.ts:85
 msgid "Orders"
 msgstr "Bestillinger"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:280
+#: src/lib/framework/defaults.ts:285
 msgid "Orders Summary Widget"
 msgstr "Bestillingsoversikt-widget"
 
@@ -4389,14 +4640,14 @@ msgstr "Enhetsinformasjon"
 
 #: src/app/routes/_authenticated/_tax-categories/tax-categories.tsx:48
 msgid "Default"
-msgstr ""
+msgstr "Standard"
 
 #: src/lib/components/data-table/data-table-views-tabs.tsx:144
 msgid "Manage my views"
-msgstr ""
+msgstr "Administrer visningene mine"
 
-#: src/lib/framework/dashboard-widget/metrics-widget/index.tsx:35
-#: src/lib/framework/dashboard-widget/metrics-widget/index.tsx:82
+#: src/lib/framework/dashboard-widget/metrics-widget/index.tsx:41
+#: src/lib/framework/dashboard-widget/metrics-widget/index.tsx:86
 msgid "Order Total"
 msgstr "Totalt bestilling"
 
@@ -4411,9 +4662,11 @@ msgstr "Ant."
 #: src/lib/components/shared/rich-text-editor/responsive-toolbar.tsx:183
 #: src/lib/components/shared/rich-text-editor/selection-bubble-menu.tsx:91
 msgid "Inline code"
-msgstr ""
+msgstr "Innebygd kode"
 
+#: src/app/routes/_authenticated/_assets/components/asset-tag-filter.tsx:45
 #: src/app/routes/_authenticated/_assets/components/asset-tags-editor.tsx:104
+#: src/lib/components/shared/asset/asset-gallery.tsx:1200
 msgid "Tags"
 msgstr "Tagger"
 
@@ -4427,7 +4680,7 @@ msgstr "Superadministrator"
 
 #: src/lib/components/shared/rich-text-editor/resizable-image.tsx:90
 msgid "Resize image from left"
-msgstr ""
+msgstr "Endre størrelse på bildet fra venstre"
 
 #: src/app/routes/_authenticated/_promotions/components/promotion-actions-selector.tsx:38
 msgid "Available Actions"
@@ -4436,13 +4689,22 @@ msgstr "Tilgjengelige handlinger"
 #. placeholder {0}: error.message
 #: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:143
 msgid "Failed to update order line: {0}"
-msgstr ""
+msgstr "Kunne ikke oppdatere bestillingslinjen: {0}"
+
+#: src/app/routes/_authenticated/index.tsx:411
+#: src/app/routes/_authenticated/index.tsx:419
+msgid "Edit layout"
+msgstr "Rediger oppsett"
+
+#: src/lib/components/login/reset-password-form.tsx:116
+msgid "This link is invalid or has expired"
+msgstr "Denne lenken er ugyldig eller har utløpt"
 
 #: src/lib/components/shared/rich-text-editor/link-dialog.tsx:84
 #~ msgid "Insert link"
 #~ msgstr "Sett inn lenke"
 
-#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:205
+#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:224
 msgid "If enabled, the filters will be inherited from the parent collection and combined with the filters set on this collection."
 msgstr "Hvis aktivert, vil filtrene arves fra overordnet samling og kombineres med filtrene satt på denne samlingen."
 
@@ -4454,7 +4716,7 @@ msgstr "Velg en sone"
 msgid "Test shipping methods"
 msgstr "Test fraktmetoder"
 
-#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:42
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:50
 msgid "Payment settled successfully"
 msgstr "Betaling gjennomført"
 
@@ -4469,7 +4731,7 @@ msgid "Enable"
 msgstr "Aktiver"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:216
+#: src/lib/framework/defaults.ts:219
 msgid "Payment Methods"
 msgstr "Betalingsmetoder"
 
@@ -4514,8 +4776,8 @@ msgstr "Venter"
 msgid "paymentState.Settled"
 msgstr "Gjort opp"
 
-#: src/lib/framework/dashboard-widget/metrics-widget/index.tsx:37
-#: src/lib/framework/dashboard-widget/metrics-widget/index.tsx:84
+#: src/lib/framework/dashboard-widget/metrics-widget/index.tsx:43
+#: src/lib/framework/dashboard-widget/metrics-widget/index.tsx:88
 msgid "Average Order Value"
 msgstr "Gjennomsnittlig ordreverdi"
 
@@ -4523,7 +4785,7 @@ msgstr "Gjennomsnittlig ordreverdi"
 msgid "Failed to create zone"
 msgstr "Kunne ikke opprette sone"
 
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:382
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:655
 msgid "Stock levels"
 msgstr "Lagernivåer"
 
@@ -4549,6 +4811,10 @@ msgstr "Kunne ikke gi nytt navn til global visning"
 #~ msgid "Insert a new hyperlink with URL and target options"
 #~ msgstr "Sett inn en ny hyperlenke med URL og målalternativer"
 
+#: src/app/routes/_authenticated/_assets/assets_.$id.tsx:192
+msgid "Display name"
+msgstr ""
+
 #: src/lib/components/shared/rich-text-editor/image-dialog.tsx:194
 msgid "Height"
 msgstr "Høyde"
@@ -4562,6 +4828,14 @@ msgstr "En refusjon på {formattedDiff} er nødvendig. Velg betalingsbeløp og s
 #: src/app/routes/_authenticated/_orders/components/refund-order-dialog.tsx:100
 msgid "Unit price"
 msgstr "Enhetspris"
+
+#: src/lib/components/shared/asset/asset-gallery.tsx:857
+msgid "Try changing your search, asset type, or selected tags."
+msgstr ""
+
+#: src/lib/components/login/forgot-password-form.tsx:87
+msgid "If an account exists for {submittedEmailAddress}, you will receive an email with a link to reset your password."
+msgstr "Hvis det finnes en konto for {submittedEmailAddress}, vil du motta en e-post med en lenke for å tilbakestille passordet ditt."
 
 #: src/app/routes/_authenticated/_system/scheduled-tasks.tsx:145
 msgid "Schedule Pattern"
@@ -4592,7 +4866,7 @@ msgstr "Legg til kundegrupper"
 msgid "Available Languages"
 msgstr "Tilgjengelige språk"
 
-#: src/lib/components/data-table/data-table-bulk-actions.tsx:114
+#: src/lib/components/data-table/data-table-bulk-actions.tsx:129
 msgid "Reset selection"
 msgstr "Tilbakestill valg"
 
@@ -4611,7 +4885,11 @@ msgstr "Kundeinformasjon oppdatert"
 #. placeholder {0}: error.message
 #: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:358
 msgid "Failed to delete draft order: {0}"
-msgstr ""
+msgstr "Kunne ikke slette bestillingsutkastet: {0}"
+
+#: src/lib/framework/dashboard-widget/latest-customers-widget/index.tsx:91
+msgid "No new customers for this period"
+msgstr "Ingen nye kunder i denne perioden"
 
 #: src/lib/components/data-table/views-sheet.tsx:120
 msgid "Failed to convert view to global"
@@ -4619,24 +4897,24 @@ msgstr "Kunne ikke konvertere visning til global"
 
 #: src/app/routes/_authenticated/_payment-methods/components/payment-eligibility-checker-selector.tsx:37
 msgid "Select Payment Eligibility Checker"
-msgstr ""
+msgstr "Velg kvalifiseringssjekker for betaling"
 
 #: src/lib/components/data-table/filters/data-table-enum-filter.tsx:53
 msgid "Select operator"
-msgstr ""
+msgstr "Velg operator"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:38
+#: src/lib/framework/defaults.ts:41
 msgid "Product Variants"
 msgstr "Produktvarianter"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:31
+#: src/lib/framework/defaults.ts:34
 msgid "Products"
 msgstr "Produkter"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:121
+#: src/lib/framework/defaults.ts:124
 msgid "Promotions"
 msgstr "Kampanjer"
 
@@ -4652,7 +4930,12 @@ msgstr "Gammel e-post:"
 msgid "Save a view as \"Global\" to make it available to all users."
 msgstr "Lagre en visning som \"Global\" for å gjøre den tilgjengelig for alle brukere."
 
-#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:184
+#: src/app/routes/_authenticated/_assets/components/asset-tag-filter.tsx:147
+msgid "Search tags..."
+msgstr ""
+
+#: src/app/routes/_authenticated/_products/components/generate-missing-variants-dialog.tsx:154
+#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:90
 msgid "Failed to create variants"
 msgstr "Kunne ikke opprette variantene"
 
@@ -4662,7 +4945,7 @@ msgstr "Setter lagernivået der denne varianten anses som utsolgt. Bruk av en ne
 
 #: src/app/routes/_authenticated/_promotions/promotions.tsx:40
 msgid "Search promotions..."
-msgstr ""
+msgstr "Søk etter kampanjer..."
 
 #: src/app/routes/_authenticated/_api-keys/components/rotate-api-key-button.tsx:45
 #: src/app/routes/_authenticated/_api-keys/components/rotate-api-key-button.tsx:68
@@ -4677,9 +4960,9 @@ msgstr "Roter nøkkel"
 msgid "Hide password"
 msgstr "Skjul passord"
 
-#: src/lib/components/data-table/data-table-bulk-actions.tsx:71
+#: src/lib/components/data-table/data-table-bulk-actions.tsx:86
 msgid "Bulk actions"
-msgstr ""
+msgstr "Massehandlinger"
 
 #: src/app/routes/_authenticated/_sellers/sellers_.$id.tsx:30
 #: src/app/routes/_authenticated/_sellers/sellers_.$id.tsx:71
@@ -4688,20 +4971,20 @@ msgstr "Ny selger"
 
 #: src/lib/components/ui/state-views.tsx:14
 msgid "Loading…"
-msgstr ""
+msgstr "Laster…"
 
-#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:146
+#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:148
 msgid "e.g., Red, Large, Cotton"
 msgstr "f.eks. Rød, Stor, Bomull"
 
-#: src/app/routes/_authenticated/_profile/profile.tsx:75
+#: src/app/routes/_authenticated/_profile/profile.tsx:76
 msgid "Failed to update profile"
 msgstr "Kunne ikke oppdatere profil"
 
 #: src/lib/components/shared/rich-text-editor/responsive-toolbar.tsx:156
 #: src/lib/components/shared/rich-text-editor/selection-bubble-menu.tsx:67
 msgid "Italic"
-msgstr ""
+msgstr "Kursiv"
 
 #: src/app/routes/_authenticated/_orders/components/order-modification-summary.tsx:221
 msgid "Removed coupon codes"
@@ -4715,11 +4998,15 @@ msgstr "Tøm filter"
 msgid "Regions"
 msgstr "Regioner"
 
-#: src/lib/components/shared/asset/asset-gallery.tsx:438
+#: src/lib/components/shared/asset/asset-gallery.tsx:629
 msgid "Drop files here to upload"
 msgstr "Slipp filer her for å laste opp"
 
-#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:276
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:215
+msgid "View payment metadata"
+msgstr "Vis betalingsmetadata"
+
+#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:182
 msgid "Toggle all visible variants"
 msgstr "Veksle alle synlige varianter"
 
@@ -4737,6 +5024,12 @@ msgstr "Ny opsjonsgruppe"
 #~ msgid "Last updated {0}"
 #~ msgstr "Sist oppdatert {0}"
 
+#: src/lib/components/login/forgot-password-form.tsx:94
+#: src/lib/components/login/forgot-password-form.tsx:147
+#: src/lib/components/login/reset-password-form.tsx:199
+msgid "Back to sign in"
+msgstr "Tilbake til innlogging"
+
 #: src/lib/components/data-table/views-sheet.tsx:141
 msgid "No global views have been created yet."
 msgstr "Ingen globale visninger er opprettet ennå."
@@ -4749,7 +5042,7 @@ msgstr "Kunne ikke oppdatere rolle"
 msgid "This is the only time the full API key will be displayed. Copy or download it now — it cannot be retrieved later."
 msgstr "Dette er den eneste gangen den fullstendige API-nøkkelen vil vises. Kopier eller last den ned nå — den kan ikke hentes frem igjen senere."
 
-#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:105
+#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:124
 msgid "Successfully updated collection"
 msgstr "Samling oppdatert"
 
@@ -4784,7 +5077,7 @@ msgstr "Kupongkode fjernet fra bestilling"
 msgid "Never"
 msgstr "Aldri"
 
-#: src/app/routes/_authenticated/_facets/facets_.$facetId.values_.$id.tsx:93
+#: src/app/routes/_authenticated/_facets/facets_.$facetId.values_.$id.tsx:94
 msgid "Failed to update facet value"
 msgstr "Kunne ikke oppdatere fasettverdi"
 
@@ -4798,12 +5091,12 @@ msgstr "Bestilling oppfylt"
 
 #: src/lib/components/data-input/product-multi-selector-input.tsx:438
 msgid "Loading selected items..."
-msgstr ""
+msgstr "Laster valgte elementer..."
 
 #. placeholder {0}: error.message
 #: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:250
 msgid "Failed to set billing address for order: {0}"
-msgstr ""
+msgstr "Kunne ikke angi fakturaadresse for bestillingen: {0}"
 
 #: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:271
 msgid "No shipping address"
@@ -4875,8 +5168,8 @@ msgstr "Ny fraktmetode"
 msgid "is greater than or equal to"
 msgstr "er større enn eller lik"
 
-#: src/app/routes/_authenticated/_collections/components/collection-contents-preview-table.tsx:81
-#: src/app/routes/_authenticated/_collections/components/collection-contents-preview-table.tsx:92
+#: src/app/routes/_authenticated/_collections/components/collection-contents-preview-table.tsx:99
+#: src/app/routes/_authenticated/_collections/components/collection-contents-preview-table.tsx:113
 #: src/lib/components/shared/entity-assets.tsx:151
 msgid "Preview"
 msgstr "Forhåndsvisning"
@@ -4921,8 +5214,16 @@ msgstr "Feil vare"
 msgid "Summary of modifications"
 msgstr "Oppsummering av endringer"
 
+#: src/lib/components/login/reset-password-form.tsx:191
+msgid "Reset password"
+msgstr "Tilbakestill passord"
+
+#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:457
+msgid "Select"
+msgstr "Velg"
+
 #. placeholder {0}: payment.refunds.length
-#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:206
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:242
 msgid "Refunds ({0})"
 msgstr "Refusjoner ({0})"
 
@@ -4930,11 +5231,11 @@ msgstr "Refusjoner ({0})"
 msgid "Last Executed"
 msgstr "Sist utført"
 
-#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:250
+#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:266
 msgid "Payment details"
 msgstr "Betalingsdetaljer"
 
-#: src/app/routes/_authenticated/_products/products.tsx:119
+#: src/app/routes/_authenticated/_products/products.tsx:46
 msgid "Rebuild search index"
 msgstr "Bygg søkeindeks på nytt"
 
@@ -4951,7 +5252,11 @@ msgstr "Hvert 60. sekund"
 msgid "Failed to update customer group"
 msgstr "Kunne ikke oppdatere kundegruppe"
 
-#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:189
+#: src/app/routes/_authenticated/index.tsx:270
+msgid "Remove widget"
+msgstr "Fjern widget"
+
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:220
 msgid "Payment metadata"
 msgstr "Betalingsmetadata"
 
@@ -4969,10 +5274,10 @@ msgstr "Bruk filtre på tabellen og klikk \"Lagre visning\" for å komme i gang.
 
 #: src/lib/components/shared/rich-text-editor/link-bubble-menu.tsx:144
 msgid "Link URL"
-msgstr ""
+msgstr "Lenke-URL"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:202
+#: src/lib/framework/defaults.ts:205
 msgid "Roles"
 msgstr "Roller"
 
@@ -4980,14 +5285,18 @@ msgstr "Roller"
 msgid "Additional payment required"
 msgstr "Ekstra betaling påkrevd"
 
-#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:97
+#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:99
 #: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:63
 msgid "Failed to update order"
 msgstr "Kunne ikke oppdatere bestilling"
 
 #: src/lib/components/shared/asset/asset-bulk-actions.tsx:84
-msgid "With selected..."
-msgstr "Med valgte..."
+#~ msgid "With selected..."
+#~ msgstr "Med valgte..."
+
+#: src/lib/components/login/reset-password-form.tsx:146
+msgid "Choose a new password for your account"
+msgstr "Velg et nytt passord for kontoen din"
 
 #: src/app/routes/_authenticated/_stock-locations/stock-locations_.$id.tsx:77
 msgid "Failed to create stock location"
@@ -5004,17 +5313,16 @@ msgstr "Kundegruppemedlemmer for {customerGroupName}"
 #. placeholder {0}: e instanceof Error ? e.message : String(e)
 #: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:217
 msgid "Failed to set address for order: {0}"
-msgstr ""
+msgstr "Kunne ikke angi adresse for bestillingen: {0}"
 
-#: src/app/routes/_authenticated/_orders/components/fulfillment-details.tsx:120
-#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:215
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:251
 #: src/app/routes/_authenticated/_orders/orders.tsx:102
 #: src/app/routes/_authenticated/_system/job-queue.tsx:265
 msgid "State"
 msgstr "Tilstand"
 
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:389
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:409
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:662
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:680
 msgid "Do not track"
 msgstr "Ikke spor"
 
@@ -5043,8 +5351,8 @@ msgstr "Stat / Fylke"
 #: src/app/routes/_authenticated/_countries/countries_.$id.tsx:92
 #: src/app/routes/_authenticated/_payment-methods/payment-methods_.$id.tsx:147
 #: src/app/routes/_authenticated/_payment-methods/payment-methods.tsx:43
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:261
-#: src/app/routes/_authenticated/_products/products_.$id.tsx:226
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:491
+#: src/app/routes/_authenticated/_products/products_.$id.tsx:228
 #: src/app/routes/_authenticated/_promotions/promotions_.$id.tsx:153
 #: src/app/routes/_authenticated/_system/scheduled-tasks.tsx:131
 #: src/app/routes/_authenticated/_system/scheduled-tasks.tsx:139
@@ -5057,7 +5365,7 @@ msgstr "Stat / Fylke"
 msgid "Enabled"
 msgstr "Aktivert"
 
-#: src/lib/components/shared/asset/asset-gallery.tsx:476
+#: src/lib/components/shared/asset/asset-gallery.tsx:688
 msgid "Items per page"
 msgstr "Elementer per side"
 
@@ -5080,7 +5388,7 @@ msgstr "ID"
 #: src/lib/components/shared/error-page.tsx:113
 #: src/lib/components/shared/error-page.tsx:117
 msgid "Access denied"
-msgstr ""
+msgstr "Ingen tilgang"
 
 #: src/lib/components/shared/alerts.tsx:33
 msgid "Alerts"
@@ -5098,7 +5406,7 @@ msgstr "Forhåndsvis endringer"
 msgid "Failed to remove {entityType} from channel"
 msgstr "Kunne ikke fjerne {entityType} fra kanalen"
 
-#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:188
+#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:214
 msgid "Variant deleted successfully"
 msgstr "Variant slettet"
 
@@ -5107,7 +5415,7 @@ msgstr "Variant slettet"
 #~ msgstr "Rediger egenskapene for den valgte lenken"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:75
+#: src/lib/framework/defaults.ts:78
 msgid "Sales"
 msgstr "Salg"
 
@@ -5115,35 +5423,39 @@ msgstr "Salg"
 msgid "Select a destination collection"
 msgstr "Velg en målsamling"
 
-#: src/lib/framework/dashboard-widget/latest-orders-widget/index.tsx:53
+#: src/lib/framework/dashboard-widget/latest-orders-widget/index.tsx:54
 msgid "Your latest orders"
 msgstr "Dine siste bestillinger"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:144
+#: src/lib/framework/defaults.ts:147
 msgid "Scheduled Tasks"
 msgstr "Planlagte oppgaver"
+
+#: src/app/routes/_authenticated/_assets/assets_.$id.tsx:139
+msgid "Use {sourceExtensionLabel} or remove the extension from the display name."
+msgstr ""
 
 #: src/lib/components/data-table/use-generated-columns.tsx:428
 msgid "Are you sure you want to delete this item? This action cannot be undone."
 msgstr "Er du sikker på at du vil slette denne varen? Denne handlingen kan ikke angres."
 
-#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:323
+#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:405
 msgid "Variants"
 msgstr "Varianter"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:174
+#: src/lib/framework/defaults.ts:177
 msgid "Sellers"
 msgstr "Selgere"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:167
+#: src/lib/framework/defaults.ts:170
 msgid "Settings"
 msgstr "Innstillinger"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:151
+#: src/lib/framework/defaults.ts:154
 msgid "Settings Store"
 msgstr "Innstillingslager"
 
@@ -5151,12 +5463,12 @@ msgstr "Innstillingslager"
 msgid "Heading 3"
 msgstr "Overskrift 3"
 
-#: src/lib/components/login/login-form.tsx:70
+#: src/lib/components/login/login-form.tsx:71
 msgid "Welcome to Vendure"
 msgstr "Velkommen til Vendure"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:209
+#: src/lib/framework/defaults.ts:212
 msgid "Shipping Methods"
 msgstr "Fraktmetoder"
 
@@ -5170,15 +5482,19 @@ msgstr "Identifikator"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/fulfillment-handler-selector.tsx:51
 msgid "Select a fulfillment handler"
-msgstr ""
+msgstr "Velg en håndterer for ordreoppfyllelse"
 
-#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:119
+#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:138
 msgid "Failed to update collection"
 msgstr "Kunne ikke oppdatere samling"
 
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:304
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:577
 msgid "Price and tax"
 msgstr "Pris og mva"
+
+#: src/lib/framework/dashboard-widget/top-products-widget/index.tsx:120
+msgid "We couldn't load the top products"
+msgstr "Vi kunne ikke laste topproduktene"
 
 #: src/app/routes/_authenticated/_orders/components/order-history/order-history-container.tsx:56
 msgid "Order not found"
@@ -5195,6 +5511,10 @@ msgstr "Feil"
 #: src/app/routes/_authenticated/_orders/components/order-history/order-history-utils.tsx:103
 msgid "Order modified"
 msgstr "Bestilling endret"
+
+#: src/lib/components/login/reset-password-form.tsx:143
+msgid "Reset your password"
+msgstr "Tilbakestill passordet ditt"
 
 #: src/app/routes/_authenticated/_customers/components/customer-history/customer-history-utils.tsx:59
 #: src/app/routes/_authenticated/_customers/components/customer-history/default-customer-history-components.tsx:128
@@ -5227,23 +5547,37 @@ msgstr "Legg til tagger..."
 msgid "{0} items selected"
 msgstr "{0} elementer valgt"
 
+#: src/app/routes/_authenticated/index.tsx:455
+msgid "All widgets are hidden. Use the \"Add widget\" button to add them back."
+msgstr "Alle widgeter er skjult. Bruk «Legg til widget»-knappen for å legge dem til igjen."
+
 #: src/lib/components/shared/language-selector.tsx:53
 msgid "Search languages..."
 msgstr "Søk språk..."
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:188
+#: src/lib/framework/defaults.ts:191
 msgid "Stock Locations"
 msgstr "Lagerlokasjoner"
 
+#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:276
+#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:289
+msgid "Failed to update variant"
+msgstr "Kunne ikke oppdatere varianten"
+
 #: src/lib/components/data-table/data-table-pagination.tsx:69
-#: src/lib/components/data-table/data-table.tsx:705
+#: src/lib/components/data-table/data-table.tsx:776
 msgid "Go to previous page"
 msgstr "Gå til forrige side"
 
-#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:255
-#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:258
-#: src/app/routes/_authenticated/_collections/collections.tsx:425
+#. placeholder {0}: line.quantity
+#: src/app/routes/_authenticated/_orders/components/fulfillment-details.tsx:174
+msgid "Quantity: {0}"
+msgstr "Antall: {0}"
+
+#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:275
+#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:278
+#: src/app/routes/_authenticated/_collections/collections.tsx:447
 msgid "Contents"
 msgstr "Innhold"
 
@@ -5270,12 +5604,12 @@ msgid "Add payment ({0})"
 msgstr "Legg til betaling ({0})"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:130
+#: src/lib/framework/defaults.ts:133
 msgid "System"
 msgstr "System"
 
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:290
-#: src/app/routes/_authenticated/_products/components/product-variants-table.tsx:87
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:563
+#: src/app/routes/_authenticated/_products/components/product-variants-table.tsx:85
 msgid "Variant name"
 msgstr "Variantnavn"
 
@@ -5289,11 +5623,11 @@ msgstr "Fjern"
 msgid "Failed to update customer"
 msgstr "Kunne ikke oppdatere kunde"
 
-#: src/app/routes/_authenticated/_products/products_.$id.tsx:305
+#: src/app/routes/_authenticated/_products/products_.$id.tsx:319
 msgid "Remove option groups?"
 msgstr "Fjerne opsjonsgrupper?"
 
-#: src/app/routes/_authenticated/_collections/components/collection-contents-preview-table.tsx:95
+#: src/app/routes/_authenticated/_collections/components/collection-contents-preview-table.tsx:102
 msgid "This is a preview of the collection contents based on the current filter settings. Once you save the collection, the contents will be updated to reflect the new filter settings."
 msgstr "Dette er en forhåndsvisning av samlingens innhold basert på gjeldende filterinnstillinger. Når du lagrer samlingen, vil innholdet bli oppdatert for å gjenspeile de nye filterinnstillingene."
 
@@ -5302,18 +5636,27 @@ msgid "{count, plural, one {Removed {count} customer from group} other {Removed 
 msgstr "{count, plural, one {Fjernet {count} kunde fra gruppen} other {Fjernet {count} kunder fra gruppen}}"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:223
+#: src/lib/framework/defaults.ts:226
 msgid "Tax Categories"
 msgstr "Skattekategorier"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:230
+#: src/lib/framework/defaults.ts:233
 msgid "Tax Rates"
 msgstr "Skattesatser"
 
 #: src/app/routes/_authenticated/_customer-groups/components/customer-group-members-bulk-actions.tsx:40
 msgid "Failed to remove customers from group"
 msgstr "Kunne ikke fjerne kunder fra gruppen"
+
+#. placeholder {0}: failedAssets.length
+#: src/lib/components/shared/asset/asset-gallery.tsx:325
+msgid "Failed to upload {0} assets"
+msgstr ""
+
+#: src/lib/framework/dashboard-widget/latest-customers-widget/index.tsx:56
+msgid "We couldn't load the latest customers"
+msgstr "Vi kunne ikke laste de siste kundene"
 
 #: src/lib/components/layout/manage-languages-dialog.tsx:273
 msgid "Failed to load global settings"
@@ -5323,7 +5666,7 @@ msgstr "Kunne ikke laste globale innstillinger"
 msgid "Select items to refund and optionally return to stock"
 msgstr "Velg varer å refundere og eventuelt returnere til lager"
 
-#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:245
+#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:261
 #: src/app/routes/_authenticated/_system/settings-store.tsx:153
 #: src/lib/components/data-table/data-table-views-tabs.tsx:132
 #: src/lib/components/data-table/views-sheet.tsx:210
@@ -5354,15 +5697,19 @@ msgstr "Siden vil fortsette med standardspørringen."
 msgid "Street Address"
 msgstr "Gateadresse"
 
+#: src/lib/framework/dashboard-widget/low-stock-widget/index.tsx:113
+msgid "No low stock in this sample"
+msgstr "Ingen lav lagerbeholdning i dette utvalget"
+
 #: src/lib/components/shared/facet-value-selector.tsx:243
 msgid "No more facets"
 msgstr "Ingen flere fasetter"
 
-#: src/app/routes/_authenticated/_products/products.tsx:33
+#: src/app/routes/_authenticated/_products/products.tsx:35
 msgid "Search index rebuild started"
 msgstr "Gjenoppbygging av søkeindeks startet"
 
-#: src/app/routes/_authenticated/_collections/collections.tsx:346
+#: src/app/routes/_authenticated/_collections/collections.tsx:348
 msgid "Collection position updated"
 msgstr "Samlingsposisjon oppdatert"
 
@@ -5374,7 +5721,8 @@ msgstr "Samlingsposisjon oppdatert"
 msgid "Add \"{newOptionInput}\""
 msgstr "Legg til \"{newOptionInput}\""
 
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:244
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:74
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:473
 msgid "New product variant"
 msgstr "Ny produktvariant"
 
@@ -5386,6 +5734,15 @@ msgstr "Refusjon endret"
 msgid "Using native authentication strategy"
 msgstr "Bruker innebygd autentiseringsstrategi"
 
+#: src/app/routes/_authenticated/_products/components/generate-missing-variants-dialog.tsx:212
+msgid "Exists"
+msgstr "Finnes"
+
+#: src/lib/components/login/forgot-password-form.tsx:136
+#: src/lib/components/login/reset-password-form.tsx:188
+msgid "Please wait"
+msgstr "Vennligst vent"
+
 #: src/lib/components/shared/assign-to-channel-dialog.tsx:73
 msgid "Failed to assign {entityIdsLength} {entityType} to channel"
 msgstr "Kunne ikke tilordne {entityIdsLength} {entityType} til kanal"
@@ -5393,6 +5750,11 @@ msgstr "Kunne ikke tilordne {entityIdsLength} {entityType} til kanal"
 #: src/lib/components/layout/manage-languages-dialog.tsx:351
 msgid "Default Language"
 msgstr "Standardspråk"
+
+#. js-lingui-explicit-id
+#: src/lib/framework/defaults.ts:293
+msgid "Top Products Widget"
+msgstr "Topprodukter-widget"
 
 #: src/app/routes/_authenticated/_channels/channels_.$id.tsx:141
 msgid "Token"
@@ -5402,9 +5764,9 @@ msgstr "Token"
 msgid "Fulfilling..."
 msgstr "Oppfyller..."
 
-#: src/app/routes/_authenticated/_collections/collections.tsx:524
+#: src/app/routes/_authenticated/_collections/collections.tsx:552
 msgid "Search collections..."
-msgstr ""
+msgstr "Søk etter samlinger..."
 
 #: src/app/routes/_authenticated/_products/components/add-option-group-dialog.tsx:148
 msgid "Add option group to product"
@@ -5419,7 +5781,7 @@ msgstr "Forhåndsvisning av {0}"
 msgid "Successfully updated seller"
 msgstr "Selger oppdatert"
 
-#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:132
+#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:134
 msgid "Failed to transition order to state"
 msgstr "Kunne ikke endre bestilling til tilstand"
 
@@ -5440,7 +5802,7 @@ msgstr "Jeg har lagret denne API-nøkkelen"
 msgid "Configure available languages for your store and channels"
 msgstr "Konfigurer tilgjengelige språk for butikken og kanalene dine"
 
-#: src/app/routes/_authenticated/_products/products_.$id.tsx:164
+#: src/app/routes/_authenticated/_products/products_.$id.tsx:165
 msgid "Successfully created product"
 msgstr "Produkt opprettet"
 
@@ -5457,9 +5819,9 @@ msgstr "Skriv og trykk Enter eller komma for å legge til..."
 msgid "Edit Note"
 msgstr "Rediger notat"
 
-#: src/lib/components/shared/asset/asset-gallery.tsx:628
-msgid "No assets found. Try adjusting your filters."
-msgstr "Ingen ressurser funnet. Prøv å justere filtrene dine."
+#: src/lib/components/shared/asset/asset-gallery.tsx:635
+#~ msgid "No assets found. Try adjusting your filters."
+#~ msgstr "Ingen ressurser funnet. Prøv å justere filtrene dine."
 
 #: src/app/routes/_authenticated/_products/components/option-groups-editor.tsx:161
 msgid "Add Option"
@@ -5477,14 +5839,20 @@ msgstr "Lagre opsjonsgruppe"
 msgid "Click \"Run Test\" to test this shipping method."
 msgstr "Klikk \"Kjør test\" for å teste denne fraktmetoden."
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:78
+#: src/app/routes/_authenticated/_product-variants/components/variant-price-detail.tsx:84
+msgid "Gross price"
+msgstr ""
+
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:79
 msgid "Successfully updated administrator"
 msgstr "Administrator oppdatert"
 
 #: src/lib/components/data-table/data-table-facet-value-faceted-filter.tsx:263
 #: src/lib/components/data-table/data-table-faceted-filter.tsx:225
-#: src/lib/components/data-table/data-table.tsx:582
-#: src/lib/components/shared/asset/asset-gallery.tsx:361
+#: src/lib/components/data-table/data-table.tsx:652
+#: src/lib/components/shared/asset/asset-gallery.tsx:504
+#: src/lib/components/shared/asset/asset-gallery.tsx:511
+#: src/lib/components/shared/asset/asset-gallery.tsx:866
 msgid "Clear filters"
 msgstr "Tøm filtre"
 
@@ -5513,8 +5881,13 @@ msgstr "Status"
 msgid "No options found"
 msgstr "Ingen alternativer funnet"
 
-#: src/lib/components/shared/asset/asset-gallery.tsx:370
-#: src/lib/components/shared/asset/asset-gallery.tsx:382
+#: src/lib/components/shared/asset/asset-gallery.tsx:871
+msgid "Upload assets"
+msgstr ""
+
+#: src/lib/components/shared/asset/asset-gallery.tsx:110
+#: src/lib/components/shared/asset/asset-gallery.tsx:528
+#: src/lib/components/shared/asset/asset-gallery.tsx:545
 msgid "Binary"
 msgstr "Binær"
 
@@ -5531,6 +5904,10 @@ msgstr "Ny fraktmetode"
 msgid "Every 10 seconds"
 msgstr "Hvert 10. sekund"
 
+#: src/lib/framework/dashboard-widget/low-stock-widget/index.tsx:53
+msgid "Low Stock"
+msgstr "Lav lagerbeholdning"
+
 #: src/app/routes/_authenticated/_shipping-methods/components/price-display.tsx:17
 msgid "ex. tax:"
 msgstr "ekskl. mva:"
@@ -5539,11 +5916,11 @@ msgstr "ekskl. mva:"
 #~ msgid "Add Stock to Location"
 #~ msgstr "Legg til lager til lokasjon"
 
-#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:98
+#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:100
 msgid "Successfully added option value"
 msgstr "Opsjonsverdi lagt til"
 
-#: src/app/routes/_authenticated/_collections/collections.tsx:348
+#: src/app/routes/_authenticated/_collections/collections.tsx:350
 msgid "Collection moved to new parent"
 msgstr "Samling flyttet til ny overordnet"
 
@@ -5551,6 +5928,10 @@ msgstr "Samling flyttet til ny overordnet"
 #: src/app/routes/_authenticated/_products/hooks/use-remove-option-group.ts:67
 msgid "Option group removed"
 msgstr "Opsjonsgruppe fjernet"
+
+#: src/lib/components/login/login-form.tsx:101
+msgid "Forgot password?"
+msgstr "Glemt passord?"
 
 #: src/app/routes/_authenticated/_orders/components/use-transition-order-to-state.tsx:130
 msgid "Transition to selected state"
@@ -5564,7 +5945,7 @@ msgstr "En ekstra betaling på {formattedDiff} vil være nødvendig."
 msgid "Track inventory by default"
 msgstr "Spor lager som standard"
 
-#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:258
+#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:164
 msgid "{selected} of {total} selected"
 msgstr "{selected} av {total} valgt"
 
@@ -5599,6 +5980,10 @@ msgstr "Slug vil bli generert automatisk..."
 msgid "Customer not found"
 msgstr "Kunde ikke funnet"
 
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:400
+msgid "Inherit from global settings (Track)"
+msgstr ""
+
 #. placeholder {0}: entityName.toLowerCase()
 #: src/lib/components/data-input/default-relation-input.tsx:658
 msgid "Select {0}s"
@@ -5613,15 +5998,15 @@ msgstr "Nye fasettverdier å legge til:"
 msgid "Failed to process refund"
 msgstr "Kunne ikke behandle refusjon"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:115
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:116
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:176
-#: src/app/routes/_authenticated/_profile/profile.tsx:102
+#: src/app/routes/_authenticated/_profile/profile.tsx:103
 msgid "First name"
 msgstr "Fornavn"
 
 #: src/lib/components/shared/product-variant-selector.tsx:83
 msgid "Add item to order"
-msgstr ""
+msgstr "Legg til vare i bestillingen"
 
 #: src/lib/components/data-table/human-readable-operator.tsx:58
 msgid "contains"
@@ -5629,7 +6014,11 @@ msgstr "inneholder"
 
 #: src/app/routes/_authenticated/_shipping-methods/shipping-methods.tsx:43
 msgid "Search shipping methods..."
-msgstr ""
+msgstr "Søk etter fraktmetoder..."
+
+#: src/lib/components/login/forgot-password-form.tsx:84
+msgid "Check your email"
+msgstr "Sjekk e-posten din"
 
 #: src/app/routes/_authenticated/_products/components/add-option-group-dialog.tsx:249
 msgid "No option groups found"
@@ -5642,22 +6031,21 @@ msgstr "Ingen varer funnet"
 #: src/app/routes/_authenticated/_products/hooks/use-remove-option-group.ts:54
 #: src/app/routes/_authenticated/_products/hooks/use-remove-option-group.ts:72
 msgid "Failed to remove option group"
-msgstr ""
+msgstr "Kunne ikke fjerne alternativgruppen"
 
 #: src/app/routes/_authenticated/_orders/components/order-table-totals.tsx:52
 msgid "Sub total"
 msgstr "Delsum"
 
-#. placeholder {0}: fulfillment.lines.reduce((acc, line) => acc + line.quantity, 0)
 #: src/app/routes/_authenticated/_orders/components/fulfillment-details.tsx:133
-msgid "Fulfilled items ({0})"
-msgstr "Oppfylte varer ({0})"
+#~ msgid "Fulfilled items ({0})"
+#~ msgstr "Oppfylte varer ({0})"
 
-#: src/app/routes/_authenticated/_products/products.tsx:102
+#: src/app/routes/_authenticated/_products/products.tsx:117
 msgid "Create your first product"
-msgstr ""
+msgstr "Opprett ditt første produkt"
 
-#: src/app/routes/_authenticated/_system/settings-store.tsx:246
+#: src/app/routes/_authenticated/_system/settings-store.tsx:345
 msgid "Value updated"
 msgstr "Verdi oppdatert"
 
@@ -5669,6 +6057,7 @@ msgstr "Uverifisert"
 #: src/app/routes/_authenticated/_orders/components/edit-order-table.tsx:182
 #: src/app/routes/_authenticated/_orders/components/fulfill-order-dialog.tsx:268
 #: src/app/routes/_authenticated/_orders/components/order-table.tsx:78
+#: src/lib/framework/dashboard-widget/top-products-widget/index.tsx:103
 msgid "Quantity"
 msgstr "Antall"
 
@@ -5676,13 +6065,13 @@ msgstr "Antall"
 #~ msgid "Add filter"
 #~ msgstr "Legg til filter"
 
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:309
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:582
 #: src/app/routes/_authenticated/_tax-rates/tax-rates_.$id.tsx:127
 msgid "Tax category"
 msgstr "Skattekategori"
 
-#: src/app/routes/_authenticated/_profile/profile.tsx:38
-#: src/app/routes/_authenticated/_profile/profile.tsx:84
+#: src/app/routes/_authenticated/_profile/profile.tsx:39
+#: src/app/routes/_authenticated/_profile/profile.tsx:85
 #: src/lib/components/layout/nav-user.tsx:108
 msgid "Profile"
 msgstr "Profil"
@@ -5709,9 +6098,9 @@ msgstr "Duplikatverdien \"{trimmed}\" finnes allerede"
 
 #: src/app/routes/_authenticated/_customers/customers.tsx:95
 msgid "Create your first customer"
-msgstr ""
+msgstr "Opprett din første kunde"
 
-#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:231
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:267
 #: src/app/routes/_authenticated/_orders/components/refund-order-dialog.tsx:222
 msgid "Reason"
 msgstr "Årsak"
@@ -5728,9 +6117,9 @@ msgstr "{entityType} ble fjernet fra kanalen"
 #: src/app/routes/_authenticated/_option-groups/option-groups_.$groupId.options_.$id.tsx:90
 #: src/app/routes/_authenticated/_option-groups/option-groups_.$id.tsx:81
 #: src/app/routes/_authenticated/_option-groups/option-groups_.$id.tsx:89
-#: src/app/routes/_authenticated/_option-groups/option-groups.tsx:17
-#: src/app/routes/_authenticated/_option-groups/option-groups.tsx:24
-#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:259
+#: src/app/routes/_authenticated/_option-groups/option-groups.tsx:18
+#: src/app/routes/_authenticated/_option-groups/option-groups.tsx:25
+#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:341
 msgid "Option Groups"
 msgstr "Opsjonsgrupper"
 
@@ -5762,14 +6151,15 @@ msgstr "Legg til land"
 
 #: src/app/routes/_authenticated/_promotions/promotions.tsx:72
 msgid "Create your first promotion"
-msgstr ""
+msgstr "Opprett din første kampanje"
 
 #: src/lib/components/data-input/custom-field-list-input.tsx:85
 msgid "Remove item"
 msgstr "Fjern vare"
 
-#: src/lib/components/shared/asset/asset-gallery.tsx:369
-#: src/lib/components/shared/asset/asset-gallery.tsx:381
+#: src/lib/components/shared/asset/asset-gallery.tsx:108
+#: src/lib/components/shared/asset/asset-gallery.tsx:527
+#: src/lib/components/shared/asset/asset-gallery.tsx:544
 msgid "Video"
 msgstr "Video"
 
@@ -5785,7 +6175,7 @@ msgstr "Varianten kunne ikke legges til. Sørg for at foreldreproduktet er aktiv
 #~ msgid "An unknown error occurred"
 #~ msgstr "En ukjent feil oppstod"
 
-#: src/lib/framework/dashboard-widget/metrics-widget/index.tsx:75
+#: src/lib/framework/dashboard-widget/metrics-widget/index.tsx:80
 msgid "Metrics"
 msgstr "Beregninger"
 
@@ -5793,7 +6183,7 @@ msgstr "Beregninger"
 msgid "Language"
 msgstr "Språk"
 
-#: src/app/routes/_authenticated/_collections/collections.tsx:555
+#: src/app/routes/_authenticated/_collections/collections.tsx:583
 msgid "New Collection"
 msgstr "Ny samling"
 
@@ -5809,7 +6199,7 @@ msgstr "E-postoppdatering verifisert"
 msgid "is between"
 msgstr "er mellom"
 
-#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:173
+#: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:175
 msgid "Refund & Cancel"
 msgstr "Refunder og kanseller"
 
@@ -5826,6 +6216,10 @@ msgstr "{label}"
 msgid "Failed to create shipping method"
 msgstr "Kunne ikke opprette fraktmetode"
 
+#: src/lib/framework/dashboard-widget/latest-customers-widget/index.tsx:46
+msgid "New registrations in the selected period"
+msgstr "Nye registreringer i den valgte perioden"
+
 #: src/lib/components/shared/assign-to-channel-dialog.tsx:68
 msgid "Successfully assigned {entityIdsLength} {entityType} to channel"
 msgstr "Tildelte {entityIdsLength} {entityType} til kanal"
@@ -5834,8 +6228,8 @@ msgstr "Tildelte {entityIdsLength} {entityType} til kanal"
 msgid "Global Languages"
 msgstr "Globale språk"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:38
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:97
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:39
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:98
 msgid "New administrator"
 msgstr "Ny administrator"
 
@@ -5847,8 +6241,7 @@ msgstr "Slett utkast"
 msgid "Source"
 msgstr "Kilde"
 
-#: src/lib/components/data-table/data-table-bulk-actions.tsx:107
-#: src/lib/components/shared/asset/asset-bulk-actions.tsx:98
+#: src/lib/components/data-table/data-table-bulk-actions.tsx:122
 msgid "No actions available"
 msgstr "Ingen tilgjengelige handlinger"
 
@@ -5877,17 +6270,24 @@ msgstr "Fasett oppdatert"
 #: src/lib/components/shared/rich-text-editor/responsive-toolbar.tsx:174
 #: src/lib/components/shared/rich-text-editor/selection-bubble-menu.tsx:83
 msgid "Strikethrough"
+msgstr "Gjennomstreking"
+
+#. placeholder {0}: createdAssets.length
+#: src/lib/components/shared/asset/asset-gallery.tsx:322
+msgid "Uploaded {0} assets"
 msgstr ""
 
+#: src/lib/framework/dashboard-widget/latest-customers-widget/index.tsx:92
 #: src/lib/framework/dashboard-widget/metrics-widget/index.tsx:126
+#: src/lib/framework/dashboard-widget/top-products-widget/index.tsx:154
 msgid "Try selecting a different date range."
-msgstr ""
+msgstr "Prøv å velge et annet datointervall."
 
 #: src/app/routes/_authenticated/_zones/zones_.$id.tsx:61
 msgid "Successfully created zone"
 msgstr "Sone opprettet"
 
-#: src/app/routes/_authenticated/_system/settings-store.tsx:278
+#: src/app/routes/_authenticated/_system/settings-store.tsx:361
 msgid "Value"
 msgstr "Verdi"
 
@@ -5909,7 +6309,7 @@ msgid "New facet"
 msgstr "Ny fasett"
 
 #: src/app/routes/_authenticated/_products/components/product-option-group-badge.tsx:63
-#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:298
+#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:380
 msgid "Are you sure you want to remove this option group from the product?"
 msgstr "Er du sikker på at du vil fjerne denne alternativgruppen fra produktet?"
 
@@ -5917,7 +6317,7 @@ msgstr "Er du sikker på at du vil fjerne denne alternativgruppen fra produktet?
 msgid "Description (alt)"
 msgstr "Beskrivelse (alt-tekst)"
 
-#: src/app/routes/_authenticated/_assets/components/asset-tag-filter.tsx:124
+#: src/app/routes/_authenticated/_assets/components/asset-tag-filter.tsx:154
 #: src/app/routes/_authenticated/_assets/components/asset-tags-editor.tsx:164
 #: src/app/routes/_authenticated/_assets/components/manage-tags-dialog.tsx:99
 msgid "No tags found"
@@ -5931,21 +6331,41 @@ msgstr "Standardvaluta"
 msgid "No payment or refund is required for these changes."
 msgstr "Ingen betaling eller refusjon er nødvendig for disse endringene."
 
+#: src/app/routes/_authenticated/_products/components/generate-missing-variants-dialog.tsx:169
+msgid "All possible variant combinations already exist."
+msgstr "Alle mulige variantkombinasjoner finnes allerede."
+
 #: src/app/routes/_authenticated/_system/components/cancel-jobs-bulk-action.tsx:72
 msgid "{cancellableCount, plural, one {Are you sure you want to cancel {cancellableCount} job? This action cannot be undone.} other {Are you sure you want to cancel {cancellableCount} jobs? This action cannot be undone.}}"
+msgstr "{cancellableCount, plural, one {Er du sikker på at du vil avbryte {cancellableCount} jobb? Denne handlingen kan ikke angres.} other {Er du sikker på at du vil avbryte {cancellableCount} jobber? Denne handlingen kan ikke angres.}}"
+
+#: src/app/routes/_authenticated/_product-variants/components/variant-option-select.tsx:66
+msgid "Go to option group"
 msgstr ""
 
-#: src/lib/framework/dashboard-widget/orders-summary/index.tsx:100
+#: src/lib/framework/dashboard-widget/orders-summary/index.tsx:111
 msgid "Total Revenue"
 msgstr "Totale inntekter"
+
+#: src/app/routes/_authenticated/_collections/components/collection-contents-preview-table.tsx:89
+msgid "Applying filters…"
+msgstr "Bruker filtre…"
 
 #: src/app/routes/_authenticated/_system/scheduled-tasks.tsx:163
 msgid "Next Execution"
 msgstr "Neste utførelse"
 
+#: src/lib/framework/dashboard-widget/low-stock-widget/index.tsx:54
+msgid "Saleable stock at or below {threshold}, from a sample of {CANDIDATE_POOL_SIZE} variants"
+msgstr "Salgbar lagerbeholdning på eller under {threshold}, fra et utvalg på {CANDIDATE_POOL_SIZE} varianter"
+
 #: src/lib/components/shared/history-timeline/history-note-checkbox.tsx:21
 msgid "Note is private"
 msgstr "Notat er privat"
+
+#: src/app/routes/_authenticated/_collections/components/collection-contents-preview-table.tsx:92
+msgid "The collection contents will refresh once the update has finished."
+msgstr "Innholdet i kolleksjonen oppdateres når oppdateringen er fullført."
 
 #: src/lib/components/layout/language-dialog.tsx:124
 msgid "Medium date"
@@ -5980,7 +6400,7 @@ msgstr "Bruk som standard leveringsadresse"
 msgid "Edit slug manually"
 msgstr "Rediger slug manuelt"
 
-#: src/app/routes/_authenticated/_collections/components/collection-contents-preview-table.tsx:84
+#: src/app/routes/_authenticated/_collections/components/collection-contents-preview-table.tsx:116
 msgid "Add filters to preview the collection contents."
 msgstr "Legg til filtre for å forhåndsvise samlingens innhold."
 
@@ -5996,7 +6416,7 @@ msgstr "Delsum"
 msgid "is less than"
 msgstr "er mindre enn"
 
-#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:213
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:249
 msgid "Refund ID"
 msgstr "Refusjons-ID"
 
@@ -6004,9 +6424,9 @@ msgstr "Refusjons-ID"
 msgid "Order custom fields updated"
 msgstr "Egendefinerte ordrefelt oppdatert"
 
-#: src/app/routes/_authenticated/_system/settings-store.tsx:320
+#: src/app/routes/_authenticated/_system/settings-store.tsx:384
 msgid "Search entries..."
-msgstr ""
+msgstr "Søk etter oppføringer..."
 
 #: src/app/routes/_authenticated/_payment-methods/payment-methods_.$id.tsx:193
 #: src/app/routes/_authenticated/_shipping-methods/shipping-methods_.$id.tsx:191
@@ -6029,19 +6449,20 @@ msgstr "Flytt til toppnivå"
 msgid "Clear"
 msgstr "Tøm"
 
-#: src/lib/framework/dashboard-widget/orders-summary/index.tsx:84
+#: src/lib/framework/dashboard-widget/orders-summary/index.tsx:95
 msgid "Orders Summary"
 msgstr "Bestillingsoversikt"
 
 #: src/app/routes/_authenticated/_stock-locations/stock-locations.tsx:33
 msgid "Search stock locations..."
-msgstr ""
+msgstr "Søk etter lagerlokasjoner..."
 
-#: src/lib/components/shared/asset/asset-gallery.tsx:349
+#: src/lib/components/shared/asset/asset-gallery.tsx:486
+#: src/lib/components/shared/asset/asset-gallery.tsx:1197
 msgid "Search assets..."
 msgstr "Søk etter ressurser..."
 
-#: src/app/routes/_authenticated/_facets/facets.tsx:127
+#: src/app/routes/_authenticated/_facets/facets.tsx:125
 msgid "New Facet"
 msgstr "Ny fasett"
 
@@ -6060,7 +6481,7 @@ msgstr "Fortsett"
 msgid "Promotions"
 msgstr "Kampanjer"
 
-#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:181
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:205
 msgid "Error message"
 msgstr "Feilmelding"
 
@@ -6074,7 +6495,7 @@ msgstr "Slett adresse"
 
 #: src/lib/components/shared/error-page.tsx:130
 msgid "We couldn't load this page"
-msgstr ""
+msgstr "Vi kunne ikke laste denne siden"
 
 #: src/app/routes/_authenticated/_facets/facets_.$id.tsx:85
 msgid "Failed to update facet"
@@ -6086,7 +6507,7 @@ msgstr "useWidgetFilters må brukes innenfor en WidgetFiltersProvider"
 
 #: src/lib/components/shared/configurable-operation-input.tsx:104
 msgid "Edit as form"
-msgstr ""
+msgstr "Rediger som skjema"
 
 #: src/app/routes/_authenticated/_customers/components/customer-address-card.tsx:129
 msgid "Edit Address"
@@ -6100,9 +6521,9 @@ msgstr "Kunne ikke fjerne fasett fra kanal: {message}"
 #~ msgid "Set link"
 #~ msgstr "Sett lenke"
 
-#: src/lib/components/data-table/data-table.tsx:704
+#: src/lib/components/data-table/data-table.tsx:775
 msgid "Pagination"
-msgstr ""
+msgstr "Paginering"
 
 #: src/app/routes/_authenticated/_sellers/sellers.tsx:47
 msgid "New Seller"
@@ -6110,19 +6531,19 @@ msgstr "Ny selger"
 
 #: src/app/routes/_authenticated/_tax-categories/tax-categories.tsx:29
 msgid "Search tax categories..."
-msgstr ""
+msgstr "Søk etter skattekategorier..."
 
 #: src/lib/components/shared/rich-text-editor/image-dialog.tsx:106
 msgid "Edit image"
 msgstr "Rediger bilde"
 
-#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:61
+#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:63
 msgid "Manage Variants"
 msgstr "Administrer varianter"
 
-#: src/lib/framework/dashboard-widget/latest-orders-widget/index.tsx:134
+#: src/lib/framework/dashboard-widget/latest-orders-widget/index.tsx:137
 msgid "There was a problem loading your latest orders."
-msgstr ""
+msgstr "Det oppstod et problem med å laste de siste bestillingene dine."
 
 #: src/lib/components/shared/stock-level-label.tsx:18
 msgid "Stock allocated"
@@ -6132,8 +6553,7 @@ msgstr "Lager allokert"
 msgid "greater than or equal"
 msgstr "større enn eller lik"
 
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:420
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:438
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:705
 msgid "Sets the stock level at which this variant is considered to be out of stock. Using a negative value enables backorder support."
 msgstr "Setter lagernivået der denne varianten anses som utsolgt. Bruk av en negativ verdi aktiverer restordrestøtte."
 
@@ -6152,7 +6572,7 @@ msgid "View result"
 msgstr "Vis resultat"
 
 #: src/lib/components/data-table/data-table-pagination.tsx:20
-#: src/lib/components/data-table/data-table.tsx:707
+#: src/lib/components/data-table/data-table.tsx:778
 msgid "Rows per page"
 msgstr "Rader per side"
 
@@ -6160,7 +6580,7 @@ msgstr "Rader per side"
 msgid "Loading collections..."
 msgstr "Laster samlinger..."
 
-#: src/app/routes/_authenticated/_facets/facets_.$facetId.values_.$id.tsx:84
+#: src/app/routes/_authenticated/_facets/facets_.$facetId.values_.$id.tsx:85
 msgid "Successfully updated facet value"
 msgstr "Fasettverdi oppdatert"
 
@@ -6181,46 +6601,48 @@ msgstr "Kunde lagt til gruppe"
 msgid "Seller orders"
 msgstr "Selgerbestillinger"
 
-#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:104
+#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:106
 msgid "Failed to add option value"
 msgstr "Kunne ikke legge til opsjonsverdi"
 
-#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:133
+#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:135
 msgid "Add option value to {groupName}"
 msgstr "Legg til opsjonsverdi til {groupName}"
 
 #. placeholder {0}: error.message
 #: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:261
 msgid "Failed to unset shipping address for order: {0}"
-msgstr ""
+msgstr "Kunne ikke fjerne leveringsadressen for bestillingen: {0}"
 
 #: src/app/routes/_authenticated/_orders/orders.tsx:38
 msgid "Search orders..."
-msgstr ""
+msgstr "Søk etter bestillinger..."
 
 #: src/app/routes/_authenticated/_orders/components/add-surcharge-form.tsx:82
 #: src/app/routes/_authenticated/_orders/components/edit-order-table.tsx:167
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:297
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:570
 #: src/app/routes/_authenticated/_products/components/add-product-variant-dialog.tsx:292
 #: src/app/routes/_authenticated/_products/components/assign-facet-values-dialog.tsx:197
-#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:287
-#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:332
+#: src/app/routes/_authenticated/_products/components/generate-missing-variants-dialog.tsx:188
+#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:193
+#: src/app/routes/_authenticated/_products/components/variant-generation-fields.tsx:100
+#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:414
 msgid "SKU"
 msgstr "SKU"
 
 #: src/lib/components/shared/rich-text-editor/table-grid-picker.tsx:68
 msgid "Table size"
-msgstr ""
+msgstr "Tabellstørrelse"
 
 #: src/lib/components/shared/rich-text-editor/responsive-toolbar.tsx:387
 msgid "More formatting options"
-msgstr ""
+msgstr "Flere formateringsalternativer"
 
 #: src/app/routes/_authenticated/_orders/components/order-history/default-order-history-components.tsx:117
 msgid "{totalQuantity} item(s) refunded"
 msgstr "{totalQuantity} vare(r) refundert"
 
-#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:263
+#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:345
 msgid "No option groups defined yet. Add option groups to create different variants of your product (e.g., Size, Color, Material)"
 msgstr "Ingen opsjonsgrupper definert ennå. Legg til opsjonsgrupper for å opprette ulike varianter av produktet ditt (f.eks. Størrelse, Farge, Materiale)"
 
@@ -6236,20 +6658,20 @@ msgstr "Kunne ikke oppdatere betalingsmetode"
 msgid "Available:"
 msgstr "Tilgjengelig:"
 
-#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:172
-#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:219
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:193
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:255
 msgid "Created at"
 msgstr "Opprettet"
 
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:156
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:185
 #: src/app/routes/_authenticated/_products/components/add-product-variant-dialog.tsx:165
 msgid "Failed to create product variant"
 msgstr "Kunne ikke opprette produktvariant"
 
 #: src/lib/components/data-input/relation-selector.tsx:418
-#: src/lib/components/data-table/data-table.tsx:489
+#: src/lib/components/data-table/data-table.tsx:559
 msgid "Search..."
-msgstr ""
+msgstr "Søk..."
 
 #. placeholder {0}: formatLanguageName(contentLanguage)
 #: src/lib/components/layout/channel-switcher.tsx:130
@@ -6264,9 +6686,13 @@ msgstr "Du har ikke tillatelse til å se globale språkinnstillinger"
 msgid "Successfully created tax rate"
 msgstr "Skattesats opprettet"
 
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:401
+msgid "Inherit from global settings (Do not track)"
+msgstr ""
+
 #: src/app/routes/_authenticated/_products/components/product-option-group-badge.tsx:46
 msgid "Remove option group {name}"
-msgstr ""
+msgstr "Fjern alternativgruppen {name}"
 
 #: src/lib/components/shared/rich-text-editor/responsive-toolbar.tsx:135
 msgid "Heading 6"
@@ -6281,7 +6707,7 @@ msgctxt "active language"
 msgid "Active"
 msgstr "Aktiv"
 
-#: src/app/routes/_authenticated/_orders/components/order-tax-summary.tsx:20
+#: src/app/routes/_authenticated/_orders/components/order-tax-summary.tsx:22
 msgid "Tax base"
 msgstr "Skattegrunnlag"
 
@@ -6289,6 +6715,10 @@ msgstr "Skattegrunnlag"
 #: src/app/routes/_authenticated/_orders/components/order-history/order-history-container.tsx:75
 msgid "Load more"
 msgstr "Last mer"
+
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:691
+msgid "When enabled, this variant uses the global out-of-stock threshold configured in Settings instead of its own value."
+msgstr ""
 
 #: src/app/routes/_authenticated/_orders/components/order-history/order-history-utils.tsx:72
 msgid "Refund settled"
@@ -6302,7 +6732,7 @@ msgstr "API Key"
 msgid "Successfully duplicated {count} {entityName}"
 msgstr "Dupliserte {count} {entityName}"
 
-#: src/app/routes/_authenticated/_option-groups/option-groups.tsx:71
+#: src/app/routes/_authenticated/_option-groups/option-groups.tsx:95
 msgid "New Option Group"
 msgstr "Ny opsjonsgruppe"
 
@@ -6323,9 +6753,8 @@ msgstr "Tilgjengelige betingelser"
 msgid "Active filters"
 msgstr "Aktive filtre"
 
-#: src/app/routes/_authenticated/_assets/components/asset-tag-filter.tsx:176
 #: src/lib/components/data-table/data-table-active-filters-popover.tsx:54
-#: src/lib/components/data-table/data-table.tsx:565
+#: src/lib/components/data-table/data-table.tsx:635
 msgid "Clear all"
 msgstr "Tøm alle"
 
@@ -6336,7 +6765,7 @@ msgstr "er større enn"
 #: src/lib/components/shared/rich-text-editor/responsive-toolbar.tsx:165
 #: src/lib/components/shared/rich-text-editor/selection-bubble-menu.tsx:75
 msgid "Underline"
-msgstr ""
+msgstr "Understreking"
 
 #: src/app/routes/_authenticated/_api-keys/components/api-key-secret-dialog.tsx:125
 msgid "Close"
@@ -6345,7 +6774,7 @@ msgstr "Lukk"
 #: src/lib/components/shared/rich-text-editor/responsive-toolbar.tsx:228
 #: src/lib/components/shared/rich-text-editor/selection-bubble-menu.tsx:99
 msgid "Link"
-msgstr ""
+msgstr "Lenke"
 
 #: src/app/routes/_authenticated/_orders/components/add-manual-payment-dialog.tsx:127
 msgid "Add payment to order"
@@ -6363,6 +6792,10 @@ msgstr "Legg til betaling til bestilling"
 #~ msgid "Loading..."
 #~ msgstr "Laster..."
 
+#: src/app/routes/_authenticated/_products/components/generate-missing-variants-dialog.tsx:71
+msgid "Create variants for the option combinations that don't exist yet. Combinations that already exist are shown for context and can't be edited."
+msgstr "Opprett varianter for alternativkombinasjonene som ikke finnes ennå. Kombinasjoner som allerede finnes vises for kontekst og kan ikke redigeres."
+
 #: src/app/routes/_authenticated/_channels/channels_.$id.tsx:143
 msgid "The token is used to specify the channel when making API requests."
 msgstr "Token brukes til å spesifisere kanalen ved API-forespørsler."
@@ -6371,7 +6804,7 @@ msgstr "Token brukes til å spesifisere kanalen ved API-forespørsler."
 msgid "No addresses found"
 msgstr "Ingen adresser funnet"
 
-#: src/app/routes/_authenticated/_orders/components/fulfillment-details.tsx:117
+#: src/app/routes/_authenticated/_orders/components/fulfillment-details.tsx:136
 msgid "Fulfillment ID"
 msgstr "Oppfyllelse-ID"
 
@@ -6381,13 +6814,13 @@ msgstr "Velg betalinger å refundere"
 
 #: src/lib/components/shared/error-page.tsx:101
 msgid "The page you are looking for does not exist or may have been moved."
-msgstr ""
+msgstr "Siden du leter etter finnes ikke, eller den kan ha blitt flyttet."
 
 #: src/app/common/delete-bulk-action.tsx:115
 msgid "Failed to delete {failed} {entityName}"
 msgstr "Kunne ikke slette {failed} {entityName}"
 
-#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:418
+#: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:703
 msgid "Out-of-stock threshold"
 msgstr "Utsolgt-terskel"
 
@@ -6395,7 +6828,7 @@ msgstr "Utsolgt-terskel"
 #~ msgid "Successfully removed product from channel"
 #~ msgstr "Produkt fjernet fra kanal"
 
-#: src/app/routes/_authenticated/_system/settings-store.tsx:249
+#: src/app/routes/_authenticated/_system/settings-store.tsx:348
 msgid "Failed to update value"
 msgstr "Kunne ikke oppdatere verdi"
 
@@ -6403,7 +6836,7 @@ msgstr "Kunne ikke oppdatere verdi"
 msgid "Failed to create API key"
 msgstr "Kunne ikke opprette API-nøkkelen"
 
-#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:262
+#: src/app/routes/_authenticated/_orders/components/payment-details.tsx:298
 #: src/app/routes/_authenticated/_orders/components/settle-refund-dialog.tsx:49
 #: src/app/routes/_authenticated/_orders/components/settle-refund-dialog.tsx:74
 msgid "Settle refund"
@@ -6418,8 +6851,12 @@ msgstr "Betalingsmetode er påkrevd"
 msgid "Failed to add customer to group"
 msgstr "Kunne ikke legge til kunde i gruppe"
 
-#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:256
-#: src/app/routes/_authenticated/_products/products_.$id.tsx:277
+#: src/lib/components/shared/asset/asset-gallery.tsx:675
+msgid "{totalItems, plural, one {{totalItems} asset found} other {{totalItems} assets found}}"
+msgstr ""
+
+#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:338
+#: src/app/routes/_authenticated/_products/products_.$id.tsx:291
 msgid "Manage variants"
 msgstr "Administrer varianter"
 
@@ -6432,7 +6869,7 @@ msgid "Customer registered"
 msgstr "Kunde registrert"
 
 #. js-lingui-explicit-id
-#: src/lib/framework/defaults.ts:244
+#: src/lib/framework/defaults.ts:247
 msgid "Zones"
 msgstr "Soner"
 
@@ -6445,7 +6882,7 @@ msgstr "Søk etter selgere..."
 msgid "Successfully created promotion"
 msgstr "Kampanje opprettet"
 
-#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:273
+#: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:355
 msgid "Option"
 msgstr "Opsjon"
 
@@ -6457,14 +6894,15 @@ msgstr "Ordreprosess"
 msgid "Phone number"
 msgstr "Telefonnummer"
 
-#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:161
+#: src/app/routes/_authenticated/_collections/collections_.$id.tsx:180
 #: src/app/routes/_authenticated/_facets/facets_.$id.tsx:109
 #: src/lib/components/data-input/default-relation-input.tsx:247
 #: src/lib/components/data-input/default-relation-input.tsx:277
 msgid "Private"
 msgstr "Privat"
 
-#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:283
+#: src/app/routes/_authenticated/_products/components/generate-missing-variants-dialog.tsx:185
+#: src/app/routes/_authenticated/_products/components/generate-variants-panel.tsx:189
 msgid "Variant"
 msgstr "Variant"
 

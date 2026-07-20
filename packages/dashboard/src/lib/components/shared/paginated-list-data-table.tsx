@@ -187,7 +187,7 @@ export interface PaginatedListDataTableProps<
     customizeColumns?: CustomizeColumnConfig<T>;
     additionalColumns?: AC;
     defaultColumnOrder?: (keyof ListQueryFields<T> | keyof AC | CustomFieldKeysOfItem<ListQueryFields<T>>)[];
-    defaultVisibility?: Partial<Record<AllItemFieldKeys<T>, boolean>>;
+    defaultVisibility?: Partial<Record<AllItemFieldKeys<T> | keyof AC, boolean>>;
     /**
      * @description
      * Called whenever the debounced search term changes (including when it
@@ -224,8 +224,31 @@ export interface PaginatedListDataTableProps<
     onColumnVisibilityChange?: (table: Table<any>, columnVisibility: VisibilityState) => void;
     facetedFilters?: FacetedFilterConfig<T>;
     rowActions?: RowAction<PaginatedListItemFields<T>>[];
-    bulkActions?: BulkActionsInput;
+    /**
+     * Bulk actions to render for selected rows. Set to `false` to suppress the
+     * bulk-action toolbar while retaining row selection.
+     */
+    bulkActions?: BulkActionsInput | false;
+    /**
+     * The selected items, used to synchronize table selection with an owning component.
+     */
+    selectedItems?: PaginatedListItemFields<T>[];
+    /**
+     * Called when row selection changes, including selections retained across pages.
+     */
+    onSelectionChange?: (selection: PaginatedListItemFields<T>[]) => void;
     disableViewOptions?: boolean;
+    /**
+     * @description
+     * Enables saved-view controls for this table. This should be used for tables
+     * which represent a whole data set, such as top-level list pages. It should
+     * not be enabled for embedded tables or tables whose query is already scoped
+     * by a predefined filter.
+     *
+     * @default false
+     * @since 3.8.0
+     */
+    enableViews?: boolean;
     transformData?: (data: PaginatedListItemFields<T>[]) => PaginatedListItemFields<T>[];
     setTableOptions?: (table: TableOptions<any>) => TableOptions<any>;
     /**
@@ -439,7 +462,10 @@ export function PaginatedListDataTable<
     facetedFilters,
     rowActions,
     bulkActions,
+    selectedItems,
+    onSelectionChange,
     disableViewOptions,
+    enableViews,
     setTableOptions,
     transformData,
     registerRefresher,
@@ -488,7 +514,7 @@ export function PaginatedListDataTable<
         fields,
         customizeColumns,
         rowActions,
-        bulkActions,
+        bulkActions: bulkActions === false ? undefined : bulkActions,
         deleteMutation,
         additionalColumns,
         defaultColumnOrder: getStandardizedDefaultColumnOrder(defaultColumnOrder),
@@ -587,7 +613,10 @@ export function PaginatedListDataTable<
                     defaultColumnVisibility={columnVisibility}
                     facetedFilters={facetedFilters}
                     disableViewOptions={disableViewOptions}
+                    enableViews={enableViews}
                     bulkActions={bulkActions}
+                    selectedItems={selectedItems}
+                    onSelectionChange={onSelectionChange}
                     setTableOptions={setTableOptions}
                     onRefresh={refetchPaginatedList}
                     onReorder={onReorder}

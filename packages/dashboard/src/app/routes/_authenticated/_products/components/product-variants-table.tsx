@@ -22,7 +22,6 @@ import { productVariantListDocument } from '../products.graphql.js';
 interface ProductVariantsTableProps {
     productId: string;
     registerRefresher?: PaginatedListRefresherRegisterFn;
-    fromProductDetailPage?: boolean;
     title?: ReactNode;
     actions?: ReactNode;
 }
@@ -30,7 +29,6 @@ interface ProductVariantsTableProps {
 export function ProductVariantsTable({
     productId,
     registerRefresher,
-    fromProductDetailPage,
     title,
     actions,
 }: ProductVariantsTableProps) {
@@ -89,7 +87,6 @@ export function ProductVariantsTable({
                         <DetailPageButton
                             href={`../../product-variants/${original.id}`}
                             label={original.name}
-                            search={fromProductDetailPage ? { from: 'product' } : undefined}
                         />
                     ),
                 },
