@@ -2,6 +2,7 @@ import sharp from 'sharp';
 import { describe, expect, it } from 'vitest';
 
 import { getValidBackgroundColor } from './common';
+import { PresetOnlyStrategy } from './config/preset-only-strategy';
 import { Dimensions, Point, resizeToFocalPoint, transformImage } from './transform-image';
 
 describe('resizeToFocalPoint', () => {
@@ -76,7 +77,7 @@ describe('getValidBackgroundColor', () => {
     });
 
     it('accepts 6-char hex with #', () => {
-        expect(getValidBackgroundColor('#F0A703')).toBe('#F0A703');
+        expect(getValidBackgroundColor('#F0A703')).toBe('#f0a703');
     });
 
     it('accepts 3-char shorthand hex', () => {
@@ -163,5 +164,95 @@ describe('transformImage with backgroundColor', () => {
         const { channels, hasAlpha } = await sharp(buffer).metadata();
         expect(channels).toBe(4);
         expect(hasAlpha).toBe(true);
+    });
+});
+
+describe('PresetOnlyStrategy permittedBackgroundColors', () => {
+    const presets = [{ name: 'thumb', width: 100, height: 100, mode: 'crop' as const }];
+    const baseInput = {
+        width: undefined,
+        height: undefined,
+        mode: undefined,
+        quality: undefined,
+        format: undefined,
+        fpx: undefined,
+        fpy: undefined,
+        preset: 'thumb',
+        backgroundColor: '#ffffff',
+    };
+
+    it('drops backgroundColor when permittedBackgroundColors is omitted', () => {
+        const strategy = new PresetOnlyStrategy({ defaultPreset: 'thumb' });
+        const result = strategy.getImageTransformParameters({
+            input: baseInput,
+            availablePresets: presets,
+            req: {} as any,
+        });
+        expect(result.backgroundColor).toBeUndefined();
+    });
+
+    it('allows any backgroundColor when set to "any"', () => {
+        const strategy = new PresetOnlyStrategy({
+            defaultPreset: 'thumb',
+            permittedBackgroundColors: 'any',
+        });
+        const result = strategy.getImageTransformParameters({
+            input: baseInput,
+            availablePresets: presets,
+            req: {} as any,
+        });
+        expect(result.backgroundColor).toBe('#ffffff');
+    });
+
+    it('allows a whitelisted backgroundColor', () => {
+        const strategy = new PresetOnlyStrategy({
+            defaultPreset: 'thumb',
+            permittedBackgroundColors: ['#ffffff', '#000000'],
+        });
+        const result = strategy.getImageTransformParameters({
+            input: baseInput,
+            availablePresets: presets,
+            req: {} as any,
+        });
+        expect(result.backgroundColor).toBe('#ffffff');
+    });
+
+    it('drops a non-whitelisted backgroundColor', () => {
+        const strategy = new PresetOnlyStrategy({
+            defaultPreset: 'thumb',
+            permittedBackgroundColors: ['#000000'],
+        });
+        const result = strategy.getImageTransformParameters({
+            input: baseInput,
+            availablePresets: presets,
+            req: {} as any,
+        });
+        expect(result.backgroundColor).toBeUndefined();
+    });
+
+    it('whitelist comparison is case-insensitive', () => {
+        const strategy = new PresetOnlyStrategy({
+            defaultPreset: 'thumb',
+            permittedBackgroundColors: ['#FFFFFF'],
+        });
+        const result = strategy.getImageTransformParameters({
+            input: { ...baseInput, backgroundColor: '#ffffff' },
+            availablePresets: presets,
+            req: {} as any,
+        });
+        expect(result.backgroundColor).toBe('#ffffff');
+    });
+
+    it('whitelist comparison ignores # prefix differences', () => {
+        const strategy = new PresetOnlyStrategy({
+            defaultPreset: 'thumb',
+            permittedBackgroundColors: ['ffffff'],
+        });
+        const result = strategy.getImageTransformParameters({
+            input: { ...baseInput, backgroundColor: '#ffffff' },
+            availablePresets: presets,
+            req: {} as any,
+        });
+        expect(result.backgroundColor).toBe('#ffffff');
     });
 });
