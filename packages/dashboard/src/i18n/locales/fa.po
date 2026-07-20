@@ -90,7 +90,7 @@ msgstr "حداقل یک کالا به سفارش اضافه کنید"
 msgid "Add products to create a test order"
 msgstr "برای ایجاد سفارش آزمایشی محصولات اضافه کنید"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:124
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:128
 msgid "Failed to create address"
 msgstr "ایجاد آدرس ناموفق بود"
 
@@ -178,6 +178,10 @@ msgstr "دلیل سفارشی را وارد کنید..."
 msgid "Type"
 msgstr "نوع"
 
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:266
+msgid "The default currency is chosen from this list."
+msgstr ""
+
 #. placeholder {0}: asset.name
 #. placeholder {0}: entityName.toLowerCase()
 #. placeholder {0}: group.name
@@ -214,7 +218,7 @@ msgstr "فعلی"
 msgid "No fulfillments"
 msgstr "هیچ تحویلی وجود ندارد"
 
-#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:232
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:339
 msgid "When this is enabled, the prices entered in the product catalog will be included in the tax for the default tax zone."
 msgstr "وقتی این فعال باشد، قیمت‌های وارد شده در کاتالوگ محصول شامل مالیات برای منطقه مالیاتی پیش‌فرض خواهد بود."
 
@@ -282,7 +286,7 @@ msgstr "رفتن به داشبورد"
 msgid "{fulfilled, plural, one {Successfully cancelled {fulfilled} job} other {Successfully cancelled {fulfilled} jobs}}"
 msgstr "{fulfilled, plural, one {{fulfilled} کار با موفقیت لغو شد} other {{fulfilled} کار با موفقیت لغو شد}}"
 
-#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:152
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:244
 msgid "Seller"
 msgstr "فروشنده"
 
@@ -317,7 +321,7 @@ msgstr "محل‌های انبار"
 msgid "Fulfillment handler"
 msgstr "مدیریت تحویل"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:248
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:252
 #: src/app/routes/_authenticated/_orders/orders.tsx:21
 #: src/app/routes/_authenticated/_orders/orders.tsx:37
 #: src/app/routes/_authenticated/_orders/utils/order-detail-loaders.tsx:48
@@ -387,7 +391,7 @@ msgid "Type at least 2 characters to search..."
 msgstr "حداقل ۲ حرف برای جستجو تایپ کنید..."
 
 #: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:122
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:182
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:186
 #: src/app/routes/_authenticated/_profile/profile.tsx:109
 msgid "Last name"
 msgstr "نام خانوادگی"
@@ -452,7 +456,7 @@ msgstr "مشاهده جزئیات"
 msgid "Select a channel to assign {0} {entityType} to"
 msgstr "یک کانال برای اختصاص {0} {entityType} انتخاب کنید"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:98
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:100
 msgid "Successfully created customer"
 msgstr "مشتری با موفقیت ایجاد شد"
 
@@ -465,8 +469,8 @@ msgctxt "date-range"
 msgid "Last 7 days"
 msgstr "7 روز گذشته"
 
-#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:90
-#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:96
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:180
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:186
 msgid "Failed to create channel"
 msgstr "ایجاد کانال ناموفق بود"
 
@@ -632,6 +636,10 @@ msgstr "جستجوی گزینه‌ها..."
 #: src/lib/framework/dashboard-widget/metrics-widget/index.tsx:85
 msgid "Order Count"
 msgstr "تعداد سفارش"
+
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:159
+msgid "You must first select an available currency to set a default currency"
+msgstr ""
 
 #: src/app/routes/_authenticated/_orders/components/fulfillment-details.tsx:157
 msgid "Fulfilled items"
@@ -800,7 +808,7 @@ msgstr "انتخاب آدرس"
 msgid "Payment eligibility checker"
 msgstr "بررسی صلاحیت پرداخت"
 
-#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:214
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:321
 msgid "Default tax zone"
 msgstr "منطقه مالیاتی پیش‌فرض"
 
@@ -831,7 +839,7 @@ msgstr "فیلتر..."
 msgid "New facet value"
 msgstr "مقدار ویژگی جدید"
 
-#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:83
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:173
 msgid "Successfully updated channel"
 msgstr "کانال با موفقیت به‌روزرسانی شد"
 
@@ -843,7 +851,7 @@ msgstr "نمایش کمتر"
 msgid "Short date"
 msgstr "تاریخ کوتاه"
 
-#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:172
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:265
 msgid "Available currencies"
 msgstr "ارزهای موجود"
 
@@ -1315,7 +1323,7 @@ msgstr "صف کارها"
 msgid "Assets"
 msgstr "فایل‌ها"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:188
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:192
 msgid "Email address"
 msgstr "آدرس ایمیل"
 
@@ -1389,9 +1397,16 @@ msgstr "باقیمانده:"
 msgid "No duplicator found with code \"{duplicatorCode}\" for {entityName}s"
 msgstr "هیچ تکثیرکننده‌ای با کد \"{duplicatorCode}\" برای {entityName} یافت نشد"
 
-#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:230
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:337
 msgid "Prices include tax for default tax zone"
 msgstr "قیمت‌ها شامل مالیات برای منطقه مالیاتی پیش‌فرض است"
+
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:130
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:131
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:134
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:135
+msgid "This field is required"
+msgstr ""
 
 #: src/app/routes/_authenticated/_orders/components/order-modification-preview-dialog.tsx:276
 msgid "Total refund:"
@@ -1512,8 +1527,8 @@ msgstr "{productCount, plural, one {این گروه گزینه توسط یک م�
 msgid "My Saved Views"
 msgstr "نماهای ذخیره شده من"
 
-#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:39
-#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:111
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:66
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:201
 msgid "New channel"
 msgstr "کانال جدید"
 
@@ -1530,7 +1545,7 @@ msgstr "پیکربندی تنظیمات تکرار برای {0}s"
 msgid "No variants match the current filter."
 msgstr "هیچ گونه‌ای با فیلتر فعلی مطابقت ندارد."
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:203
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:207
 #: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:245
 msgid "Addresses"
 msgstr "آدرس‌ها"
@@ -1919,7 +1934,7 @@ msgstr "حذف گونه"
 msgid "No modifications made"
 msgstr "هیچ تغییری انجام نشد"
 
-#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:222
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:329
 msgid "Default shipping zone"
 msgstr "منطقه ارسال پیش‌فرض"
 
@@ -2039,11 +2054,11 @@ msgstr "بازپرداخت با موفقیت تسویه شد"
 #: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:106
 #: src/app/routes/_authenticated/_api-keys/api-keys_.$id.tsx:155
 #: src/app/routes/_authenticated/_assets/assets_.$id.tsx:155
-#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:122
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:214
 #: src/app/routes/_authenticated/_collections/collections_.$id.tsx:171
 #: src/app/routes/_authenticated/_countries/countries_.$id.tsx:84
 #: src/app/routes/_authenticated/_customer-groups/customer-groups_.$id.tsx:94
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:159
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:163
 #: src/app/routes/_authenticated/_facets/facets_.$facetId.values_.$id.tsx:111
 #: src/app/routes/_authenticated/_facets/facets_.$id.tsx:100
 #: src/app/routes/_authenticated/_global-settings/global-settings.tsx:102
@@ -2137,7 +2152,7 @@ msgstr "نتیجه‌ای وجود ندارد"
 msgid "Column settings"
 msgstr "تنظیمات ستون"
 
-#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:132
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:224
 #: src/app/routes/_authenticated/_countries/countries_.$id.tsx:110
 #: src/app/routes/_authenticated/_facets/facets_.$facetId.values_.$id.tsx:127
 #: src/app/routes/_authenticated/_facets/facets_.$id.tsx:127
@@ -2197,13 +2212,13 @@ msgid "Facets"
 msgstr "ویژگی‌ها"
 
 #. js-lingui-explicit-id
-#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:103
+#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:107
 #: src/app/routes/_authenticated/_orders/components/order-history/use-order-history.ts:108
 msgid "Failed to add note"
 msgstr "افزودن یادداشت ناموفق بود"
 
 #. js-lingui-explicit-id
-#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:144
+#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:148
 #: src/app/routes/_authenticated/_orders/components/order-history/use-order-history.ts:150
 msgid "Failed to delete note"
 msgstr "حذف یادداشت ناموفق بود"
@@ -2214,7 +2229,7 @@ msgid "Failed to extend query document"
 msgstr "گسترش سند پرس‌وجو ناموفق بود"
 
 #. js-lingui-explicit-id
-#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:124
+#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:128
 #: src/app/routes/_authenticated/_orders/components/order-history/use-order-history.ts:129
 msgid "Failed to update note"
 msgstr "به‌روزرسانی یادداشت ناموفق بود"
@@ -2253,6 +2268,10 @@ msgstr "فایل با موفقیت به‌روزرسانی شد"
 #: src/lib/components/layout/nav-user.tsx:118
 msgid "Theme"
 msgstr "تم"
+
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:156
+msgid "You must select at least one available currency"
+msgstr ""
 
 #. placeholder {0}: value.totalItems
 #: src/app/routes/_authenticated/_customer-groups/customer-groups.tsx:41
@@ -2867,11 +2886,11 @@ msgstr "دسته‌بندی مالیاتی جدید"
 #~ msgid "No stock locations available on current channel"
 #~ msgstr "محل انباری در کانال فعلی موجود نیست"
 
-#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:83
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:173
 msgid "Successfully created channel"
 msgstr "کانال با موفقیت ایجاد شد"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:98
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:100
 msgid "Successfully updated customer"
 msgstr "مشتری با موفقیت به‌روزرسانی شد"
 
@@ -2887,7 +2906,7 @@ msgstr "مشاهده داده‌ها"
 msgid "Delete View"
 msgstr "حذف نما"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:231
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:235
 msgid "Add a new address to the customer."
 msgstr "یک آدرس جدید به مشتری اضافه کنید."
 
@@ -3046,8 +3065,8 @@ msgstr "مقدار"
 msgid "Phone Number"
 msgstr "شماره تلفن"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:62
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:152
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:63
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:156
 msgid "New customer"
 msgstr "مشتری جدید"
 
@@ -3088,7 +3107,7 @@ msgid "Added"
 msgstr "اضافه شد"
 
 #: src/app/routes/_authenticated/_customers/components/customer-history/customer-history-container.tsx:30
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:250
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:254
 msgid "Customer history"
 msgstr "تاریخچه مشتری"
 
@@ -3096,7 +3115,7 @@ msgstr "تاریخچه مشتری"
 msgid "Successfully updated facet values for {entityIdsLength} {entityType}"
 msgstr "مقادیر ویژگی برای {entityIdsLength} {entityType} با موفقیت به‌روزرسانی شد"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:144
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:148
 msgid "Failed to remove customer from group"
 msgstr "حذف مشتری از گروه ناموفق بود"
 
@@ -3143,11 +3162,11 @@ msgstr "حذف نمای عمومی"
 
 #: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:106
 #: src/app/routes/_authenticated/_api-keys/api-keys_.$id.tsx:155
-#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:122
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:214
 #: src/app/routes/_authenticated/_collections/collections_.$id.tsx:171
 #: src/app/routes/_authenticated/_countries/countries_.$id.tsx:84
 #: src/app/routes/_authenticated/_customer-groups/customer-groups_.$id.tsx:94
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:159
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:163
 #: src/app/routes/_authenticated/_facets/facets_.$facetId.values_.$id.tsx:111
 #: src/app/routes/_authenticated/_facets/facets_.$id.tsx:100
 #: src/app/routes/_authenticated/_option-groups/option-groups_.$groupId.options_.$id.tsx:177
@@ -3181,8 +3200,8 @@ msgstr "کشور جدید"
 msgid "From {0} to {1}"
 msgstr "از {0} به {1}"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:105
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:111
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:109
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:115
 msgid "Failed to create customer"
 msgstr "ایجاد مشتری ناموفق بود"
 
@@ -3486,7 +3505,7 @@ msgstr "ایالت/استان"
 msgid "Failed to update option group"
 msgstr "به‌روزرسانی گروه گزینه ناموفق بود"
 
-#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:183
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:277
 msgid "Channel defaults"
 msgstr "پیش‌فرض‌های کانال"
 
@@ -3677,7 +3696,7 @@ msgstr "یادداشت"
 msgid "Bold"
 msgstr "پررنگ"
 
-#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:160
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:252
 #: src/app/routes/_authenticated/_global-settings/global-settings.tsx:112
 msgid "Available languages"
 msgstr "زبان‌های موجود"
@@ -3855,7 +3874,7 @@ msgstr "بررسی‌کننده‌ای یافت نشد"
 msgid "Settle payment"
 msgstr "تسویه پرداخت"
 
-#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:38
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:65
 #: src/app/routes/_authenticated/_channels/channels.tsx:15
 #: src/app/routes/_authenticated/_channels/channels.tsx:24
 #: src/app/routes/_authenticated/_option-groups/option-groups_.$id.tsx:210
@@ -4037,7 +4056,7 @@ msgstr "جستجوی ارزها..."
 msgid "Remove from channel"
 msgstr "حذف از کانال"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:169
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:173
 #: src/lib/components/shared/rich-text-editor/image-dialog.tsx:157
 msgid "Title"
 msgstr "عنوان"
@@ -4234,7 +4253,7 @@ msgid "Refund #{0} transitioned to {1}"
 msgstr "بازپرداخت شماره {0} به {1} منتقل شد"
 
 #: src/app/routes/_authenticated/_customer-groups/customer-groups_.$id.tsx:114
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:61
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:62
 #: src/app/routes/_authenticated/_customers/customers.tsx:16
 #: src/app/routes/_authenticated/_customers/customers.tsx:23
 msgid "Customers"
@@ -4286,19 +4305,19 @@ msgid "between"
 msgstr "بین"
 
 #. js-lingui-explicit-id
-#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:99
+#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:103
 #: src/app/routes/_authenticated/_orders/components/order-history/use-order-history.ts:104
 msgid "Note added successfully"
 msgstr "یادداشت با موفقیت اضافه شد"
 
 #. js-lingui-explicit-id
-#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:140
+#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:144
 #: src/app/routes/_authenticated/_orders/components/order-history/use-order-history.ts:146
 msgid "Note deleted successfully"
 msgstr "یادداشت با موفقیت حذف شد"
 
 #. js-lingui-explicit-id
-#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:120
+#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:124
 #: src/app/routes/_authenticated/_orders/components/order-history/use-order-history.ts:125
 msgid "Note updated successfully"
 msgstr "یادداشت با موفقیت به‌روزرسانی شد"
@@ -5062,6 +5081,10 @@ msgstr "نما با موفقیت حذف شد"
 msgid "OR"
 msgstr "یا"
 
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:166
+msgid "You must select a default currency from the list of available currencies"
+msgstr ""
+
 #: src/app/routes/_authenticated/_assets/components/asset-tags-editor.tsx:213
 msgid "Manage tags"
 msgstr "مدیریت برچسب‌ها"
@@ -5618,8 +5641,8 @@ msgstr "نام نوع"
 msgid "Remove"
 msgstr "حذف"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:105
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:111
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:109
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:115
 msgid "Failed to update customer"
 msgstr "به‌روزرسانی مشتری ناموفق بود"
 
@@ -5756,7 +5779,7 @@ msgstr "زبان پیش‌فرض"
 msgid "Top Products Widget"
 msgstr "ابزارک محصولات برتر"
 
-#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:141
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:233
 msgid "Token"
 msgstr "توکن"
 
@@ -5867,11 +5890,11 @@ msgstr "تحویل شماره {0} از {1} به {2}"
 msgid "Failed to delete global view"
 msgstr "حذف نمای عمومی ناموفق بود"
 
-#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:188
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:282
 msgid "Default language"
 msgstr "زبان پیش‌فرض"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:253
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:257
 #: src/app/routes/_authenticated/_customers/customers.tsx:47
 msgid "Status"
 msgstr "وضعیت"
@@ -5999,7 +6022,7 @@ msgid "Failed to process refund"
 msgstr "پردازش بازپرداخت ناموفق بود"
 
 #: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:116
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:176
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:180
 #: src/app/routes/_authenticated/_profile/profile.tsx:103
 msgid "First name"
 msgstr "نام"
@@ -6105,7 +6128,7 @@ msgstr "اولین مشتری خود را ایجاد کنید"
 msgid "Reason"
 msgstr "دلیل"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:256
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:260
 msgid "Customer groups"
 msgstr "گروه‌های مشتری"
 
@@ -6152,6 +6175,10 @@ msgstr "افزودن کشور"
 #: src/app/routes/_authenticated/_promotions/promotions.tsx:72
 msgid "Create your first promotion"
 msgstr "اولین تبلیغ خود را ایجاد کنید"
+
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:253
+msgid "Defaults to the default language."
+msgstr ""
 
 #: src/lib/components/data-input/custom-field-list-input.tsx:85
 msgid "Remove item"
@@ -6245,8 +6272,8 @@ msgstr "منبع"
 msgid "No actions available"
 msgstr "عملیاتی موجود نیست"
 
-#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:90
-#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:96
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:180
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:186
 msgid "Failed to update channel"
 msgstr "به‌روزرسانی کانال ناموفق بود"
 
@@ -6258,8 +6285,8 @@ msgstr "عمومی"
 #~ msgid "Failed to remove product from channel"
 #~ msgstr "حذف محصول از کانال ناموفق بود"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:223
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:228
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:227
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:232
 msgid "Add new address"
 msgstr "افزودن آدرس جدید"
 
@@ -6323,7 +6350,7 @@ msgstr "توضیحات (متن جایگزین)"
 msgid "No tags found"
 msgstr "هیچ برچسبی یافت نشد"
 
-#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:201
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:304
 msgid "Default currency"
 msgstr "ارز پیش‌فرض"
 
@@ -6796,7 +6823,7 @@ msgstr "افزودن پرداخت به سفارش"
 msgid "Create variants for the option combinations that don't exist yet. Combinations that already exist are shown for context and can't be edited."
 msgstr "برای ترکیب‌های گزینه‌هایی که هنوز وجود ندارند متغیر ایجاد کنید. ترکیب‌های موجود فقط برای مرجع نمایش داده می‌شوند و قابل ویرایش نیستند."
 
-#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:143
+#: src/app/routes/_authenticated/_channels/channels_.$id.tsx:235
 msgid "The token is used to specify the channel when making API requests."
 msgstr "توکن برای مشخص کردن کانال هنگام انجام درخواست‌های API استفاده می‌شود."
 
@@ -6847,7 +6874,7 @@ msgid "Payment method is required"
 msgstr "روش پرداخت الزامی است"
 
 #: src/app/routes/_authenticated/_customer-groups/components/customer-group-members-table.tsx:69
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:134
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:138
 msgid "Failed to add customer to group"
 msgstr "افزودن مشتری به گروه ناموفق بود"
 
@@ -6890,7 +6917,7 @@ msgstr "گزینه"
 msgid "Order process"
 msgstr "فرآیند سفارش"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:194
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:198
 msgid "Phone number"
 msgstr "شماره تلفن"
 
