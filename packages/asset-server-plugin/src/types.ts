@@ -11,8 +11,12 @@ export type ImageTransformFormat = 'jpg' | 'jpeg' | 'png' | 'webp' | 'avif';
 
 /**
  * @description
- * A hex color string with a `#` prefix, e.g. `'#ffffff'` or `'#000'`.
- * Accepts 3, 4, 6, or 8 hex digit formats.
+ * A `#`-prefixed hex color string, e.g. `'#ffffff'` or `'#000'`.
+ * Full hex-char validation at the type level is not feasible because
+ * TypeScript's template literal unions exceed compiler limits for
+ * 6- and 8-char hex strings. The `#` prefix is enforced at compile time;
+ * hex-character and length validation is handled at runtime by
+ * `getValidBackgroundColor()`.
  *
  * @docsCategory core plugins/AssetServerPlugin
  * @since 3.8.0
