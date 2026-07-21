@@ -14,6 +14,7 @@ import {
     ManyToOne,
 } from 'typeorm';
 import { EmbeddedMetadataArgs } from 'typeorm/metadata-args/EmbeddedMetadataArgs';
+import { RelationMetadataArgs } from 'typeorm/metadata-args/RelationMetadataArgs';
 import { DateUtils } from 'typeorm/util/DateUtils';
 
 import { CustomFieldConfig, CustomFields } from '../config/custom-field/custom-field-types';
@@ -49,13 +50,35 @@ export function getEntityNamesWithCustomFields(): string[] {
     const translationEntityNames = new Set(
         metadataArgsStorage.relations
             .filter(relation => relation.propertyName === 'translations')
-            .map(relation => (relation.type as () => Function)().name),
+            .map(relation => getRelationTargetName(relation.type))
+            .filter((name): name is string => name != null),
     );
     const names = metadataArgsStorage.embeddeds
         .filter(embedded => embedded.propertyName === 'customFields')
         .map(embedded => (typeof embedded.target === 'string' ? embedded.target : embedded.target.name))
         .filter(name => !translationEntityNames.has(name));
     return Array.from(new Set(names));
+}
+
+/**
+ * Resolves a TypeORM relation target to the target entity's name. The target may be a
+ * constructor closure (`() => ProductTranslation`, the usual form), a bare string name, or a
+ * closure returning a string — the latter two are both legal and commonly used to break
+ * circular imports (`@OneToMany('ArticleTranslation', ...)`). Calling a non-function, as the
+ * previous code did unconditionally, threw `relation.type is not a function` and aborted
+ * bootstrap; a closure returning a string yielded `undefined` and silently failed to exclude
+ * the translation entity.
+ */
+function getRelationTargetName(type: RelationMetadataArgs['type']): string | undefined {
+    const resolved: unknown = typeof type === 'function' ? (type as () => unknown)() : type;
+    if (typeof resolved === 'string') {
+        return resolved;
+    }
+    if (typeof resolved === 'function') {
+        return resolved.name;
+    }
+    // Anything else that carries a `name` (e.g. an EntitySchema-like object).
+    return (resolved as { name?: string } | undefined)?.name;
 }
 
 /**
