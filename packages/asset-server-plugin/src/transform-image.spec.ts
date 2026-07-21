@@ -243,10 +243,10 @@ describe('PresetOnlyStrategy permittedBackgroundColors', () => {
         expect(result.backgroundColor).toBe('#ffffff');
     });
 
-    it('whitelist comparison ignores # prefix differences', () => {
+    it('whitelist comparison is case-insensitive with # prefix', () => {
         const strategy = new PresetOnlyStrategy({
             defaultPreset: 'thumb',
-            permittedBackgroundColors: ['ffffff'],
+            permittedBackgroundColors: ['#ffffff'],
         });
         const result = strategy.getImageTransformParameters({
             input: { ...baseInput, backgroundColor: '#ffffff' },

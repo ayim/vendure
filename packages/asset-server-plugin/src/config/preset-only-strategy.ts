@@ -1,4 +1,4 @@
-import { ImageTransformFormat } from '../types';
+import { HexColorString, ImageTransformFormat } from '../types';
 
 import {
     GetImageTransformParametersArgs,
@@ -51,13 +51,13 @@ export interface PresetOnlyStrategyOptions {
      * If set to `'any'`, any valid hex color is accepted (explicit opt-in to an
      * unbounded cache surface).
      *
-     * Comparison is case-insensitive and ignores the `#` prefix, so
-     * `'#FFFFFF'` and `'ffffff'` are treated as the same entry.
+     * Comparison is case-insensitive, so `'#FFFFFF'` and `'#ffffff'` are
+     * treated as the same entry.
      *
      * @default undefined
      * @since 3.8.0
      */
-    permittedBackgroundColors?: string[] | 'any';
+    permittedBackgroundColors?: HexColorString[] | 'any';
 }
 
 /**
@@ -139,7 +139,7 @@ export class PresetOnlyStrategy implements ImageTransformStrategy {
         if (permitted === 'any') {
             return input;
         }
-        const normalise = (c: string) => c.replace('#', '').toLowerCase();
+        const normalise = (c: string) => c.toLowerCase();
         const normalised = normalise(input);
         return permitted.some(c => normalise(c) === normalised) ? input : undefined;
     }

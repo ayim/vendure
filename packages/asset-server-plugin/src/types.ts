@@ -11,6 +11,16 @@ export type ImageTransformFormat = 'jpg' | 'jpeg' | 'png' | 'webp' | 'avif';
 
 /**
  * @description
+ * A hex color string with a `#` prefix, e.g. `'#ffffff'` or `'#000'`.
+ * Accepts 3, 4, 6, or 8 hex digit formats.
+ *
+ * @docsCategory core plugins/AssetServerPlugin
+ * @since 3.8.0
+ */
+export type HexColorString = `#${string}`;
+
+/**
+ * @description
  * Specifies the way in which an asset preview image will be resized to fit in the
  * proscribed dimensions:
  *
