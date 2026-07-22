@@ -2,7 +2,6 @@ import { Badge } from '@/vdb/components/ui/badge.js';
 import { Button } from '@/vdb/components/ui/button.js';
 import { Popover, PopoverContent, PopoverTrigger } from '@/vdb/components/ui/popover.js';
 import { cn } from '@/vdb/lib/utils.js';
-import { Popover as PopoverPrimitive } from '@base-ui/react/popover';
 import { ChevronDown, X } from 'lucide-react';
 import { useState } from 'react';
 import { Input } from '../ui/input.js';
@@ -132,40 +131,38 @@ export function MultiSelect<T extends boolean>(props: MultiSelectProps<T>) {
     return (
         <Popover>
             <PopoverTrigger render={renderTrigger()}></PopoverTrigger>
-            <PopoverPrimitive.Portal>
-                <PopoverContent
-                    className="w-[200px] p-0"
-                    side="bottom"
-                    align="start"
-                    onWheel={e => e.stopPropagation()}
-                >
-                    {(showSearch === true || items.length > 10) && (
-                        <div className="p-2">
-                            <Input
-                                type="text"
-                                placeholder={searchPlaceholder}
-                                value={search}
-                                onChange={e => setSearch(e.target.value)}
-                                className="w-full px-2 py-1 text-sm border rounded"
-                            />
-                        </div>
-                    )}
-                    <div className="max-h-[300px] overflow-auto">
-                        {filteredItems.map(item => (
-                            <button
-                                key={item.value}
-                                onClick={() => handleSelect(item.value)}
-                                className={cn(
-                                    'w-full px-2 py-1.5 text-sm text-left hover:bg-accent',
-                                    multiple && (value as string[]).includes(item.value) && 'bg-accent',
-                                )}
-                            >
-                                {item.display ?? item.label}
-                            </button>
-                        ))}
+            <PopoverContent
+                className="w-[200px] p-0"
+                side="bottom"
+                align="start"
+                onWheel={e => e.stopPropagation()}
+            >
+                {(showSearch === true || items.length > 10) && (
+                    <div className="p-2">
+                        <Input
+                            type="text"
+                            placeholder={searchPlaceholder}
+                            value={search}
+                            onChange={e => setSearch(e.target.value)}
+                            className="w-full px-2 py-1 text-sm border rounded"
+                        />
                     </div>
-                </PopoverContent>
-            </PopoverPrimitive.Portal>
+                )}
+                <div className="max-h-[300px] overflow-auto">
+                    {filteredItems.map(item => (
+                        <button
+                            key={item.value}
+                            onClick={() => handleSelect(item.value)}
+                            className={cn(
+                                'w-full px-2 py-1.5 text-sm text-left hover:bg-accent',
+                                multiple && (value as string[]).includes(item.value) && 'bg-accent',
+                            )}
+                        >
+                            {item.display ?? item.label}
+                        </button>
+                    ))}
+                </div>
+            </PopoverContent>
         </Popover>
     );
 }

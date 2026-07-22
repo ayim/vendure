@@ -1,6 +1,7 @@
 import { toast } from '@/vdb/components/ui/sonner.js';
-import { ReactNode, useEffect, useMemo, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 
+import { ChannelCodeLabel } from '@/vdb/components/shared/channel-code-label.js';
 import { MultiSelect } from '@/vdb/components/shared/multi-select.js';
 import { Button } from '@/vdb/components/ui/button.js';
 import {
@@ -63,19 +64,13 @@ export function AssignToChannelDialog({
     }, [open]);
 
     // Filter out the currently selected channel from available options
-    const availableChannels = useMemo(
-        () => channels.filter(channel => channel.id !== activeChannel?.id),
-        [channels, activeChannel?.id],
-    );
+    const availableChannels = channels.filter(channel => channel.id !== activeChannel?.id);
 
-    const selectItems = useMemo(
-        () =>
-            availableChannels.map(ch => ({
-                value: ch.id,
-                label: ch.code,
-            })),
-        [availableChannels],
-    );
+    const selectItems = availableChannels.map(ch => ({
+        value: ch.id,
+        label: ch.code,
+        display: <ChannelCodeLabel code={ch.code} />,
+    }));
 
     const handleAssign = async () => {
         setIsAssigning(true);
@@ -86,19 +81,28 @@ export function AssignToChannelDialog({
                 ),
             );
 
-            const rejected = results.filter(r => r.status === 'rejected');
-            if (rejected.length === 0) {
+            const failedChannelIds = results.flatMap((r, i) =>
+                r.status === 'rejected' ? [selectedChannelIds[i]] : [],
+            );
+            const succeededCount = results.length - failedChannelIds.length;
+
+            if (succeededCount > 0) {
+                onSuccess?.();
+            }
+
+            if (failedChannelIds.length === 0) {
                 toast.success(
                     t`Successfully assigned ${entityIdsLength} ${entityType} to ${selectedChannelIds.length} channels`,
                 );
-                onSuccess?.();
                 onOpenChange(false);
             } else {
-                const firstReason = rejected[0]?.status === 'rejected' ? rejected[0].reason : undefined;
+                const firstRejected = results.find(r => r.status === 'rejected');
+                const firstReason = firstRejected?.status === 'rejected' ? firstRejected.reason : undefined;
                 const description = firstReason instanceof Error ? firstReason.message : undefined;
+                setSelectedChannelIds(failedChannelIds);
                 toast.error(
-                    t`Failed to assign ${entityIdsLength} ${entityType} to ${rejected.length} of ${selectedChannelIds.length} channels`,
-                    description ? { description } : undefined,
+                    t`Failed to assign ${entityIdsLength} ${entityType} to ${failedChannelIds.length} of ${selectedChannelIds.length} channels`,
+                    { description },
                 );
             }
         } finally {
