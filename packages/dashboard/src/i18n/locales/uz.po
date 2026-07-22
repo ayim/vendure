@@ -1561,7 +1561,7 @@ msgstr "Oxirgi sahifaga o'tish"
 #: src/lib/components/data-table/views-sheet.tsx:293
 #: src/lib/components/layout/manage-languages-dialog.tsx:379
 #: src/lib/components/shared/asset/asset-focal-point-editor.tsx:88
-#: src/lib/components/shared/assign-to-channel-dialog.tsx:141
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:145
 #: src/lib/components/shared/confirmation-dialog.tsx:42
 #: src/lib/components/shared/customer-address-form.tsx:253
 #: src/lib/components/shared/navigation-confirmation.tsx:55
@@ -2607,7 +2607,7 @@ msgid "All types"
 msgstr "Barcha turlar"
 
 #. placeholder {0}: entityIds.length
-#: src/lib/components/shared/assign-to-channel-dialog.tsx:117
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:121
 msgid "Select channels to assign {0} {entityType} to"
 msgstr ""
 
@@ -2636,7 +2636,7 @@ msgstr "Faset qiymatlarini qoʻshish"
 msgid "after"
 msgstr "keyin"
 
-#: src/lib/components/shared/assign-to-channel-dialog.tsx:125
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:129
 msgid "Channel"
 msgstr "Kanal"
 
@@ -2913,7 +2913,7 @@ msgid "Address updated"
 msgstr "Manzil yangilandi"
 
 #. placeholder {0}: selectedChannelIds.length
-#: src/lib/components/shared/assign-to-channel-dialog.tsx:92
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:95
 msgid "Successfully assigned {entityIdsLength} {entityType} to {0} channels"
 msgstr ""
 
@@ -3160,7 +3160,7 @@ msgstr "Toifa"
 msgid "Moving..."
 msgstr "Ko'chirilmoqda..."
 
-#: src/lib/components/shared/assign-to-channel-dialog.tsx:144
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:148
 msgid "Assign"
 msgstr "Tayinlash"
 
@@ -3168,9 +3168,9 @@ msgstr "Tayinlash"
 msgid "Successfully created seller"
 msgstr "Sotuvchi yaratildi"
 
-#. placeholder {0}: rejected.length
+#. placeholder {0}: failedChannelIds.length
 #. placeholder {1}: selectedChannelIds.length
-#: src/lib/components/shared/assign-to-channel-dialog.tsx:100
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:104
 msgid "Failed to assign {entityIdsLength} {entityType} to {0} of {1} channels"
 msgstr ""
 
@@ -4149,7 +4149,7 @@ msgstr "URL va maqsad parametrlari bilan yangi havola qo'shish"
 msgid "Height"
 msgstr "Balandlik"
 
-#: src/lib/components/shared/assign-to-channel-dialog.tsx:114
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:118
 msgid "Assign {entityType} to channels"
 msgstr ""
 
@@ -4175,7 +4175,7 @@ msgstr "To'lov muvaffaqiyatsiz tugadi"
 msgid "Add channel"
 msgstr "Kanal qo'shish"
 
-#: src/lib/components/shared/assign-to-channel-dialog.tsx:133
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:137
 #: src/lib/components/shared/channel-selector.tsx:48
 msgid "Search channels..."
 msgstr "Kanallarni qidirish..."
@@ -4217,7 +4217,7 @@ msgstr "Ko'rinishni globalga o'tkazib bo'lmadi"
 msgid "Select Payment Eligibility Checker"
 msgstr ""
 
-#: src/lib/components/shared/assign-to-channel-dialog.tsx:132
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:136
 msgid "Select one or more channels"
 msgstr ""
 
@@ -5365,7 +5365,7 @@ msgstr "Qiymat"
 msgid "Customer updated"
 msgstr "Mijoz yangilandi"
 
-#: src/lib/components/shared/assign-to-channel-dialog.tsx:161
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:165
 msgid "Price conversion factor"
 msgstr "Narx konversiya koeffitsienti"
 

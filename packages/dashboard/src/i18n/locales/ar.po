@@ -1614,7 +1614,7 @@ msgstr "الانتقال إلى الصفحة الأخيرة"
 #: src/lib/components/data-table/views-sheet.tsx:293
 #: src/lib/components/layout/manage-languages-dialog.tsx:379
 #: src/lib/components/shared/asset/asset-focal-point-editor.tsx:88
-#: src/lib/components/shared/assign-to-channel-dialog.tsx:141
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:145
 #: src/lib/components/shared/confirmation-dialog.tsx:42
 #: src/lib/components/shared/customer-address-form.tsx:253
 #: src/lib/components/shared/navigation-confirmation.tsx:55
@@ -2686,7 +2686,7 @@ msgid "All types"
 msgstr "جميع الأنواع"
 
 #. placeholder {0}: entityIds.length
-#: src/lib/components/shared/assign-to-channel-dialog.tsx:117
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:121
 msgid "Select channels to assign {0} {entityType} to"
 msgstr ""
 
@@ -2715,7 +2715,7 @@ msgstr "إضافة قيم الخصائص"
 msgid "after"
 msgstr "بعد"
 
-#: src/lib/components/shared/assign-to-channel-dialog.tsx:125
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:129
 msgid "Channel"
 msgstr "القناة"
 
@@ -3005,7 +3005,7 @@ msgid "Address updated"
 msgstr "تم تحديث العنوان"
 
 #. placeholder {0}: selectedChannelIds.length
-#: src/lib/components/shared/assign-to-channel-dialog.tsx:92
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:95
 msgid "Successfully assigned {entityIdsLength} {entityType} to {0} channels"
 msgstr ""
 
@@ -3252,7 +3252,7 @@ msgstr "الفئة"
 msgid "Moving..."
 msgstr "جارٍ النقل..."
 
-#: src/lib/components/shared/assign-to-channel-dialog.tsx:144
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:148
 msgid "Assign"
 msgstr "تعيين"
 
@@ -3260,9 +3260,9 @@ msgstr "تعيين"
 msgid "Successfully created seller"
 msgstr "تم إنشاء البائع بنجاح"
 
-#. placeholder {0}: rejected.length
+#. placeholder {0}: failedChannelIds.length
 #. placeholder {1}: selectedChannelIds.length
-#: src/lib/components/shared/assign-to-channel-dialog.tsx:100
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:104
 msgid "Failed to assign {entityIdsLength} {entityType} to {0} of {1} channels"
 msgstr ""
 
@@ -4285,7 +4285,7 @@ msgstr "إدراج رابط جديد بـ URL وخيارات الهدف"
 msgid "Height"
 msgstr "الارتفاع"
 
-#: src/lib/components/shared/assign-to-channel-dialog.tsx:114
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:118
 msgid "Assign {entityType} to channels"
 msgstr ""
 
@@ -4315,7 +4315,7 @@ msgstr "إضافة قناة"
 #~ msgid "Failed to update product option group"
 #~ msgstr "فشل تحديث مجموعة خيارات المنتج"
 
-#: src/lib/components/shared/assign-to-channel-dialog.tsx:133
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:137
 #: src/lib/components/shared/channel-selector.tsx:48
 msgid "Search channels..."
 msgstr "بحث في القنوات..."
@@ -4357,7 +4357,7 @@ msgstr "فشل تحويل العرض إلى عام"
 msgid "Select Payment Eligibility Checker"
 msgstr ""
 
-#: src/lib/components/shared/assign-to-channel-dialog.tsx:132
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:136
 msgid "Select one or more channels"
 msgstr ""
 
@@ -5561,7 +5561,7 @@ msgstr "القيمة"
 msgid "Customer updated"
 msgstr "تم تحديث العميل"
 
-#: src/lib/components/shared/assign-to-channel-dialog.tsx:161
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:165
 msgid "Price conversion factor"
 msgstr "عامل تحويل السعر"
 
