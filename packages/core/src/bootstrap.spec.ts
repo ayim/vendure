@@ -6,11 +6,10 @@ import { CustomFieldConfig } from './config/custom-field/custom-field-types';
 import { RuntimeVendureConfig } from './config/vendure-config';
 // Importing the core entities registers their `customFields` embedded columns in the
 // TypeORM metadata, which is how getEntityNamesWithCustomFields() detects the entities
-// that support custom fields.
-import { coreEntitiesMap } from './entity/entities';
+// that support custom fields. Imported for its side effect only.
+import './entity/entities';
+import { registerCustomEntityFields } from './entity/register-custom-entity-fields';
 import { VendurePlugin } from './plugin/vendure-plugin';
-
-void coreEntitiesMap;
 
 /**
  * Registers a `translations` relation (and a matching `customFields` embedded on the
@@ -130,5 +129,54 @@ describe('runPluginConfigurations()', () => {
         const config = makeConfig({ plugins: [TestPlugin] });
         await runPluginConfigurations(config);
         expect(config.customFields.Product).toContainEqual({ name: 'fromPlugin', type: 'string' });
+    });
+});
+
+describe('registerCustomEntityFields()', () => {
+    // OSS-408 / Michael's review: the translatable branch resolved the translation entity via
+    // `(translationsMetadata.type as Function)()`, which threw `type is not a function` for a
+    // bare-string relation target — the same crash class fixed in getEntityNamesWithCustomFields().
+    // It now reuses getRelationTargetName(), so a translatable entity with a string translations
+    // target and real custom fields registers without aborting bootstrap.
+    it('does not throw when a translatable entity has a bare-string translations relation target', () => {
+        const storage = getMetadataArgsStorage();
+        class Oss408RegBase {}
+        class Oss408RegBaseTranslation {}
+        // Base entity declares a customFields embedded…
+        storage.embeddeds.push({
+            target: Oss408RegBase,
+            propertyName: 'customFields',
+            prefix: undefined,
+            type: () => Oss408RegBase,
+        } as any);
+        // …a `translations` relation whose target is a BARE STRING (the crash case)…
+        storage.relations.push({
+            target: Oss408RegBase,
+            propertyName: 'translations',
+            relationType: 'one-to-many',
+            type: 'Oss408RegBaseTranslation',
+            isLazy: false,
+            options: {},
+        } as any);
+        // …and the translation entity also declares a customFields embedded.
+        storage.embeddeds.push({
+            target: Oss408RegBaseTranslation,
+            propertyName: 'customFields',
+            prefix: undefined,
+            type: () => Oss408RegBaseTranslation,
+        } as any);
+
+        const config = {
+            customFields: { Oss408RegBase: [{ name: 'foo', type: 'string' }] },
+            dbConnectionOptions: { type: 'sqljs' },
+        } as unknown as RuntimeVendureConfig;
+
+        try {
+            expect(() => registerCustomEntityFields(config)).not.toThrow();
+        } finally {
+            storage.embeddeds.pop();
+            storage.relations.pop();
+            storage.embeddeds.pop();
+        }
     });
 });

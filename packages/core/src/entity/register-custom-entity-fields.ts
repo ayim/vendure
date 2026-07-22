@@ -325,17 +325,23 @@ export function registerCustomEntityFields(config: VendureConfig) {
             if (translationsMetadata) {
                 // This entity is translatable, which means that we should
                 // also register any localized custom fields on the related
-                // EntityTranslation entity.
-                const translationType: Function = (translationsMetadata.type as Function)();
-                const customFieldsTranslationsMetadata = getCustomFieldsMetadata(translationType);
-                const customFieldsTranslationClass = customFieldsTranslationsMetadata.type();
-                if (customFieldsTranslationClass && typeof customFieldsTranslationClass !== 'string') {
-                    registerCustomFieldsForEntity(
-                        config,
-                        entityName,
-                        customFieldsTranslationClass as any,
-                        true,
-                    );
+                // EntityTranslation entity. Resolve the target via the shared
+                // helper so a bare-string or closure-returning-string relation
+                // target (both legal, used to break circular imports) does not
+                // throw `type is not a function` here — the same crash fixed in
+                // getEntityNamesWithCustomFields().
+                const translationEntityName = getRelationTargetName(translationsMetadata.type);
+                if (translationEntityName != null) {
+                    const customFieldsTranslationsMetadata = getCustomFieldsMetadata(translationEntityName);
+                    const customFieldsTranslationClass = customFieldsTranslationsMetadata.type();
+                    if (customFieldsTranslationClass && typeof customFieldsTranslationClass !== 'string') {
+                        registerCustomFieldsForEntity(
+                            config,
+                            entityName,
+                            customFieldsTranslationClass as any,
+                            true,
+                        );
+                    }
                 }
             } else {
                 assertLocaleFieldsNotSpecified(config, entityName);
