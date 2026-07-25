@@ -98,6 +98,29 @@ describe('EntityHydrator', () => {
                 'lines.productVariant',
             ]);
         });
+
+        // https://github.com/vendurehq/vendure/issues/4955
+        // Relation arrays can contain `undefined` holes (e.g. payments/surcharges/shippingLines
+        // after OrderPlacedEvent). An `undefined` element was never fetched and must be reported
+        // missing; only `null` counts as loaded.
+        it('reports missing when the array has an undefined leading hole', () => {
+            const order = { payments: [undefined, { refunds: [{ id: 1 }] }] };
+            expect(getMissingRelations(order, ['payments.refunds'])).toEqual([
+                'payments',
+                'payments.refunds',
+            ]);
+        });
+
+        it('does not crash when a loaded relation array is very large', () => {
+            // Spreading a very large array into push() (`push(...value)`) exceeds V8's argument
+            // limit and throws "RangeError: Maximum call stack size exceeded"; a plain loop must
+            // be used instead. Reproduces e.g. `collections.productVariants` on a big catalog.
+            const collection = {
+                productVariants: Array.from({ length: 200_000 }, (_, i) => ({ id: i })),
+            };
+            expect(() => getMissingRelations(collection, ['productVariants'])).not.toThrow();
+            expect(getMissingRelations(collection, ['productVariants'])).toEqual([]);
+        });
     });
 
     describe('getRelationEntityAtPath()', () => {

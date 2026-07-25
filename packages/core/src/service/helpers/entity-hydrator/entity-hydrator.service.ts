@@ -220,9 +220,15 @@ export class EntityHydrator {
                     if (!isMissing) {
                         const nextEntities: Array<Record<string, any>> = [];
                         for (const entity of entities) {
+                            // undefined = this array element (or relation) was never fetched,
+                            // e.g. an `undefined` hole in a relation array, so the rest of the
+                            // path must be reported missing rather than skipped.
+                            if (entity === undefined) {
+                                isMissing = true;
+                                continue;
+                            }
                             // null = the relation has been fetched but was null in the database.
-                            // undefined = the relation has not been fetched.
-                            if (!entity || entity[part] === null) {
+                            if (entity === null || entity[part] === null) {
                                 continue;
                             }
                             if (entity[part]) {
@@ -233,7 +239,13 @@ export class EntityHydrator {
                                         // path, so treat the rest of the path as missing.
                                         isMissing = true;
                                     } else {
-                                        nextEntities.push(...value);
+                                        // Use a plain loop rather than push(...value): spreading a
+                                        // very large array (e.g. collections.productVariants on a
+                                        // big catalog) exceeds V8's argument limit and throws
+                                        // RangeError, even when everything is already loaded.
+                                        for (const element of value) {
+                                            nextEntities.push(element);
+                                        }
                                     }
                                 } else {
                                     nextEntities.push(value);
