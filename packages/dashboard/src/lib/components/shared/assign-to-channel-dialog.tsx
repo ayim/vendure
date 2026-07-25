@@ -3,6 +3,7 @@ import { ReactNode, useState } from 'react';
 import { toast } from '@/vdb/components/ui/sonner.js';
 
 import { ChannelCodeLabel } from '@/vdb/components/shared/channel-code-label.js';
+import { MultiSelect } from '@/vdb/components/shared/multi-select.js';
 import { Button } from '@/vdb/components/ui/button.js';
 import {
     Dialog,
@@ -13,7 +14,6 @@ import {
     DialogTitle,
 } from '@/vdb/components/ui/dialog.js';
 import { Input } from '@/vdb/components/ui/input.js';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/vdb/components/ui/select.js';
 import { ResultOf } from '@/vdb/graphql/graphql.js';
 import { Trans, useLingui } from '@lingui/react/macro';
 
@@ -55,33 +55,56 @@ export function AssignToChannelDialog({
     additionalData = {},
 }: Readonly<AssignToChannelDialogProps>) {
     const { t } = useLingui();
-    const [selectedChannelId, setSelectedChannelId] = useState<string>('');
+    const [selectedChannelIds, setSelectedChannelIds] = useState<string[]>([]);
     const { channels, activeChannel } = useChannel();
     const entityIdsLength = entityIds.length;
 
-    // Filter out the currently selected channel from available options
+    // Filter out the currently active channel from available options
     const availableChannels = channels.filter(channel => channel.id !== activeChannel?.id);
 
     const { mutate, isPending } = useMutation({
-        mutationFn,
-        onSuccess: () => {
-            toast.success(t`Successfully assigned ${entityIdsLength} ${entityType} to channel`);
-            onSuccess?.();
-            onOpenChange(false);
+        mutationFn: async () => {
+            const results = await Promise.allSettled(
+                selectedChannelIds.map(channelId => {
+                    const input = buildInput(channelId, additionalData);
+                    return mutationFn({ input });
+                }),
+            );
+
+            const succeeded = results.filter(r => r.status === 'fulfilled').length;
+            const failed = results.filter(r => r.status === 'rejected').length;
+
+            return { succeeded, failed };
         },
-        onError: () => {
-            toast.error(t`Failed to assign ${entityIdsLength} ${entityType} to channel`);
+        onSuccess: ({ succeeded, failed }) => {
+            if (failed === 0) {
+                toast.success(
+                    t`Successfully assigned ${entityIdsLength} ${entityType} to ${succeeded} channel(s)`,
+                );
+            } else if (succeeded === 0) {
+                toast.error(
+                    t`Failed to assign ${entityIdsLength} ${entityType} to ${failed} channel(s)`,
+                );
+            } else {
+                toast.warning(
+                    t`Assigned ${entityIdsLength} ${entityType} to ${succeeded} channel(s), failed for ${failed}`,
+                );
+            }
+
+            if (succeeded > 0) {
+                onSuccess?.();
+                onOpenChange(false);
+            }
         },
     });
 
     const handleAssign = () => {
-        if (!selectedChannelId) {
-            toast.error('Please select a channel');
+        if (selectedChannelIds.length === 0) {
+            toast.error(t`Please select at least one channel`);
             return;
         }
 
-        const input = buildInput(selectedChannelId, additionalData);
-        mutate({ input });
+        mutate();
     };
 
     return (
@@ -93,31 +116,27 @@ export function AssignToChannelDialog({
                     </DialogTitle>
                     <DialogDescription>
                         <Trans>
-                            Select a channel to assign {entityIds.length} {entityType} to
+                            Select one or more channels to assign {entityIds.length} {entityType} to
                         </Trans>
                     </DialogDescription>
                 </DialogHeader>
                 <div className="grid gap-4 py-4">
                     <div className="grid gap-2">
                         <label className="text-sm font-medium">
-                            <Trans>Channel</Trans>
+                            <Trans>Channels</Trans>
                         </label>
-                        <Select
-                            items={Object.fromEntries(availableChannels.map(ch => [ch.id, <ChannelCodeLabel key={ch.id} code={ch.code} />]))}
-                            value={selectedChannelId}
-                            onValueChange={value => value != null && setSelectedChannelId(value)}
-                        >
-                            <SelectTrigger>
-                                <SelectValue placeholder={t`Select a channel`} />
-                            </SelectTrigger>
-                            <SelectContent>
-                                {availableChannels.map(channel => (
-                                    <SelectItem key={channel.id} value={channel.id}>
-                                        <ChannelCodeLabel code={channel.code} />
-                                    </SelectItem>
-                                ))}
-                            </SelectContent>
-                        </Select>
+                        <MultiSelect
+                            multiple={true}
+                            value={selectedChannelIds}
+                            onChange={setSelectedChannelIds}
+                            items={availableChannels.map(ch => ({
+                                value: ch.id,
+                                label: ch.code,
+                                display: <ChannelCodeLabel code={ch.code} />,
+                            }))}
+                            placeholder={t`Select channels`}
+                            searchPlaceholder={t`Search channels...`}
+                        />
                     </div>
                     {additionalFields}
                 </div>
@@ -125,7 +144,7 @@ export function AssignToChannelDialog({
                     <Button variant="outline" onClick={() => onOpenChange(false)}>
                         <Trans>Cancel</Trans>
                     </Button>
-                    <Button onClick={handleAssign} disabled={!selectedChannelId || isPending}>
+                    <Button onClick={handleAssign} disabled={selectedChannelIds.length === 0 || isPending}>
                         <Trans>Assign</Trans>
                     </Button>
                 </DialogFooter>

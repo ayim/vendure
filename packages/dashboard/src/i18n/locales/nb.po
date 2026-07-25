@@ -73,7 +73,7 @@ msgstr "Legg til minst én vare i bestillingen"
 msgid "Add products to create a test order"
 msgstr "Legg til produkter for å opprette en testbestilling"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:124
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:128
 msgid "Failed to create address"
 msgstr "Kunne ikke opprette adresse"
 
@@ -157,7 +157,7 @@ msgstr "Skattesats oppdatert"
 msgid "Enter custom reason..."
 msgstr "Skriv inn egendefinert grunn..."
 
-#: src/lib/components/shared/asset/asset-gallery.tsx:744
+#: src/lib/components/shared/asset/asset-gallery.tsx:751
 msgid "Type"
 msgstr "Type"
 
@@ -168,7 +168,7 @@ msgstr ""
 #. placeholder {0}: entityName.toLowerCase()
 #. placeholder {0}: group.name
 #: src/app/routes/_authenticated/_products/components/product-option-select.tsx:57
-#: src/lib/components/data-input/default-relation-input.tsx:676
+#: src/lib/components/data-input/default-relation-input.tsx:679
 msgid "Select {0}"
 msgstr "Velg {0}"
 
@@ -228,6 +228,10 @@ msgstr "Auto-oppdatering: {0}"
 msgid "Deleted {deleted} {entityName}"
 msgstr "Slettet {deleted} {entityName}"
 
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:82
+msgid "Successfully assigned {entityIdsLength} {entityType} to {succeeded} channel(s)"
+msgstr ""
+
 #: src/lib/components/shared/asset/asset-properties.tsx:32
 msgid "File Size"
 msgstr ""
@@ -281,7 +285,7 @@ msgstr "Lagerlokasjoner"
 msgid "Fulfillment handler"
 msgstr "Oppfyllelsesbehandler"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:247
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:251
 #: src/app/routes/_authenticated/_orders/orders.tsx:21
 #: src/app/routes/_authenticated/_orders/orders.tsx:37
 #: src/app/routes/_authenticated/_orders/utils/order-detail-loaders.tsx:48
@@ -307,7 +311,7 @@ msgstr "Er du sikker på at du vil slette denne varianten?"
 #~ msgid "All resources are up and running"
 #~ msgstr "Alle ressurser er oppe og kjører"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:86
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:87
 msgid "Failed to create administrator"
 msgstr "Kunne ikke opprette administrator"
 
@@ -335,9 +339,9 @@ msgstr "Kunne ikke oppdatere land"
 msgid "Type at least 2 characters to search..."
 msgstr "Skriv minst 2 tegn for å søke..."
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:121
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:182
-#: src/app/routes/_authenticated/_profile/profile.tsx:108
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:122
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:186
+#: src/app/routes/_authenticated/_profile/profile.tsx:109
 msgid "Last name"
 msgstr "Etternavn"
 
@@ -379,12 +383,11 @@ msgstr "Total refusjon kan ikke være negativ"
 msgid "View details"
 msgstr "Vis detaljer"
 
-#. placeholder {0}: entityIds.length
 #: src/lib/components/shared/assign-to-channel-dialog.tsx:95
-msgid "Select a channel to assign {0} {entityType} to"
-msgstr "Velg en kanal å tildele {0} {entityType} til"
+#~ msgid "Select a channel to assign {0} {entityType} to"
+#~ msgstr "Velg en kanal å tildele {0} {entityType} til"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:98
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:100
 msgid "Successfully created customer"
 msgstr "Kunde opprettet"
 
@@ -513,7 +516,7 @@ msgstr "Overordnet produkt"
 msgid "City"
 msgstr "By"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:37
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:38
 #: src/app/routes/_authenticated/_administrators/administrators.tsx:15
 #: src/app/routes/_authenticated/_administrators/administrators.tsx:22
 msgid "Administrators"
@@ -616,7 +619,7 @@ msgstr "Legger til..."
 msgid "Move Collections"
 msgstr "Flytt samlinger"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:139
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:140
 #: src/app/routes/_authenticated/_administrators/administrators.tsx:55
 #: src/app/routes/_authenticated/_api-keys/api-keys_.$id.tsx:170
 #: src/app/routes/_authenticated/_roles/roles_.$id.tsx:32
@@ -787,7 +790,7 @@ msgstr "Fullfør utkast"
 #: src/app/routes/_authenticated/_tax-categories/tax-categories_.$id.tsx:106
 #: src/app/routes/_authenticated/_tax-rates/tax-rates_.$id.tsx:113
 #: src/app/routes/_authenticated/_zones/zones_.$id.tsx:93
-#: src/lib/components/shared/asset/asset-gallery.tsx:743
+#: src/lib/components/shared/asset/asset-gallery.tsx:750
 msgid "Name"
 msgstr "Navn"
 
@@ -827,7 +830,7 @@ msgstr "Oppfyllelse opprettet"
 msgid "Found {0} eligible shipping method{1}"
 msgstr "Fant {0} kvalifiserte fraktmetode(r)"
 
-#: src/lib/components/shared/asset/asset-gallery.tsx:746
+#: src/lib/components/shared/asset/asset-gallery.tsx:753
 #: src/lib/components/shared/asset/asset-properties.tsx:39
 msgid "Dimensions"
 msgstr "Dimensjoner"
@@ -970,9 +973,9 @@ msgstr "Fakturaadresse satt for bestilling"
 msgid "Failed to update zone"
 msgstr "Kunne ikke oppdatere sone"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:133
-#: src/app/routes/_authenticated/_profile/profile.tsx:120
-#: src/app/routes/_authenticated/_profile/profile.tsx:137
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:134
+#: src/app/routes/_authenticated/_profile/profile.tsx:121
+#: src/app/routes/_authenticated/_profile/profile.tsx:138
 #: src/lib/components/login/login-form.tsx:93
 msgid "Password"
 msgstr "Passord"
@@ -1153,7 +1156,7 @@ msgstr "Jobbkø"
 msgid "Assets"
 msgstr "Ressurser"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:188
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:192
 msgid "Email address"
 msgstr "E-postadresse"
 
@@ -1245,7 +1248,7 @@ msgid "No items selected"
 msgstr "Ingen varer valgt"
 
 #. placeholder {0}: selected.length
-#: src/lib/components/shared/asset/asset-gallery.tsx:469
+#: src/lib/components/shared/asset/asset-gallery.tsx:476
 msgid ", {0} selected"
 msgstr ", {0} valgt"
 
@@ -1359,7 +1362,7 @@ msgstr "Konfigurer duplikeringsinnstillinger for {0}"
 msgid "No variants match the current filter."
 msgstr "Ingen varianter samsvarer med gjeldende filter."
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:203
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:207
 #: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:245
 msgid "Addresses"
 msgstr "Adresser"
@@ -1428,7 +1431,6 @@ msgstr "Kampanje oppdatert"
 msgid "{rejected, plural, one {Failed to cancel {rejected} job} other {Failed to cancel {rejected} jobs}}"
 msgstr "{rejected, plural, one {Kunne ikke avbryte {rejected} jobb} other {Kunne ikke avbryte {rejected} jobber}}"
 
-#: src/lib/components/shared/assign-to-channel-dialog.tsx:111
 #: src/lib/components/shared/channel-selector.tsx:47
 msgid "Select a channel"
 msgstr "Velg en kanal"
@@ -1463,7 +1465,7 @@ msgstr "før"
 msgid "Failed to set customer for order: {0}"
 msgstr ""
 
-#: src/lib/components/shared/asset/asset-gallery.tsx:745
+#: src/lib/components/shared/asset/asset-gallery.tsx:752
 msgid "Size"
 msgstr "Størrelse"
 
@@ -1560,6 +1562,11 @@ msgstr ""
 msgid "Sample Formatting"
 msgstr "Eksempel på formatering"
 
+#. placeholder {0}: entityIds.length
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:118
+msgid "Select one or more channels to assign {0} {entityType} to"
+msgstr ""
+
 #: src/app/routes/_authenticated/_option-groups/option-groups_.$groupId.options_.$id.tsx:83
 #: src/app/routes/_authenticated/_option-groups/option-groups_.$groupId.options_.$id.tsx:92
 msgid "New option"
@@ -1579,7 +1586,7 @@ msgstr "Adresse oppdatert"
 
 #: src/app/routes/_authenticated/_api-keys/api-keys_.$id.tsx:226
 #: src/app/routes/_authenticated/_orders/components/fulfillment-details.tsx:124
-#: src/lib/components/shared/asset/asset-gallery.tsx:747
+#: src/lib/components/shared/asset/asset-gallery.tsx:754
 #: src/lib/framework/layout-engine/page-layout.tsx:733
 msgid "Created"
 msgstr "Opprettet"
@@ -1637,7 +1644,7 @@ msgstr "Gå til siste side"
 #: src/lib/components/data-table/views-sheet.tsx:293
 #: src/lib/components/layout/manage-languages-dialog.tsx:379
 #: src/lib/components/shared/asset/asset-focal-point-editor.tsx:88
-#: src/lib/components/shared/assign-to-channel-dialog.tsx:126
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:145
 #: src/lib/components/shared/confirmation-dialog.tsx:42
 #: src/lib/components/shared/customer-address-form.tsx:253
 #: src/lib/components/shared/navigation-confirmation.tsx:55
@@ -1811,14 +1818,14 @@ msgstr "Kunne ikke oppdatere skattekategori"
 msgid "Refund settled successfully"
 msgstr "Refusjon gjennomført"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:105
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:106
 #: src/app/routes/_authenticated/_api-keys/api-keys_.$id.tsx:155
 #: src/app/routes/_authenticated/_assets/assets_.$id.tsx:115
 #: src/app/routes/_authenticated/_channels/channels_.$id.tsx:214
 #: src/app/routes/_authenticated/_collections/collections_.$id.tsx:148
 #: src/app/routes/_authenticated/_countries/countries_.$id.tsx:84
 #: src/app/routes/_authenticated/_customer-groups/customer-groups_.$id.tsx:93
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:159
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:163
 #: src/app/routes/_authenticated/_facets/facets_.$facetId.values_.$id.tsx:110
 #: src/app/routes/_authenticated/_facets/facets_.$id.tsx:99
 #: src/app/routes/_authenticated/_global-settings/global-settings.tsx:102
@@ -1829,7 +1836,7 @@ msgstr "Refusjon gjennomført"
 #: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:252
 #: src/app/routes/_authenticated/_products/components/assign-facet-values-dialog.tsx:279
 #: src/app/routes/_authenticated/_products/products_.$id.tsx:212
-#: src/app/routes/_authenticated/_profile/profile.tsx:92
+#: src/app/routes/_authenticated/_profile/profile.tsx:93
 #: src/app/routes/_authenticated/_promotions/promotions_.$id.tsx:144
 #: src/app/routes/_authenticated/_roles/roles_.$id.tsx:84
 #: src/app/routes/_authenticated/_sellers/sellers_.$id.tsx:78
@@ -1850,7 +1857,7 @@ msgstr "Overskrift 2"
 msgid "Order placed"
 msgstr "Bestilling lagt inn"
 
-#: src/app/routes/_authenticated/_profile/profile.tsx:71
+#: src/app/routes/_authenticated/_profile/profile.tsx:72
 msgid "Successfully updated profile"
 msgstr "Profil oppdatert"
 
@@ -1971,13 +1978,13 @@ msgid "Facets"
 msgstr "Fasetter"
 
 #. js-lingui-explicit-id
-#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:103
+#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:107
 #: src/app/routes/_authenticated/_orders/components/order-history/use-order-history.ts:108
 msgid "Failed to add note"
 msgstr "Kunne ikke legge til notat"
 
 #. js-lingui-explicit-id
-#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:144
+#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:148
 #: src/app/routes/_authenticated/_orders/components/order-history/use-order-history.ts:150
 msgid "Failed to delete note"
 msgstr "Kunne ikke slette notat"
@@ -1988,7 +1995,7 @@ msgid "Failed to extend query document"
 msgstr "Kunne ikke utvide spørringsdokument"
 
 #. js-lingui-explicit-id
-#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:124
+#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:128
 #: src/app/routes/_authenticated/_orders/components/order-history/use-order-history.ts:129
 msgid "Failed to update note"
 msgstr "Kunne ikke oppdatere notat"
@@ -2442,6 +2449,10 @@ msgstr "Størrelse, farge, osv."
 msgid "Browse facets"
 msgstr "Bla gjennom fasetter"
 
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:103
+msgid "Please select at least one channel"
+msgstr ""
+
 #: src/app/routes/_authenticated/_tax-rates/tax-rates_.$id.tsx:135
 #: src/app/routes/_authenticated/_tax-rates/tax-rates.tsx:72
 msgid "Zone"
@@ -2617,7 +2628,7 @@ msgstr "Ny skattekategori"
 msgid "Successfully created channel"
 msgstr "Kanal opprettet"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:98
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:100
 msgid "Successfully updated customer"
 msgstr "Kunde oppdatert"
 
@@ -2629,7 +2640,7 @@ msgstr "Vis data"
 msgid "Delete View"
 msgstr "Slett visning"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:231
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:235
 msgid "Add a new address to the customer."
 msgstr "Legg til en ny adresse til kunden."
 
@@ -2742,8 +2753,8 @@ msgid "after"
 msgstr "etter"
 
 #: src/lib/components/shared/assign-to-channel-dialog.tsx:103
-msgid "Channel"
-msgstr "Kanal"
+#~ msgid "Channel"
+#~ msgstr "Kanal"
 
 #. js-lingui-explicit-id
 #: src/lib/framework/defaults.ts:137
@@ -2760,8 +2771,8 @@ msgstr "Beløp"
 msgid "Phone Number"
 msgstr "Telefonnummer"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:62
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:152
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:63
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:156
 msgid "New customer"
 msgstr "Ny kunde"
 
@@ -2770,7 +2781,7 @@ msgstr "Ny kunde"
 msgid "Image"
 msgstr "Bilde"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:77
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:78
 msgid "Successfully created administrator"
 msgstr "Administrator opprettet"
 
@@ -2795,12 +2806,12 @@ msgstr "Er du sikker på at du vil slette denne globale visningen? Denne handlin
 msgid "Force remove option group"
 msgstr "Tving fjerning av alternativgruppe"
 
-#: src/app/routes/_authenticated/_profile/profile.tsx:140
+#: src/app/routes/_authenticated/_profile/profile.tsx:141
 msgid "Added"
 msgstr "Lagt til"
 
 #: src/app/routes/_authenticated/_customers/components/customer-history/customer-history-container.tsx:30
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:250
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:254
 msgid "Customer history"
 msgstr "Kundehistorikk"
 
@@ -2808,7 +2819,7 @@ msgstr "Kundehistorikk"
 msgid "Successfully updated facet values for {entityIdsLength} {entityType}"
 msgstr "Fasettverdier oppdatert for {entityIdsLength} {entityType}"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:144
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:148
 msgid "Failed to remove customer from group"
 msgstr "Kunne ikke fjerne kunde fra gruppe"
 
@@ -2842,13 +2853,13 @@ msgstr "Total refusjon overstiger maksimalt refunderbart beløp på {0}"
 msgid "Delete Global View"
 msgstr "Slett global visning"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:105
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:106
 #: src/app/routes/_authenticated/_api-keys/api-keys_.$id.tsx:155
 #: src/app/routes/_authenticated/_channels/channels_.$id.tsx:214
 #: src/app/routes/_authenticated/_collections/collections_.$id.tsx:148
 #: src/app/routes/_authenticated/_countries/countries_.$id.tsx:84
 #: src/app/routes/_authenticated/_customer-groups/customer-groups_.$id.tsx:93
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:159
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:163
 #: src/app/routes/_authenticated/_facets/facets_.$facetId.values_.$id.tsx:110
 #: src/app/routes/_authenticated/_facets/facets_.$id.tsx:99
 #: src/app/routes/_authenticated/_option-groups/option-groups_.$groupId.options_.$id.tsx:177
@@ -2882,8 +2893,8 @@ msgstr "Nytt land"
 msgid "From {0} to {1}"
 msgstr "Fra {0} til {1}"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:105
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:111
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:109
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:115
 msgid "Failed to create customer"
 msgstr "Kunne ikke opprette kunde"
 
@@ -3123,6 +3134,10 @@ msgstr "Veksle overskriftskolonne"
 msgid "New Promotion"
 msgstr "Ny kampanje"
 
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:86
+msgid "Failed to assign {entityIdsLength} {entityType} to {failed} channel(s)"
+msgstr ""
+
 #: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:144
 msgid "Option value name"
 msgstr "Opsjonsverdinavn"
@@ -3211,7 +3226,7 @@ msgstr "Velg visningsspråk"
 msgid "Select Payment Handler"
 msgstr ""
 
-#: src/app/routes/_authenticated/_profile/profile.tsx:128
+#: src/app/routes/_authenticated/_profile/profile.tsx:129
 msgid "Authentication methods"
 msgstr "Autentiseringsmetoder"
 
@@ -3236,6 +3251,10 @@ msgstr "Søk roller..."
 #~ msgid "Successfully cancelled {fulfilled} jobs"
 #~ msgstr ""
 
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:137
+msgid "Select channels"
+msgstr ""
+
 #: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:71
 #: src/app/routes/_authenticated/_product-variants/product-variants.tsx:19
 #: src/app/routes/_authenticated/_product-variants/product-variants.tsx:28
@@ -3251,7 +3270,7 @@ msgid "Processing..."
 msgstr "Behandler..."
 
 #. placeholder {0}: totalItems === 1 ? 'asset' : 'assets'
-#: src/lib/components/shared/asset/asset-gallery.tsx:465
+#: src/lib/components/shared/asset/asset-gallery.tsx:472
 msgid "{totalItems} {0} found"
 msgstr "{totalItems} {0} funnet"
 
@@ -3277,7 +3296,7 @@ msgstr "Kategori"
 msgid "Moving..."
 msgstr "Flytter..."
 
-#: src/lib/components/shared/assign-to-channel-dialog.tsx:129
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:148
 msgid "Assign"
 msgstr "Tildel"
 
@@ -3474,6 +3493,7 @@ msgstr "Gjennomfør betaling"
 #: src/app/routes/_authenticated/_products/products_.$id.tsx:337
 #: src/app/routes/_authenticated/_roles/roles_.$id.tsx:111
 #: src/lib/components/layout/channel-switcher.tsx:146
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:126
 msgid "Channels"
 msgstr "Kanaler"
 
@@ -3618,7 +3638,7 @@ msgstr "Søk valutaer..."
 msgid "Remove from channel"
 msgstr "Fjern fra kanal"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:169
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:173
 #: src/lib/components/shared/rich-text-editor/image-dialog.tsx:157
 msgid "Title"
 msgstr "Tittel"
@@ -3779,8 +3799,8 @@ msgstr "Filtrer varianter..."
 msgid "Add a price in another currency"
 msgstr "Legg til en pris i en annen valuta"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:127
-#: src/app/routes/_authenticated/_profile/profile.tsx:114
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:128
+#: src/app/routes/_authenticated/_profile/profile.tsx:115
 msgid "Email Address or identifier"
 msgstr "E-postadresse eller identifikator"
 
@@ -3791,7 +3811,7 @@ msgid "Refund #{0} transitioned to {1}"
 msgstr "Refusjon #{0} endret til {1}"
 
 #: src/app/routes/_authenticated/_customer-groups/customer-groups_.$id.tsx:110
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:61
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:62
 #: src/app/routes/_authenticated/_customers/customers.tsx:15
 #: src/app/routes/_authenticated/_customers/customers.tsx:21
 msgid "Customers"
@@ -3843,19 +3863,19 @@ msgid "between"
 msgstr "mellom"
 
 #. js-lingui-explicit-id
-#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:99
+#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:103
 #: src/app/routes/_authenticated/_orders/components/order-history/use-order-history.ts:104
 msgid "Note added successfully"
 msgstr "Notat lagt til"
 
 #. js-lingui-explicit-id
-#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:140
+#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:144
 #: src/app/routes/_authenticated/_orders/components/order-history/use-order-history.ts:146
 msgid "Note deleted successfully"
 msgstr "Notat slettet"
 
 #. js-lingui-explicit-id
-#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:120
+#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:124
 #: src/app/routes/_authenticated/_orders/components/order-history/use-order-history.ts:125
 msgid "Note updated successfully"
 msgstr "Notat oppdatert"
@@ -3960,7 +3980,7 @@ msgstr "er i"
 msgid "Email"
 msgstr "E-post"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:86
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:87
 msgid "Failed to update administrator"
 msgstr "Kunne ikke oppdatere administrator"
 
@@ -4336,6 +4356,7 @@ msgstr "Legg til kanal"
 #~ msgid "Failed to update product option group"
 #~ msgstr "Kunne ikke oppdatere produktalternativgruppe"
 
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:138
 #: src/lib/components/shared/channel-selector.tsx:48
 msgid "Search channels..."
 msgstr "Søk kanaler..."
@@ -4438,7 +4459,7 @@ msgstr "Ny selger"
 msgid "e.g., Red, Large, Cotton"
 msgstr "f.eks. Rød, Stor, Bomull"
 
-#: src/app/routes/_authenticated/_profile/profile.tsx:75
+#: src/app/routes/_authenticated/_profile/profile.tsx:76
 msgid "Failed to update profile"
 msgstr "Kunne ikke oppdatere profil"
 
@@ -4454,7 +4475,7 @@ msgstr "Tøm filter"
 msgid "Regions"
 msgstr "Regioner"
 
-#: src/lib/components/shared/asset/asset-gallery.tsx:438
+#: src/lib/components/shared/asset/asset-gallery.tsx:445
 msgid "Drop files here to upload"
 msgstr "Slipp filer her for å laste opp"
 
@@ -4617,6 +4638,10 @@ msgstr "Ny fraktmetode"
 #: src/lib/components/data-table/human-readable-operator.tsx:47
 msgid "is greater than or equal to"
 msgstr "er større enn eller lik"
+
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:90
+msgid "Assigned {entityIdsLength} {entityType} to {succeeded} channel(s), failed for {failed}"
+msgstr ""
 
 #: src/app/routes/_authenticated/_collections/components/collection-contents-preview-table.tsx:77
 #: src/app/routes/_authenticated/_collections/components/collection-contents-preview-table.tsx:88
@@ -4796,7 +4821,7 @@ msgstr "Stat / Fylke"
 msgid "Enabled"
 msgstr "Aktivert"
 
-#: src/lib/components/shared/asset/asset-gallery.tsx:476
+#: src/lib/components/shared/asset/asset-gallery.tsx:483
 msgid "Items per page"
 msgstr "Elementer per side"
 
@@ -5015,8 +5040,8 @@ msgstr "Variantnavn"
 msgid "Remove"
 msgstr "Fjern"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:105
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:111
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:109
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:115
 msgid "Failed to update customer"
 msgstr "Kunne ikke oppdatere kunde"
 
@@ -5117,8 +5142,8 @@ msgid "Using native authentication strategy"
 msgstr "Bruker innebygd autentiseringsstrategi"
 
 #: src/lib/components/shared/assign-to-channel-dialog.tsx:73
-msgid "Failed to assign {entityIdsLength} {entityType} to channel"
-msgstr "Kunne ikke tilordne {entityIdsLength} {entityType} til kanal"
+#~ msgid "Failed to assign {entityIdsLength} {entityType} to channel"
+#~ msgstr "Kunne ikke tilordne {entityIdsLength} {entityType} til kanal"
 
 #: src/lib/components/layout/manage-languages-dialog.tsx:351
 msgid "Default Language"
@@ -5183,7 +5208,7 @@ msgstr "Skriv og trykk Enter eller komma for å legge til..."
 msgid "Edit Note"
 msgstr "Rediger notat"
 
-#: src/lib/components/shared/asset/asset-gallery.tsx:628
+#: src/lib/components/shared/asset/asset-gallery.tsx:635
 msgid "No assets found. Try adjusting your filters."
 msgstr "Ingen ressurser funnet. Prøv å justere filtrene dine."
 
@@ -5203,7 +5228,7 @@ msgstr "Lagre opsjonsgruppe"
 msgid "Click \"Run Test\" to test this shipping method."
 msgstr "Klikk \"Kjør test\" for å teste denne fraktmetoden."
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:78
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:79
 msgid "Successfully updated administrator"
 msgstr "Administrator oppdatert"
 
@@ -5228,7 +5253,7 @@ msgstr "Kunne ikke slette global visning"
 msgid "Default language"
 msgstr "Standardspråk"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:253
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:257
 #: src/app/routes/_authenticated/_customers/customers.tsx:44
 msgid "Status"
 msgstr "Status"
@@ -5325,7 +5350,7 @@ msgid "Customer not found"
 msgstr "Kunde ikke funnet"
 
 #. placeholder {0}: entityName.toLowerCase()
-#: src/lib/components/data-input/default-relation-input.tsx:663
+#: src/lib/components/data-input/default-relation-input.tsx:666
 msgid "Select {0}s"
 msgstr "Velg {0}"
 
@@ -5338,9 +5363,9 @@ msgstr "Nye fasettverdier å legge til:"
 msgid "Failed to process refund"
 msgstr "Kunne ikke behandle refusjon"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:115
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:176
-#: src/app/routes/_authenticated/_profile/profile.tsx:102
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:116
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:180
+#: src/app/routes/_authenticated/_profile/profile.tsx:103
 msgid "First name"
 msgstr "Fornavn"
 
@@ -5397,8 +5422,8 @@ msgstr "Legg til filter"
 msgid "Tax category"
 msgstr "Skattekategori"
 
-#: src/app/routes/_authenticated/_profile/profile.tsx:38
-#: src/app/routes/_authenticated/_profile/profile.tsx:84
+#: src/app/routes/_authenticated/_profile/profile.tsx:39
+#: src/app/routes/_authenticated/_profile/profile.tsx:85
 #: src/lib/components/layout/nav-user.tsx:108
 msgid "Profile"
 msgstr "Profil"
@@ -5428,7 +5453,7 @@ msgstr "Duplikatverdien \"{trimmed}\" finnes allerede"
 msgid "Reason"
 msgstr "Årsak"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:256
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:260
 msgid "Customer groups"
 msgstr "Kundegrupper"
 
@@ -5539,15 +5564,15 @@ msgid "Failed to create shipping method"
 msgstr "Kunne ikke opprette fraktmetode"
 
 #: src/lib/components/shared/assign-to-channel-dialog.tsx:68
-msgid "Successfully assigned {entityIdsLength} {entityType} to channel"
-msgstr "Tildelte {entityIdsLength} {entityType} til kanal"
+#~ msgid "Successfully assigned {entityIdsLength} {entityType} to channel"
+#~ msgstr "Tildelte {entityIdsLength} {entityType} til kanal"
 
 #: src/lib/components/layout/manage-languages-dialog.tsx:253
 msgid "Global Languages"
 msgstr "Globale språk"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:38
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:97
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:39
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:98
 msgid "New administrator"
 msgstr "Ny administrator"
 
@@ -5577,8 +5602,8 @@ msgstr "Generelt"
 #~ msgid "Failed to remove product from channel"
 #~ msgstr "Kunne ikke fjerne produkt fra kanal"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:223
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:228
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:227
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:232
 msgid "Add new address"
 msgstr "Legg til ny adresse"
 
@@ -5598,7 +5623,7 @@ msgstr "Verdi"
 msgid "Customer updated"
 msgstr "Kunde oppdatert"
 
-#: src/lib/components/shared/assign-to-channel-dialog.tsx:146
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:165
 msgid "Price conversion factor"
 msgstr "Priskonverteringsfaktor"
 
@@ -5740,7 +5765,7 @@ msgstr "Søk etter ressurser..."
 msgid "New Facet"
 msgstr "Ny fasett"
 
-#: src/lib/components/shared/assign-to-channel-dialog.tsx:92
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:115
 msgid "Assign {entityType} to channel"
 msgstr "Tildel {entityType} til kanal"
 
@@ -6057,7 +6082,7 @@ msgid "Payment method is required"
 msgstr "Betalingsmetode er påkrevd"
 
 #: src/app/routes/_authenticated/_customer-groups/components/customer-group-members-table.tsx:67
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:134
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:138
 msgid "Failed to add customer to group"
 msgstr "Kunne ikke legge til kunde i gruppe"
 
@@ -6095,7 +6120,7 @@ msgstr "Opsjon"
 msgid "Order process"
 msgstr "Ordreprosess"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:194
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:198
 msgid "Phone number"
 msgstr "Telefonnummer"
 
