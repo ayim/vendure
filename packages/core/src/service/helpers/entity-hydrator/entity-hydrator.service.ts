@@ -225,33 +225,40 @@ export class EntityHydrator {
                             // path must be reported missing rather than skipped.
                             if (entity === undefined) {
                                 isMissing = true;
-                                continue;
+                                break;
                             }
                             // null = the relation has been fetched but was null in the database.
                             if (entity === null || entity[part] === null) {
                                 continue;
                             }
-                            if (entity[part]) {
-                                const value = entity[part];
-                                if (Array.isArray(value)) {
-                                    if (value.length === 0 && path.length < parts.length) {
+                            const value = entity[part];
+                            if (!value) {
+                                isMissing = true;
+                                break;
+                            }
+                            // At the last segment of the path we only need to know whether the
+                            // relation is present; the entities it points to are never inspected,
+                            // so there is no point collecting them.
+                            const isLastPart = path.length === parts.length;
+                            if (Array.isArray(value)) {
+                                if (value.length === 0) {
+                                    if (!isLastPart) {
                                         // An empty array leaves nothing to check further down the
                                         // path, so treat the rest of the path as missing.
                                         isMissing = true;
-                                    } else {
-                                        // Use a plain loop rather than push(...value): spreading a
-                                        // very large array (e.g. collections.productVariants on a
-                                        // big catalog) exceeds V8's argument limit and throws
-                                        // RangeError, even when everything is already loaded.
-                                        for (const element of value) {
-                                            nextEntities.push(element);
-                                        }
+                                        break;
                                     }
-                                } else {
-                                    nextEntities.push(value);
+                                } else if (!isLastPart) {
+                                    // Use a plain loop rather than push(...value): spreading a
+                                    // very large array (e.g. collections.productVariants on a
+                                    // big catalog) exceeds V8's argument limit and throws
+                                    // RangeError, even when everything is already loaded.
+                                    for (const element of value) {
+                                        nextEntities.push(element);
+                                    }
                                 }
-                            } else {
-                                isMissing = true;
+                            } else if (!isLastPart) {
+                                nextEntities.push(value);
                             }
                         }
                         entities = nextEntities;
