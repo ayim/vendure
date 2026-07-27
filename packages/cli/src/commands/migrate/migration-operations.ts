@@ -78,11 +78,14 @@ export async function runMigrationsOperation(configFile?: string): Promise<Migra
         const config = await loadVendureConfigFile(vendureConfig);
 
         log.info('Running migrations...');
-        const migrationsRan = await runMigrations(config);
+        let noMigrationsFoundMessage: string | undefined;
+        const migrationsRan = await runMigrations(config, {
+            onNoMigrationsFound: message => (noMigrationsFoundMessage = message),
+        });
 
         const report = migrationsRan.length
             ? `Successfully ran ${migrationsRan.length} migrations`
-            : 'No pending migrations found';
+            : (noMigrationsFoundMessage ?? 'No pending migrations found');
 
         return {
             success: true,

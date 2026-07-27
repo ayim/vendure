@@ -32,16 +32,38 @@ export interface MigrationOptions {
 
 /**
  * @description
+ * Options for {@link runMigrations}.
+ *
+ * @docsCategory migration
+ * @since 3.7.2
+ */
+export interface RunMigrationsOptions {
+    /**
+     * @description
+     * Invoked when the configured `migrations` patterns matched no files at all, which is
+     * otherwise indistinguishable from "no pending migrations" since both result in an empty
+     * return value. The message describes the patterns and the directory they were resolved
+     * against.
+     */
+    onNoMigrationsFound?: (message: string) => void;
+}
+
+/**
+ * @description
  * Runs any pending database migrations. See [TypeORM migration docs](https://typeorm.io/#/migrations)
  * for more information about the underlying migration mechanism.
  *
  * @docsCategory migration
  */
-export async function runMigrations(userConfig: Partial<VendureConfig>): Promise<string[]> {
+export async function runMigrations(
+    userConfig: Partial<VendureConfig>,
+    options?: RunMigrationsOptions,
+): Promise<string[]> {
     const config = await preBootstrapConfig(userConfig);
     const connection = await createConnection(createConnectionOptions(config));
     const migrationsRan: string[] = [];
     try {
+        warnIfNoMigrationsFound(connection, options?.onNoMigrationsFound);
         const migrations = await disableForeignKeysForSqLite(connection, () =>
             connection.runMigrations({ transaction: 'each' }),
         );
@@ -77,6 +99,50 @@ async function checkMigrationStatus(connection: Connection) {
             log(' - ' + pc.yellow(query.query));
         }
     }
+}
+
+/**
+ * TypeORM resolves the `migrations` option to zero classes when the configured glob patterns
+ * match no files. By the time `runMigrations()` returns, that case is indistinguishable from
+ * "every migration has already been applied" — both yield an empty array — so the command
+ * reports success while leaving the database untouched.
+ *
+ * The patterns are resolved relative to the current working directory, so this typically
+ * happens when the command is run from a different directory than expected, or when the
+ * patterns point at compiled output (e.g. `dist/migrations/*.js`) which has not been built.
+ * Neither is detectable from the return value, so report it here.
+ */
+export function getNoMigrationsFoundMessage(
+    loadedMigrationCount: number,
+    configuredMigrations: DataSourceOptions['migrations'],
+    cwd: string = process.cwd(),
+): string | undefined {
+    if (loadedMigrationCount) {
+        return;
+    }
+    const patterns = (
+        Array.isArray(configuredMigrations) ? configuredMigrations : Object.values(configuredMigrations ?? {})
+    ).filter((migration): migration is string => typeof migration === 'string');
+    if (!patterns.length) {
+        return;
+    }
+    return [
+        'No migration files matched the configured `migrations` patterns, so no migrations can be run.',
+        `Patterns are resolved relative to the current directory (${cwd}):`,
+        ...patterns.map(pattern => ' - ' + pattern),
+    ].join('\n');
+}
+
+function warnIfNoMigrationsFound(connection: Connection, onNoMigrationsFound?: (message: string) => void) {
+    const message = getNoMigrationsFoundMessage(connection.migrations.length, connection.options.migrations);
+    if (!message) {
+        return;
+    }
+    // `log()` is a no-op while running from the CLI, because a spinner is active for the
+    // duration of this call and writing to stdout would corrupt it. Hand the message to the
+    // caller instead, so the CLI can report it once the spinner has stopped.
+    onNoMigrationsFound?.(message);
+    log(pc.yellow(message));
 }
 
 /**
