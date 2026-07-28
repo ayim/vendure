@@ -8,6 +8,11 @@ class HealthController {
         return {
             status: 'ok',
             service: 'vendure-overwatch-demo',
+            release: {
+                version: process.env.APP_VERSION ?? 'local',
+                revision: process.env.VCS_REF_REVISION ?? 'local',
+                ref: process.env.VCS_REF_NAME ?? 'local',
+            },
             timestamp: new Date().toISOString(),
         };
     }
