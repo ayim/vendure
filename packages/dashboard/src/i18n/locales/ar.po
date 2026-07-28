@@ -14,7 +14,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:159
-#: src/lib/components/shared/customer-address-form.tsx:103
+#: src/lib/components/shared/customer-address-form.tsx:110
 msgid "Full Name"
 msgstr "الاسم الكامل"
 
@@ -39,6 +39,10 @@ msgstr "سيتم تطبيق الصلاحيات المحددة على هذه ال
 msgid "Product options"
 msgstr "خيارات المنتج"
 
+#: src/lib/components/shared/customer-selector.tsx:266
+msgid "Select an existing customer or create a new one"
+msgstr ""
+
 #: src/app/routes/_authenticated/_tax-rates/tax-rates.tsx:108
 msgid "New Tax Rate"
 msgstr "معدل ضريبة جديد"
@@ -52,7 +56,7 @@ msgstr "تعيين مجموعة خيارات موجودة أو إنشاء مجم
 msgid "New role"
 msgstr "دور جديد"
 
-#: src/lib/components/shared/customer-address-form.tsx:131
+#: src/lib/components/shared/customer-address-form.tsx:140
 msgid "Apartment, suite, etc."
 msgstr "شقة، جناح، إلخ."
 
@@ -207,7 +211,7 @@ msgstr "عند تمكين هذا، ستكون الأسعار المدخلة في
 #~ msgid "Create variants for your product"
 #~ msgstr "إنشاء أشكال لمنتجك"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:331
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:329
 msgid "Draft order completed"
 msgstr "اكتمل طلب المسودة"
 
@@ -338,6 +342,7 @@ msgstr "اكتب حرفين على الأقل للبحث..."
 #: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:121
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:182
 #: src/app/routes/_authenticated/_profile/profile.tsx:108
+#: src/lib/components/shared/customer-selector.tsx:176
 msgid "Last name"
 msgstr "اسم العائلة"
 
@@ -508,8 +513,12 @@ msgstr "تم إنشاء خيار المنتج بنجاح"
 msgid "Parent product"
 msgstr "المنتج الأساسي"
 
+#: src/lib/components/shared/customer-selector.tsx:277
+msgid "Create new customer"
+msgstr ""
+
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:196
-#: src/lib/components/shared/customer-address-form.tsx:141
+#: src/lib/components/shared/customer-address-form.tsx:150
 msgid "City"
 msgstr "المدينة"
 
@@ -545,7 +554,7 @@ msgid "You must first select an available currency to set a default currency"
 msgstr ""
 
 #: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:92
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:59
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:60
 msgid "Successfully updated order"
 msgstr "تم تحديث الطلب بنجاح"
 
@@ -561,7 +570,7 @@ msgstr "إدارة العروض المحفوظة العامة المرئية ل�
 msgid "Search payment methods..."
 msgstr "بحث في طرق الدفع..."
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:257
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:255
 msgid "Shipping address unset for order"
 msgstr "تم إلغاء تعيين عنوان الشحن للطلب"
 
@@ -685,7 +694,7 @@ msgstr "يرجى إضافة منتجات وإكمال عنوان الشحن لت
 msgid "Toggle header row"
 msgstr "تبديل صف الرأس"
 
-#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:52
+#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:80
 msgid "Select address"
 msgstr "تحديد عنوان"
 
@@ -707,7 +716,7 @@ msgid "Metadata"
 msgstr "البيانات الوصفية"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:291
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:289
 msgid "Failed to set shipping method for order: {0}"
 msgstr ""
 
@@ -737,6 +746,10 @@ msgstr "تاريخ قصير"
 msgid "Available currencies"
 msgstr "العملات المتاحة"
 
+#: src/lib/components/shared/customer-selector.tsx:113
+msgid "Search customers..."
+msgstr ""
+
 #. placeholder {0}: selectedIds.size
 #: src/lib/components/data-input/product-multi-selector-input.tsx:473
 msgid "Select {0} Items"
@@ -762,7 +775,7 @@ msgstr "تأكيد التنقل"
 msgid "Link target"
 msgstr "هدف الرابط"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:405
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:403
 msgid "Complete draft"
 msgstr "إكمال المسودة"
 
@@ -813,7 +826,7 @@ msgstr "أدخل معرف المعاملة لتسوية الاسترداد هذ�
 msgid "Your API Key"
 msgstr "مفتاح API الخاص بك"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:389
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:387
 msgid "Are you sure you want to delete this draft order?"
 msgstr "هل أنت متأكد من حذف طلب المسودة هذا؟"
 
@@ -842,7 +855,7 @@ msgid "(max: {0})"
 msgstr "(الحد الأقصى: {0})"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:165
-#: src/lib/components/shared/customer-address-form.tsx:111
+#: src/lib/components/shared/customer-address-form.tsx:120
 msgid "Company"
 msgstr "الشركة"
 
@@ -883,7 +896,7 @@ msgid "Confirm"
 msgstr "تأكيد"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:343
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:341
 msgid "Failed to complete draft order: {0}"
 msgstr ""
 
@@ -904,8 +917,8 @@ msgid "Failed to create product"
 msgstr "فشل إنشاء المنتج"
 
 #: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:276
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:233
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:497
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:246
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:495
 #: src/lib/components/shared/role-code-label.tsx:8
 msgid "Customer"
 msgstr "العميل"
@@ -915,7 +928,7 @@ msgstr "العميل"
 msgid "Error loading order history: {0}"
 msgstr "خطأ في تحميل سجل الطلب: {0}"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:235
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:233
 msgid "Shipping address set for order"
 msgstr "تم تعيين عنوان الشحن للطلب"
 
@@ -962,7 +975,7 @@ msgstr "هذه هي قيم الخصائص للخاصية <0>{facetName}</0>."
 msgid "Successfully added payment to order"
 msgstr "تمت إضافة الدفع إلى الطلب بنجاح"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:246
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:244
 msgid "Billing address set for order"
 msgstr "تم تعيين عنوان الفوترة للطلب"
 
@@ -1040,7 +1053,7 @@ msgstr "مخصص"
 #~ msgstr "إضافة مجموعة خيارات أخرى"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:310
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:308
 msgid "Failed to set coupon code for order: {0}"
 msgstr ""
 
@@ -1065,7 +1078,7 @@ msgstr "تم إنشاء المجموعة بنجاح"
 msgid "Price"
 msgstr "السعر"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:383
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:381
 #: src/app/routes/_authenticated/_orders/orders.tsx:115
 msgid "Draft order"
 msgstr "طلب مسودة"
@@ -1112,7 +1125,7 @@ msgstr "عند التمكين، يصبح العرض الترويجي متاحً�
 msgid "When tracked, product variant stock levels will be automatically adjusted when sold. This setting can be overridden by individual product variants."
 msgstr "عند التتبع، سيتم تعديل مستويات مخزون أشكال المنتج تلقائيًا عند البيع. يمكن تجاوز هذا الإعداد بواسطة أشكال المنتج الفردية."
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:282
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:280
 msgid "Shipping method set for order"
 msgstr "تم تعيين طريقة الشحن للطلب"
 
@@ -1154,11 +1167,12 @@ msgid "Assets"
 msgstr "الملفات"
 
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:188
+#: src/lib/components/shared/customer-selector.tsx:182
 msgid "Email address"
 msgstr "عنوان البريد الإلكتروني"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:321
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:319
 msgid "Failed to remove coupon code from order: {0}"
 msgstr ""
 
@@ -1276,7 +1290,7 @@ msgstr "طرق الدفع"
 msgid "Stock"
 msgstr "المخزون"
 
-#: src/lib/components/shared/customer-selector.tsx:88
+#: src/lib/components/shared/customer-selector.tsx:119
 msgid "No customers found"
 msgstr "لم يتم العثور على عملاء"
 
@@ -1360,7 +1374,7 @@ msgid "No variants match the current filter."
 msgstr "لا توجد متغيرات تطابق عامل التصفية الحالي."
 
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:203
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:245
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:258
 msgid "Addresses"
 msgstr "العناوين"
 
@@ -1390,7 +1404,8 @@ msgstr "فشل إنشاء مجموعة الخيارات"
 msgid "True"
 msgstr "صحيح"
 
-#: src/lib/components/shared/customer-selector.tsx:77
+#: src/lib/components/shared/customer-selector.tsx:222
+#: src/lib/components/shared/customer-selector.tsx:258
 msgid "Select customer"
 msgstr "تحديد العميل"
 
@@ -1406,7 +1421,7 @@ msgstr "تم نقل الطلب"
 msgid "is before"
 msgstr "قبل"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:388
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:386
 msgid "Delete draft order"
 msgstr "حذف طلب المسودة"
 
@@ -1459,7 +1474,7 @@ msgid "before"
 msgstr "قبل"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:228
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:226
 msgid "Failed to set customer for order: {0}"
 msgstr ""
 
@@ -1484,7 +1499,7 @@ msgstr "أحدث الطلبات"
 msgid "+ {leftOver} more"
 msgstr "+ {leftOver} المزيد"
 
-#: src/lib/components/shared/customer-address-form.tsx:241
+#: src/lib/components/shared/customer-address-form.tsx:259
 msgid "Use as the default billing address"
 msgstr "استخدام كعنوان فوترة افتراضي"
 
@@ -1584,7 +1599,7 @@ msgstr "تم تحديث العنوان بنجاح"
 msgid "Created"
 msgstr "تم الإنشاء"
 
-#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:63
+#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:100
 msgid "Loading addresses..."
 msgstr "جارٍ تحميل العناوين..."
 
@@ -1594,7 +1609,7 @@ msgid "Select a target collection to move {0} to."
 msgstr "حدد مجموعة مستهدفة لنقل {0} إليها."
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:272
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:270
 msgid "Failed to unset billing address for order: {0}"
 msgstr ""
 
@@ -1639,7 +1654,7 @@ msgstr "الانتقال إلى الصفحة الأخيرة"
 #: src/lib/components/shared/asset/asset-focal-point-editor.tsx:88
 #: src/lib/components/shared/assign-to-channel-dialog.tsx:126
 #: src/lib/components/shared/confirmation-dialog.tsx:42
-#: src/lib/components/shared/customer-address-form.tsx:253
+#: src/lib/components/shared/customer-address-form.tsx:272
 #: src/lib/components/shared/navigation-confirmation.tsx:55
 #: src/lib/components/shared/rich-text-editor/image-dialog.tsx:208
 #: src/lib/components/shared/rich-text-editor/link-dialog.tsx:146
@@ -1661,7 +1676,7 @@ msgid "Refund from this method"
 msgstr "الاسترداد من هذه الطريقة"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:208
-#: src/lib/components/shared/customer-address-form.tsx:163
+#: src/lib/components/shared/customer-address-form.tsx:174
 msgid "Postal Code"
 msgstr "الرمز البريدي"
 
@@ -1682,7 +1697,7 @@ msgstr "فئة ضريبية جديدة"
 msgid "Partial refund completed"
 msgstr "تم استكمال الاسترداد الجزئي"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:492
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:490
 msgid "Set custom fields"
 msgstr "تعيين الحقول المخصصة"
 
@@ -1713,8 +1728,8 @@ msgid "Reason:"
 msgstr "السبب:"
 
 #: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:291
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:248
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:510
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:261
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:516
 msgid "Shipping address"
 msgstr "عنوان الشحن"
 
@@ -1736,6 +1751,10 @@ msgstr "فئات الضرائب"
 #: src/app/routes/_authenticated/_collections/collections_.$id.tsx:158
 msgid "Private collections are not visible in the shop"
 msgstr "المجموعات الخاصة غير مرئية في المتجر"
+
+#: src/lib/components/shared/customer-selector.tsx:194
+msgid "Create customer"
+msgstr ""
 
 #: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:262
 #: src/app/routes/_authenticated/_products/products_.$id.tsx:222
@@ -1764,7 +1783,7 @@ msgstr "معطل"
 msgid "New promotion"
 msgstr "عرض ترويجي جديد"
 
-#: src/lib/components/shared/customer-address-form.tsx:220
+#: src/lib/components/shared/customer-address-form.tsx:238
 msgid "Default Shipping Address"
 msgstr "عنوان الشحن الافتراضي"
 
@@ -1865,8 +1884,8 @@ msgstr "تم تحديث الملف الشخصي بنجاح"
 msgid "Payment method"
 msgstr "طريقة الدفع"
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:263
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:292
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:277
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:307
 #: src/lib/components/shared/history-timeline/history-note-entry.tsx:46
 msgid "Edit"
 msgstr "تحرير"
@@ -1888,7 +1907,7 @@ msgstr "تمت إضافة الملاحظة"
 msgid "Select quantities to fulfill and configure the fulfillment handler"
 msgstr "حدد الكميات للتنفيذ وقم بتكوين معالج التنفيذ"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:268
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:266
 msgid "Billing address unset for order"
 msgstr "تم إلغاء عنوان الفوترة من الطلب"
 
@@ -2411,7 +2430,7 @@ msgid "Registered"
 msgstr "مسجل"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:239
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:237
 msgid "Failed to set shipping address for order: {0}"
 msgstr ""
 
@@ -2487,7 +2506,7 @@ msgstr "{0} محدد"
 msgid "Search option groups..."
 msgstr "البحث في مجموعات الخيارات..."
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:168
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:181
 msgid "Modify order"
 msgstr "تعديل الطلب"
 
@@ -2649,6 +2668,10 @@ msgstr "تم تطبيق العرض \"{viewName}\""
 msgid "Successfully removed {successCount} facets from channel"
 msgstr "تمت إزالة {successCount} خاصية من القناة بنجاح"
 
+#: src/lib/components/shared/customer-selector.tsx:263
+msgid "Set customer"
+msgstr ""
+
 #: src/app/routes/_authenticated/_products/products.tsx:117
 msgid "New Product"
 msgstr "منتج جديد"
@@ -2679,8 +2702,8 @@ msgid "This will remove all option groups from this product and return to the va
 msgstr "سيؤدي هذا إلى إزالة جميع مجموعات الخيارات من هذا المنتج والعودة إلى اختيار إعداد المتغيرات."
 
 #: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:299
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:277
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:532
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:291
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:544
 msgid "Billing address"
 msgstr "عنوان الفوترة"
 
@@ -2756,7 +2779,7 @@ msgid "Amount"
 msgstr "المبلغ"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:242
-#: src/lib/components/shared/customer-address-form.tsx:201
+#: src/lib/components/shared/customer-address-form.tsx:218
 msgid "Phone Number"
 msgstr "رقم الهاتف"
 
@@ -2895,12 +2918,12 @@ msgstr "تم تحديث نقطة التركيز"
 msgid "Option values"
 msgstr "قيم الخيارات"
 
-#: src/lib/components/shared/customer-address-form.tsx:238
+#: src/lib/components/shared/customer-address-form.tsx:256
 msgid "Default Billing Address"
 msgstr "عنوان الفوترة الافتراضي"
 
 #: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:284
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:241
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:254
 msgid "No customer"
 msgstr "لا يوجد عميل"
 
@@ -3148,7 +3171,7 @@ msgstr "فشل تحديث نقطة التركيز"
 msgid "Successfully updated zone"
 msgstr "تم تحديث المنطقة بنجاح"
 
-#: src/lib/components/shared/customer-address-form.tsx:149
+#: src/lib/components/shared/customer-address-form.tsx:160
 msgid "State/Province"
 msgstr "الولاية/المحافظة"
 
@@ -3170,7 +3193,7 @@ msgstr "تعيين معايير التصفية لعمود {columnId}"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:217
 #: src/app/routes/_authenticated/_zones/components/zone-countries-table.tsx:53
-#: src/lib/components/shared/customer-address-form.tsx:173
+#: src/lib/components/shared/customer-address-form.tsx:184
 msgid "Country"
 msgstr "البلد"
 
@@ -3382,7 +3405,7 @@ msgstr "تم تفويض الدفع"
 msgid "Successfully updated role"
 msgstr "تم تحديث الدور بنجاح"
 
-#: src/lib/components/shared/customer-address-form.tsx:184
+#: src/lib/components/shared/customer-address-form.tsx:201
 msgid "Select a country"
 msgstr "حدد بلدًا"
 
@@ -3397,8 +3420,8 @@ msgid "Shipping Methods"
 msgstr "طرق الشحن"
 
 #: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:58
-msgid "Select an address"
-msgstr "حدد عنوانًا"
+#~ msgid "Select an address"
+#~ msgstr "حدد عنوانًا"
 
 #: src/app/routes/_authenticated/_system/settings-store.tsx:326
 msgid "Yes"
@@ -3454,6 +3477,10 @@ msgstr "لا يساوي"
 #: src/app/routes/_authenticated/_system/healthchecks.tsx:47
 #~ msgid "Refresh"
 #~ msgstr "تحديث"
+
+#: src/lib/components/shared/customer-selector.tsx:273
+msgid "Existing customer"
+msgstr ""
 
 #: src/app/routes/_authenticated/_products/components/create-product-options-dialog.tsx:269
 #~ msgid "e.g. Size"
@@ -3576,7 +3603,7 @@ msgstr "إضافة صف بعد"
 msgid "Tax total"
 msgstr "إجمالي الضريبة"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:414
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:412
 msgid "Draft order status"
 msgstr "حالة طلب المسودة"
 
@@ -3597,7 +3624,11 @@ msgstr "تم إنشاء قيمة الخاصية بنجاح"
 msgid "Marketing"
 msgstr "التسويق"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:351
+#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:89
+msgid "Existing address"
+msgstr ""
+
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:349
 msgid "Draft order deleted"
 msgstr "تم حذف طلب المسودة"
 
@@ -3619,6 +3650,7 @@ msgid "Remove from channel"
 msgstr "إزالة من القناة"
 
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:169
+#: src/lib/components/shared/customer-selector.tsx:164
 #: src/lib/components/shared/rich-text-editor/image-dialog.tsx:157
 msgid "Title"
 msgstr "العنوان"
@@ -3658,7 +3690,7 @@ msgstr "{0} متغير"
 msgid "Failed to settle payment"
 msgstr "فشل تسوية الدفع"
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:300
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:315
 msgid "No billing address"
 msgstr "لا يوجد عنوان فوترة"
 
@@ -3810,7 +3842,7 @@ msgstr "فشل تحديث موقع المخزون"
 msgid "Order shipped"
 msgstr "تم شحن الطلب"
 
-#: src/lib/components/shared/customer-address-form.tsx:257
+#: src/lib/components/shared/customer-address-form.tsx:276
 msgid "Save Address"
 msgstr "حفظ العنوان"
 
@@ -4070,7 +4102,7 @@ msgstr "+ {0} المزيد"
 msgid "Option Groups"
 msgstr "مجموعات الخيارات"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:471
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:469
 msgid "Custom fields"
 msgstr "الحقول المخصصة"
 
@@ -4294,7 +4326,7 @@ msgstr "{title}"
 
 #: src/app/routes/_authenticated/_orders/components/fulfill-order-dialog.tsx:244
 #: src/app/routes/_authenticated/_orders/components/refund-order-dialog.tsx:87
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:178
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:191
 msgid "Order lines"
 msgstr "بنود الطلب"
 
@@ -4365,7 +4397,7 @@ msgid "Customer information updated"
 msgstr "تم تحديث معلومات العميل"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:358
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:356
 msgid "Failed to delete draft order: {0}"
 msgstr ""
 
@@ -4516,7 +4548,7 @@ msgstr ""
 msgid "Manage tags"
 msgstr "إدارة العلامات"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:317
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:315
 msgid "Coupon code removed from order"
 msgstr "تم حذف رمز القسيمة من الطلب"
 
@@ -4544,11 +4576,11 @@ msgid "Loading selected items..."
 msgstr ""
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:250
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:248
 msgid "Failed to set billing address for order: {0}"
 msgstr ""
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:271
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:285
 msgid "No shipping address"
 msgstr "لا يوجد عنوان شحن"
 
@@ -4602,7 +4634,7 @@ msgstr "شروط فاحص أهلية طريقة الشحن هذه غير مست�
 msgid "Add coupon code"
 msgstr "إضافة رمز قسيمة"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:301
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:299
 msgid "Coupon code set for order"
 msgstr "تم تعيين رمز القسيمة للطلب"
 
@@ -4660,7 +4692,7 @@ msgstr "أخرى"
 msgid "refundReason.WrongItem"
 msgstr "منتج خاطئ"
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:201
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:214
 msgid "Summary of modifications"
 msgstr "ملخص التعديلات"
 
@@ -4698,7 +4730,7 @@ msgstr "فشل تحديث مجموعة العملاء"
 msgid "Payment metadata"
 msgstr "البيانات الوصفية للدفع"
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:173
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:186
 msgid "Cancel modification"
 msgstr "إلغاء التعديل"
 
@@ -4720,7 +4752,7 @@ msgid "Additional payment required"
 msgstr "مطلوب دفع إضافي"
 
 #: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:96
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:63
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:64
 msgid "Failed to update order"
 msgstr "فشل تحديث الطلب"
 
@@ -4741,7 +4773,7 @@ msgid "Customer group members for {customerGroupName}"
 msgstr "أعضاء مجموعة العملاء {customerGroupName}"
 
 #. placeholder {0}: e instanceof Error ? e.message : String(e)
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:217
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:214
 msgid "Failed to set address for order: {0}"
 msgstr ""
 
@@ -4808,6 +4840,10 @@ msgstr "تحرير الأعضاء"
 msgid "Stock on hand"
 msgstr "المخزون المتاح"
 
+#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:93
+msgid "New address"
+msgstr ""
+
 #: src/lib/components/data-table/data-table-filter-dialog.tsx:55
 msgid "Filter by {columnId}"
 msgstr "تصفية حسب {columnId}"
@@ -4824,7 +4860,7 @@ msgstr "التنبيهات"
 msgid "Option Values"
 msgstr "قيم الخيارات"
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:222
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:235
 msgid "Preview changes"
 msgstr "معاينة التغييرات"
 
@@ -5011,7 +5047,7 @@ msgstr "النظام"
 msgid "Variant name"
 msgstr "اسم المتغير"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:579
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:597
 msgid "Remove"
 msgstr "إزالة"
 
@@ -5080,7 +5116,7 @@ msgid "The page will continue with the default query."
 msgstr "ستستمر الصفحة بالاستعلام الافتراضي."
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:175
-#: src/lib/components/shared/customer-address-form.tsx:121
+#: src/lib/components/shared/customer-address-form.tsx:130
 msgid "Street Address"
 msgstr "عنوان الشارع"
 
@@ -5341,6 +5377,7 @@ msgstr "فشل في معالجة الاسترداد"
 #: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:115
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:176
 #: src/app/routes/_authenticated/_profile/profile.tsx:102
+#: src/lib/components/shared/customer-selector.tsx:170
 msgid "First name"
 msgstr "الاسم الأول"
 
@@ -5447,7 +5484,7 @@ msgid "Option Groups"
 msgstr "مجموعات الخيارات"
 
 #: src/app/routes/_authenticated/_orders/components/add-surcharge-form.tsx:133
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:194
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:207
 msgid "Add surcharge"
 msgstr "إضافة رسوم إضافية"
 
@@ -5551,7 +5588,7 @@ msgstr "اللغات العامة"
 msgid "New administrator"
 msgstr "مسؤول جديد"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:395
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:393
 msgid "Delete draft"
 msgstr "حذف المسودة"
 
@@ -5674,7 +5711,7 @@ msgstr "عرض عملية الطلب"
 msgid "Failed to duplicate view"
 msgstr "فشل نسخ العرض"
 
-#: src/lib/components/shared/customer-address-form.tsx:223
+#: src/lib/components/shared/customer-address-form.tsx:241
 msgid "Use as the default shipping address"
 msgstr "استخدام كعنوان شحن افتراضي"
 
@@ -5864,7 +5901,7 @@ msgid "Add option value to {groupName}"
 msgstr "إضافة قيمة خيار إلى {groupName}"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:261
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:259
 msgid "Failed to unset shipping address for order: {0}"
 msgstr ""
 
@@ -6005,7 +6042,7 @@ msgstr "إضافة دفع إلى الطلب"
 #: src/lib/components/data-input/relation-selector.tsx:427
 #: src/lib/components/shared/country-selector.tsx:86
 #: src/lib/components/shared/customer-group-selector.tsx:56
-#: src/lib/components/shared/customer-selector.tsx:88
+#: src/lib/components/shared/customer-selector.tsx:119
 #: src/lib/components/shared/facet-value-selector.tsx:159
 msgid "Loading..."
 msgstr "جارٍ التحميل..."
@@ -6014,7 +6051,7 @@ msgstr "جارٍ التحميل..."
 msgid "The token is used to specify the channel when making API requests."
 msgstr "يُستخدم الرمز المميز لتحديد القناة عند إجراء طلبات API."
 
-#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:67
+#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:104
 msgid "No addresses found"
 msgstr "لم يتم العثور على عناوين"
 
@@ -6096,6 +6133,7 @@ msgid "Order process"
 msgstr "عملية الطلب"
 
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:194
+#: src/lib/components/shared/customer-selector.tsx:188
 msgid "Phone number"
 msgstr "رقم الهاتف"
 

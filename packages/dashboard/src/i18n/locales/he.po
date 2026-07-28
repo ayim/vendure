@@ -14,7 +14,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:159
-#: src/lib/components/shared/customer-address-form.tsx:103
+#: src/lib/components/shared/customer-address-form.tsx:110
 msgid "Full Name"
 msgstr "שם מלא"
 
@@ -39,6 +39,10 @@ msgstr "ההרשאות שנבחרו יוחלו על ערוצים אלה."
 msgid "Product options"
 msgstr "אפשרויות מוצר"
 
+#: src/lib/components/shared/customer-selector.tsx:266
+msgid "Select an existing customer or create a new one"
+msgstr ""
+
 #: src/app/routes/_authenticated/_tax-rates/tax-rates.tsx:108
 msgid "New Tax Rate"
 msgstr "שיעור מס חדש"
@@ -52,7 +56,7 @@ msgstr "הקצאת קבוצת אפשרויות קיימת או יצירת קבו
 msgid "New role"
 msgstr "תפקיד חדש"
 
-#: src/lib/components/shared/customer-address-form.tsx:131
+#: src/lib/components/shared/customer-address-form.tsx:140
 msgid "Apartment, suite, etc."
 msgstr "דירה, יחידה וכו'"
 
@@ -207,7 +211,7 @@ msgstr "כאשר זה מופעל, המחירים שהוזנו בקטלוג המ�
 #~ msgid "Create variants for your product"
 #~ msgstr "צור גרסאות למוצר שלך"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:331
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:329
 msgid "Draft order completed"
 msgstr "הזמנת הטיוטה הושלמה"
 
@@ -338,6 +342,7 @@ msgstr "הקלד לפחות 2 תווים לחיפוש..."
 #: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:121
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:182
 #: src/app/routes/_authenticated/_profile/profile.tsx:108
+#: src/lib/components/shared/customer-selector.tsx:176
 msgid "Last name"
 msgstr "שם משפחה"
 
@@ -508,8 +513,12 @@ msgstr "אפשרות מוצר נוצרה בהצלחה"
 msgid "Parent product"
 msgstr "מוצר הורה"
 
+#: src/lib/components/shared/customer-selector.tsx:277
+msgid "Create new customer"
+msgstr ""
+
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:196
-#: src/lib/components/shared/customer-address-form.tsx:141
+#: src/lib/components/shared/customer-address-form.tsx:150
 msgid "City"
 msgstr "עיר"
 
@@ -545,7 +554,7 @@ msgid "You must first select an available currency to set a default currency"
 msgstr ""
 
 #: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:92
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:59
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:60
 msgid "Successfully updated order"
 msgstr "ההזמנה עודכנה בהצלחה"
 
@@ -561,7 +570,7 @@ msgstr "נהל תצוגות שמורות גלובליות הגלויות לכל 
 msgid "Search payment methods..."
 msgstr "חפש אמצעי תשלום..."
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:257
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:255
 msgid "Shipping address unset for order"
 msgstr "כתובת משלוח בוטלה להזמנה"
 
@@ -685,7 +694,7 @@ msgstr "אנא הוסף מוצרים והשלם את כתובת המשלוח כ�
 msgid "Toggle header row"
 msgstr "החלף שורת כותרת"
 
-#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:52
+#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:80
 msgid "Select address"
 msgstr "בחר כתובת"
 
@@ -707,7 +716,7 @@ msgid "Metadata"
 msgstr "מטא-דאטה"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:291
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:289
 msgid "Failed to set shipping method for order: {0}"
 msgstr ""
 
@@ -737,6 +746,10 @@ msgstr "תאריך קצר"
 msgid "Available currencies"
 msgstr "מטבעות זמינים"
 
+#: src/lib/components/shared/customer-selector.tsx:113
+msgid "Search customers..."
+msgstr ""
+
 #. placeholder {0}: selectedIds.size
 #: src/lib/components/data-input/product-multi-selector-input.tsx:473
 msgid "Select {0} Items"
@@ -762,7 +775,7 @@ msgstr "אשר ניווט"
 msgid "Link target"
 msgstr "יעד קישור"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:405
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:403
 msgid "Complete draft"
 msgstr "השלם טיוטה"
 
@@ -813,7 +826,7 @@ msgstr "הזן את מזהה העסקה לסילוק החזר זה"
 msgid "Your API Key"
 msgstr "מפתח ה-API שלך"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:389
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:387
 msgid "Are you sure you want to delete this draft order?"
 msgstr "האם אתה בטוח שברצונך למחוק הזמנת טיוטה זו?"
 
@@ -842,7 +855,7 @@ msgid "(max: {0})"
 msgstr "(מקס: {0})"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:165
-#: src/lib/components/shared/customer-address-form.tsx:111
+#: src/lib/components/shared/customer-address-form.tsx:120
 msgid "Company"
 msgstr "חברה"
 
@@ -883,7 +896,7 @@ msgid "Confirm"
 msgstr "אשר"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:343
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:341
 msgid "Failed to complete draft order: {0}"
 msgstr ""
 
@@ -904,8 +917,8 @@ msgid "Failed to create product"
 msgstr "יצירת המוצר נכשלה"
 
 #: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:276
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:233
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:497
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:246
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:495
 #: src/lib/components/shared/role-code-label.tsx:8
 msgid "Customer"
 msgstr "לקוח"
@@ -915,7 +928,7 @@ msgstr "לקוח"
 msgid "Error loading order history: {0}"
 msgstr "שגיאה בטעינת היסטוריית הזמנה: {0}"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:235
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:233
 msgid "Shipping address set for order"
 msgstr "כתובת משלוח הוגדרה להזמנה"
 
@@ -962,7 +975,7 @@ msgstr "אלה ערכי המאפיינים עבור המאפיין <0>{facetName
 msgid "Successfully added payment to order"
 msgstr "התשלום נוסף להזמנה בהצלחה"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:246
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:244
 msgid "Billing address set for order"
 msgstr "כתובת חיוב הוגדרה עבור ההזמנה"
 
@@ -1040,7 +1053,7 @@ msgstr "מוקצה"
 #~ msgstr "הוסף קבוצת אפשרויות נוספת"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:310
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:308
 msgid "Failed to set coupon code for order: {0}"
 msgstr ""
 
@@ -1065,7 +1078,7 @@ msgstr "האוסף נוצר בהצלחה"
 msgid "Price"
 msgstr "מחיר"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:383
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:381
 #: src/app/routes/_authenticated/_orders/orders.tsx:115
 msgid "Draft order"
 msgstr "הזמנת טיוטה"
@@ -1112,7 +1125,7 @@ msgstr "כאשר מופעל, המבצע זמין בחנות"
 msgid "When tracked, product variant stock levels will be automatically adjusted when sold. This setting can be overridden by individual product variants."
 msgstr "כאשר עוקבים, רמות מלאי גרסת המוצר יותאמו אוטומטית במכירה. ניתן לעקוף הגדרה זו על ידי גרסאות מוצר בודדות."
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:282
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:280
 msgid "Shipping method set for order"
 msgstr "שיטת משלוח הוגדרה להזמנה"
 
@@ -1154,11 +1167,12 @@ msgid "Assets"
 msgstr "קבצים"
 
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:188
+#: src/lib/components/shared/customer-selector.tsx:182
 msgid "Email address"
 msgstr "כתובת דוא\"ל"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:321
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:319
 msgid "Failed to remove coupon code from order: {0}"
 msgstr ""
 
@@ -1276,7 +1290,7 @@ msgstr "אמצעי תשלום"
 msgid "Stock"
 msgstr "מלאי"
 
-#: src/lib/components/shared/customer-selector.tsx:88
+#: src/lib/components/shared/customer-selector.tsx:119
 msgid "No customers found"
 msgstr "לא נמצאו לקוחות"
 
@@ -1360,7 +1374,7 @@ msgid "No variants match the current filter."
 msgstr "אין וריאנטים התואמים את הסינון הנוכחי."
 
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:203
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:245
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:258
 msgid "Addresses"
 msgstr "כתובות"
 
@@ -1390,7 +1404,8 @@ msgstr "יצירת קבוצת האפשרויות נכשלה"
 msgid "True"
 msgstr "אמת"
 
-#: src/lib/components/shared/customer-selector.tsx:77
+#: src/lib/components/shared/customer-selector.tsx:222
+#: src/lib/components/shared/customer-selector.tsx:258
 msgid "Select customer"
 msgstr "בחר לקוח"
 
@@ -1406,7 +1421,7 @@ msgstr "ההזמנה הועברה"
 msgid "is before"
 msgstr "לפני"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:388
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:386
 msgid "Delete draft order"
 msgstr "מחק הזמנת טיוטה"
 
@@ -1459,7 +1474,7 @@ msgid "before"
 msgstr "לפני"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:228
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:226
 msgid "Failed to set customer for order: {0}"
 msgstr ""
 
@@ -1484,7 +1499,7 @@ msgstr "הזמנות אחרונות"
 msgid "+ {leftOver} more"
 msgstr "+ {leftOver} נוספים"
 
-#: src/lib/components/shared/customer-address-form.tsx:241
+#: src/lib/components/shared/customer-address-form.tsx:259
 msgid "Use as the default billing address"
 msgstr "השתמש ככתובת חיוב ברירת מחדל"
 
@@ -1584,7 +1599,7 @@ msgstr "הכתובת עודכנה בהצלחה"
 msgid "Created"
 msgstr "נוצר"
 
-#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:63
+#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:100
 msgid "Loading addresses..."
 msgstr "טוען כתובות..."
 
@@ -1594,7 +1609,7 @@ msgid "Select a target collection to move {0} to."
 msgstr "בחר אוסף יעד להעברת {0} אליו."
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:272
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:270
 msgid "Failed to unset billing address for order: {0}"
 msgstr ""
 
@@ -1639,7 +1654,7 @@ msgstr "עבור לעמוד האחרון"
 #: src/lib/components/shared/asset/asset-focal-point-editor.tsx:88
 #: src/lib/components/shared/assign-to-channel-dialog.tsx:126
 #: src/lib/components/shared/confirmation-dialog.tsx:42
-#: src/lib/components/shared/customer-address-form.tsx:253
+#: src/lib/components/shared/customer-address-form.tsx:272
 #: src/lib/components/shared/navigation-confirmation.tsx:55
 #: src/lib/components/shared/rich-text-editor/image-dialog.tsx:208
 #: src/lib/components/shared/rich-text-editor/link-dialog.tsx:146
@@ -1661,7 +1676,7 @@ msgid "Refund from this method"
 msgstr "החזר משיטה זו"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:208
-#: src/lib/components/shared/customer-address-form.tsx:163
+#: src/lib/components/shared/customer-address-form.tsx:174
 msgid "Postal Code"
 msgstr "מיקוד"
 
@@ -1682,7 +1697,7 @@ msgstr "קטגוריית מס חדשה"
 msgid "Partial refund completed"
 msgstr "החזר חלקי הושלם"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:492
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:490
 msgid "Set custom fields"
 msgstr "הגדר שדות מותאמים אישית"
 
@@ -1713,8 +1728,8 @@ msgid "Reason:"
 msgstr "סיבה:"
 
 #: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:291
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:248
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:510
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:261
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:516
 msgid "Shipping address"
 msgstr "כתובת משלוח"
 
@@ -1736,6 +1751,10 @@ msgstr "קטגוריות מס"
 #: src/app/routes/_authenticated/_collections/collections_.$id.tsx:158
 msgid "Private collections are not visible in the shop"
 msgstr "אוספים פרטיים אינם גלויים בחנות"
+
+#: src/lib/components/shared/customer-selector.tsx:194
+msgid "Create customer"
+msgstr ""
 
 #: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:262
 #: src/app/routes/_authenticated/_products/products_.$id.tsx:222
@@ -1764,7 +1783,7 @@ msgstr "מושבת"
 msgid "New promotion"
 msgstr "מבצע חדש"
 
-#: src/lib/components/shared/customer-address-form.tsx:220
+#: src/lib/components/shared/customer-address-form.tsx:238
 msgid "Default Shipping Address"
 msgstr "כתובת משלוח ברירת מחדל"
 
@@ -1865,8 +1884,8 @@ msgstr "הפרופיל עודכן בהצלחה"
 msgid "Payment method"
 msgstr "אמצעי תשלום"
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:263
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:292
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:277
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:307
 #: src/lib/components/shared/history-timeline/history-note-entry.tsx:46
 msgid "Edit"
 msgstr "ערוך"
@@ -1888,7 +1907,7 @@ msgstr "ההערה נוספה"
 msgid "Select quantities to fulfill and configure the fulfillment handler"
 msgstr "בחר כמויות למילוי והגדר את מטפל המשלוח"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:268
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:266
 msgid "Billing address unset for order"
 msgstr "כתובת חיוב הוסרה מההזמנה"
 
@@ -2411,7 +2430,7 @@ msgid "Registered"
 msgstr "רשום"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:239
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:237
 msgid "Failed to set shipping address for order: {0}"
 msgstr ""
 
@@ -2487,7 +2506,7 @@ msgstr "{0} נבחרו"
 msgid "Search option groups..."
 msgstr "חיפוש קבוצות אפשרויות..."
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:168
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:181
 msgid "Modify order"
 msgstr "שנה הזמנה"
 
@@ -2649,6 +2668,10 @@ msgstr "התצוגה \"{viewName}\" הוחלה"
 msgid "Successfully removed {successCount} facets from channel"
 msgstr "{successCount} מאפיינים הוסרו מהערוץ בהצלחה"
 
+#: src/lib/components/shared/customer-selector.tsx:263
+msgid "Set customer"
+msgstr ""
+
 #: src/app/routes/_authenticated/_products/products.tsx:117
 msgid "New Product"
 msgstr "מוצר חדש"
@@ -2679,8 +2702,8 @@ msgid "This will remove all option groups from this product and return to the va
 msgstr "פעולה זו תסיר את כל קבוצות האפשרויות ממוצר זה ותחזור לבחירת הגדרת הגרסאות."
 
 #: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:299
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:277
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:532
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:291
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:544
 msgid "Billing address"
 msgstr "כתובת חיוב"
 
@@ -2756,7 +2779,7 @@ msgid "Amount"
 msgstr "סכום"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:242
-#: src/lib/components/shared/customer-address-form.tsx:201
+#: src/lib/components/shared/customer-address-form.tsx:218
 msgid "Phone Number"
 msgstr "מספר טלפון"
 
@@ -2895,12 +2918,12 @@ msgstr "נקודת המיקוד עודכנה"
 msgid "Option values"
 msgstr "ערכי אפשרויות"
 
-#: src/lib/components/shared/customer-address-form.tsx:238
+#: src/lib/components/shared/customer-address-form.tsx:256
 msgid "Default Billing Address"
 msgstr "כתובת חיוב ברירת מחדל"
 
 #: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:284
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:241
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:254
 msgid "No customer"
 msgstr "אין לקוח"
 
@@ -3148,7 +3171,7 @@ msgstr "עדכון נקודת המיקוד נכשל"
 msgid "Successfully updated zone"
 msgstr "האזור עודכן בהצלחה"
 
-#: src/lib/components/shared/customer-address-form.tsx:149
+#: src/lib/components/shared/customer-address-form.tsx:160
 msgid "State/Province"
 msgstr "מדינה/מחוז"
 
@@ -3170,7 +3193,7 @@ msgstr "הגדרת קריטריוני סינון לעמודה {columnId}"
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:217
 #: src/app/routes/_authenticated/_zones/components/zone-countries-table.tsx:53
-#: src/lib/components/shared/customer-address-form.tsx:173
+#: src/lib/components/shared/customer-address-form.tsx:184
 msgid "Country"
 msgstr "מדינה"
 
@@ -3382,7 +3405,7 @@ msgstr "התשלום אושר"
 msgid "Successfully updated role"
 msgstr "התפקיד עודכן בהצלחה"
 
-#: src/lib/components/shared/customer-address-form.tsx:184
+#: src/lib/components/shared/customer-address-form.tsx:201
 msgid "Select a country"
 msgstr "בחר מדינה"
 
@@ -3397,8 +3420,8 @@ msgid "Shipping Methods"
 msgstr "שיטות משלוח"
 
 #: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:58
-msgid "Select an address"
-msgstr "בחר כתובת"
+#~ msgid "Select an address"
+#~ msgstr "בחר כתובת"
 
 #: src/app/routes/_authenticated/_system/settings-store.tsx:326
 msgid "Yes"
@@ -3454,6 +3477,10 @@ msgstr "לא שווה ל"
 #: src/app/routes/_authenticated/_system/healthchecks.tsx:47
 #~ msgid "Refresh"
 #~ msgstr "רענן"
+
+#: src/lib/components/shared/customer-selector.tsx:273
+msgid "Existing customer"
+msgstr ""
 
 #: src/app/routes/_authenticated/_products/components/create-product-options-dialog.tsx:269
 #~ msgid "e.g. Size"
@@ -3576,7 +3603,7 @@ msgstr "הוסף שורה אחרי"
 msgid "Tax total"
 msgstr "סה\"כ מס"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:414
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:412
 msgid "Draft order status"
 msgstr "סטטוס טיוטת הזמנה"
 
@@ -3597,7 +3624,11 @@ msgstr "ערך המאפיין נוצר בהצלחה"
 msgid "Marketing"
 msgstr "שיווק"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:351
+#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:89
+msgid "Existing address"
+msgstr ""
+
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:349
 msgid "Draft order deleted"
 msgstr "הזמנת הטיוטה נמחקה"
 
@@ -3619,6 +3650,7 @@ msgid "Remove from channel"
 msgstr "הסרה מהערוץ"
 
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:169
+#: src/lib/components/shared/customer-selector.tsx:164
 #: src/lib/components/shared/rich-text-editor/image-dialog.tsx:157
 msgid "Title"
 msgstr "כותרת"
@@ -3658,7 +3690,7 @@ msgstr "{0} גרסאות"
 msgid "Failed to settle payment"
 msgstr "סילוק התשלום נכשל"
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:300
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:315
 msgid "No billing address"
 msgstr "אין כתובת חיוב"
 
@@ -3810,7 +3842,7 @@ msgstr "עדכון מיקום המלאי נכשל"
 msgid "Order shipped"
 msgstr "ההזמנה נשלחה"
 
-#: src/lib/components/shared/customer-address-form.tsx:257
+#: src/lib/components/shared/customer-address-form.tsx:276
 msgid "Save Address"
 msgstr "שמור כתובת"
 
@@ -4070,7 +4102,7 @@ msgstr "+ {0} נוספים"
 msgid "Option Groups"
 msgstr "קבוצות אפשרויות"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:471
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:469
 msgid "Custom fields"
 msgstr "שדות מותאמים אישית"
 
@@ -4294,7 +4326,7 @@ msgstr "{title}"
 
 #: src/app/routes/_authenticated/_orders/components/fulfill-order-dialog.tsx:244
 #: src/app/routes/_authenticated/_orders/components/refund-order-dialog.tsx:87
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:178
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:191
 msgid "Order lines"
 msgstr "שורות הזמנה"
 
@@ -4365,7 +4397,7 @@ msgid "Customer information updated"
 msgstr "מידע הלקוח עודכן"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:358
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:356
 msgid "Failed to delete draft order: {0}"
 msgstr ""
 
@@ -4516,7 +4548,7 @@ msgstr ""
 msgid "Manage tags"
 msgstr "נהל תגיות"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:317
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:315
 msgid "Coupon code removed from order"
 msgstr "קוד קופון הוסר מההזמנה"
 
@@ -4544,11 +4576,11 @@ msgid "Loading selected items..."
 msgstr ""
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:250
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:248
 msgid "Failed to set billing address for order: {0}"
 msgstr ""
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:271
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:285
 msgid "No shipping address"
 msgstr "אין כתובת משלוח"
 
@@ -4602,7 +4634,7 @@ msgstr "תנאי בודק הזכאות של שיטת משלוח זו אינם מ
 msgid "Add coupon code"
 msgstr "הוסף קוד קופון"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:301
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:299
 msgid "Coupon code set for order"
 msgstr "קוד קופון הוגדר עבור ההזמנה"
 
@@ -4660,7 +4692,7 @@ msgstr "אחר"
 msgid "refundReason.WrongItem"
 msgstr "פריט שגוי"
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:201
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:214
 msgid "Summary of modifications"
 msgstr "סיכום שינויים"
 
@@ -4698,7 +4730,7 @@ msgstr "עדכון קבוצת הלקוחות נכשל"
 msgid "Payment metadata"
 msgstr "מטא-דאטה של תשלום"
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:173
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:186
 msgid "Cancel modification"
 msgstr "בטל שינוי"
 
@@ -4720,7 +4752,7 @@ msgid "Additional payment required"
 msgstr "נדרש תשלום נוסף"
 
 #: src/app/routes/_authenticated/_orders/components/order-detail-shared.tsx:96
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:63
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:64
 msgid "Failed to update order"
 msgstr "עדכון ההזמנה נכשל"
 
@@ -4741,7 +4773,7 @@ msgid "Customer group members for {customerGroupName}"
 msgstr "חברי קבוצת לקוחות {customerGroupName}"
 
 #. placeholder {0}: e instanceof Error ? e.message : String(e)
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:217
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:214
 msgid "Failed to set address for order: {0}"
 msgstr ""
 
@@ -4808,6 +4840,10 @@ msgstr "ערוך חברים"
 msgid "Stock on hand"
 msgstr "מלאי זמין"
 
+#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:93
+msgid "New address"
+msgstr ""
+
 #: src/lib/components/data-table/data-table-filter-dialog.tsx:55
 msgid "Filter by {columnId}"
 msgstr "סנן לפי {columnId}"
@@ -4824,7 +4860,7 @@ msgstr "התראות"
 msgid "Option Values"
 msgstr "ערכי אפשרויות"
 
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:222
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:235
 msgid "Preview changes"
 msgstr "תצוגה מקדימה של שינויים"
 
@@ -5011,7 +5047,7 @@ msgstr "מערכת"
 msgid "Variant name"
 msgstr "שם הגרסה"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:579
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:597
 msgid "Remove"
 msgstr "הסר"
 
@@ -5080,7 +5116,7 @@ msgid "The page will continue with the default query."
 msgstr "הדף ימשיך עם שאילתת ברירת המחדל."
 
 #: src/app/routes/_authenticated/_shipping-methods/components/test-address-form.tsx:175
-#: src/lib/components/shared/customer-address-form.tsx:121
+#: src/lib/components/shared/customer-address-form.tsx:130
 msgid "Street Address"
 msgstr "כתובת רחוב"
 
@@ -5341,6 +5377,7 @@ msgstr "נכשל בעיבוד ההחזר"
 #: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:115
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:176
 #: src/app/routes/_authenticated/_profile/profile.tsx:102
+#: src/lib/components/shared/customer-selector.tsx:170
 msgid "First name"
 msgstr "שם פרטי"
 
@@ -5447,7 +5484,7 @@ msgid "Option Groups"
 msgstr "קבוצות אפשרויות"
 
 #: src/app/routes/_authenticated/_orders/components/add-surcharge-form.tsx:133
-#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:194
+#: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:207
 msgid "Add surcharge"
 msgstr "הוסף תוספת"
 
@@ -5551,7 +5588,7 @@ msgstr "שפות גלובליות"
 msgid "New administrator"
 msgstr "מנהל חדש"
 
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:395
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:393
 msgid "Delete draft"
 msgstr "מחק טיוטה"
 
@@ -5674,7 +5711,7 @@ msgstr "צפייה בתהליך ההזמנה"
 msgid "Failed to duplicate view"
 msgstr "שכפול התצוגה נכשל"
 
-#: src/lib/components/shared/customer-address-form.tsx:223
+#: src/lib/components/shared/customer-address-form.tsx:241
 msgid "Use as the default shipping address"
 msgstr "השתמש ככתובת משלוח ברירת מחדל"
 
@@ -5864,7 +5901,7 @@ msgid "Add option value to {groupName}"
 msgstr "הוסף ערך אפשרות ל-{groupName}"
 
 #. placeholder {0}: error.message
-#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:261
+#: src/app/routes/_authenticated/_orders/orders_.draft.$id.tsx:259
 msgid "Failed to unset shipping address for order: {0}"
 msgstr ""
 
@@ -6005,7 +6042,7 @@ msgstr "הוסף תשלום להזמנה"
 #: src/lib/components/data-input/relation-selector.tsx:427
 #: src/lib/components/shared/country-selector.tsx:86
 #: src/lib/components/shared/customer-group-selector.tsx:56
-#: src/lib/components/shared/customer-selector.tsx:88
+#: src/lib/components/shared/customer-selector.tsx:119
 #: src/lib/components/shared/facet-value-selector.tsx:159
 msgid "Loading..."
 msgstr "טוען..."
@@ -6014,7 +6051,7 @@ msgstr "טוען..."
 msgid "The token is used to specify the channel when making API requests."
 msgstr "הטוקן משמש לציון הערוץ בעת ביצוע בקשות API."
 
-#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:67
+#: src/app/routes/_authenticated/_orders/components/customer-address-selector.tsx:104
 msgid "No addresses found"
 msgstr "לא נמצאו כתובות"
 
@@ -6096,6 +6133,7 @@ msgid "Order process"
 msgstr "תהליך הזמנה"
 
 #: src/app/routes/_authenticated/_customers/customers_.$id.tsx:194
+#: src/lib/components/shared/customer-selector.tsx:188
 msgid "Phone number"
 msgstr "מספר טלפון"
 
