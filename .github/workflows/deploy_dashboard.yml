@@ -30,6 +30,8 @@ concurrency:
 
 jobs:
     deploy:
+        # Preview deployment credentials are only configured in the upstream repository.
+        if: ${{ github.repository == 'vendurehq/vendure' }}
         runs-on: ubuntu-latest
         permissions:
             contents: read
