@@ -17,6 +17,7 @@ import { ActionBarItem } from '@/vdb/framework/layout-engine/action-bar-item-wra
 import { useDetailPage } from '@/vdb/framework/page/use-detail-page.js';
 import { api } from '@/vdb/graphql/api.js';
 import { Trans, useLingui } from '@lingui/react/macro';
+import { usePostHog } from '@posthog/react';
 import { useMutation, useQuery } from '@tanstack/react-query';
 import { createFileRoute, Link, useNavigate } from '@tanstack/react-router';
 import { ResultOf } from 'gql.tada';
@@ -56,6 +57,7 @@ export const Route = createFileRoute('/_authenticated/_orders/orders_/draft/$id'
 
 function DraftOrderPage() {
     const params = Route.useParams();
+    const posthog = usePostHog();
     const { t } = useLingui();
     const navigate = useNavigate();
 
@@ -328,6 +330,7 @@ function DraftOrderPage() {
             const order = result.transitionOrderToState;
             switch (order?.__typename) {
                 case 'Order':
+                    posthog?.capture('draft_order_completed', { order_id: order.id });
                     toast.success(t`Draft order completed`);
                     refreshEntity();
                     setTimeout(() => {
@@ -348,6 +351,7 @@ function DraftOrderPage() {
         mutationFn: api.mutate(deleteDraftOrderDocument),
         onSuccess: (result: ResultOf<typeof deleteDraftOrderDocument>) => {
             if (result.deleteDraftOrder.result === 'DELETED') {
+                posthog?.capture('draft_order_deleted', { order_id: params.id });
                 toast.success(t`Draft order deleted`);
                 navigate({ to: '/orders' });
             } else {

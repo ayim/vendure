@@ -11,6 +11,7 @@ import { api } from '@/vdb/graphql/api.js';
 import { ResultOf } from '@/vdb/graphql/graphql.js';
 import { useServerConfig } from '@/vdb/hooks/use-server-config.js';
 import { Trans, useLingui } from '@lingui/react/macro';
+import { usePostHog } from '@posthog/react';
 import { useMutation } from '@tanstack/react-query';
 import { createFileRoute, useNavigate } from '@tanstack/react-router';
 import { PlusIcon } from 'lucide-react';
@@ -24,10 +25,12 @@ export const Route = createFileRoute('/_authenticated/_orders/orders')({
 function OrderListPage() {
     const serverConfig = useServerConfig();
     const navigate = useNavigate();
+    const posthog = usePostHog();
     const { t } = useLingui();
     const { mutate: createDraftOrder } = useMutation({
         mutationFn: api.mutate(createDraftOrderDocument),
         onSuccess: (result: ResultOf<typeof createDraftOrderDocument>) => {
+            posthog?.capture('draft_order_created', { order_id: result.createDraftOrder.id });
             navigate({ to: '/orders/draft/$id', params: { id: result.createDraftOrder.id } });
         },
     });
