@@ -28,6 +28,7 @@ import {
     Type,
     UiComponentConfig,
 } from '@vendure/common/lib/shared-types';
+import { RelationOptions } from 'typeorm';
 
 import { RequestContext } from '../../api/common/request-context';
 import { Injector } from '../../common/injector';
@@ -149,9 +150,8 @@ export type RelationCustomFieldConfig = TypedCustomFieldConfig<
 > & {
     entity: Type<VendureEntity>;
     graphQLType?: string;
-    eager?: boolean;
     inverseSide?: string | ((object: any) => any);
-};
+} & Pick<RelationOptions, 'cascade' | 'onDelete' | 'onUpdate' | 'eager'>;
 
 // Struct field definitions
 export type BaseTypedStructFieldConfig<T extends StructFieldType, C extends GraphQLStructField> = Omit<
