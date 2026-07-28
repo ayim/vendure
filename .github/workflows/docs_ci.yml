@@ -51,8 +51,8 @@ jobs:
 
     generate-manifest:
         name: Generate & commit manifest
-        # Skip fork PRs (can't push back to fork branches) and draft PRs
-        if: ${{ github.event_name == 'push' || (!github.event.pull_request.head.repo.fork && !github.event.pull_request.draft) }}
+        # The CI bot credentials only exist upstream. Also skip fork and draft PRs.
+        if: ${{ github.repository == 'vendurehq/vendure' && (github.event_name == 'push' || (!github.event.pull_request.head.repo.fork && !github.event.pull_request.draft)) }}
         runs-on: ubuntu-latest
         permissions:
             contents: write
