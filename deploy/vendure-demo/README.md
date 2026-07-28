@@ -19,6 +19,8 @@ From the repository root:
 
 ```bash
 APP_VERSION="$(git rev-parse --short HEAD)" \
+VCS_REF_NAME="$(git branch --show-current)" \
+VCS_REF_REVISION="$(git rev-parse HEAD)" \
   docker compose --env-file .env -f deploy/vendure-demo/compose.yml up -d --build
 ```
 
@@ -30,3 +32,7 @@ docker compose --env-file .env -f deploy/vendure-demo/compose.yml ps
 ```
 
 The initial seed job is idempotent: it skips product import once products exist.
+To create a safe, attributable error span for the demo, send a request to
+`/health/controlled-failure` with the `x-demo-failure-token` header matching
+`DEMO_FAILURE_TOKEN`. The endpoint returns `404` when the token is absent or
+incorrect and `503` only for an authorized synthetic probe.
