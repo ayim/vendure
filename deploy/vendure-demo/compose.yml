@@ -54,6 +54,10 @@ services:
             <<: *server-environment
             OTEL_ENABLED: 'true'
             OTEL_SERVICE_NAME: vendure-overwatch-demo
+            OTEL_EXPORTER_OTLP_ENDPOINT: ${NEW_RELIC_OTLP_ENDPOINT:-https://otlp.nr-data.net}
+            OTEL_EXPORTER_OTLP_HEADERS: api-key=${NEW_RELIC_LICENSE_KEY}
+            OTEL_EXPORTER_OTLP_PROTOCOL: http/protobuf
+            OTEL_LOGS_EXPORTER: otlp
             APP_VERSION: ${APP_VERSION:-local}
         volumes:
             - vendure_data:/app/data
