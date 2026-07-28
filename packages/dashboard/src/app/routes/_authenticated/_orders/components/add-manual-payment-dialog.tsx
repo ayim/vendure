@@ -158,7 +158,6 @@ export function AddManualPaymentDialog({ order, onSuccess }: Readonly<AddManualP
                                 control={form.control}
                                 name="transactionId"
                                 label={<Trans>Transaction ID</Trans>}
-                                rules={{ required: t`Transaction ID is required` }}
                                 render={({ field }) => (
                                     <Input {...field} placeholder={t`Enter transaction ID`} />
                                 )}
