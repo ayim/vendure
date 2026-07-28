@@ -1,0 +1,11 @@
+version: overwatch-rules-v1
+rules:
+  - id: sign-in-critical-path
+    description: The sign-in route is a universal critical path and cannot be auto-approved.
+    owner: identity
+    review: required
+    autoApprove: never
+    requiredTests:
+      - successful and rejected sign-in flows
+      - redirect safety
+      - no credentials or PII in analytics

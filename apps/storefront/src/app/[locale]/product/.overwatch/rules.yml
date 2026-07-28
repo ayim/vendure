@@ -1,0 +1,10 @@
+version: overwatch-rules-v1
+rules:
+  - id: catalog-product-experience
+    description: Product-page changes are eligible for risk-based approval with catalog coverage.
+    owner: catalog
+    review: risk_based
+    autoApprove: eligible
+    requiredTests:
+      - unavailable variant behavior
+      - price and currency rendering

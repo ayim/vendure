@@ -1,0 +1,11 @@
+version: overwatch-rules-v1
+rules:
+  - id: authentication-boundary
+    description: Authentication and session changes always require a human reviewer.
+    owner: identity
+    review: required
+    autoApprove: never
+    requiredTests:
+      - denial-by-default behavior
+      - invalid and expired session handling
+      - login failure without credential leakage

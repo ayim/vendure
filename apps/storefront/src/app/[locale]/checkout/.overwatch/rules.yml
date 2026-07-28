@@ -1,0 +1,11 @@
+version: overwatch-rules-v1
+rules:
+  - id: checkout-money-movement
+    description: Checkout changes can affect money movement and order integrity.
+    owner: payments
+    review: required
+    autoApprove: never
+    requiredTests:
+      - payment idempotency
+      - duplicate-submit protection
+      - failed payment recovery

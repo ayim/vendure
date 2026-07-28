@@ -1,0 +1,11 @@
+version: overwatch-rules-v1
+rules:
+  - id: analytics-data-contract
+    description: Analytics changes must preserve event contracts and avoid customer PII.
+    owner: data-platform
+    review: risk_based
+    autoApprove: eligible
+    requiredTests:
+      - event name and property contract
+      - synthetic traffic labeling
+      - no customer PII
