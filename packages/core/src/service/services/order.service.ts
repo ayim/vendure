@@ -673,8 +673,8 @@ export class OrderService {
                 customFields,
             );
             const validationError =
-                this.assertQuantityIsPositive(quantity) ||
                 this.assertAddingItemsState(order) ||
+                this.assertQuantityIsPositive(quantity) ||
                 this.assertNotOverOrderItemsLimit(order, quantity) ||
                 this.assertNotOverOrderLineItemsLimit(existingOrderLine, quantity);
             if (validationError) {
