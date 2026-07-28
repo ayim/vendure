@@ -146,6 +146,7 @@ export class StockLocationService {
                     where: {
                         stockLocationId: input.transferToLocationId,
                         productVariantId: stockLevel.productVariantId,
+                        partitionKey: stockLevel.partitionKey,
                     },
                 });
                 if (existingStockLevel) {
@@ -158,6 +159,7 @@ export class StockLocationService {
                         stockLocationId: input.transferToLocationId,
                         stockOnHand: stockLevel.stockOnHand,
                         stockAllocated: stockLevel.stockAllocated,
+                        partitionKey: stockLevel.partitionKey,
                     });
                     await this.connection.getRepository(ctx, StockLevel).save(newStockLevel);
                 }
