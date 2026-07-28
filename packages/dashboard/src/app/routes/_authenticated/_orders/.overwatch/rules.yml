@@ -1,0 +1,11 @@
+version: overwatch-rules-v1
+rules:
+  - id: operator-order-mutations
+    description: Admin order mutations require an operations reviewer.
+    owner: commerce-operations
+    review: required
+    autoApprove: never
+    requiredTests:
+      - state transition authorization
+      - cancellation and refund safeguards
+      - audit trail preservation
