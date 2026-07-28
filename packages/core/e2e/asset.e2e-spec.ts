@@ -1,10 +1,11 @@
 import { DeletionResult, LogicalOperator, SortOrder } from '@vendure/common/lib/generated-types';
 import { omit } from '@vendure/common/lib/omit';
 import { pick } from '@vendure/common/lib/pick';
-import { mergeConfig } from '@vendure/core';
+import { AssetService, mergeConfig } from '@vendure/core';
 import { createErrorResultGuard, createTestEnvironment, ErrorResultGuard } from '@vendure/testing';
 import fs from 'fs-extra';
 import path from 'node:path';
+import { Readable } from 'node:stream';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 
 import { initialData } from '../../../e2e-common/e2e-initial-data';
@@ -25,7 +26,7 @@ describe('Asset resolver', () => {
     const { server, adminClient } = createTestEnvironment(
         mergeConfig(testConfig(), {
             assetOptions: {
-                permittedFileTypes: ['image/*', '.pdf', '.zip'],
+                permittedFileTypes: ['image/*', '.pdf', '.zip', '.md'],
             },
         }),
     );
@@ -423,6 +424,23 @@ describe('Asset resolver', () => {
                 expect(e.message).toContain('File truncated as it exceeds the 20971520 byte size limit');
             } finally {
                 fs.rmSync(filename);
+            }
+        });
+
+        // https://github.com/vendurehq/vendure/issues/4651
+        it('create an asset from a file stream without RequestContext', async () => {
+            const assetService = server.app.get(AssetService);
+
+            const stream = new Readable({ encoding: 'utf-8' });
+            stream.push('test file content');
+            stream.push(null);
+
+            const result = await assetService.createFromFileStream(stream, 'test-file.md');
+
+            expect(result).toBeDefined();
+            expect('id' in result).toBe(true);
+            if ('id' in result) {
+                expect(result.name).toBe('test-file.md');
             }
         });
     });
