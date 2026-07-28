@@ -75,6 +75,7 @@ services:
             args:
                 NEXT_PUBLIC_POSTHOG_KEY: ${NEXT_PUBLIC_POSTHOG_KEY:-}
                 NEXT_PUBLIC_POSTHOG_HOST: ${NEXT_PUBLIC_POSTHOG_HOST:-https://us.i.posthog.com}
+                NEXT_PUBLIC_SYNTHETIC_TRAFFIC: ${NEXT_PUBLIC_SYNTHETIC_TRAFFIC:-false}
                 NEXT_PUBLIC_SITE_URL: ${PUBLIC_URL:-http://localhost}
         restart: unless-stopped
         environment:

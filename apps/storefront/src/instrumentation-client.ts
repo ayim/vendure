@@ -10,4 +10,11 @@ if (posthogKey) {
         capture_pageleave: true,
         person_profiles: 'identified_only',
     });
+
+    if (process.env.NEXT_PUBLIC_SYNTHETIC_TRAFFIC === 'true') {
+        posthog.register({
+            synthetic: true,
+            traffic_type: 'demo_synthetic',
+        });
+    }
 }
