@@ -21,6 +21,11 @@ const sdk = new NodeSDK(
                 'service.namespace': 'overwatch-demo',
                 'service.environment': process.env.APP_ENV ?? 'production',
                 'service.version': process.env.APP_VERSION ?? 'local',
+                'deployment.environment.name': process.env.APP_ENV ?? 'production',
+                'vcs.repository.url':
+                    process.env.VCS_REPOSITORY_URL ?? 'https://github.com/ayim/vendure',
+                'vcs.ref.head.name': process.env.VCS_REF_NAME ?? 'master',
+                'vcs.ref.head.revision': process.env.VCS_REF_REVISION ?? process.env.APP_VERSION ?? 'local',
             }),
         },
     }),
