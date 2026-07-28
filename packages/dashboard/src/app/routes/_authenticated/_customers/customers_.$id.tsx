@@ -28,6 +28,7 @@ import { detailPageRouteLoader } from '@/vdb/framework/page/detail-page-route-lo
 import { useDetailPage } from '@/vdb/framework/page/use-detail-page.js';
 import { api } from '@/vdb/graphql/api.js';
 import { Trans, useLingui } from '@lingui/react/macro';
+import { usePostHog } from '@posthog/react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { createFileRoute, useNavigate } from '@tanstack/react-router';
 import { Plus } from 'lucide-react';
@@ -69,6 +70,7 @@ export const Route = createFileRoute('/_authenticated/_customers/customers_/$id'
 function CustomerDetailPage() {
     const params = Route.useParams();
     const navigate = useNavigate();
+    const posthog = usePostHog();
     const creatingNewEntity = params.id === NEW_ENTITY_PATH;
     const { t } = useLingui();
     const queryClient = useQueryClient();
@@ -96,6 +98,11 @@ function CustomerDetailPage() {
         params: { id: params.id },
         onSuccess: async data => {
             if (data.__typename === 'Customer') {
+                if (creatingNewEntity) {
+                    posthog?.capture('customer_created', { customer_id: data.id });
+                } else {
+                    posthog?.capture('customer_updated', { customer_id: data.id });
+                }
                 toast.success(
                     creatingNewEntity ? t`Successfully created customer` : t`Successfully updated customer`,
                 );

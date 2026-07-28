@@ -28,6 +28,25 @@ export default ({ mode }: { mode: string }) => {
         optimizeDeps: {
             include: ['lodash/get', 'lodash/isString', 'lodash/isNaN'],
         },
+        server: {
+            proxy: {
+                '/ingest/static': {
+                    target: 'https://us-assets.i.posthog.com',
+                    changeOrigin: true,
+                    rewrite: (path: string) => path.replace(/^\/ingest/, ''),
+                },
+                '/ingest/array': {
+                    target: 'https://us-assets.i.posthog.com',
+                    changeOrigin: true,
+                    rewrite: (path: string) => path.replace(/^\/ingest/, ''),
+                },
+                '/ingest': {
+                    target: process.env.VITE_PUBLIC_POSTHOG_HOST || 'https://us.i.posthog.com',
+                    changeOrigin: true,
+                    rewrite: (path: string) => path.replace(/^\/ingest/, ''),
+                },
+            },
+        },
         test: {
             ...sharedTestConfig,
             globals: true,

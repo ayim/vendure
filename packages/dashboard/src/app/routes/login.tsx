@@ -2,6 +2,7 @@ import { LoginForm } from '@/vdb/components/login/login-form.js';
 import { LoginBranding } from '@/vdb/components/shared/powered-by-vendure.js';
 import { useAuth } from '@/vdb/hooks/use-auth.js';
 import { createFileRoute, Navigate, redirect, useRouterState } from '@tanstack/react-router';
+import { usePostHog } from '@posthog/react';
 import { z } from '@/vdb/lib/zod.js';
 
 const fallback = '/' as const;
@@ -20,12 +21,14 @@ export const Route = createFileRoute('/login')({
 
 function LoginPage() {
     const auth = useAuth();
+    const posthog = usePostHog();
     const isLoading = useRouterState({ select: s => s.isLoading });
     const navigate = Route.useNavigate();
     const search = Route.useSearch();
 
     const onFormSubmit = (username: string, password: string) => {
         auth.login(username, password, () => {
+            posthog?.capture('admin_logged_in');
             navigate({ to: search.redirect || fallback });
         });
     };

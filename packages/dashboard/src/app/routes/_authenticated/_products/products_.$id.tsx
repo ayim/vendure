@@ -22,6 +22,7 @@ import { ActionBarItem } from '@/vdb/framework/layout-engine/action-bar-item-wra
 import { detailPageRouteLoader } from '@/vdb/framework/page/detail-page-route-loader.js';
 import { useDetailPage } from '@/vdb/framework/page/use-detail-page.js';
 import { Trans, useLingui } from '@lingui/react/macro';
+import { usePostHog } from '@posthog/react';
 import { createFileRoute, Link, useNavigate } from '@tanstack/react-router';
 import { Layers, Package, PlusIcon } from 'lucide-react';
 import { useRef, useState } from 'react';
@@ -122,6 +123,7 @@ function NoVariantsPrompt({
 function ProductDetailPage() {
     const params = Route.useParams();
     const navigate = useNavigate();
+    const posthog = usePostHog();
     const creatingNewEntity = params.id === NEW_ENTITY_PATH;
     const { t } = useLingui();
     const refreshRef = useRef<() => void>(() => {});
@@ -155,6 +157,11 @@ function ProductDetailPage() {
         },
         params: { id: params.id },
         onSuccess: async data => {
+            if (creatingNewEntity) {
+                posthog?.capture('product_created', { product_id: data.id });
+            } else {
+                posthog?.capture('product_updated', { product_id: data.id });
+            }
             toast.success(
                 creatingNewEntity ? t`Successfully created product` : t`Successfully updated product`,
             );

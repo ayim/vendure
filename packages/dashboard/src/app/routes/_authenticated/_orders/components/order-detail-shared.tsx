@@ -16,6 +16,7 @@ import { api } from '@/vdb/graphql/api.js';
 import { useCustomFieldConfig } from '@/vdb/hooks/use-custom-field-config.js';
 import { useDynamicTranslations } from '@/vdb/hooks/use-dynamic-translations.js';
 import { Trans, useLingui } from '@lingui/react/macro';
+import { usePostHog } from '@posthog/react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { Link, useNavigate } from '@tanstack/react-router';
 import { ResultOf } from 'gql.tada';
@@ -71,6 +72,7 @@ export function OrderDetailShared({
     beforeOrderTable,
 }: Readonly<OrderDetailSharedProps>) {
     const { t } = useLingui();
+    const posthog = usePostHog();
     const navigate = useNavigate();
     const queryClient = useQueryClient();
     const { getTranslatedOrderState } = useDynamicTranslations();
@@ -131,6 +133,10 @@ export function OrderDetailShared({
                             description: transitionError,
                         });
                     } else {
+                        posthog?.capture('order_state_changed', {
+                            order_id: entity?.id,
+                            new_state: state,
+                        });
                         void refreshPage();
                     }
                 },
