@@ -12,6 +12,7 @@ class HealthController {
                 version: process.env.APP_VERSION ?? 'local',
                 revision: process.env.VCS_REF_REVISION ?? 'local',
                 ref: process.env.VCS_REF_NAME ?? 'local',
+                environment: process.env.APP_ENV ?? 'local',
             },
             timestamp: new Date().toISOString(),
         };
