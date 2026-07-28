@@ -1,0 +1,97 @@
+name: overwatch-vendure-demo
+
+services:
+    postgres:
+        image: postgres:16-alpine
+        restart: unless-stopped
+        environment:
+            POSTGRES_DB: ${DB_NAME:-vendure}
+            POSTGRES_USER: ${DB_USERNAME:-vendure}
+            POSTGRES_PASSWORD: ${DB_PASSWORD:-vendure}
+        volumes:
+            - postgres_data:/var/lib/postgresql/data
+        healthcheck:
+            test: ['CMD-SHELL', 'pg_isready -U ${DB_USERNAME:-vendure} -d ${DB_NAME:-vendure}']
+            interval: 5s
+            timeout: 5s
+            retries: 20
+
+    seed:
+        build:
+            context: ../../apps/server
+        command: npm run seed
+        restart: 'no'
+        env_file:
+            - ../../.env
+        environment: &server-environment
+            APP_ENV: production
+            OTEL_ENABLED: 'false'
+            DB_HOST: postgres
+            DB_PORT: 5432
+            DB_NAME: ${DB_NAME:-vendure}
+            DB_USERNAME: ${DB_USERNAME:-vendure}
+            DB_PASSWORD: ${DB_PASSWORD:-vendure}
+            DB_SYNCHRONIZE: 'true'
+            COOKIE_SECRET: ${COOKIE_SECRET:-local-overwatch-cookie-secret-change-on-oracle}
+            SUPERADMIN_USERNAME: ${SUPERADMIN_USERNAME:-overwatch-admin}
+            SUPERADMIN_PASSWORD: ${SUPERADMIN_PASSWORD:-local-overwatch-admin-password}
+            VENDURE_DATA_DIR: /app/data
+            STOREFRONT_ORIGIN: ${PUBLIC_URL:-http://localhost}
+            PUBLIC_API_URL: ${PUBLIC_URL:-http://localhost}
+        volumes:
+            - vendure_data:/app/data
+        depends_on:
+            postgres:
+                condition: service_healthy
+
+    server:
+        build:
+            context: ../../apps/server
+        restart: unless-stopped
+        env_file:
+            - ../../.env
+        environment:
+            <<: *server-environment
+            OTEL_ENABLED: 'true'
+            OTEL_SERVICE_NAME: vendure-overwatch-demo
+            OTEL_EXPORTER_OTLP_ENDPOINT: ${NEW_RELIC_OTLP_ENDPOINT:-https://otlp.nr-data.net}
+            OTEL_EXPORTER_OTLP_HEADERS: api-key=${NEW_RELIC_LICENSE_KEY}
+            OTEL_EXPORTER_OTLP_PROTOCOL: http/protobuf
+            OTEL_LOGS_EXPORTER: otlp
+            APP_VERSION: ${APP_VERSION:-local}
+        volumes:
+            - vendure_data:/app/data
+        depends_on:
+            seed:
+                condition: service_completed_successfully
+
+    storefront:
+        build:
+            context: ../../apps/storefront
+            args:
+                NEXT_PUBLIC_POSTHOG_KEY: ${NEXT_PUBLIC_POSTHOG_KEY:-}
+                NEXT_PUBLIC_POSTHOG_HOST: ${NEXT_PUBLIC_POSTHOG_HOST:-https://us.i.posthog.com}
+                NEXT_PUBLIC_SITE_URL: ${PUBLIC_URL:-http://localhost}
+        restart: unless-stopped
+        environment:
+            VENDURE_SHOP_API_URL: http://server:3000/shop-api
+            VENDURE_CHANNEL_TOKEN: __default_channel__
+            NEXT_PUBLIC_SITE_URL: ${PUBLIC_URL:-http://localhost}
+            REVALIDATION_SECRET: ${REVALIDATION_SECRET:-replace-me}
+        depends_on:
+            - server
+
+    caddy:
+        image: caddy:2.10-alpine
+        restart: unless-stopped
+        ports:
+            - '80:80'
+        volumes:
+            - ./Caddyfile:/etc/caddy/Caddyfile:ro
+        depends_on:
+            - storefront
+            - server
+
+volumes:
+    postgres_data:
+    vendure_data:

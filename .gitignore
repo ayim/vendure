@@ -306,6 +306,8 @@ FakesAssemblies/
 # Node.js Tools for Visual Studio
 .ntvs_analysis.dat
 node_modules/
+.next/
+data/
 
 # Visual Studio 6 build log
 *.plg
@@ -397,6 +399,9 @@ __admin-ui/
 # Bun is the canonical package manager; package-lock.json is only generated
 # locally (e.g. for the dependency-tracker script) and must not be committed.
 package-lock.json
+!apps/server/package-lock.json
+!apps/storefront/package-lock.json
+*.tsbuildinfo
 
 # Agentic engineering
 plans/

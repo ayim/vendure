@@ -85,7 +85,8 @@
     "better-sqlite3"
   ],
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "apps/*"
   ],
   "commitlint": {
     "extends": [
