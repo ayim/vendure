@@ -562,7 +562,16 @@ export class CollectionService implements OnModuleInit {
         // Ensure the entity belongs to the active channel before updating.
         await this.connection.getEntityOrThrow(ctx, Collection, input.id, { channelId: ctx.channelId });
         await this.slugValidator.validateSlugs(ctx, input, CollectionTranslation);
-        const collection = await this.translatableSaver.update({
+        const existingCollection = await this.connection.getEntityOrThrow<Collection>(
+            ctx,
+            Collection,
+            input.id,
+            {
+                channelId: ctx.channelId,
+            },
+        );
+
+        const collection = await this.translatableSaver.update<Collection>({
             ctx,
             input,
             entityType: Collection,
@@ -585,7 +594,9 @@ export class CollectionService implements OnModuleInit {
             const affectedVariantIds = await this.getCollectionProductVariantIds(collection);
             await this.eventBus.publish(new CollectionModificationEvent(ctx, collection, affectedVariantIds));
         }
-        await this.eventBus.publish(new CollectionEvent(ctx, collection, 'updated', input));
+        await this.eventBus.publish(
+            new CollectionEvent(ctx, collection, 'updated', input, existingCollection),
+        );
         return assertFound(this.findOne(ctx, collection.id));
     }
 

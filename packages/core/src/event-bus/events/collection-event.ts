@@ -21,6 +21,7 @@ export class CollectionEvent extends VendureEntityEvent<Collection, CollectionIn
         entity: Collection,
         type: 'created' | 'updated' | 'deleted',
         input?: CollectionInputTypes,
+        public readonly previousEntity?: Collection,
     ) {
         super(entity, type, ctx, input);
     }
