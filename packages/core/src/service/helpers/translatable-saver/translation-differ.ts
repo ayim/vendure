@@ -5,6 +5,7 @@ import { InternalServerError } from '../../../common/error/errors';
 import { Translatable, Translation, TranslationInput } from '../../../common/types/locale-types';
 import { foundIn, not } from '../../../common/utils';
 import { TransactionalConnection } from '../../../connection/transactional-connection';
+import { isUniqueConstraintViolationError } from '../utils/db-errors';
 
 export type TranslationContructor<T> = new (
     input?: DeepPartial<TranslationInput<T>> | DeepPartial<Translation<T>>,
@@ -68,11 +69,38 @@ export class TranslationDiffer<Entity extends Translatable & { id: ID }> {
                 (translation as any).baseId = entity.id;
                 let newTranslation: any;
                 try {
+                    // Run the insert in a savepoint (nested transaction). On Postgres, a unique
+                    // constraint violation aborts the entire enclosing transaction, which would
+                    // otherwise make the fallback queries below fail with "current transaction is
+                    // aborted" instead of recovering. Rolling back just the savepoint keeps the
+                    // outer transaction (shared with the rest of this request) healthy.
+                    newTranslation = await this.connection.withTransaction(ctx, transactionCtx =>
+                        this.connection
+                            .getRepository(transactionCtx, this.translationCtor)
+                            .save(translation as any),
+                    );
+                } catch (err: any) {
+                    if (!isUniqueConstraintViolationError(err)) {
+                        throw new InternalServerError(err.message);
+                    }
+                    // A concurrent request already inserted a translation for this languageCode
+                    // between our initial lookup and this insert. Update that row instead of
+                    // failing the request and leaving the entity without this translation.
+                    const concurrentlyInserted = await this.connection
+                        .getRepository(ctx, this.translationCtor)
+                        .findOne({
+                            where: {
+                                base: { id: entity.id },
+                                languageCode: translation.languageCode,
+                            },
+                        } as any);
+                    if (!concurrentlyInserted) {
+                        throw new InternalServerError(err.message);
+                    }
+                    translation.id = concurrentlyInserted.id;
                     newTranslation = await this.connection
                         .getRepository(ctx, this.translationCtor)
                         .save(translation as any);
-                } catch (err: any) {
-                    throw new InternalServerError(err.message);
                 }
                 entity.translations.push(newTranslation);
             }
