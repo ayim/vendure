@@ -73,7 +73,7 @@ msgstr "Ajoutez au moins un article à la commande"
 msgid "Add products to create a test order"
 msgstr "Ajouter des produits pour créer une commande de test"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:124
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:128
 msgid "Failed to create address"
 msgstr "Échec de la création de l'adresse"
 
@@ -157,7 +157,7 @@ msgstr "Taux de taxe mis à jour avec succès"
 msgid "Enter custom reason..."
 msgstr "Entrez une raison personnalisée..."
 
-#: src/lib/components/shared/asset/asset-gallery.tsx:744
+#: src/lib/components/shared/asset/asset-gallery.tsx:751
 msgid "Type"
 msgstr "Type"
 
@@ -168,7 +168,7 @@ msgstr ""
 #. placeholder {0}: entityName.toLowerCase()
 #. placeholder {0}: group.name
 #: src/app/routes/_authenticated/_products/components/product-option-select.tsx:57
-#: src/lib/components/data-input/default-relation-input.tsx:676
+#: src/lib/components/data-input/default-relation-input.tsx:679
 msgid "Select {0}"
 msgstr "Sélectionner {0}"
 
@@ -228,6 +228,10 @@ msgstr "Actualisation automatique : {0}"
 msgid "Deleted {deleted} {entityName}"
 msgstr "{deleted} {entityName} supprimé(s)"
 
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:82
+msgid "Successfully assigned {entityIdsLength} {entityType} to {succeeded} channel(s)"
+msgstr ""
+
 #: src/lib/components/shared/asset/asset-properties.tsx:32
 msgid "File Size"
 msgstr ""
@@ -281,7 +285,7 @@ msgstr "Emplacements de stock"
 msgid "Fulfillment handler"
 msgstr "Gestionnaire d'exécution"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:247
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:251
 #: src/app/routes/_authenticated/_orders/orders.tsx:21
 #: src/app/routes/_authenticated/_orders/orders.tsx:37
 #: src/app/routes/_authenticated/_orders/utils/order-detail-loaders.tsx:48
@@ -307,7 +311,7 @@ msgstr "Êtes-vous sûr de vouloir supprimer cette variante ?"
 #~ msgid "All resources are up and running"
 #~ msgstr "Toutes les ressources sont opérationnelles"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:86
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:87
 msgid "Failed to create administrator"
 msgstr "Échec de la création de l'administrateur"
 
@@ -335,9 +339,9 @@ msgstr "Échec de la mise à jour du pays"
 msgid "Type at least 2 characters to search..."
 msgstr "Tapez au moins 2 caractères pour rechercher..."
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:121
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:182
-#: src/app/routes/_authenticated/_profile/profile.tsx:108
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:122
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:186
+#: src/app/routes/_authenticated/_profile/profile.tsx:109
 msgid "Last name"
 msgstr "Nom de famille"
 
@@ -379,12 +383,11 @@ msgstr "Le total du remboursement ne peut pas être négatif"
 msgid "View details"
 msgstr "Voir les détails"
 
-#. placeholder {0}: entityIds.length
 #: src/lib/components/shared/assign-to-channel-dialog.tsx:95
-msgid "Select a channel to assign {0} {entityType} to"
-msgstr "Sélectionnez un canal auquel assigner {0} {entityType}"
+#~ msgid "Select a channel to assign {0} {entityType} to"
+#~ msgstr "Sélectionnez un canal auquel assigner {0} {entityType}"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:98
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:100
 msgid "Successfully created customer"
 msgstr "Client créé avec succès"
 
@@ -513,7 +516,7 @@ msgstr "Produit parent"
 msgid "City"
 msgstr "Ville"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:37
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:38
 #: src/app/routes/_authenticated/_administrators/administrators.tsx:15
 #: src/app/routes/_authenticated/_administrators/administrators.tsx:22
 msgid "Administrators"
@@ -616,7 +619,7 @@ msgstr "Ajout..."
 msgid "Move Collections"
 msgstr "Déplacer les collections"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:139
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:140
 #: src/app/routes/_authenticated/_administrators/administrators.tsx:55
 #: src/app/routes/_authenticated/_api-keys/api-keys_.$id.tsx:170
 #: src/app/routes/_authenticated/_roles/roles_.$id.tsx:32
@@ -787,7 +790,7 @@ msgstr "Terminer le brouillon"
 #: src/app/routes/_authenticated/_tax-categories/tax-categories_.$id.tsx:106
 #: src/app/routes/_authenticated/_tax-rates/tax-rates_.$id.tsx:113
 #: src/app/routes/_authenticated/_zones/zones_.$id.tsx:93
-#: src/lib/components/shared/asset/asset-gallery.tsx:743
+#: src/lib/components/shared/asset/asset-gallery.tsx:750
 msgid "Name"
 msgstr "Nom"
 
@@ -827,7 +830,7 @@ msgstr "Exécution créée"
 msgid "Found {0} eligible shipping method{1}"
 msgstr "Trouvé {0} méthode(s) d'expédition éligible(s)"
 
-#: src/lib/components/shared/asset/asset-gallery.tsx:746
+#: src/lib/components/shared/asset/asset-gallery.tsx:753
 #: src/lib/components/shared/asset/asset-properties.tsx:39
 msgid "Dimensions"
 msgstr "Dimensions"
@@ -970,9 +973,9 @@ msgstr "Adresse de facturation définie pour la commande"
 msgid "Failed to update zone"
 msgstr "Échec de la mise à jour de la zone"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:133
-#: src/app/routes/_authenticated/_profile/profile.tsx:120
-#: src/app/routes/_authenticated/_profile/profile.tsx:137
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:134
+#: src/app/routes/_authenticated/_profile/profile.tsx:121
+#: src/app/routes/_authenticated/_profile/profile.tsx:138
 #: src/lib/components/login/login-form.tsx:93
 msgid "Password"
 msgstr "Mot de passe"
@@ -1153,7 +1156,7 @@ msgstr "File d'attente des tâches"
 msgid "Assets"
 msgstr "Ressources"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:188
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:192
 msgid "Email address"
 msgstr "Adresse e-mail"
 
@@ -1245,7 +1248,7 @@ msgid "No items selected"
 msgstr "Aucun élément sélectionné"
 
 #. placeholder {0}: selected.length
-#: src/lib/components/shared/asset/asset-gallery.tsx:469
+#: src/lib/components/shared/asset/asset-gallery.tsx:476
 msgid ", {0} selected"
 msgstr ", {0} sélectionné(s)"
 
@@ -1359,7 +1362,7 @@ msgstr "Configurer les paramètres de duplication pour les {0}s"
 msgid "No variants match the current filter."
 msgstr "Aucune variante ne correspond au filtre actuel."
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:203
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:207
 #: src/app/routes/_authenticated/_orders/orders_.$id_.modify.tsx:245
 msgid "Addresses"
 msgstr "Adresses"
@@ -1428,7 +1431,6 @@ msgstr "Promotion mise à jour avec succès"
 msgid "{rejected, plural, one {Failed to cancel {rejected} job} other {Failed to cancel {rejected} jobs}}"
 msgstr "{rejected, plural, one {Échec de l'annulation de {rejected} tâche} other {Échec de l'annulation de {rejected} tâches}}"
 
-#: src/lib/components/shared/assign-to-channel-dialog.tsx:111
 #: src/lib/components/shared/channel-selector.tsx:47
 msgid "Select a channel"
 msgstr "Sélectionner un canal"
@@ -1463,7 +1465,7 @@ msgstr "avant"
 msgid "Failed to set customer for order: {0}"
 msgstr ""
 
-#: src/lib/components/shared/asset/asset-gallery.tsx:745
+#: src/lib/components/shared/asset/asset-gallery.tsx:752
 msgid "Size"
 msgstr "Taille"
 
@@ -1560,6 +1562,11 @@ msgstr ""
 msgid "Sample Formatting"
 msgstr "Formatage d'exemple"
 
+#. placeholder {0}: entityIds.length
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:118
+msgid "Select one or more channels to assign {0} {entityType} to"
+msgstr ""
+
 #: src/app/routes/_authenticated/_option-groups/option-groups_.$groupId.options_.$id.tsx:83
 #: src/app/routes/_authenticated/_option-groups/option-groups_.$groupId.options_.$id.tsx:92
 msgid "New option"
@@ -1579,7 +1586,7 @@ msgstr "Adresse mise à jour avec succès"
 
 #: src/app/routes/_authenticated/_api-keys/api-keys_.$id.tsx:226
 #: src/app/routes/_authenticated/_orders/components/fulfillment-details.tsx:124
-#: src/lib/components/shared/asset/asset-gallery.tsx:747
+#: src/lib/components/shared/asset/asset-gallery.tsx:754
 #: src/lib/framework/layout-engine/page-layout.tsx:733
 msgid "Created"
 msgstr "Créé"
@@ -1637,7 +1644,7 @@ msgstr "Aller à la dernière page"
 #: src/lib/components/data-table/views-sheet.tsx:293
 #: src/lib/components/layout/manage-languages-dialog.tsx:379
 #: src/lib/components/shared/asset/asset-focal-point-editor.tsx:88
-#: src/lib/components/shared/assign-to-channel-dialog.tsx:126
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:145
 #: src/lib/components/shared/confirmation-dialog.tsx:42
 #: src/lib/components/shared/customer-address-form.tsx:253
 #: src/lib/components/shared/navigation-confirmation.tsx:55
@@ -1811,14 +1818,14 @@ msgstr "Échec de la mise à jour de la catégorie fiscale"
 msgid "Refund settled successfully"
 msgstr "Remboursement réglé avec succès"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:105
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:106
 #: src/app/routes/_authenticated/_api-keys/api-keys_.$id.tsx:155
 #: src/app/routes/_authenticated/_assets/assets_.$id.tsx:115
 #: src/app/routes/_authenticated/_channels/channels_.$id.tsx:214
 #: src/app/routes/_authenticated/_collections/collections_.$id.tsx:148
 #: src/app/routes/_authenticated/_countries/countries_.$id.tsx:84
 #: src/app/routes/_authenticated/_customer-groups/customer-groups_.$id.tsx:93
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:159
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:163
 #: src/app/routes/_authenticated/_facets/facets_.$facetId.values_.$id.tsx:110
 #: src/app/routes/_authenticated/_facets/facets_.$id.tsx:99
 #: src/app/routes/_authenticated/_global-settings/global-settings.tsx:102
@@ -1829,7 +1836,7 @@ msgstr "Remboursement réglé avec succès"
 #: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:252
 #: src/app/routes/_authenticated/_products/components/assign-facet-values-dialog.tsx:279
 #: src/app/routes/_authenticated/_products/products_.$id.tsx:212
-#: src/app/routes/_authenticated/_profile/profile.tsx:92
+#: src/app/routes/_authenticated/_profile/profile.tsx:93
 #: src/app/routes/_authenticated/_promotions/promotions_.$id.tsx:144
 #: src/app/routes/_authenticated/_roles/roles_.$id.tsx:84
 #: src/app/routes/_authenticated/_sellers/sellers_.$id.tsx:78
@@ -1850,7 +1857,7 @@ msgstr "Titre 2"
 msgid "Order placed"
 msgstr "Commande passée"
 
-#: src/app/routes/_authenticated/_profile/profile.tsx:71
+#: src/app/routes/_authenticated/_profile/profile.tsx:72
 msgid "Successfully updated profile"
 msgstr "Profil mis à jour avec succès"
 
@@ -1971,13 +1978,13 @@ msgid "Facets"
 msgstr "Facettes"
 
 #. js-lingui-explicit-id
-#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:103
+#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:107
 #: src/app/routes/_authenticated/_orders/components/order-history/use-order-history.ts:108
 msgid "Failed to add note"
 msgstr "Échec de l'ajout de la note"
 
 #. js-lingui-explicit-id
-#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:144
+#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:148
 #: src/app/routes/_authenticated/_orders/components/order-history/use-order-history.ts:150
 msgid "Failed to delete note"
 msgstr "Échec de la suppression de la note"
@@ -1988,7 +1995,7 @@ msgid "Failed to extend query document"
 msgstr "Échec d'extension du document de requête"
 
 #. js-lingui-explicit-id
-#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:124
+#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:128
 #: src/app/routes/_authenticated/_orders/components/order-history/use-order-history.ts:129
 msgid "Failed to update note"
 msgstr "Échec de la mise à jour de la note"
@@ -2442,6 +2449,10 @@ msgstr "Taille, couleur, etc."
 msgid "Browse facets"
 msgstr "Parcourir les facettes"
 
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:103
+msgid "Please select at least one channel"
+msgstr ""
+
 #: src/app/routes/_authenticated/_tax-rates/tax-rates_.$id.tsx:135
 #: src/app/routes/_authenticated/_tax-rates/tax-rates.tsx:72
 msgid "Zone"
@@ -2617,7 +2628,7 @@ msgstr "Nouvelle catégorie fiscale"
 msgid "Successfully created channel"
 msgstr "Canal créé avec succès"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:98
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:100
 msgid "Successfully updated customer"
 msgstr "Client mis à jour avec succès"
 
@@ -2629,7 +2640,7 @@ msgstr "Voir les données"
 msgid "Delete View"
 msgstr "Supprimer la vue"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:231
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:235
 msgid "Add a new address to the customer."
 msgstr "Ajouter une nouvelle adresse au client."
 
@@ -2742,8 +2753,8 @@ msgid "after"
 msgstr "après"
 
 #: src/lib/components/shared/assign-to-channel-dialog.tsx:103
-msgid "Channel"
-msgstr "Canal"
+#~ msgid "Channel"
+#~ msgstr "Canal"
 
 #. js-lingui-explicit-id
 #: src/lib/framework/defaults.ts:137
@@ -2760,8 +2771,8 @@ msgstr "Montant"
 msgid "Phone Number"
 msgstr "Numéro de téléphone"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:62
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:152
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:63
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:156
 msgid "New customer"
 msgstr "Nouveau client"
 
@@ -2770,7 +2781,7 @@ msgstr "Nouveau client"
 msgid "Image"
 msgstr "Image"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:77
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:78
 msgid "Successfully created administrator"
 msgstr "Administrateur créé avec succès"
 
@@ -2795,12 +2806,12 @@ msgstr "Êtes-vous sûr de vouloir supprimer cette vue globale ? Cette action ne
 msgid "Force remove option group"
 msgstr "Forcer la suppression du groupe d'options"
 
-#: src/app/routes/_authenticated/_profile/profile.tsx:140
+#: src/app/routes/_authenticated/_profile/profile.tsx:141
 msgid "Added"
 msgstr "Ajouté"
 
 #: src/app/routes/_authenticated/_customers/components/customer-history/customer-history-container.tsx:30
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:250
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:254
 msgid "Customer history"
 msgstr "Historique du client"
 
@@ -2808,7 +2819,7 @@ msgstr "Historique du client"
 msgid "Successfully updated facet values for {entityIdsLength} {entityType}"
 msgstr "Valeurs de facette mises à jour avec succès pour {entityIdsLength} {entityType}"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:144
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:148
 msgid "Failed to remove customer from group"
 msgstr "Échec de la suppression du client du groupe"
 
@@ -2842,13 +2853,13 @@ msgstr "Le total du remboursement dépasse le montant maximum remboursable de {0
 msgid "Delete Global View"
 msgstr "Supprimer la vue globale"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:105
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:106
 #: src/app/routes/_authenticated/_api-keys/api-keys_.$id.tsx:155
 #: src/app/routes/_authenticated/_channels/channels_.$id.tsx:214
 #: src/app/routes/_authenticated/_collections/collections_.$id.tsx:148
 #: src/app/routes/_authenticated/_countries/countries_.$id.tsx:84
 #: src/app/routes/_authenticated/_customer-groups/customer-groups_.$id.tsx:93
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:159
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:163
 #: src/app/routes/_authenticated/_facets/facets_.$facetId.values_.$id.tsx:110
 #: src/app/routes/_authenticated/_facets/facets_.$id.tsx:99
 #: src/app/routes/_authenticated/_option-groups/option-groups_.$groupId.options_.$id.tsx:177
@@ -2882,8 +2893,8 @@ msgstr "Nouveau pays"
 msgid "From {0} to {1}"
 msgstr "De {0} à {1}"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:105
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:111
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:109
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:115
 msgid "Failed to create customer"
 msgstr "Échec de la création du client"
 
@@ -3123,6 +3134,10 @@ msgstr "Basculer la colonne d'en-tête"
 msgid "New Promotion"
 msgstr "Nouvelle promotion"
 
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:86
+msgid "Failed to assign {entityIdsLength} {entityType} to {failed} channel(s)"
+msgstr ""
+
 #: src/app/routes/_authenticated/_products/products_.$id_.variants.tsx:144
 msgid "Option value name"
 msgstr "Nom de la valeur d'option"
@@ -3211,7 +3226,7 @@ msgstr "Sélectionner la langue d'affichage"
 msgid "Select Payment Handler"
 msgstr ""
 
-#: src/app/routes/_authenticated/_profile/profile.tsx:128
+#: src/app/routes/_authenticated/_profile/profile.tsx:129
 msgid "Authentication methods"
 msgstr "Méthodes d'authentification"
 
@@ -3236,6 +3251,10 @@ msgstr "Rechercher des rôles..."
 #~ msgid "Successfully cancelled {fulfilled} jobs"
 #~ msgstr ""
 
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:137
+msgid "Select channels"
+msgstr ""
+
 #: src/app/routes/_authenticated/_product-variants/product-variants_.$id.tsx:71
 #: src/app/routes/_authenticated/_product-variants/product-variants.tsx:19
 #: src/app/routes/_authenticated/_product-variants/product-variants.tsx:28
@@ -3251,7 +3270,7 @@ msgid "Processing..."
 msgstr "Traitement en cours..."
 
 #. placeholder {0}: totalItems === 1 ? 'asset' : 'assets'
-#: src/lib/components/shared/asset/asset-gallery.tsx:465
+#: src/lib/components/shared/asset/asset-gallery.tsx:472
 msgid "{totalItems} {0} found"
 msgstr "{totalItems} {0} trouvé(s)"
 
@@ -3277,7 +3296,7 @@ msgstr "Catégorie"
 msgid "Moving..."
 msgstr "Déplacement..."
 
-#: src/lib/components/shared/assign-to-channel-dialog.tsx:129
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:148
 msgid "Assign"
 msgstr "Assigner"
 
@@ -3474,6 +3493,7 @@ msgstr "Régler le paiement"
 #: src/app/routes/_authenticated/_products/products_.$id.tsx:337
 #: src/app/routes/_authenticated/_roles/roles_.$id.tsx:111
 #: src/lib/components/layout/channel-switcher.tsx:146
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:126
 msgid "Channels"
 msgstr "Canaux"
 
@@ -3618,7 +3638,7 @@ msgstr "Rechercher des devises..."
 msgid "Remove from channel"
 msgstr "Retirer du canal"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:169
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:173
 #: src/lib/components/shared/rich-text-editor/image-dialog.tsx:157
 msgid "Title"
 msgstr "Titre"
@@ -3779,8 +3799,8 @@ msgstr "Filtrer les variantes..."
 msgid "Add a price in another currency"
 msgstr "Ajouter un prix dans une autre devise"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:127
-#: src/app/routes/_authenticated/_profile/profile.tsx:114
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:128
+#: src/app/routes/_authenticated/_profile/profile.tsx:115
 msgid "Email Address or identifier"
 msgstr "Adresse e-mail ou identifiant"
 
@@ -3791,7 +3811,7 @@ msgid "Refund #{0} transitioned to {1}"
 msgstr "Remboursement #{0} transféré vers {1}"
 
 #: src/app/routes/_authenticated/_customer-groups/customer-groups_.$id.tsx:110
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:61
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:62
 #: src/app/routes/_authenticated/_customers/customers.tsx:15
 #: src/app/routes/_authenticated/_customers/customers.tsx:21
 msgid "Customers"
@@ -3843,19 +3863,19 @@ msgid "between"
 msgstr "entre"
 
 #. js-lingui-explicit-id
-#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:99
+#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:103
 #: src/app/routes/_authenticated/_orders/components/order-history/use-order-history.ts:104
 msgid "Note added successfully"
 msgstr "Note ajoutée avec succès"
 
 #. js-lingui-explicit-id
-#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:140
+#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:144
 #: src/app/routes/_authenticated/_orders/components/order-history/use-order-history.ts:146
 msgid "Note deleted successfully"
 msgstr "Note supprimée avec succès"
 
 #. js-lingui-explicit-id
-#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:120
+#: src/app/routes/_authenticated/_customers/components/customer-history/use-customer-history.ts:124
 #: src/app/routes/_authenticated/_orders/components/order-history/use-order-history.ts:125
 msgid "Note updated successfully"
 msgstr "Note mise à jour avec succès"
@@ -3960,7 +3980,7 @@ msgstr "est dans"
 msgid "Email"
 msgstr "E-mail"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:86
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:87
 msgid "Failed to update administrator"
 msgstr "Échec de la mise à jour de l'administrateur"
 
@@ -4336,6 +4356,7 @@ msgstr "Ajouter un canal"
 #~ msgid "Failed to update product option group"
 #~ msgstr "Échec de la mise à jour du groupe d'options de produit"
 
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:138
 #: src/lib/components/shared/channel-selector.tsx:48
 msgid "Search channels..."
 msgstr "Rechercher des canaux..."
@@ -4438,7 +4459,7 @@ msgstr "Nouveau vendeur"
 msgid "e.g., Red, Large, Cotton"
 msgstr "ex. Rouge, Grande, Coton"
 
-#: src/app/routes/_authenticated/_profile/profile.tsx:75
+#: src/app/routes/_authenticated/_profile/profile.tsx:76
 msgid "Failed to update profile"
 msgstr "Échec de la mise à jour du profil"
 
@@ -4454,7 +4475,7 @@ msgstr "Effacer le filtre"
 msgid "Regions"
 msgstr "Régions"
 
-#: src/lib/components/shared/asset/asset-gallery.tsx:438
+#: src/lib/components/shared/asset/asset-gallery.tsx:445
 msgid "Drop files here to upload"
 msgstr "Déposez les fichiers ici pour les téléverser"
 
@@ -4617,6 +4638,10 @@ msgstr "Nouvelle méthode d'expédition"
 #: src/lib/components/data-table/human-readable-operator.tsx:47
 msgid "is greater than or equal to"
 msgstr "est supérieur ou égal à"
+
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:90
+msgid "Assigned {entityIdsLength} {entityType} to {succeeded} channel(s), failed for {failed}"
+msgstr ""
 
 #: src/app/routes/_authenticated/_collections/components/collection-contents-preview-table.tsx:77
 #: src/app/routes/_authenticated/_collections/components/collection-contents-preview-table.tsx:88
@@ -4796,7 +4821,7 @@ msgstr "État / Province"
 msgid "Enabled"
 msgstr "Activé"
 
-#: src/lib/components/shared/asset/asset-gallery.tsx:476
+#: src/lib/components/shared/asset/asset-gallery.tsx:483
 msgid "Items per page"
 msgstr "Éléments par page"
 
@@ -5015,8 +5040,8 @@ msgstr "Nom de la variante"
 msgid "Remove"
 msgstr "Supprimer"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:105
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:111
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:109
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:115
 msgid "Failed to update customer"
 msgstr "Échec de la mise à jour du client"
 
@@ -5117,8 +5142,8 @@ msgid "Using native authentication strategy"
 msgstr "Utilisation de la stratégie d'authentification native"
 
 #: src/lib/components/shared/assign-to-channel-dialog.tsx:73
-msgid "Failed to assign {entityIdsLength} {entityType} to channel"
-msgstr "Échec de l'attribution de {entityIdsLength} {entityType} au canal"
+#~ msgid "Failed to assign {entityIdsLength} {entityType} to channel"
+#~ msgstr "Échec de l'attribution de {entityIdsLength} {entityType} au canal"
 
 #: src/lib/components/layout/manage-languages-dialog.tsx:351
 msgid "Default Language"
@@ -5183,7 +5208,7 @@ msgstr "Saisissez et appuyez sur Entrée ou virgule pour ajouter..."
 msgid "Edit Note"
 msgstr "Modifier la note"
 
-#: src/lib/components/shared/asset/asset-gallery.tsx:628
+#: src/lib/components/shared/asset/asset-gallery.tsx:635
 msgid "No assets found. Try adjusting your filters."
 msgstr "Aucun asset trouvé. Essayez d'ajuster vos filtres."
 
@@ -5203,7 +5228,7 @@ msgstr "Enregistrer le groupe d'options"
 msgid "Click \"Run Test\" to test this shipping method."
 msgstr "Cliquez sur « Exécuter le test » pour tester cette méthode d'expédition."
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:78
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:79
 msgid "Successfully updated administrator"
 msgstr "Administrateur mis à jour avec succès"
 
@@ -5228,7 +5253,7 @@ msgstr "Échec de la suppression de la vue globale"
 msgid "Default language"
 msgstr "Langue par défaut"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:253
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:257
 #: src/app/routes/_authenticated/_customers/customers.tsx:44
 msgid "Status"
 msgstr "Statut"
@@ -5325,7 +5350,7 @@ msgid "Customer not found"
 msgstr "Client non trouvé"
 
 #. placeholder {0}: entityName.toLowerCase()
-#: src/lib/components/data-input/default-relation-input.tsx:663
+#: src/lib/components/data-input/default-relation-input.tsx:666
 msgid "Select {0}s"
 msgstr "Sélectionner {0}s"
 
@@ -5338,9 +5363,9 @@ msgstr "Nouvelles valeurs de facette à ajouter :"
 msgid "Failed to process refund"
 msgstr "Échec du traitement du remboursement"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:115
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:176
-#: src/app/routes/_authenticated/_profile/profile.tsx:102
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:116
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:180
+#: src/app/routes/_authenticated/_profile/profile.tsx:103
 msgid "First name"
 msgstr "Prénom"
 
@@ -5397,8 +5422,8 @@ msgstr "Ajouter un filtre"
 msgid "Tax category"
 msgstr "Catégorie de taxe"
 
-#: src/app/routes/_authenticated/_profile/profile.tsx:38
-#: src/app/routes/_authenticated/_profile/profile.tsx:84
+#: src/app/routes/_authenticated/_profile/profile.tsx:39
+#: src/app/routes/_authenticated/_profile/profile.tsx:85
 #: src/lib/components/layout/nav-user.tsx:108
 msgid "Profile"
 msgstr "Profil"
@@ -5428,7 +5453,7 @@ msgstr "La valeur en double \"{trimmed}\" existe déjà"
 msgid "Reason"
 msgstr "Raison"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:256
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:260
 msgid "Customer groups"
 msgstr "Groupes de clients"
 
@@ -5539,15 +5564,15 @@ msgid "Failed to create shipping method"
 msgstr "Échec de la création du mode de livraison"
 
 #: src/lib/components/shared/assign-to-channel-dialog.tsx:68
-msgid "Successfully assigned {entityIdsLength} {entityType} to channel"
-msgstr "Attribution réussie de {entityIdsLength} {entityType} au canal"
+#~ msgid "Successfully assigned {entityIdsLength} {entityType} to channel"
+#~ msgstr "Attribution réussie de {entityIdsLength} {entityType} au canal"
 
 #: src/lib/components/layout/manage-languages-dialog.tsx:253
 msgid "Global Languages"
 msgstr "Langues globales"
 
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:38
-#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:97
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:39
+#: src/app/routes/_authenticated/_administrators/administrators_.$id.tsx:98
 msgid "New administrator"
 msgstr "Nouvel administrateur"
 
@@ -5577,8 +5602,8 @@ msgstr "Général"
 #~ msgid "Failed to remove product from channel"
 #~ msgstr "Échec de la suppression du produit du canal"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:223
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:228
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:227
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:232
 msgid "Add new address"
 msgstr "Ajouter une nouvelle adresse"
 
@@ -5598,7 +5623,7 @@ msgstr "Valeur"
 msgid "Customer updated"
 msgstr "Client mis à jour"
 
-#: src/lib/components/shared/assign-to-channel-dialog.tsx:146
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:165
 msgid "Price conversion factor"
 msgstr "Facteur de conversion des prix"
 
@@ -5740,7 +5765,7 @@ msgstr "Rechercher des assets..."
 msgid "New Facet"
 msgstr "Nouvelle facette"
 
-#: src/lib/components/shared/assign-to-channel-dialog.tsx:92
+#: src/lib/components/shared/assign-to-channel-dialog.tsx:115
 msgid "Assign {entityType} to channel"
 msgstr "Assigner {entityType} au canal"
 
@@ -6057,7 +6082,7 @@ msgid "Payment method is required"
 msgstr "La méthode de paiement est requise"
 
 #: src/app/routes/_authenticated/_customer-groups/components/customer-group-members-table.tsx:67
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:134
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:138
 msgid "Failed to add customer to group"
 msgstr "Échec de l'ajout du client au groupe"
 
@@ -6095,7 +6120,7 @@ msgstr "Option"
 msgid "Order process"
 msgstr "Processus de commande"
 
-#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:194
+#: src/app/routes/_authenticated/_customers/customers_.$id.tsx:198
 msgid "Phone number"
 msgstr "Numéro de téléphone"
 
