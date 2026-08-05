@@ -23,10 +23,13 @@ async function runRunMigration(configFile?: string): Promise<CliCommandReturnVal
 
     const runSpinner = spinner();
     runSpinner.start('Running migrations...');
-    const migrationsRan = await runMigrations(config);
+    let noMigrationsFoundMessage: string | undefined;
+    const migrationsRan = await runMigrations(config, {
+        onNoMigrationsFound: message => (noMigrationsFoundMessage = message),
+    });
     const report = migrationsRan.length
         ? `Successfully ran ${migrationsRan.length} migrations`
-        : 'No pending migrations found';
+        : (noMigrationsFoundMessage ?? 'No pending migrations found');
     runSpinner.stop(report);
     return {
         project,
